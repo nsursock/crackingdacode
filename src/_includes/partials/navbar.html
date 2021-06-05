@@ -1,5 +1,5 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
-<div class="relative bg-white">
+<div class="relative bg-white" x-data="{ isOpenMobile: false }">
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <div
       class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10"
@@ -16,6 +16,7 @@
       </div>
       <div class="-mr-2 -my-2 md:hidden">
         <button
+          @click="isOpenMobile = !isOpenMobile"
           type="button"
           class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
           aria-expanded="false"
@@ -571,6 +572,7 @@
       To: "opacity-0 scale-95"
   -->
   <div
+    :hidden="!isOpenMobile"
     class="absolute z-50 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
   >
     <div
@@ -587,6 +589,7 @@
           </div>
           <div class="-mr-2">
             <button
+              @click="isOpenMobile = !isOpenMobile"
               type="button"
               class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
             >
