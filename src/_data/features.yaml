@@ -1,0 +1,14 @@
+---
+features:
+  - title: Pixel perfect design
+    description: Thanks to great attention to details, I will create the website based on your designs. Just send me the Figma or even a screenshot, and watch your design come to life.
+    iconUrl: "../static/img/pixel.svg"
+  - title: Competitive hourly rate
+    description: I will always deliver with quality for a reasonable hourly rate between 20$ or 35$. Your budget will be respected at all times and you won't have to face unforeseen costs. Payment is done every week.
+    iconUrl: "../static/img/dollar.svg"
+  - title: No communication breakdown
+    description: I'm fluent in English and French (native) and I'm learning Arabic. There will be no communication problems between us and your requirements will be understood correctly.
+    iconUrl: "../static/img/chat.svg"
+  - title: Modern technologies
+    description: On the frontend, I'm experienced with Vue, React, Alpine and Tailwind. On the backend, I know GraphQL, Firebase, Mongo, Express and Node. This gives you the choice when creating a project.
+    iconUrl: "../static/img/tech.svg"
