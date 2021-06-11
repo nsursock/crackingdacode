@@ -34,7 +34,8 @@
     {% endif %}
   </head>
   <body>
-    {{ content | safe }} {% include "./partials/footer.html" %}
+    {% include "./banner.html" %} {{ content | safe }} {% include
+    "./partials/footer.html" %}
 
     <script src="/static/js/alpine.js"></script>
 
