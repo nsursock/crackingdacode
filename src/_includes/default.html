@@ -17,7 +17,7 @@
       type="text/css"
       href="/static/css/prism-tomorrow.css"
     />
-    {% endif %} {% if env.nodeEnv == 'production'}
+    {% endif %}
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-C3CETTNJHN"
@@ -31,7 +31,6 @@
 
       gtag("config", "G-C3CETTNJHN");
     </script>
-    {% endif %}
   </head>
   <body>
     {{ content | safe }} {% include "./partials/footer.html" %}
