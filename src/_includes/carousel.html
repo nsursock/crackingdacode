@@ -1,56 +1,96 @@
 <div class="py-8">
   <div
     class="max-w-4xl mx-auto relative"
-    x-data="{ activeSlide: 1, slides: [1, 2, 3, 4, 5] }"
+    x-data="{
+      activeSlide: 1,
+      slides: [
+        {url: '../static/img/social.png'},
+        {url: '../static/img/rating.png'},
+        {url: '../static/img/users.png'}
+      ]
+    }"
   >
     <!-- Slides -->
-    <template x-for="slide in slides" :key="slide">
-      <div
-        x-show="activeSlide === slide"
-        x-transition:enter="transition transform ease-out duration-1000"
-        x-transition:enter-start="opacity-0 -translate-x-full "
-        x-transition:enter-end="opacity-100 translate-x-0 "
-        x-transition:leave="transition transform ease-in duration-1000"
-        x-transition:leave-start="opacity-100 translate-x-0 "
-        x-transition:leave-end="opacity-0 -translate-x-full "
-        class="p-24 font-bold text-5xl h-64 flex items-center justify-center bg-indigo-500 text-white rounded-lg"
-      >
-        <span class="w-12 text-center" x-text="slide"></span>
-        <span class="text-indigo-300">/</span>
-        <span class="w-12 text-center" x-text="slides.length"></span>
-      </div>
-    </template>
+    <div class="h-64 border-r border-l border-gray-300">
+      <template x-for="(slide, index) in slides" :key="index">
+        <div
+          x-show="activeSlide === index + 1"
+          x-transition:enter="transition transform ease-out duration-1000 absolute"
+          x-transition:enter-start="opacity-0 -translate-x-full "
+          x-transition:enter-end="opacity-100 translate-x-0 "
+          x-transition:leave="transition transform ease-in duration-1000 absolute"
+          x-transition:leave-start="opacity-100 translate-x-0 "
+          x-transition:leave-end="opacity-0 -translate-x-full "
+          class="font-bold text-5xl h-64 w-full flex items-center justify-center bg-indigo-500 text-white rounded-lg"
+        >
+          <img class="object-cover w-full h-64" :src="slide.url" alt="" />
+          <!-- <span class="w-12 text-center" x-text="slide"></span>
+          <span class="text-indigo-300">/</span>
+          <span class="w-12 text-center" x-text="slides.length"></span> -->
+        </div>
+      </template>
+    </div>
 
     <!-- Prev/Next Arrows -->
     <div class="absolute inset-0 flex">
       <div class="flex items-center justify-start w-1/2">
         <button
-          class="focus:outline-none bg-indigo-100 text-indigo-500 hover:text-orange-500 font-bold hover:shadow-lg rounded-full w-12 h-12 -ml-6"
+          class="relative inline-flex items-center px-2 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:outline-none -ml-6"
           x-on:click="activeSlide = activeSlide === 1 ? slides.length : activeSlide - 1"
         >
-          &#8592;
+          <span class="sr-only">Previous</span>
+          <!-- Heroicon name: solid/chevron-left -->
+          <svg
+            class="h-5 w-5"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+              clip-rule="evenodd"
+            />
+          </svg>
         </button>
       </div>
       <div class="flex items-center justify-end w-1/2">
         <button
-          class="focus:outline-none bg-indigo-100 text-indigo-500 hover:text-orange-500 font-bold hover:shadow rounded-full w-12 h-12 -mr-6"
+          class="relative inline-flex items-center px-2 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:outline-none -mr-6"
           x-on:click="activeSlide = activeSlide === slides.length ? 1 : activeSlide + 1"
         >
-          &#8594;
+          <span class="sr-only">Next</span>
+          <!-- Heroicon name: solid/chevron-right -->
+          <svg
+            class="h-5 w-5"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+              clip-rule="evenodd"
+            />
+          </svg>
         </button>
       </div>
     </div>
 
     <!-- Buttons -->
-    <div class="absolute w-full flex items-center justify-center px-4">
-      <template x-for="slide in slides" :key="slide">
+    <div class="absolute right-0 flex items-center justify-center px-4 mt-4">
+      <template x-for="(slide, index) in slides" :key="index">
         <button
-          class="flex-1 w-4 h-2 mt-4 mx-2 mb-0 rounded-full overflow-hidden transition-colors duration-200 ease-out hover:bg-indigo-600 hover:shadow-lg"
+          x-on:click="activeSlide = index + 1"
+          aria-current="slide"
+          class="relative inline-flex items-center px-4 py-2 border text-sm font-medium -mr-1"
           :class="{
-              'bg-indigo-600': activeSlide === slide,
-              'bg-indigo-300': activeSlide !== slide
+              'z-10 bg-indigo-50 border-indigo-500 text-indigo-600': activeSlide === index + 1,
+              'bg-white border-gray-300 text-gray-500 hover:bg-gray-50': activeSlide !== index + 1
           }"
-          x-on:click="activeSlide = slide"
+          x-text="index + 1"
         ></button>
       </template>
     </div>

@@ -1,4 +1,4 @@
-<footer>
+<footer x-data="{ year: new Date().getFullYear() }">
   <!-- <small class="text-gray-500"
     >Copyright © {{settings.name}} 2021. Made with ❤ by
     <a href="{{settings.url}}" target="_blank" class="underline"
@@ -18,8 +18,11 @@
       <div
         class="antialiased text-gray-500 bg-white text-base font-medium flex flex-col md:flex-row justify-between items-center py-9"
       >
-        <span class="md:mt-2 text-center">© 2021 Sursock Labs</span>
-        <!-- <span class="mt-2 text-center">{{variables.environment}}</span> -->
+        <div class="md:mt-2 text-center">
+          ©
+          <span x-text="year"></span>
+          Sursock Labs
+        </div>
         <span class="mt-2 text-center"
           >Made with ❤ by Nicolas Sursock on a MacBook Pro using the NEAT
           stack</span
