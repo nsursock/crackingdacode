@@ -10,5 +10,5 @@ features:
     description: I'm fluent in English and French (native) and I'm learning Arabic. There will be no communication problems between us and your requirements will be understood correctly.
     iconUrl: "../static/img/chat.svg"
   - title: Modern technologies
-    description: On the frontend, I'm experienced with Vue, React, Alpine and Tailwind. On the backend, I know GraphQL, Firebase, Mongo, Express and Node. This gives you the choice when creating a project.
+    description: On the frontend, I'm experienced with Vue, React, Ember, Alpine and Tailwind. On the backend, I know GraphQL, Firebase, Mongo, Express and Node. This gives you the choice when creating a project.
     iconUrl: "../static/img/tech.svg"
