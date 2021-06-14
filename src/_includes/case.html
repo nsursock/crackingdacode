@@ -1,10 +1,6 @@
 <div id="case" class="py-12 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="relative bg-white overflow-hidden">
-      <aside class="sm:float-right sm:w-2/3 mx-8">
-        {% include "./carousel.html" %}
-      </aside>
-
       <div class="">
         <h2
           class="text-base text-indigo-600 font-semibold tracking-wide uppercase"
@@ -23,13 +19,23 @@
           CSS and JS.
         </p>
         <div class="">
+          <p
+            class="mt-7 text-xl leading-8 font-extrabold tracking-tight sm:text-2xl underline"
+          >
+            <a href="https://www.themusicstop.app">The Music Stop</a>
+          </p>
+          <aside class="sm:float-right sm:w-2/3 mx-8">
+            {% include "./carousel.html" %}
+          </aside>
           <aside
-            class="grid grid-cols-2 sm:mx-20 sm:my-16 my-5 sm:float-right shadow-xl border-b border-r border-gray-300 divide-x divide-y divide-gray-300"
+            class="grid grid-cols-2 sm:grid-cols-3 sm:mx-20 sm:my-16 my-9 sm:float-right shadow-xl border-b border-r border-gray-300 divide-x divide-y divide-gray-300"
             x-data="{stats: [
               {title: 'Backend', caption: 'Heroku'},
               {title: 'Frontend', caption: 'Netlify'},
               {title: 'Design', caption: 'Tailwind'},
               {title: 'Stack', caption: 'MEVN'},
+              {title: 'Payments', caption: 'Stripe'},
+              {title: 'Query', caption: 'Axios'},
             ]}"
           >
             <template x-for="(stat, index) in stats" :key="index">
@@ -45,11 +51,7 @@
               </div>
             </template>
           </aside>
-          <p
-            class="mt-7 text-xl leading-8 font-extrabold tracking-tight sm:text-2xl underline"
-          >
-            <a href="https://www.themusicstop.app">The Music Stop</a>
-          </p>
+
           <p class="mt-4 w-full text-md text-gray-500">
             This project was simple at the beginning: the MVP should allow you
             to rate songs and let your friends discover what grade you gave to
@@ -59,15 +61,16 @@
             instead of Angular. Vue has a great community and was used in
             tutorials by the creators of Tailwind CSS. The UI uses free
             components from and is inspired by TailwindUI, an interesting
-            component library. The choice of Node, Express and Mongo for the
-            backend was based on the popularity of those tools. I found
+            component library. <br /><br />The choice of Node, Express and Mongo
+            for the backend was based on the popularity of those tools. I found
             documentation effortlessly and was up and running in no time with a
-            CRUD app. Of course, I used GraphQL because of the single endpoint
-            ease of use.<br /><br />This was my first project using a JS library
-            and the MVP was finished in 2 months. I learned so much during that
-            time and can't think of a better reward than making a new website!
-            The website uses Stripe to process payments. Stripe makes it easy to
-            accept payments in many currencies and their API is straightforward.
+            CRUD app. <br /><br />The website uses Stripe to process payments.
+            Stripe makes it easy to accept payments in many currencies and their
+            API is straightforward. Of course, I used GraphQL with Axios because
+            of a single endpoint ease of use.<br /><br />This was my first
+            project using a JS library and the MVP was finished in 2 months. I
+            learned so much during that time and can't think of a better reward
+            than making a new website!
           </p>
         </div>
         <!-- <div class="float-right">
