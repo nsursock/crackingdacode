@@ -12,9 +12,9 @@ features:
   - title: Modern technologies
     description: On the frontend, I'm experienced with Vue, React, Ember, Alpine and Tailwind. On the backend, I know GraphQL, Firebase, Mongo, Express and Node. This gives you the choice when creating a project.
     iconUrl: "../static/img/tech.svg"
-  - title: Years Of Experience
+  - title: Years of experience
     description: You're worried about your budget because you're not made out of gold. I've been a software engineer for 10+ years and a web developer for 4 years. Your project will be delivered on time and on budget.
     iconUrl: "../static/img/xp.svg"
-  - title: Obsession For Quality
+  - title: Obsession for quality
     description: Someone told you obsessions are bad. But I'm obsessed about the quality of your website and your project. That's why I won't be afraid to work on evenings and week-ends to make sure there's no bug.
     iconUrl: "../static/img/focus.svg"
