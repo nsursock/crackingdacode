@@ -1,14 +1,8 @@
 <div class="py-8">
   <div
     class="max-w-4xl mx-auto relative"
-    x-data="{
-      activeSlide: 1,
-      slides: [
-        {url: '../static/img/social.jpg'},
-        {url: '../static/img/rating.jpg'},
-        {url: '../static/img/users.jpg'}
-      ]
-    }"
+    x-data="data()"
+    x-init="() => { init(); }"
   >
     <!-- Slides -->
     <div class="h-64 border-r border-l border-gray-300">
@@ -23,10 +17,7 @@
           x-transition:leave-end="opacity-0 -translate-x-full "
           class="font-bold text-5xl h-64 w-full flex items-center justify-center bg-indigo-500 text-white rounded-lg"
         >
-          <img class="object-cover w-full h-64" :src="slide.url" alt="" />
-          <!-- <span class="w-12 text-center" x-text="slide"></span>
-          <span class="text-indigo-300">/</span>
-          <span class="w-12 text-center" x-text="slides.length"></span> -->
+          <img class="object-cover w-full h-64" :data-src="slide.url" alt="" />
         </div>
       </template>
     </div>
@@ -98,3 +89,35 @@
     </div>
   </div>
 </div>
+
+<script>
+  const data = () => {
+    return {
+      activeSlide: 1,
+      slides: [
+        { url: "../static/img/social.jpg" },
+        { url: "../static/img/rating.jpg" },
+        { url: "../static/img/users.jpg" },
+      ],
+      init() {
+        let io = new IntersectionObserver(
+          function (entries, observer) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                let lazyImage = entry.target;
+                lazyImage.src = lazyImage.dataset.src;
+                lazyImage.removeAttribute("data-src");
+                io.unobserve(lazyImage);
+              }
+            });
+          },
+          { root: null, threshold: 0 }
+        );
+        const list = document.querySelectorAll("[data-src]");
+        list.forEach((lazyImage) => {
+          io.observe(lazyImage);
+        });
+      },
+    };
+  };
+</script>
