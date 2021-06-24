@@ -26,6 +26,8 @@
   "dependencies": {
     "@tailwindcss/forms": "^0.3.3",
     "autoprefixer": "^10.1.0",
+    "critical": "^4.0.0",
+    "gulp": "^4.0.2",
     "postcss": "^8.2.1"
   }
 }
