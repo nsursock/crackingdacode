@@ -14,37 +14,5 @@
 
 </div> -->
 
-<!-- <div x-data="trans()" x-init="init()"> -->
 {% include "./hero.html" %} {% include "./features.html" %} {% include
 "../case.html" %} {% include "./contact.html" %} {% include "./cta.html" %}
-<!-- </div> -->
-
-<!-- <script>
-  const trans = () => {
-    return {
-      init() {
-        let io = new IntersectionObserver(
-          function (entries, observer) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
-                let section = entry.target;
-                var elements = section.querySelectorAll("[x-show]");
-                elements.forEach((element) => {
-                  console.log(element);
-                  element.setAttribute("x-show", true);
-                  console.log(element);
-                });
-                io.unobserve(section);
-              }
-            });
-          },
-          { root: null, threshold: 0 }
-        );
-        const list = document.querySelectorAll("section");
-        list.forEach((section) => {
-          io.observe(section);
-        });
-      },
-    };
-  };
-</script> -->
