@@ -1,4 +1,4 @@
-<div class="bg-gray-50">
+<div class="bg-gray-50" x-data="dataCta()">
   <div
     class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between"
   >
@@ -25,6 +25,7 @@
             </span>
           </div>
           <input
+            x-model.number="amount"
             type="text"
             name="price"
             id="price"
@@ -34,6 +35,7 @@
           <div class="absolute inset-y-0 right-0 flex items-center">
             <label for="currency" class="sr-only">Currency</label>
             <select
+              x-model="currency"
               @change="symbol = document.querySelector(`#${event.target.id} option:checked`).dataset.symbol"
               id="currency"
               name="currency"
@@ -80,10 +82,35 @@
 
       <div class="inline-flex rounded-md shadow">
         <button
+          @click="pay"
           id="payment"
           class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
         >
-          Pay
+          <template x-if="!isFetching">
+            <span>Pay</span>
+          </template>
+          <template x-if="isFetching">
+            <svg
+              class="animate-spin-slow h-5 w-5 text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <circle
+                class="opacity-25"
+                cx="12"
+                cy="12"
+                r="10"
+                stroke="currentColor"
+                stroke-width="4"
+              ></circle>
+              <path
+                class="opacity-75"
+                fill="currentColor"
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+              ></path>
+            </svg>
+          </template>
         </button>
       </div>
     </div>
@@ -92,36 +119,53 @@
 
 <script src="https://js.stripe.com/v3"></script>
 <script>
-  var stripe = Stripe("{{variables.stripeKey}}");
+  function dataCta() {
+    return {
+      isFetching: false,
+      amount: 3,
+      currency: "USD",
+      stripe: Stripe("{{variables.stripeKey}}"),
+      pay() {
+        // console.log(this.stripe === null);
+        // if (!this.stripe) {
+        // var script = document.createElement("script");
+        // script.src = "https://js.stripe.com/v3";
+        // script.onload = async function () {
+        // this.stripe = ;
 
-  document.querySelector("#payment").addEventListener("click", () => {
-    var purchase = {
-      amount: +document.querySelector("#price").value,
-      currency: document.querySelector("#currency").value,
-    };
+        var purchase = {
+          amount: this.amount,
+          currency: this.currency,
+        };
 
-    fetch("{{variables.apiUrl}}" + "/payment", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
+        this.isFetching = true;
+        fetch("{{variables.apiUrl}}" + "/payment", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(purchase),
+        })
+          .then((response) => response.json())
+          .then((session) => {
+            this.stripe.redirectToCheckout({
+              sessionId: session.id,
+            });
+          })
+          .then(function (result) {
+            if (result.error) {
+              console.error("Error:", result.error.message);
+              // var displayError = document.getElementById("error-message");
+              // displayError.textContent = result.error.message;
+            }
+          })
+          .catch(function (error) {
+            console.error("Error:", error);
+          });
+        // };
+        // document.getElementsByTagName("head")[0].appendChild(script);
+        // }
       },
-      body: JSON.stringify(purchase),
-    })
-      .then((response) => response.json())
-      .then((session) => {
-        stripe.redirectToCheckout({
-          sessionId: session.id,
-        });
-      })
-      .then(function (result) {
-        if (result.error) {
-          console.error("Error:", result.error.message);
-          // var displayError = document.getElementById("error-message");
-          // displayError.textContent = result.error.message;
-        }
-      })
-      .catch(function (error) {
-        console.error("Error:", error);
-      });
-  });
+    };
+  }
 </script>
