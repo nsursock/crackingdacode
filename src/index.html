@@ -27,4 +27,15 @@ path: home
 
 {% include "./_includes/partials/content.html" %}
 
-<!-- <script defer src="https://unpkg.com/alpinejs@3.1.1/dist/cdn.min.js"></script> -->
+<!-- <script type="module">
+  import intersect from "@alpinejs/intersect";
+  document.addEventListener("alpine:init", () => {
+    // Will be executed before initializing Alpine.
+    Alpine.plugin(intersect);
+  });
+
+  document.addEventListener("alpine:initialized", () => {
+    // Will be executed after initializing Alpine.
+  });
+</script>
+<script defer src="https://unpkg.com/alpinejs@3.1.1/dist/cdn.min.js"></script> -->
