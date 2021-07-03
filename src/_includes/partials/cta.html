@@ -117,21 +117,18 @@
   </div>
 </div>
 
-<script src="https://js.stripe.com/v3"></script>
+<!-- <script src="https://js.stripe.com/v3"></script> -->
+
 <script>
   function dataCta() {
     return {
       isFetching: false,
       amount: 3,
       currency: "USD",
-      stripe: Stripe("{{variables.stripeKey}}"),
-      pay() {
-        // console.log(this.stripe === null);
-        // if (!this.stripe) {
-        // var script = document.createElement("script");
-        // script.src = "https://js.stripe.com/v3";
-        // script.onload = async function () {
-        // this.stripe = ;
+      stripe: null,
+      async pay() {
+        await loadScript("https://js.stripe.com/v3");
+        this.stripe = Stripe("{{variables.stripeKey}}");
 
         var purchase = {
           amount: this.amount,
@@ -162,9 +159,6 @@
           .catch(function (error) {
             console.error("Error:", error);
           });
-        // };
-        // document.getElementsByTagName("head")[0].appendChild(script);
-        // }
       },
     };
   }
