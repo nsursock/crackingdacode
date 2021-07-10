@@ -29,11 +29,11 @@
             {% set slides = case.images %} {% include "./carousel.html" %}
           </aside>
           <aside
-            class="grid grid-cols-2 sm:grid-cols-3 sm:mx-20 sm:my-16 my-9 mx-4 sm:px-4 sm:float-right shadow-xl rounded-md border border-gray-300"
+            class="flex flex-wrap items-center justify-center sm:max-w-md sm:mx-20 sm:my-16 my-9 mx-4 sm:px-4 sm:float-right shadow-xl rounded-md border border-gray-300"
           >
             {% for stat in case.stats %}
             <div
-              class="flex flex-col items-center justify-center p-3 items-center h-32"
+              class="flex flex-col items-center justify-center p-3 items-center h-24 w-32"
             >
               <span class="text-md text-gray-500">{{stat.title}}</span>
               <span

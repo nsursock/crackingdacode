@@ -39,6 +39,8 @@ cases:
       - url: ../static/img/ss/adverts.jpg
       - url: ../static/img/ss/preview.jpg
       - url: ../static/img/ss/details.jpg
+      - url: ../static/img/ss/form.jpg
+      - url: ../static/img/ss/login.jpg
     paragraphs:
       - text: Another project I did was to build a job board. I was spending so much time looking for a job that I felt I could do a side project to create a stunning UI so that candidates and recruiters could feel at home here.
       - text: I decided to use React to code the app because it was an industry standard. So many people use React that I felt it was a nice addition to my resume. I also had plans of using Next to make the website blazing fast. The Jamstack is gaining popularity these days.
