@@ -1,8 +1,9 @@
-<div class="py-8" x-data="data()" x-init="$nextTick(() => { init(); })">
+<div class="py-8" x-data="dataCar()">
   <div class="max-w-4xl mx-auto relative">
     <!-- Slides -->
     <div class="h-64 border-r border-l border-gray-300">
       {% for slide in slides %}
+      <!-- <span>{{slide.url}}</span> -->
       <div
         x-show="activeSlide === {{loop.index}}"
         x-transition:enter="transition transform ease-out duration-1000 absolute"
@@ -179,38 +180,13 @@
 </div>
 
 <script>
-  const data = () => {
+  dataCar = () => {
     return {
       showModal: false,
       toggleModal() {
         this.showModal = !this.showModal;
       },
       activeSlide: 1,
-      // slides: [
-      //   { url: "../static/img/social.jpg" },
-      //   { url: "../static/img/rating.jpg" },
-      //   { url: "../static/img/users.jpg" },
-      //   { url: "../static/img/graph.jpg" },
-      // ],
-      init() {
-        let io = new IntersectionObserver(
-          function (entries, observer) {
-            entries.forEach(function (entry) {
-              if (entry.isIntersecting) {
-                let lazyImage = entry.target;
-                lazyImage.src = lazyImage.dataset.src;
-                lazyImage.removeAttribute("data-src");
-                io.unobserve(lazyImage);
-              }
-            });
-          },
-          { root: null, threshold: 0 }
-        );
-        const list = document.querySelectorAll("[data-src]");
-        list.forEach((lazyImage) => {
-          io.observe(lazyImage);
-        });
-      },
     };
   };
 </script>

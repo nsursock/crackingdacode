@@ -14,5 +14,33 @@
 
 </div> -->
 
-{% include "./hero.html" %} {% include "./features.html" %} {% include
-"../case.html" %} {% include "./contact.html" %} {% include "./cta.html" %}
+<div class="" x-data="data()" x-init="$nextTick(() => { init(); })">
+  {% include "./hero.html" %} {% include "./features.html" %} {% include
+  "../case.html" %} {% include "./contact.html" %} {% include "./cta.html" %}
+</div>
+
+<script>
+  const data = () => {
+    return {
+      init() {
+        let io = new IntersectionObserver(
+          function (entries, observer) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                let lazyImage = entry.target;
+                lazyImage.src = lazyImage.dataset.src;
+                lazyImage.removeAttribute("data-src");
+                io.unobserve(lazyImage);
+              }
+            });
+          },
+          { root: null, threshold: 0 }
+        );
+        const list = document.querySelectorAll("[data-src]");
+        list.forEach((lazyImage) => {
+          io.observe(lazyImage);
+        });
+      },
+    };
+  };
+</script>
