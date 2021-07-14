@@ -27,7 +27,31 @@
               }"
             class=""
           >
-            <ul class="flex border-b">
+            <div class="md:hidden mt-5">
+              <label
+                for="project"
+                class="block text-sm font-medium text-gray-700"
+              >
+                Project
+              </label>
+              <select
+                @change="openTab = $event.target.options[$event.target.selectedIndex].index + 1"
+                id="project"
+                name="project"
+                class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              >
+                {% for case in cases.cases %}
+                <option
+                  :value="{{loop.index}}"
+                  :selected="openTab === {{loop.index}}"
+                >
+                  {{case.project}}
+                </option>
+                {% endfor %}
+              </select>
+            </div>
+
+            <ul class="md:flex md:border-b hidden md:block">
               {% for case in cases.cases %}
               <li
                 @click="openTab = {{loop.index}}"
