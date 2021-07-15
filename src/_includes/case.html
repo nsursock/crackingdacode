@@ -69,7 +69,13 @@
             </ul>
             <div class="w-full pt-4">
               {% for case in cases.cases %}
-              <div x-show="openTab === {{loop.index}}">
+              <div
+                x-show="openTab === {{loop.index}}"
+                x-transition:enter="transition transform ease-out duration-1000 "
+                x-transition:enter-start="opacity-0 "
+                x-transition:enter-end="opacity-100 "
+                x-transition:leave="hidden"
+              >
                 <aside class="sm:float-right sm:w-2/3 mx-8">
                   {% set slides = case.images %} {% include "./carousel.html" %}
                 </aside>
