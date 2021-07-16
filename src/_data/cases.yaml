@@ -26,7 +26,7 @@ cases:
       - text: The choice of Node, Express and Mongo for the backend was based on the popularity of those tools. I found documentation effortlessly and was up and running in no time with a CRUD app.
       - text: The website uses Stripe to process payments. Stripe makes it easy to accept payments in many currencies and their API is straightforward. Of course, I used GraphQL with Axios because of a single endpoint ease of use.
       - text: This was my first project using a JS library and the MVP was finished in 2 months. I learned so much during that time and can't think of a better reward than making a new website!
-  - project: Star Shine
+  - project: Starshine Gigs
     url: https://starshine.netlify.app/
     stats:
       - title: Design
