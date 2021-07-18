@@ -18,7 +18,7 @@
       href="/static/css/prism-tomorrow.css"
     />
     {% endif %}
-    <script>
+    <!-- <script>
       var font = new FontFace(
         "Fredoka One",
         "url(/static/font/FredokaOne-Regular.ttf)"
@@ -30,7 +30,7 @@
         var content = document.getElementById("content");
         content.style.visibility = "visible";
       });
-    </script>
+    </script> -->
     {% if variables.environment == "production" %}
     <script
       async
@@ -59,7 +59,7 @@
     {% endif %}
   </head>
   <body>
-    <div id="content" class="invisible">
+    <div id="content" class="visible">
       {% include "./banner.html" %} {{ content | safe }} {% include
       "./partials/footer.html" %}
     </div>
