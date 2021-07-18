@@ -1,5 +1,5 @@
 <div id="case" class="py-12 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
     <div class="relative bg-white overflow-hidden">
       <div class="">
         <h2
@@ -8,7 +8,7 @@
           Portfolio
         </h2>
         <p
-          class="mt-2 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl"
+          class="mt-2 text-3xl leading-8 font-extrabold tracking-tight md:text-4xl"
         >
           Selected work
         </p>
@@ -38,7 +38,7 @@
                 @change="openTab = $event.target.options[$event.target.selectedIndex].index + 1"
                 id="project"
                 name="project"
-                class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 md:text-sm"
               >
                 {% for case in cases.cases %}
                 <option
@@ -60,7 +60,7 @@
               >
                 <div
                   :class="openTab === {{loop.index}} ? activeClasses : inactiveClasses"
-                  class="mt-7 text-xl leading-8 font-extrabold tracking-tight sm:text-2xl py-2 px-4 inline-block"
+                  class="mt-7 text-xl leading-8 font-extrabold tracking-tight md:text-2xl py-2 px-4 inline-block"
                 >
                   {{case.project}}
                 </div>
@@ -76,11 +76,11 @@
                 x-transition:enter-end="opacity-100 "
                 x-transition:leave="hidden"
               >
-                <aside class="sm:float-right sm:w-2/3 mx-8">
+                <aside class="md:float-right md:w-2/3 mx-8">
                   {% set slides = case.images %} {% include "./carousel.html" %}
                 </aside>
                 <aside
-                  class="flex flex-wrap items-center justify-center sm:max-w-md sm:mx-20 sm:my-16 my-9 mx-4 sm:px-4 sm:float-right shadow-xl rounded-md border border-gray-300"
+                  class="flex flex-wrap items-center justify-center md:max-w-md md:mx-20 md:my-16 my-9 mx-4 md:px-4 md:float-right shadow-xl rounded-md border border-gray-300"
                 >
                   {% for stat in case.stats %}
                   <div
@@ -88,7 +88,7 @@
                   >
                     <span class="text-md text-gray-500">{{stat.title}}</span>
                     <span
-                      class="text-indigo-600 text-2xl leading-8 font-extrabold tracking-tight sm:text-3xl"
+                      class="text-indigo-600 text-2xl leading-8 font-extrabold tracking-tight md:text-3xl"
                       >{{stat.descr}}
                     </span>
                   </div>
