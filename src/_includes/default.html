@@ -17,7 +17,21 @@
       type="text/css"
       href="/static/css/prism-tomorrow.css"
     />
-    {% endif %} {% if variables.environment == "production" %}
+    {% endif %}
+    <script>
+      var font = new FontFace(
+        "Fredoka One",
+        "url(/static/font/FredokaOne-Regular.ttf)"
+      );
+
+      font.load().then(function () {
+        document.fonts.add(font);
+        document.body.style.fontFamily = "'Fredoka One', cursive";
+        var content = document.getElementById("content");
+        content.style.visibility = "visible";
+      });
+    </script>
+    {% if variables.environment == "production" %}
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-C3CETTNJHN"
@@ -45,8 +59,10 @@
     {% endif %}
   </head>
   <body>
-    {% include "./banner.html" %} {{ content | safe }} {% include
-    "./partials/footer.html" %}
+    <div id="content" class="invisible">
+      {% include "./banner.html" %} {{ content | safe }} {% include
+      "./partials/footer.html" %}
+    </div>
 
     <script src="/static/js/alpine.js"></script>
 
