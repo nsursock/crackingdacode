@@ -85,8 +85,9 @@
               'rounded-l-md': {{loop.index0}} === 0,
               'rounded-r-md': {{loop.index0}} === {{slides.length}} - 1,
           }"
-        x-text="{{loop.index}}"
-      ></button>
+      >
+        <span class="">{{loop.index}}</span>
+      </button>
       {% endfor %}
       <button
         class="hidden m-2 md:inline-flex items-center px-3 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:outline-none"
@@ -106,7 +107,7 @@
             clip-rule="evenodd"
           />
         </svg>
-        Zoom
+        <span class="">Zoom</span>
       </button>
     </div>
   </div>
