@@ -1,74 +1,14 @@
----
-layout: default
-title: Freelance WebDev - Nicolas Sursock
-description: Want to bring your ideas to life using the power of the web? I will build a quality website on time for you
-path: home
----
+{# This page is built with nunjucks! #}
 
-<!-- <div
-  class="container mx-auto lg:h-screen flex flex-col justify-center items-center"
->
-  <h1>
-    Welcome to
-    <strong
-      class="bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500"
-    >
-      {{title}}
-    </strong>
-  </h1>
+{% set title = 'Home' %}
+{% extends "layout.njk" %}
 
-  <p>
-    <abbr title="netlify cms, eleventy, alpine js & tailwind css">NEAT</abbr>
-    Starter Template. Get Started by editing.
-    <code class="bg-gray-100 text-blue-800 p-1">/index.njk</code>
-  </p>
-
-</div> -->
-
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-<script>
-  WebFont.load({
-    google: {
-      families: ["Special Elite"],
-    },
-  });
-</script> -->
-
-<!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"
-      rel="stylesheet"
-    /> -->
-
-<script>
-  function loadScript(src) {
-    return new Promise(function (resolve, reject) {
-      var s;
-      s = document.createElement("script");
-      s.src = src;
-      s.onload = resolve;
-      s.onerror = reject;
-      if (document.body == null) {
-        document.head.appendChild(s);
-      } else {
-        document.body.appendChild(s);
-      }
-    });
-  }
-</script>
-
-{% include "./_includes/partials/content.html" %}
-
-<!-- <script type="module">
-  import intersect from "@alpinejs/intersect";
-  document.addEventListener("alpine:init", () => {
-    // Will be executed before initializing Alpine.
-    Alpine.plugin(intersect);
-  });
-
-  document.addEventListener("alpine:initialized", () => {
-    // Will be executed after initializing Alpine.
-  });
-</script>
-<script defer src="https://unpkg.com/alpinejs@3.1.1/dist/cdn.min.js"></script> -->
+{% block body %}
+  <main>
+    {% include './_includes/sections/hero.html' %}
+    {% include './_includes/sections/features.html' %}
+    {% include './_includes/sections/portfolio.html' %}
+    {% include './_includes/sections/contact.html' %}
+    {% include './_includes/sections/cta.html' %}
+  </main>
+{% endblock %}
