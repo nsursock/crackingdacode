@@ -1,52 +1,77 @@
-<section id="features" class="py-12 bg-white">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="lg:text-center">
-      <h2
-        class="text-base text-indigo-600 font-semibold tracking-wide uppercase"
+<section
+  class="md:h-screen"
+  id="features"
+  x-data="{ showFeatures: false }"
+  x-intersect.once="showFeatures = true; $el.classList.remove('md:h-screen')"
+>
+  <div
+    class="py-12 bg-white"
+    x-show="showFeatures"
+    x-transition:enter="transition transform ease-out duration-1000 "
+    x-transition:enter-start="opacity-0 scale-75"
+    x-transition:enter-end="opacity-100 scale-100"
+  >
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        class="lg:text-center"
+        x-show="showFeatures"
+        x-transition:enter="transition transform ease-out duration-1000 "
+        x-transition:enter-start="-translate-y-full"
+        x-transition:enter-end="translate-y-0 "
       >
-        Website
-      </h2>
-      <p
-        class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
-      >
-        A better way to have an online presence
-      </p>
-      <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-        Let me build your website with JavaScript: watch your traffic and
-        conversion rate skyrocket. Thanks to the power of modern frontend and
-        robust backend tools, I will bring your ideas to life.
-      </p>
-    </div>
+        <h2
+          class="text-base text-indigo-600 font-semibold tracking-wide uppercase"
+        >
+          Website
+        </h2>
+        <p
+          class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+        >
+          A better way to have an online presence
+        </p>
+        <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+          Let me build your website with JavaScript: watch your traffic and
+          conversion rate skyrocket. Thanks to the power of modern frontend and
+          robust backend tools, I will bring your ideas to life.
+        </p>
+      </div>
 
-    <div class="mt-10">
-      {% if features.features %}
-      <dl
-        class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10"
-      >
-        {% for item in features.features %}
-        <div class="relative">
-          <dt>
-            <div
-              class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
-            >
-              <!-- Heroicon name -->
-              <object
-                class="h-6 w-6"
-                data="{{item.iconUrl}}"
-                type="image/svg+xml"
-              ></object>
-            </div>
-            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
-              {{item.title}}
-            </p>
-          </dt>
-          <dd class="mt-2 ml-16 text-base text-gray-500">
-            {{item.description}}
-          </dd>
-        </div>
-        {% endfor %}
-      </dl>
-      {% endif %}
+      <div class="mt-10">
+        {% if features.features %}
+        <dl
+          class="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10"
+        >
+          {% for item in features.features %}
+          <div
+            class="relative"
+            x-show="showFeatures"
+            x-transition:enter="transform transition ease-in-out duration-1000"
+            x-transition:enter-start="rotate-90 scale-50"
+            x-transition:enter-end="rotate-0 scale-100"
+          >
+            <dt>
+              <div
+                class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+              >
+                <!-- Heroicon name -->
+                <object
+                  class="h-6 w-6"
+                  data="{{item.iconUrl}}"
+                  type="image/svg+xml"
+                ></object>
+              </div>
+              <p class="ml-16 text-lg leading-6 font-medium text-gray-900">
+                {{item.title}}
+              </p>
+            </dt>
+            <dd class="mt-2 ml-16 text-base text-gray-500">
+              {{item.description}}
+            </dd>
+          </div>
+          {% endfor %}
+        </dl>
+        {% endif %}
+      </div>
     </div>
   </div>
 </section>
