@@ -1,26 +1,20 @@
 module.exports = {
-  purge: {
-    mode: "all",
-    content: ["./**/*.html"],
-    options: {
-      whitelist: [],
-    },
-  },
+  mode: 'jit',
+  darkMode: false,
   theme: {
     container: {
       center: true,
+      padding: '1.5rem',
     },
-    extend: {
-      colors: {},
-      animation: {
-        "spin-slow": "spin 3s linear infinite",
-      },
+    debugScreens: {
+      position: ['bottom', 'right'],
     },
+    extend: {},
   },
-  variants: {
-    extend: {
-      borderRadius: ["last", "first"],
-    },
-  },
-  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
-};
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+    require('tailwindcss-debug-screens'),
+  ],
+  purge: ['./src/**/*.{html,js,md,njk,svg}'],
+}

@@ -4,9 +4,9 @@ var gulp = require("gulp");
 gulp.task("critical", async function (cb) {
   critical.generate({
     inline: true,
-    base: "_site/",
+    base: "dist/",
     src: "index.html",
-    css: ["static/css/style.css"],
+    css: ["assets/main.bundle.css"],
     dimensions: [
       {
         width: 320,
@@ -31,3 +31,12 @@ gulp.task("critical", async function (cb) {
     ignore: ["font-face"],
   });
 });
+
+// var gzip = require("gulp-gzip");
+
+// gulp.task("compress", function () {
+//   gulp
+//     .src("./dev/scripts/*.js")
+//     .pipe(gzip())
+//     .pipe(gulp.dest("./public/scripts"));
+// });

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/main.bundle.css">
+  <script src="/assets/main.bundle.js" defer></script>
+  <title>{{ title }} | Nicolas Sursock WebDev</title>
+  {% block head %}
+  {% if env.environment == "production" %}
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-C3CETTNJHN"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-C3CETTNJHN");
+  </script>
+  {% endif %}
+  {% endblock %}
+</head>
+<body hx-boost="true" class="{{ 'debug-screens' if env.devMode }}">
+  {% include './partials/banner.html' %}
+  {% block body %}
+    <div class="container py-8">
+      {{ content | safe }}
+    </div>
+  {% endblock %}
+  {% include 'footer.html' %}
+</body>
+</html>
