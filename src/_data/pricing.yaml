@@ -1,0 +1,38 @@
+---
+prices:
+  - mode: Pro Bono
+    price: $0
+    per: / Month
+    audience: For people trying to help the public
+    features:
+      - caption: Completely free
+      - caption: Stunning design
+      - caption: Modern stack
+      - caption: Cheap maintenance
+  - mode: MVP
+    price: $2k
+    per: / Week
+    audience: For people willing to test their ideas
+    features:
+      - caption: Stunning design
+      - caption: Modern stack
+      - caption: 24/7 maintenance
+      - caption: Flexible deploys
+  - mode: Website
+    price: $4k
+    per: / Week
+    audience: For people with a clear vision of the future
+    features:
+      - caption: Stunning design
+      - caption: Modern stack
+      - caption: 24/7 maintenance
+      - caption: Flexible deploys
+  - mode: Debug
+    price: $600
+    per: / Day
+    audience: For people looking to focus on important things
+    features:
+      - caption: Overtime friendly
+      - caption: JavaScript stacks
+      - caption: 24/7 availability
+      - caption: Discord communication
