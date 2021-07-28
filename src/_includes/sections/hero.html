@@ -105,15 +105,26 @@
         Bring them to life thanks to the website I will build for
         you. If you're not satisfied, I work for free!`,
       ],
-      typeSpeed: [100, 100, 20],
-      init() {
-        this.textArray.forEach((item, index) => {
-          let charIndex = 0
-          setInterval(() => {
+      typeSpeed: [150, 150, 75],
+
+      typeText(item, index) {
+        let charIndex = 0
+        return new Promise((resolve) => {
+          var func = setInterval(() => {
+            if (charIndex === item.length) {
+              clearInterval(func)
+              resolve('finished')
+            }
             this.text[index] = item.substring(0, charIndex)
             charIndex++
           }, this.typeSpeed[index])
         })
+      },
+
+      async init() {
+        for (let index = 0; index < this.textArray.length; index++) {
+          await this.typeText(this.textArray[index], index)
+        }
       },
     }
   }
