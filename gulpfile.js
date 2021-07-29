@@ -3,7 +3,9 @@ var uglify = require('gulp-terser')
 const { dest, src, task, series } = require('gulp')
 
 task('minify', async function (cb) {
-  src('dist/assets/main.bundle.js').pipe(uglify()).pipe(dest('dist/static/js'))
+  src('dist/assets/main.bundle.js')
+    .pipe(uglify())
+    .pipe(dest('dist/static/js'))
 })
 
 task('critical', async function (cb) {
@@ -18,6 +20,10 @@ task('critical', async function (cb) {
         height: 480,
       },
       {
+        width: 375,
+        height: 812,
+      },
+      {
         width: 768,
         height: 1024,
       },
@@ -27,11 +33,10 @@ task('critical', async function (cb) {
       },
     ],
     target: {
-      css: 'static/css/critical.css',
+      // css: 'static/css/crit.bundle.css',
       html: 'index.html',
-      uncritical: 'static/css/uncritical.css',
+      uncritical: 'static/css/rest.bundle.min.css',
     },
-    // minify: true,
     extract: false,
     ignore: ['font-face'],
   })
