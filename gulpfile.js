@@ -1,12 +1,17 @@
-var critical = require("critical");
-var gulp = require("gulp");
+var critical = require('critical')
+var uglify = require('gulp-terser')
+const { dest, src, task, series } = require('gulp')
 
-gulp.task("critical", async function (cb) {
+task('minify', async function (cb) {
+  src('dist/assets/main.bundle.js').pipe(uglify()).pipe(dest('dist/static/js'))
+})
+
+task('critical', async function (cb) {
   critical.generate({
     inline: true,
-    base: "dist/",
-    src: "index.html",
-    css: ["assets/main.bundle.css"],
+    base: 'dist/',
+    src: 'index.html',
+    css: ['assets/main.bundle.css'],
     dimensions: [
       {
         width: 320,
@@ -22,15 +27,17 @@ gulp.task("critical", async function (cb) {
       },
     ],
     target: {
-      css: "static/css/critical.css",
-      html: "index.html",
-      uncritical: "static/css/uncritical.css",
+      css: 'static/css/critical.css',
+      html: 'index.html',
+      uncritical: 'static/css/uncritical.css',
     },
     // minify: true,
     extract: false,
-    ignore: ["font-face"],
-  });
-});
+    ignore: ['font-face'],
+  })
+})
+
+task('build', series('minify', 'critical'))
 
 // var gzip = require("gulp-gzip");
 

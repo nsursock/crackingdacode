@@ -41,6 +41,7 @@
     "alpinejs": "^3.1.0",
     "critical": "^4.0.1",
     "gulp": "^4.0.2",
+    "gulp-terser": "^2.0.1",
     "htmx.org": "^1.4.1",
     "lazysizes": "^5.3.0"
   },
