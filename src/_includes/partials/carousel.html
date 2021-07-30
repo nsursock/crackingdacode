@@ -1,7 +1,7 @@
 <div class="py-8" x-data="dataCar()">
   <div class="max-w-4xl mx-auto relative">
     <!-- Slides -->
-    <div class="h-64 border-r border-l border-gray-300 relative overflow-x-hidden">
+    <div class="h-64 border-r border-l border-gray-300 relative">
       {% for slide in slides %}
       <div
         x-show="activeSlide === {{loop.index}}"
