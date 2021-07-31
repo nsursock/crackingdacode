@@ -1,7 +1,10 @@
 <div class="py-8" x-data="dataCar()">
   <div class="max-w-4xl mx-auto relative">
     <!-- Slides -->
-    <div class="h-64 border-r border-l border-gray-300 relative overflow-x-hidden">
+    <div
+      class="h-64 border-r border-l border-gray-300 relative overflow-x-hidden"
+      x-intersect.once="Array.from($el.querySelectorAll('img[data-src]')).forEach(element => element.src = element.dataset.src)"
+    >
       {% for slide in slides %}
       <div
         x-show="activeSlide === {{loop.index}}"
@@ -17,7 +20,6 @@
           class="object-cover w-full h-64"
           x-bind:data-src="'{{slide.url}}'"
           alt=""
-          x-intersect.once="$el.src = $el.dataset.src"
         />
 
         {% include "./modal.html" %}
@@ -119,9 +121,9 @@
     return {
       showModal: false,
       toggleModal() {
-        this.showModal = !this.showModal;
+        this.showModal = !this.showModal
       },
       activeSlide: 1,
-    };
-  };
+    }
+  }
 </script>
