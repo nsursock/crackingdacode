@@ -79,8 +79,19 @@
                 method="POST"
                 x-data="{disableSubmit: true,
               inputText: null}"
+                action="/?success-contact=true"
                 data-netlify="true"
+                data-netlify-honeypot="bot-field"
               >
+                <p class="hidden">
+                  <label id="contact-form-bot-label">
+                    Don't fill this out if you're human:
+                    <input
+                      name="bot-field"
+                      aria-labelledby="contact-form-bot-label"
+                    />
+                  </label>
+                </p>
                 <div class="">
                   <div class="px-4 py-5 bg-white md:p-6">
                     <div class="grid grid-cols-6 gap-6">
@@ -88,8 +99,9 @@
                         <label
                           for="first_name"
                           class="block text-sm font-medium text-gray-700"
-                          >First name</label
                         >
+                          First name
+                        </label>
                         <input
                           required
                           type="text"
@@ -104,8 +116,9 @@
                         <label
                           for="last_name"
                           class="block text-sm font-medium text-gray-700"
-                          >Last name</label
                         >
+                          Last name
+                        </label>
                         <input
                           required
                           type="text"
@@ -120,8 +133,9 @@
                         <label
                           for="email_address"
                           class="block text-sm font-medium text-gray-700"
-                          >Email</label
                         >
+                          Email
+                        </label>
                         <input
                           required
                           type="text"
@@ -136,7 +150,8 @@
                         <label
                           for="phone"
                           class="block text-sm font-medium text-gray-700 flex justify-between"
-                          >Phone
+                        >
+                          Phone
                           <span class="text-gray-500">Optional</span>
                         </label>
                         <input
@@ -152,8 +167,9 @@
                         <label
                           for="subject"
                           class="block text-sm font-medium text-gray-700"
-                          >Subject</label
                         >
+                          Subject
+                        </label>
                         <input
                           required
                           type="text"
@@ -224,8 +240,6 @@
                         </label>
                         <div class="mt-1">
                           <textarea
-                            x-model="inputText"
-                            @input="disableSubmit = inputText.split(' ').length < 5"
                             required
                             id="about"
                             name="about"
@@ -244,7 +258,29 @@
                   class="px-4 py-3 md:px-6"
                   data-netlify-recaptcha="true"
                 ></div> -->
-                  <div class="px-4 py-3 text-right md:px-6">
+                  <div
+                    class="px-4 py-3 md:px-6 md:w-1/2 text-right"
+                    x-data="{ n1: Math.round(Math.random() * 20), n2: Math.round(Math.random() * 20) }"
+                  >
+                    <label
+                      for="challenge"
+                      class="block text-sm font-medium text-gray-700 flex justify-between"
+                    >
+                      <span>Please answer this question</span>
+                      <span class="text-gray-500" x-text="`${n1} + ${n2} = `"></span>
+                    </label>
+                    <input
+                      x-model.number="inputText"
+                      @input="disableSubmit = inputText !== (n1 + n2)"
+                      required
+                      type="text"
+                      name="challenge"
+                      id="challenge"
+                      autocomplete="subject"
+                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm md:text-sm border-gray-300 rounded-md"
+                    />
+                  </div>
+                  <div class="px-4 py-3 md:px-6 text-right">
                     <button
                       :disabled="disableSubmit"
                       :class="{'opacity-50': disableSubmit}"
