@@ -253,37 +253,39 @@
                           </p>
                         </div>
                       </div>
+
+                      <div
+                        class="col-span-6 md:col-span-3"
+                        x-data="{ n1: Math.round(Math.random() * 10), n2: Math.round(Math.random() * 10) }"
+                      >
+                        <label
+                          for="challenge"
+                          class="block text-sm font-medium text-gray-700 flex justify-between"
+                        >
+                          <span>Question</span>
+                          <span
+                            class="text-gray-500"
+                            x-text="`${n1} + ${n2} = ?`"
+                          ></span>
+                        </label>
+                        <input
+                          x-model.number="inputText"
+                          @input="disableSubmit = inputText !== (n1 + n2)"
+                          required
+                          type="text"
+                          name="challenge"
+                          id="challenge"
+                          autocomplete="subject"
+                          class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm md:text-sm border-gray-300 rounded-md"
+                        />
+                      </div>
                     </div>
                   </div>
                   <!-- <div
                   class="px-4 py-3 md:px-6"
                   data-netlify-recaptcha="true"
                 ></div> -->
-                  <div
-                    class="px-4 py-3 md:px-6 md:w-1/2 text-right"
-                    x-data="{ n1: Math.round(Math.random() * 20), n2: Math.round(Math.random() * 20) }"
-                  >
-                    <label
-                      for="challenge"
-                      class="block text-sm font-medium text-gray-700 flex justify-between"
-                    >
-                      <span>Please answer this question</span>
-                      <span
-                        class="text-gray-500"
-                        x-text="`${n1} + ${n2} = ?`"
-                      ></span>
-                    </label>
-                    <input
-                      x-model.number="inputText"
-                      @input="disableSubmit = inputText !== (n1 + n2)"
-                      required
-                      type="text"
-                      name="challenge"
-                      id="challenge"
-                      autocomplete="subject"
-                      class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm md:text-sm border-gray-300 rounded-md"
-                    />
-                  </div>
+
                   <div class="px-4 py-3 md:px-6 text-right">
                     <button
                       :disabled="disableSubmit"
