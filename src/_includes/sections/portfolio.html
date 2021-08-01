@@ -1,7 +1,6 @@
 <section
   class="md:h-screen"
   id="case"
-  x-data="{ showPortfolio: false }"
   x-intersect.once="showPortfolio = true; $el.classList.remove('md:h-screen')"
 >
   <div
@@ -109,14 +108,17 @@
                       <span class="text-md text-gray-500">{{stat.title}}</span>
                       <span
                         class="text-indigo-600 text-2xl leading-8 font-extrabold tracking-tight md:text-3xl"
-                        >{{stat.descr}}
+                      >
+                        {{stat.descr}}
                       </span>
                     </div>
                     {% endfor %}
                   </aside>
 
                   <p class="mt-4 w-full text-md text-gray-500">
-                    {% for para in case.paragraphs %} {{para.text}}<br /><br />
+                    {% for para in case.paragraphs %} {{para.text}}
+                    <br />
+                    <br />
                     {% endfor %}
                   </p>
                 </div>
