@@ -2,14 +2,18 @@
 {% set title = 'Home' %}
 {% extends "layout.njk" %}
 {% block body %}
-<main>
+<main x-data="{
+  showFeatures: false,
+  showPortfolio: false,
+  showContact: false,
+  showCta: false
+}">
   {% include
     './_includes/sections/hero.html' %}
   {% include
     './_includes/sections/features.html' %}
   {% include
     './_includes/sections/portfolio.html' %}
-
   {% include
     './_includes/sections/contact.html' %}
   {% include
