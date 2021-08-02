@@ -8,18 +8,20 @@ Alpine.directive(
   (el, { expression, modifiers }, { evaluateLater, cleanup }) => {
     let evaluate = evaluateLater(expression)
 
-    let observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        // if (entry.intersectionRatio === 0) return
-        // entry.target.style.opacity = entry.intersectionRatio;
+    let observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          // if (entry.intersectionRatio === 0) return
+          // entry.target.style.opacity = entry.intersectionRatio;
 
-        console.log(entry.intersectionRatio)
-        if (entry.isIntersecting)
-          evaluate()
+          console.log(entry.intersectionRatio)
+          if (entry.isIntersecting) evaluate()
 
-        // modifiers.includes('once') && observer.disconnect()
-      })
-    })
+          // modifiers.includes('once') && observer.disconnect()
+        })
+      },
+      { root: null, threshold: 0.25 }
+    )
 
     observer.observe(el)
 
