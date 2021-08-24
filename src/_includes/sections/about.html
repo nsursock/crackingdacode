@@ -203,7 +203,13 @@
             class="p-10 pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full"
           >
             <div>
-              <picture>
+              <img
+                class="w-full p-10 m-10 shadow-xl rounded-3xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
+                alt="photo of musician and webdev Nicolas Sursock"
+                data-src="../../static/img/profile-desktop.jpg"
+                x-intersect.once="$el.src = $el.dataset.src"
+              />
+              <!-- <picture>
                 <source
                   media="(max-width: 768px)"
                   srcset="../../static/img/profile-mobile.jpg"
@@ -216,7 +222,7 @@
                   class="w-full p-10 m-10 shadow-xl rounded-3xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
                   alt="photo of musician and webdev Nicolas Sursock"
                 />
-              </picture>
+              </picture> -->
             </div>
           </div>
         </div>
