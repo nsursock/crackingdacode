@@ -1,22 +1,20 @@
-{# This page is built with nunjucks! #}
-{% set title = 'Home' %}
-{% extends "layout.njk" %}
-{% block body %}
-<main id="main" x-data="{
+{# This page is built with nunjucks! #} {% set title = 'Home' %} {% extends
+"layout.njk" %} {% block body %}
+<main
+  id="main"
+  x-data="{
   showFeatures: false,
+  showAbout: false,
   showPortfolio: false,
   showContact: false,
   showCta: false
-}">
-  {% include
-    './_includes/sections/hero.html' %}
-  {% include
-    './_includes/sections/features.html' %}
-  {% include
-    './_includes/sections/portfolio.html' %}
-  {% include
-    './_includes/sections/contact.html' %}
-  {% include
-    './_includes/sections/cta.html' %}
+}"
+>
+  {% include './_includes/sections/hero.html' %} {% include
+  './_includes/sections/features.html' %} {% include
+  './_includes/sections/about.html' %} {% include
+  './_includes/sections/portfolio.html' %} {% include
+  './_includes/sections/contact.html' %} {% include
+  './_includes/sections/cta.html' %}
 </main>
 {% endblock %}
