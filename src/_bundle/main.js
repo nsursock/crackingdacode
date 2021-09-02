@@ -7,26 +7,22 @@ Alpine.directive(
   'intersect',
   (el, { expression, modifiers }, { evaluateLater, cleanup }) => {
     let evaluate = evaluateLater(expression)
+    const threshold =
+      modifiers.find((mod) => mod.includes('ratio'))?.split('-')[1] ?? 0.25
 
     let observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          // if (entry.intersectionRatio === 0) return
-          // entry.target.style.opacity = entry.intersectionRatio;
-
-          console.log(entry.intersectionRatio)
           if (entry.isIntersecting) evaluate()
-
-          // modifiers.includes('once') && observer.disconnect()
+          // modifiers.includes('once') && observer.unobserve(el)
         })
       },
-      { root: null, threshold: 0.25 }
+      { root: null, threshold: threshold }
     )
-
     observer.observe(el)
 
     cleanup(() => {
-      observer.disconnect()
+      observer.unobserve(el)
     })
   }
 )
@@ -46,17 +42,17 @@ document.body.addEventListener('htmx:afterSwap', () => {
 })
 
 // Basic Store Example in Alpine.
-window.addEventListener('alpine:initializing', () => {
-  Alpine.store('nav', {
-    isOpen: false,
-    close() {
-      return (this.isOpen = false)
-    },
-    open() {
-      return (this.isOpen = true)
-    },
-    toggle() {
-      return (this.isOpen = !this.isOpen)
-    },
-  })
-})
+// window.addEventListener('alpine:initializing', () => {
+//   Alpine.store('nav', {
+//     isOpen: false,
+//     close() {
+//       return (this.isOpen = false)
+//     },
+//     open() {
+//       return (this.isOpen = true)
+//     },
+//     toggle() {
+//       return (this.isOpen = !this.isOpen)
+//     },
+//   })
+// })
