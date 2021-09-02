@@ -3,7 +3,7 @@
     <!-- Slides -->
     <div
       class="h-64 border-r border-l border-gray-300 relative overflow-x-hidden"
-      x-intersect.once="Array.from($el.querySelectorAll('img[data-src]')).forEach(element => element.src = element.dataset.src)"
+      x-intersect.once.ratio-0="Array.from($el.querySelectorAll('img[data-src]')).forEach(element => element.src = element.dataset.src)"
     >
       {% for slide in slides %}
       <div
@@ -14,7 +14,18 @@
         x-transition:leave="transition transform ease-in duration-500 absolute"
         x-transition:leave-start="opacity-100 translate-x-0"
         x-transition:leave-end="opacity-0 -translate-x-full"
-        class="font-bold text-5xl h-64 w-full flex items-center justify-center bg-indigo-500 text-white rounded-lg"
+        class="
+          font-bold
+          text-5xl
+          h-64
+          w-full
+          flex
+          items-center
+          justify-center
+          bg-indigo-500
+          text-white
+          rounded-lg
+        "
       >
         <img
           class="object-cover w-full h-64"
@@ -31,7 +42,22 @@
     <div class="absolute inset-0 flex">
       <div class="flex items-center justify-start w-1/2">
         <button
-          class="relative inline-flex items-center px-2 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:outline-none -ml-6"
+          class="
+            relative
+            inline-flex
+            items-center
+            px-2
+            py-2
+            rounded-md
+            border border-gray-300
+            bg-white
+            text-sm
+            font-medium
+            text-gray-500
+            hover:bg-gray-50
+            focus:outline-none
+            -ml-6
+          "
           x-on:click="activeSlide = activeSlide === 1 ? {{slides.length}} : activeSlide - 1"
         >
           <span class="sr-only">Previous</span>
@@ -53,7 +79,22 @@
       </div>
       <div class="flex items-center justify-end w-1/2">
         <button
-          class="relative inline-flex items-center px-2 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:outline-none -mr-6"
+          class="
+            relative
+            inline-flex
+            items-center
+            px-2
+            py-2
+            rounded-md
+            border border-gray-300
+            bg-white
+            text-sm
+            font-medium
+            text-gray-500
+            hover:bg-gray-50
+            focus:outline-none
+            -mr-6
+          "
           x-on:click="activeSlide = activeSlide === {{slides.length}} ? 1 : activeSlide + 1"
         >
           <span class="sr-only">Next</span>
@@ -81,7 +122,17 @@
       <button
         x-on:click="activeSlide = {{loop.index}}"
         aria-current="button"
-        class="relative inline-flex items-center px-4 py-2 text-sm font-medium border -mr-px"
+        class="
+          relative
+          inline-flex
+          items-center
+          px-4
+          py-2
+          text-sm
+          font-medium
+          border
+          -mr-px
+        "
         :class="{
               'z-10 bg-indigo-50 border-indigo-500 text-indigo-600': activeSlide === {{loop.index}},
               'bg-white border-gray-300 text-gray-500 hover:bg-gray-50': activeSlide !== {{loop.index}},
@@ -93,7 +144,22 @@
       </button>
       {% endfor %}
       <button
-        class="hidden m-2 md:inline-flex items-center px-3 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:outline-none"
+        class="
+          hidden
+          m-2
+          md:inline-flex
+          items-center
+          px-3
+          py-2
+          rounded-md
+          border border-gray-300
+          bg-white
+          text-sm
+          font-medium
+          text-gray-500
+          hover:bg-gray-50
+          focus:outline-none
+        "
         type="button"
         @click="toggleModal"
       >
