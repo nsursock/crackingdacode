@@ -1,26 +1,43 @@
 <section
   id="contact"
-  class="md:h-screen"
+  class="md:h-screen dark:bg-indigo-900"
   x-intersect.once="showContact = true; $el.classList.remove('md:h-screen')"
 >
   <div
-    class="py-12 bg-white"
+    class="py-12 bg-white dark:bg-indigo-900"
     x-show="showContact"
     x-transition:enter="transition transform ease-out duration-1000 "
     x-transition:enter-start="opacity-0 scale-75"
     x-transition:enter-end="opacity-100 scale-100"
   >
-    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-      <div class="relative bg-white overflow-hidden flex flex-col md:flex-row">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 dark:bg-indigo-900">
+      <div
+        class="
+          relative
+          bg-white
+          overflow-hidden
+          flex flex-col
+          md:flex-row
+          dark:bg-indigo-900
+        "
+      >
         <div
-          class="bg-indigo-600 p-5 md:w-2/5"
+          class="bg-indigo-600 py-5 px-7 md:w-2/5 rounded-lg"
           x-show="showContact"
           x-transition:enter="transition transform ease-out duration-1000 "
           x-transition:enter-start="-translate-x-full"
           x-transition:enter-end="translate-x-0"
         >
           <p
-            class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-100 md:text-4xl"
+            class="
+              mt-2
+              text-3xl
+              leading-8
+              font-extrabold
+              tracking-tight
+              text-gray-100
+              md:text-4xl
+            "
           >
             Let's work together
           </p>
@@ -65,14 +82,14 @@
           </span>
         </div>
         <div
-          class="m-5 md:w-3/5"
+          class="m-5 md:w-3/5 dark:bg-indigo-900"
           x-show="showContact"
           x-transition:enter="transition transform ease-out duration-1000 "
           x-transition:enter-start="translate-x-full"
           x-transition:enter-end="translate-x-0"
         >
-          <div class="mt-10 md:mt-0">
-            <div class="mt-5 md:mt-0">
+          <div class="mt-10 md:mt-0 dark:bg-indigo-900">
+            <div class="mt-5 md:mt-0 dark:bg-indigo-900">
               <form
                 name="contact"
                 method="POST"
@@ -90,13 +107,19 @@
                     />
                   </label>
                 </p>
-                <div class="">
-                  <div class="px-4 py-5 bg-white md:p-6">
+                <div class="dark:bg-indigo-900">
+                  <div class="px-4 py-5 bg-white md:p-6 dark:bg-indigo-900">
                     <div class="grid grid-cols-6 gap-6">
                       <div class="col-span-6 md:col-span-3">
                         <label
                           for="first_name"
-                          class="block text-sm font-medium text-gray-700"
+                          class="
+                            block
+                            text-sm
+                            font-medium
+                            text-gray-700
+                            dark:bg-indigo-900 dark:text-gray-200
+                          "
                         >
                           First name
                         </label>
@@ -106,14 +129,30 @@
                           name="first_name"
                           id="first_name"
                           autocomplete="given-name"
-                          class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm md:text-sm border-gray-300 rounded-md"
+                          class="
+                            mt-1
+                            focus:ring-indigo-500 focus:border-indigo-500
+                            block
+                            w-full
+                            shadow-sm
+                            md:text-sm
+                            border-gray-300
+                            rounded-md
+                            dark:text-gray-900
+                          "
                         />
                       </div>
 
                       <div class="col-span-6 md:col-span-3">
                         <label
                           for="last_name"
-                          class="block text-sm font-medium text-gray-700"
+                          class="
+                            block
+                            text-sm
+                            font-medium
+                            text-gray-700
+                            dark:bg-indigo-900 dark:text-gray-200
+                          "
                         >
                           Last name
                         </label>
@@ -123,14 +162,30 @@
                           name="last_name"
                           id="last_name"
                           autocomplete="family-name"
-                          class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm md:text-sm border-gray-300 rounded-md"
+                          class="
+                            mt-1
+                            focus:ring-indigo-500 focus:border-indigo-500
+                            block
+                            w-full
+                            shadow-sm
+                            md:text-sm
+                            border-gray-300
+                            rounded-md
+                            dark:text-gray-900
+                          "
                         />
                       </div>
 
                       <div class="col-span-6 md:col-span-3">
                         <label
                           for="email_address"
-                          class="block text-sm font-medium text-gray-700"
+                          class="
+                            block
+                            text-sm
+                            font-medium
+                            text-gray-700
+                            dark:bg-indigo-900 dark:text-gray-200
+                          "
                         >
                           Email
                         </label>
@@ -140,31 +195,67 @@
                           name="email_address"
                           id="email_address"
                           autocomplete="email"
-                          class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm md:text-sm border-gray-300 rounded-md"
+                          class="
+                            mt-1
+                            focus:ring-indigo-500 focus:border-indigo-500
+                            block
+                            w-full
+                            shadow-sm
+                            md:text-sm
+                            border-gray-300
+                            rounded-md
+                            dark:text-gray-900
+                          "
                         />
                       </div>
 
                       <div class="col-span-6 md:col-span-3">
                         <label
                           for="phone"
-                          class="block text-sm font-medium text-gray-700 flex justify-between"
+                          class="
+                            block
+                            text-sm
+                            font-medium
+                            text-gray-700
+                            flex
+                            justify-between
+                            dark:bg-indigo-900 dark:text-gray-200
+                          "
                         >
                           Phone
-                          <span class="text-gray-500">Optional</span>
+                          <span class="text-gray-500 dark:text-gray-200">
+                            Optional
+                          </span>
                         </label>
                         <input
                           type="text"
                           name="phone"
                           id="phone"
                           autocomplete="phone"
-                          class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm md:text-sm border-gray-300 rounded-md"
+                          class="
+                            mt-1
+                            focus:ring-indigo-500 focus:border-indigo-500
+                            block
+                            w-full
+                            shadow-sm
+                            md:text-sm
+                            border-gray-300
+                            rounded-md
+                            dark:text-gray-900
+                          "
                         />
                       </div>
 
                       <div class="col-span-6">
                         <label
                           for="subject"
-                          class="block text-sm font-medium text-gray-700"
+                          class="
+                            block
+                            text-sm
+                            font-medium
+                            text-gray-700
+                            dark:bg-indigo-900 dark:text-gray-200
+                          "
                         >
                           Subject
                         </label>
@@ -174,7 +265,17 @@
                           name="subject"
                           id="subject"
                           autocomplete="subject"
-                          class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm md:text-sm border-gray-300 rounded-md"
+                          class="
+                            mt-1
+                            focus:ring-indigo-500 focus:border-indigo-500
+                            block
+                            w-full
+                            shadow-sm
+                            md:text-sm
+                            border-gray-300
+                            rounded-md
+                            dark:text-gray-900
+                          "
                         />
                       </div>
                       <!-- <fieldset class="col-span-6">
@@ -231,10 +332,21 @@
                       <div class="col-span-6" x-data="{ count: 0 }">
                         <label
                           for="about"
-                          class="block text-sm font-medium text-gray-700 flex justify-between"
+                          class="
+                            block
+                            text-sm
+                            font-medium
+                            text-gray-700
+                            flex
+                            justify-between
+                            dark:bg-indigo-900 dark:text-gray-200
+                          "
                         >
                           Message
-                          <span class="text-gray-500" x-text="`${count} of max. 250 words`"></span>
+                          <span
+                            class="text-gray-500 dark:text-gray-200"
+                            x-text="`${count} of max. 250 words`"
+                          ></span>
                         </label>
                         <div class="mt-1">
                           <textarea
@@ -244,10 +356,26 @@
                             id="about"
                             name="about"
                             rows="5"
-                            class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full md:text-sm border border-gray-300 rounded-md"
+                            class="
+                              shadow-sm
+                              focus:ring-indigo-500 focus:border-indigo-500
+                              mt-1
+                              block
+                              w-full
+                              md:text-sm
+                              border border-gray-300
+                              rounded-md
+                              dark:text-gray-900
+                            "
                             placeholder=""
                           ></textarea>
-                          <p class="mt-2 text-sm text-gray-500">
+                          <p
+                            class="
+                              mt-2
+                              text-sm text-gray-500
+                              dark:text-gray-200
+                            "
+                          >
                             Please mention your budget and your deadline.
                           </p>
                         </div>
@@ -259,11 +387,19 @@
                       >
                         <label
                           for="challenge"
-                          class="block text-sm font-medium text-gray-700 flex justify-between"
+                          class="
+                            block
+                            text-sm
+                            font-medium
+                            text-gray-700
+                            flex
+                            justify-between
+                            dark:bg-indigo-900 dark:text-gray-200
+                          "
                         >
                           <span>Question</span>
                           <span
-                            class="text-gray-500"
+                            class="text-gray-500 dark:text-gray-200"
                             x-text="`${n1} + ${n2} = ?`"
                           ></span>
                         </label>
@@ -275,7 +411,17 @@
                           name="challenge"
                           id="challenge"
                           autocomplete="subject"
-                          class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm md:text-sm border-gray-300 rounded-md"
+                          class="
+                            mt-1
+                            focus:ring-indigo-500 focus:border-indigo-500
+                            block
+                            w-full
+                            shadow-sm
+                            md:text-sm
+                            border-gray-300
+                            rounded-md
+                            dark:text-gray-900
+                          "
                         />
                       </div>
                     </div>
@@ -290,7 +436,24 @@
                       :disabled="disableSubmit"
                       :class="{'opacity-50': disableSubmit}"
                       type="submit"
-                      class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      class="
+                        inline-flex
+                        justify-center
+                        py-2
+                        px-4
+                        border border-transparent
+                        shadow-sm
+                        text-sm
+                        font-medium
+                        rounded-md
+                        text-white
+                        bg-indigo-600
+                        hover:bg-indigo-700
+                        focus:outline-none
+                        focus:ring-2
+                        focus:ring-offset-2
+                        focus:ring-indigo-500
+                      "
                     >
                       Send
                     </button>

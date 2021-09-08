@@ -1,6 +1,6 @@
 module.exports = {
   mode: 'jit',
-  darkMode: false,
+  darkMode: 'media',
   theme: {
     container: {
       center: true,
@@ -11,7 +11,7 @@ module.exports = {
     },
     extend: {
       animation: {
-        "spin-slow": "spin 3s linear infinite",
+        'spin-slow': 'spin 3s linear infinite',
       },
     },
   },

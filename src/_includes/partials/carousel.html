@@ -2,7 +2,14 @@
   <div class="max-w-4xl mx-auto relative">
     <!-- Slides -->
     <div
-      class="h-64 border-r border-l border-gray-300 relative overflow-x-hidden"
+      class="
+        h-64
+        border-r border-l
+        dark:border-none
+        border-gray-300
+        relative
+        overflow-x-hidden
+      "
       x-intersect.once.ratio-0="Array.from($el.querySelectorAll('img[data-src]')).forEach(element => element.src = element.dataset.src)"
     >
       {% for slide in slides %}
@@ -28,7 +35,7 @@
         "
       >
         <img
-          class="object-cover w-full h-64"
+          class="object-cover w-full h-64 rounded-lg"
           x-bind:data-src="'{{slide.url}}'"
           alt=""
         />
