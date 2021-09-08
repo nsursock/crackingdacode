@@ -14,7 +14,7 @@ Alpine.directive(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) evaluate()
-          modifiers.includes('once') && observer.unobserve(el)
+          // modifiers.includes('once') && observer.unobserve(el)
         })
       },
       { root: null, threshold: threshold }
