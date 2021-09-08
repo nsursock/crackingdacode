@@ -13,7 +13,17 @@
   x-show="showModal"
 >
   <div
-    class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center md:block md:p-0"
+    class="
+      flex
+      items-end
+      justify-center
+      min-h-screen
+      pt-4
+      px-4
+      pb-20
+      text-center
+      md:block md:p-0
+    "
   >
     <!--
       Background overlay, show/hide based on modal state.
@@ -33,7 +43,13 @@
       x-transition:leave="transition transform ease-in duration-500 "
       x-transition:leave-start="opacity-100 "
       x-transition:leave-end="opacity-0 "
-      class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+      class="
+        fixed
+        inset-0
+        bg-gray-500 bg-opacity-75
+        transition-opacity
+        backdrop-filter backdrop-blur
+      "
       aria-hidden="true"
     ></div>
 
@@ -41,8 +57,9 @@
     <span
       class="hidden md:inline-block md:align-middle md:h-screen"
       aria-hidden="true"
-      >&#8203;</span
     >
+      &#8203;
+    </span>
 
     <!--
       Modal panel, show/hide based on modal state.
@@ -55,7 +72,18 @@
         To: "opacity-0 translate-y-4 md:translate-y-0 md:scale-95"
     -->
     <div
-      class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all md:my-8 md:align-middle md:w-4/5 md:h-full"
+      class="
+        inline-block
+        align-bottom
+        bg-white
+        rounded-lg
+        text-left
+        overflow-hidden
+        shadow-xl
+        transform
+        transition-all
+        md:my-8 md:align-middle md:w-4/5 md:h-full
+      "
       @click.outside="toggleModal"
       x-show="showModal"
       x-transition:enter="transition transform ease-out duration-500 "
@@ -67,11 +95,7 @@
     >
       <div class="bg-white px-4 pt-5 pb-4 md:p-6 md:pb-4">
         <div class="md:flex md:items-start">
-          <img
-            class=""
-            x-bind:data-src="'{{slide.url}}'"
-            alt=""
-          />
+          <img class="" x-bind:data-src="'{{slide.url}}'" alt="" />
         </div>
       </div>
     </div>

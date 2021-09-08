@@ -1,10 +1,17 @@
 <section
-  class="md:h-screen"
+  class="md:h-screen dark:bg-indigo-900 dark:text-gray-200"
   id="about"
   x-intersect.once="showAbout = true; $el.classList.remove('md:h-screen')"
 >
   <div
-    class="relative pt-16 pb-32 overflow-hidden bg-white"
+    class="
+      relative
+      pt-16
+      pb-32
+      overflow-hidden
+      bg-white
+      dark:bg-indigo-900 dark:text-gray-200
+    "
     x-show="showAbout"
     x-transition:enter="transition transform ease-out duration-1000 "
     x-transition:enter-start="opacity-0 "
@@ -63,11 +70,23 @@
                 x-transition:enter-end="translate-y-0"
               >
                 <h2
-                  class="text-3xl font-extrabold tracking-tight text-gray-900"
+                  class="
+                    text-3xl
+                    font-extrabold
+                    tracking-tight
+                    text-gray-900
+                    dark:bg-indigo-900 dark:text-gray-200
+                  "
                 >
                   About
                 </h2>
-                <p class="mt-4 text-lg text-gray-500">
+                <p
+                  class="
+                    mt-4
+                    text-lg text-gray-500
+                    dark:bg-indigo-900 dark:text-gray-200
+                  "
+                >
                   I'm Nicolas Sursock, a 40-year old engineer living in Paris
                   and Beirut. I love web development and design but I also have
                   a passion for music, sports, philosophy and health. I listen
@@ -102,7 +121,16 @@
                     <polyline points="17 8 21 12 17 16"></polyline>
                     <line x1="14" y1="4" x2="10" y2="20"></line>
                   </svg>
-                  <p class="text-lg font-medium text-gray-900 ml-7 leading-6">
+                  <p
+                    class="
+                      text-lg
+                      font-medium
+                      text-gray-900
+                      ml-7
+                      leading-6
+                      dark:bg-indigo-900 dark:text-gray-200
+                    "
+                  >
                     HTML5, CSS3, JS ES6+
                   </p>
                 </span>
@@ -131,7 +159,16 @@
                     <line x1="16" y1="20" x2="16" y2="21"></line>
                   </svg>
 
-                  <p class="text-lg font-medium text-gray-900 ml-7 leading-6">
+                  <p
+                    class="
+                      text-lg
+                      font-medium
+                      text-gray-900
+                      ml-7
+                      leading-6
+                      dark:bg-indigo-900 dark:text-gray-200
+                    "
+                  >
                     React, Vue, Alpine, Tailwind, Redux
                   </p>
                 </span>
@@ -153,7 +190,16 @@
                     <path d="M4 6v6a8 3 0 0 0 16 0v-6"></path>
                     <path d="M4 12v6a8 3 0 0 0 16 0v-6"></path>
                   </svg>
-                  <p class="text-lg font-medium text-gray-900 ml-7 leading-6">
+                  <p
+                    class="
+                      text-lg
+                      font-medium
+                      text-gray-900
+                      ml-7
+                      leading-6
+                      dark:bg-indigo-900 dark:text-gray-200
+                    "
+                  >
                     Node, Express, Mongo, Postgre, Firebase
                   </p>
                 </span>
@@ -175,7 +221,16 @@
                     <line x1="7" y1="7" x2="7" y2="17"></line>
                     <line x1="4" y1="8" x2="4" y2="16"></line>
                   </svg>
-                  <p class="text-lg font-medium text-gray-900 ml-7 leading-6">
+                  <p
+                    class="
+                      text-lg
+                      font-medium
+                      text-gray-900
+                      ml-7
+                      leading-6
+                      dark:bg-indigo-900 dark:text-gray-200
+                    "
+                  >
                     Prisma, Mongoose, Stripe, React Query
                   </p>
                 </span>
@@ -228,6 +283,7 @@
             <div>
               <img
                 class="
+                  dark:bg-gray-200
                   w-full
                   p-10
                   m-10
@@ -236,7 +292,7 @@
                   ring-1 ring-black ring-opacity-5
                   lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none
                 "
-                alt="photo of musician and webdev Nicolas Sursock"
+                alt="Photo of musician and webdev Nicolas Sursock"
                 data-src="../../static/img/profile-desktop.jpg"
                 x-intersect.once.ratio-0="$el.src = $el.dataset.src"
               />
