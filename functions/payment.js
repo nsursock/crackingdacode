@@ -1,8 +1,11 @@
 const stripe = require('stripe')(
-  process.env.EXPRESS_STRIPE_KEY ||
-    'sk_test_51JFiNrAfmGj15aPlIe0B1WTAbiChENOkQnnOfdrL8TnGuplrVLnxq18XrvAQn3HMLEqB09SqL2deOyI9wFTaEpEd00IUUpKLKh'
+  (process.env.NODE_ENV || 'development').startsWith('prod')
+    ? process.env.EXPRESS_STRIPE_KEY
+    : 'sk_test_51JFiNrAfmGj15aPlIe0B1WTAbiChENOkQnnOfdrL8TnGuplrVLnxq18XrvAQn3HMLEqB09SqL2deOyI9wFTaEpEd00IUUpKLKh'
 )
-const YOUR_DOMAIN = process.env.EXPRESS_FRONTEND_URL || 'http://localhost:8888'
+const YOUR_DOMAIN = (process.env.NODE_ENV || 'development').startsWith('prod')
+  ? process.env.EXPRESS_FRONTEND_URL
+  : 'http://localhost:8888'
 
 exports.handler = async function (event, context) {
   const { currency, amount } = JSON.parse(event.body)

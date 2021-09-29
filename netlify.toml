@@ -2,3 +2,6 @@
 command = "cd functions && yarn install && cd .. && yarn build && gulp build"
 functions = "functions"
 publish = "dist"
+
+[[plugins]]
+package = "netlify-plugin-inline-functions-env"
