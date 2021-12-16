@@ -1,3 +1,4 @@
+const { strictEqual } = require('assert')
 const yaml = require('js-yaml')
 
 module.exports = (config) => {
@@ -22,6 +23,10 @@ module.exports = (config) => {
   //   './assets/main.bundle.js': './static/js/main.bundle.js',
   // })
   config.addPassthroughCopy('./src/static/img')
+
+  config.addFilter("split", function (str, sep) { 
+     return (str+'').split(sep);
+   });
 
   return {
     dir: {

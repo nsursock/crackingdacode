@@ -1,5 +1,5 @@
 [build]
-command = "cd functions && yarn install && cd .. && yarn build && gulp build"
+command = "yarn build && gulp build"
 functions = "functions"
 publish = "dist"
 

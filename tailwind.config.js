@@ -20,5 +20,8 @@ module.exports = {
     require('@tailwindcss/typography'),
     require('tailwindcss-debug-screens'),
   ],
-  purge: ['./src/**/*.{html,js,md,njk,svg}'],
+  purge: {
+    content: ['./src/**/*.{html,js,md,njk,svg}'],
+    enabled: process.env.NODE_ENV.startsWith('prod')
+  },
 }
