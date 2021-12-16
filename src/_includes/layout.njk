@@ -1,49 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta
-    name="description"
-    content="Freelance web developer based in Paris and Beirut for hire today"
-  >
-  <meta name="author" content="Nicolas Sursock">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/assets/main.bundle.css">
-  {% if env.environment == "production" %}
-  <script src="/static/js/main.bundle.js" defer></script>
-  {% else %}
-  <script src="/assets/main.bundle.js" defer></script>
-  {% endif %}
-  <title>{{ title }} | Nicolas Sursock WebDev</title>
-  {% block head %}
-  {% if env.environment == "production" %}
-  <script defer
-    data-domain="nicolas-sursock-webdev.netlify.app"
-    src="https://plausible.io/js/plausible.js"
-  ></script>
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-C3CETTNJHN"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-    gtag("config", "G-C3CETTNJHN");
-    gtag('config', 'AW-824380923');
-  </script>
-  {% endif %}
-  {% endblock %}
-</head>
-<body hx-boost="true" class="{{ 'debug-screens' if env.devMode }}">
-  {% include './partials/banner.html' %}
-  {% block body %}
-    <div class="container py-8">
-      {{ content | safe }}
-    </div>
-  {% endblock %}
-  {% include 'footer.html' %}
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Freelance web developer based in Paris and Beirut for hire today">
+    <meta name="author" content="Nicolas Sursock">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/main.bundle.css">
+    {% if env.environment == "production" %}
+      <script src="/static/js/main.bundle.js" defer></script>
+    {% else %}
+      <script src="/assets/main.bundle.js" defer></script>
+    {% endif %}
+    <title>{{ title }} | Nicolas Sursock WebDev</title>
+    {% block head %}
+      {% if env.environment == "production" %}
+        <script defer data-domain="nicolas-sursock-webdev.netlify.app" src="https://plausible.io/js/plausible.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-C3CETTNJHN"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+          gtag("config", "G-C3CETTNJHN");
+          gtag('config', 'AW-824380923');
+        </script>
+      {% endif %}
+    {% endblock %}
+  </head>
+  <body hx-boost="true" class="{{ 'debug-screens' if env.devMode }}">
+    {% include './partials/banner.html' %}
+    {% block body %}
+      <div class="container py-8">
+        {{ content | safe }}
+      </div>
+    {% endblock %}
+    {% include 'footer.html' %}
+  </body>
 </html>
