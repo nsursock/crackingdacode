@@ -86,11 +86,12 @@
         </div>
       </div>
       <div class="flex flex-col md:flex-row">
-        <aside class="px-4  md:w-1/5 hidden h-screen sticky top-0 md:flex items-center justify-center flex-col"></aside>
+        <aside class="px-4  lg:w-1/5 hidden h-screen sticky top-0 lg:flex items-center justify-center flex-col"></aside>
         <div class="container py-8 prose lg:prose-xl md:w-3/5">
           {{ content | safe }}
         </div>
-        <aside class="order-first md:order-none pl-7 pr-10 md:w-1/5 md:h-screen md:sticky md:top-0 md:flex flex-col justify-center">
+        <aside class="order-first md:order-none pl-7 pr-10 w-2/5 lg:w-1/5 md:h-screen md:sticky md:top-0 md:flex flex-col
+            xl:justify-center">
           <img class="m-2 rounded-full" src="../../static/img/{{ author }}.jpg" alt=""/>
           <h2 class=" text-base text-indigo-600 font-semibold tracking-wide uppercase ">
             Written by
@@ -151,7 +152,7 @@
               {{ date.toLocaleString() }}
             </div>
           </div>
-          <p class="hidden md:block mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto dark:bg-indigo-900 dark:text-gray-200 ">
+          <p class="hidden xl:block mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto dark:bg-indigo-900 dark:text-gray-200 ">
             {{ description }}
           </p>
           <div class="flex items-center justify-center m-5">
