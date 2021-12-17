@@ -11,6 +11,7 @@ main_tag: Philosophy
 opt_tags: Education,World
 tags: blog
 layout: blogout.njk
+affiliate_link: https://apple.co/3mcIB88
 ---
 
 I hear you: if you feel entirely messed up, it's because of intolerance. Whether you run a country, a city, a sports club, or you're just confused in your head, then this post is for you.

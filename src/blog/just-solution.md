@@ -11,6 +11,7 @@ main_tag: Life
 opt_tags: Business,Self Improvement,Humor,Wellness
 tags: blog
 layout: blogout.njk
+affiliate_link: https://apple.co/3md2ufc
 ---
 
 Based on a song from Radiohead, I think a just solution is a relaxing one for every trouble we have. For example, at the moment, I have a problem with women. I had a horrible experience with one girl and ended up almost ruined and almost alone.

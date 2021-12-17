@@ -11,6 +11,7 @@ main_tag: Health
 opt_tags: Future,Wellness,Culture
 tags: blog
 layout: blogout.njk
+affiliate_link: https://apple.co/3E4aHZm
 ---
 
 You can try to run away from the pain. But it might come back with more seriousness after. Maybe the best thing to do is to be cautious.

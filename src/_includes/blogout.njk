@@ -156,30 +156,64 @@
             {{ description }}
           </p>
           <div class="flex items-center justify-center m-5">
-            <button
-              aria-current="button"
+            <a
+              target="_blank"
+              href="https://www.facebook.com/sharer/sharer.php?u=https://nsursock.netlify.app{{ page.url }}"
               class="rounded-l-lg relative inline-flex items-center p-3 text-sm font-medium border bg-white border-gray-300
                 text-gray-500 hover:bg-gray-50">
-              <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="24" height="24">
-                <path fill="none" d="M0 0h24v24H0z"/>
-                <path d="M15.402 21v-6.966h2.333l.349-2.708h-2.682V9.598c0-.784.218-1.319 1.342-1.319h1.434V5.857a19.19 19.19 0 0
-                0-2.09-.107c-2.067 0-3.482 1.262-3.482 3.58v1.996h-2.338v2.708h2.338V21H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h16a1 1 0 0 1 1
-                1v16a1 1 0 0 1-1 1h-4.598z"/>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-brand-facebook"
+                width="24"
+                height="24"
+                viewbox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"></path>
               </svg>
-            </button>
-            <button
-              aria-current="button"
-              class="rounded-r-lg -ml-px relative inline-flex items-center p-3 text-sm font-medium border bg-white border-gray-300
-                text-gray-500 hover:bg-gray-50">
-              <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" width="24" height="24">
-                <path fill="none" d="M0 0h24v24H0z"/>
-                <path d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0
-                0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0
-                1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0
-                1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0
-                2.087-2.165z"/>
+            </a>
+            <a
+              target="_blank"
+              href="https://twitter.com/intent/tweet?url=https://nsursock.netlify.app{{ page.url }}"
+              class=" -ml-px relative inline-flex items-center p-3 text-sm font-medium border bg-white border-gray-300 text-gray-500
+                hover:bg-gray-50">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon icon-tabler icon-tabler-brand-twitter"
+                width="24"
+                height="24"
+                viewbox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135
+                  -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522
+                  -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"></path>
               </svg>
-            </button>
+            </a>
+            <a target="_blank" href="{{ affiliate_link }}" class="rounded-r-lg -ml-px relative inline-flex items-center p-3 text-sm font-medium border bg-white border-gray-300
+                                text-gray-500 hover:bg-gray-50">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6 stroke-current"
+                fill="none"
+                viewbox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2
+                    1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+              </svg>
+            </a>
           </div>
         </aside>
       </div>
