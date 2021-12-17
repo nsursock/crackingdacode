@@ -4,7 +4,7 @@ title2: Your Heart Is Broken?
 description: The best thing to do when your heart is broken is to do something crazy and absolutely wrong. Because you could wait for the miracle for a long time.
 author: Nicolas Sursock
 date: 2020-07-18T18:52:03Z
-time: 4m 44s
+time: 3m 42s
 location: Beirut, Lebanon
 featured: https://images.unsplash.com/photo-1516822003754-cca485356ecb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80
 main_tag: Health
