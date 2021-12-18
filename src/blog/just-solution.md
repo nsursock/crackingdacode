@@ -1,7 +1,7 @@
 ---
 title: What Do You Mean A
 title2: Just Solution?
-description: Business is about solving problems. You have a burning issue and someone will find a way. What could be the hint for humanity to become the best version of itself?
+description: Business is about solving problems. You have a burning issue and someone will find a cure. So, what's the hint for humanity to become the best version of itself?
 author: Nicolas Sursock
 date: 2019-06-09T14:32:01Z
 time: 4m 14s

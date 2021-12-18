@@ -1,7 +1,7 @@
 ---
 title: What If Intolerance Was
 title2: The Ugly Baby Of Ignorance?
-description: Can we tolerate everything, even the most disturbing thoughts, stories or ideas? One striking insight was that the last time I was sober I couldn't tolerate anymore the mess.
+description: Can we tolerate everything, even the most disturbing thoughts, stories or ideas? The last time I was sober I couldn't tolerate anymore the mess we're in.
 author: Nicolas Sursock
 date: 2019-12-18T11:50:33Z
 time: 4m 09s
