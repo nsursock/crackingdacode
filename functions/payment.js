@@ -12,7 +12,7 @@ exports.handler = async function (event, context) {
         price_data: {
           currency: currency,
           product_data: {
-            name: 'WebDev - Nicolas Sursock',
+            name: 'Sursock Labs',
             images: ['https://source.unsplash.com/500x500/?abstract'],
           },
           unit_amount: amount * 100,
