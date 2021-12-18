@@ -3,6 +3,9 @@ import 'htmx.org'
 import 'lazysizes'
 // import intersect from '@alpinejs/intersect'
 
+// import moment from '@victoryoalli/alpinejs-moment'
+// Alpine.plugin(moment)
+
 Alpine.directive(
   'intersect',
   (el, { expression, modifiers }, { evaluateLater, cleanup }) => {

@@ -32,10 +32,10 @@
       <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0 space-x-1">
         <div x-data="{symbol: '$'}">
           <label
-            for="price"
+            for="amount"
             class="block text-sm font-medium text-gray-700 hidden"
           >
-            Price
+            Amount
           </label>
           <div class="relative">
             <div
@@ -58,8 +58,8 @@
             <input
               x-model.number="amount"
               type="text"
-              name="price"
-              id="price"
+              name="amount"
+              id="amount"
               class="
                 ml-2
                 inline-flex
@@ -136,12 +136,14 @@
               hover:bg-indigo-700
             "
           >
-            <template x-if="!isFetching">
-              <span>Pay</span>
+            <template
+              x-if="!isFetching && !(document.getElementById('pay-button') || false)"
+            >
+              <span id="pay-button">Pay</span>
             </template>
             <template x-if="isFetching">
               <svg
-                class="animate-spin-slow h-5 w-5 text-white"
+                class="animate-spin h-5 w-5 text-white"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
@@ -186,6 +188,7 @@
     function dataCta() {
       return {
         isFetching: false,
+        isPresent: false,
         amount: 3,
         currency: 'USD',
         stripe: null,
@@ -200,7 +203,7 @@
 
           this.isFetching = true
           fetch('/.netlify/functions/payment', {
-          // fetch('{{env.apiUrl}}' + '/payment', {
+            // fetch('{{env.apiUrl}}' + '/payment', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
