@@ -1,7 +1,13 @@
 const { strictEqual } = require('assert')
 const yaml = require('js-yaml')
+const format = require('date-fns/format')
 
 module.exports = (config) => {
+
+  config.addFilter('date', function (date, dateFormat) {
+    return format(date, dateFormat)
+  })
+
   config.addPassthroughCopy({ public: './' })
   config.setBrowserSyncConfig({
     files: ['dist/**/*'],
