@@ -542,7 +542,12 @@
       "
     >
       <a href="{{ post.url }}">
-        <img class="rounded-t-lg" src="{{ post.data.featured}}" alt="" />
+        <img
+          class="rounded-t-lg"
+          data-src="{{ post.data.featured}}"
+          alt=""
+          x-intersect.once.ratio-0="$el.src = $el.dataset.src"
+        />
         <div class="flex flex-col p-7 divide-y divide-gray-300 justify-between">
           <div class="">
             <h2
