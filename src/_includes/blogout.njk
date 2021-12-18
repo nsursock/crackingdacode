@@ -28,7 +28,7 @@
       {% endif %}
     {% endblock %}
   </head>
-  <body hx-boost="true" class="{{ 'debug-screens' if env.devMode }}">
+  <body hx-boost="true" class="{{ 'debug-screens' if env.devMode }}" x-data="{ showCta: false }">
     {% if page.url != '/' %}
       {% include './header.html' %}
     {% endif %}
@@ -223,7 +223,7 @@
         </aside>
       </div>
     {% endblock %}
-    {% include 'sections/cta2.html' %}
+    {% include 'sections/cta.html' %}
     {% include 'footer.html' %}
   </body>
 </html>

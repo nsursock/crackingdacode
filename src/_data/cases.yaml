@@ -16,10 +16,10 @@ cases:
       - title: Communication
         descr: Axios
     images:
-      - url: ../static/img/tms/social.jpg
-      - url: ../static/img/tms/rating.jpg
-      - url: ../static/img/tms/users.jpg
-      - url: ../static/img/tms/graph.jpg
+      - url: /static/img/tms/social.jpg
+      - url: /static/img/tms/rating.jpg
+      - url: /static/img/tms/users.jpg
+      - url: /static/img/tms/graph.jpg
     paragraphs:
       - text: This project was simple at the beginning. The MVP should allow you to rate songs and let your friends discover what grade you gave to which song. As time went by, the expectations went up and the future of the website is to be a music hub.
       - text: At first, I hesitated to use the MEAN stack but later I decided to use Vue instead of Angular. Vue has a great community and was used in tutorials by the creators of Tailwind CSS. The UI uses free components from and is inspired by TailwindUI, an interesting component library.
@@ -36,11 +36,11 @@ cases:
       - title: Communication
         descr: Apollo
     images:
-      - url: ../static/img/ss/adverts.jpg
-      - url: ../static/img/ss/preview.jpg
-      - url: ../static/img/ss/details.jpg
-      - url: ../static/img/ss/form.jpg
-      - url: ../static/img/ss/login.jpg
+      - url: /static/img/ss/adverts.jpg
+      - url: /static/img/ss/preview.jpg
+      - url: /static/img/ss/details.jpg
+      - url: /static/img/ss/form.jpg
+      - url: /static/img/ss/login.jpg
     paragraphs:
       - text: Another project I did was to build a job board. I was spending so much time looking for a job that I felt I could do a side project to create a stunning UI so that candidates and recruiters could feel at home here.
       - text: I decided to use React to code the app because it was an industry standard. So many people use React that I felt it was a nice addition to my resume. I also had plans of using Next to make the website blazing fast. The Jamstack is gaining popularity these days.

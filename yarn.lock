@@ -1977,7 +1977,7 @@
   resolved "https://registry.yarnpkg.com/@ungap/from-entries/-/from-entries-0.2.1.tgz#7e86196b8b2e99d73106a8f25c2a068326346354"
   integrity sha512-CAqefTFAfnUPwYqsWHXpOxHaq1Zo5UQ3m9Zm2p09LggGe57rqHoBn3c++xcoomzXKynAUuiBMDUCQvKMnXjUpA==
 
-"@vue/reactivity@^3.0.2":
+"@vue/reactivity@~3.1.1":
   version "3.1.5"
   resolved "https://registry.yarnpkg.com/@vue/reactivity/-/reactivity-3.1.5.tgz#dbec4d9557f7c8f25c2635db1e23a78a729eb991"
   integrity sha512-1tdfLmNjWG6t/CsPldh+foumYFo3cpyCHgBYQ34ylaMsJ+SNHQ1kApMIa8jN+i593zQuaw3AdWH0nJTARzCFhg==
@@ -2098,12 +2098,12 @@ all-node-versions@^8.0.0:
     semver "^7.3.2"
     write-file-atomic "^3.0.3"
 
-alpinejs@^3.1.0:
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-3.2.2.tgz#3feaa479671212788d9c6716c85dc19f8255c999"
-  integrity sha512-XkQKikB4tJTLIQuRUeF86CZnvmAKhjGzw5lmMri+7MTQzz77DTetuOqldBWjEgdJ/DOExXuiM57rQwWfBPdMPA==
+alpinejs@^3.7.0:
+  version "3.7.0"
+  resolved "https://registry.yarnpkg.com/alpinejs/-/alpinejs-3.7.0.tgz#5aa4d286e69c2772b32be335129e81cac074a4ef"
+  integrity sha512-FL+DHOsO5gfE2YZqKoXUrNEOoaZnxta4Z+eZvJU6KEAwCW1ZnDEppUJ1Yo6MIBKLrVbB0ZnWphJyotX9khkm6A==
   dependencies:
-    "@vue/reactivity" "^3.0.2"
+    "@vue/reactivity" "~3.1.1"
 
 ansi-align@^3.0.0:
   version "3.0.0"
