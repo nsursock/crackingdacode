@@ -83,16 +83,9 @@
         </div>
         <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
           <picture>
-            <source
-              media="(max-width: 799px)"
-              srcset="{{ featured.replace('1080', '320') }}"/>
-            <source
-              media="(min-width: 800px)"
-              srcset="{{ featured }}"/>
-            <img
-              class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-              src="{{ featured }}"
-              alt=""/>
+            <source media="(max-width: 799px)" srcset="{{ featured.replace('1080', '320') }}"/>
+            <source media="(min-width: 800px)" srcset="{{ featured }}"/>
+            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="{{ featured }}" alt=""/>
           </picture>
         </div>
       </div>
@@ -173,6 +166,7 @@
             </p>
             <div class="flex items-center justify-center m-5">
               <a
+                rel="noopener"
                 target="_blank"
                 href="https://www.facebook.com/sharer/sharer.php?u=https://nsursock.netlify.app{{ page.url }}"
                 class="rounded-l-lg relative inline-flex items-center p-3 text-sm font-medium border bg-white border-gray-300
@@ -193,6 +187,7 @@
                 </svg>
               </a>
               <a
+                rel="noopener"
                 target="_blank"
                 href="https://twitter.com/intent/tweet?url=https://nsursock.netlify.app{{ page.url }}"
                 class=" -ml-px relative inline-flex items-center p-3 text-sm font-medium border bg-white border-gray-300 text-gray-500
@@ -214,7 +209,7 @@
                     -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"></path>
                 </svg>
               </a>
-              <a target="_blank" href="{{ affiliate_link }}" class="rounded-r-lg -ml-px relative inline-flex items-center p-3 text-sm font-medium border bg-white border-gray-300 text-gray-500 hover:bg-gray-50">
+              <a rel="noopener" target="_blank" href="{{ affiliate_link }}" class="rounded-r-lg -ml-px relative inline-flex items-center p-3 text-sm font-medium border bg-white border-gray-300 text-gray-500 hover:bg-gray-50">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6 stroke-current"
