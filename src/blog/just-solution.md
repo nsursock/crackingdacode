@@ -7,9 +7,7 @@ date: 2019-06-09T14:32:01Z
 time: 4m 14s
 location: Paris, France
 featured: https://images.unsplash.com/photo-1605712916066-e143c317df72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80
-main_tag: Life
-opt_tags: Business,Self Improvement,Humor,Wellness
-tags: blog
+tags: [Life,Business,Humor,Wellness,blog]
 layout: blogout.njk
 affiliate_link: https://apple.co/3md2ufc
 ---

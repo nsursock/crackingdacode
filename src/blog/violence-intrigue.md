@@ -7,9 +7,7 @@ date: 2020-07-19T11:22:00Z
 time: 3m 40s
 location: Beirut, Lebanon
 featured: https://images.unsplash.com/photo-1499428665502-503f6c608263?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80
-main_tag: Culture
-opt_tags: Environment,Psychology,Society
-tags: blog
+tags: [Culture,Environment,Psychology,Society,blog]
 layout: blogout.njk
 affiliate_link: https://apple.co/3sbvKXM
 ---

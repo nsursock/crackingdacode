@@ -7,9 +7,7 @@ date: 2017-10-09T09:21:32Z
 time: 3m 45s
 location: Beirut, Lebanon
 featured: https://images.unsplash.com/photo-1530902888127-5930bd44b5dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80
-main_tag: Justice
-opt_tags: Health,Creativity,Life
-tags: blog
+tags: [Justice,Health,Creativity,Life,blog]
 layout: blogout.njk
 affiliate_link: https://apple.co/3E2n9Ja
 ---

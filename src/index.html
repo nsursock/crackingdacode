@@ -502,7 +502,7 @@ author: Nicolas Sursock
 </div>
 
 <div id="posts" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-  <!-- <div class="lg:text-center">
+  <div class="lg:text-center mt-8">
     <p
       class="
         mt-2
@@ -515,7 +515,7 @@ author: Nicolas Sursock
         dark:bg-indigo-900 dark:text-gray-200
       "
     >
-      Your online presence matters
+      Explore the blog
     </p>
     <p
       class="
@@ -526,92 +526,13 @@ author: Nicolas Sursock
         dark:bg-indigo-900 dark:text-gray-200
       "
     >
-      Let me build your website with JavaScript: watch your traffic and
-      conversion rate skyrocket. I will create a stunning showcase for your
-      business and, if you're not satisfied, you don't have to pay the remaining
-      50% of the website cost.
+      Are you interested by a particular subject? Browse the categories below
+      and get a list of all posts on the matter. Or you can read the latest
+      published posts, fresh from the oven!
     </p>
-  </div> -->
-
-  <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-    {%- for post in collections.blog | reverse -%}
-
-    <div
-      class="
-        bg-white
-        shadow-lg
-        border border-gray-200
-        rounded-lg
-        max-w-sm
-        h-full
-      "
-    >
-      <a href="{{ post.url }}">
-        <img
-          class="rounded-t-lg"
-          data-src="{{ post.data.featured}}"
-          alt=""
-          x-intersect.once.ratio-0="$el.src = $el.dataset.src"
-        />
-        <div class="flex flex-col p-7 divide-y divide-gray-300 justify-between">
-          <div class="">
-            <h2
-              class="
-                text-sm text-indigo-600
-                font-semibold
-                tracking-wide
-                uppercase
-                text-center
-              "
-            >
-              {{ post.data.main_tag }}
-            </h2>
-            <p
-              class="
-                mt-2
-                text-xl
-                leading-8
-                font-bold
-                tracking-tight
-                text-gray-900
-                sm:text-2xl
-                dark:bg-indigo-900 dark:text-gray-200
-              "
-            >
-              {{ post.data.title + ' ' + post.data.title2}}
-            </p>
-            <p
-              class="
-                mt-4
-                max-w-2xl
-                text-md text-gray-500
-                lg:mx-auto
-                dark:bg-indigo-900 dark:text-gray-200
-              "
-            >
-              {{ post.data.description }}
-            </p>
-          </div>
-
-          <div class="mt-4 pt-4 flex items-center">
-            <img
-              class="h-12 w-12 rounded-full"
-              src="/static/img/{{post.data.author.split(' ').join('-')}}-small.jpg"
-              alt=""
-            />
-            <div class="ml-3 flex flex-col">
-              <span class="text-sm font-semibold">{{post.data.author}}</span>
-              <span class="text-sm text-gray-500">
-                {{post.data.date | date("MMM dd, yyyy")}} •
-                {{post.data.time.split(' ')[0]}}in read
-              </span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    {%- endfor -%}
   </div>
+
+  {%- include './_includes/tagslist.html' -%} {%- set postslist =
+  collections.blog -%} {%- include './_includes/postslist.html' -%}
 </div>
 {% endblock %}
