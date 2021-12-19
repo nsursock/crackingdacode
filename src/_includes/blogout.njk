@@ -82,7 +82,18 @@
           </div>
         </div>
         <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-          <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="{{ featured }}" alt="">
+          <picture>
+            <source
+              media="(max-width: 799px)"
+              srcset="{{ featured.replace('1080', '320') }}"/>
+            <source
+              media="(min-width: 800px)"
+              srcset="{{ featured }}"/>
+            <img
+              class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+              src="{{ featured }}"
+              alt=""/>
+          </picture>
         </div>
       </div>
       <div class="flex flex-col md:flex-row">
@@ -92,7 +103,7 @@
         </div>
         <aside class="order-first md:order-none pl-7 pr-10 sm:w-2/5 lg:w-1/5 md:h-screen md:sticky md:top-0 sm:flex md:flex-col
             md:justify-center">
-          <img class="m-4 rounded-full border-4 border-white" src="../../static/img/{{ author }}.jpg" alt=""/>
+          <img class="m-4 rounded-full border-4 border-white" src="/static/img/{{ author.split(' ').join('-') }}.jpg" alt=""/>
           <div class="flex flex-col justify-between">
             <div class="m-4 md:m-0 flex md:flex-col">
               <div class="">
@@ -153,7 +164,7 @@
                         00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
                       clip-rule="evenodd"/>
                   </svg>
-                  {{ date | date('PPPpp')}}
+                  {{ date | date('PPPpp') }}
                 </div>
               </div>
             </div>
