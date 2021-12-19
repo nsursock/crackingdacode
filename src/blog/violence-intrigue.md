@@ -1,7 +1,7 @@
 ---
 title: Is Violence Strictly A
 title2: Matter Of Intrigue?
-description: What you gonna do when they will come from you? I wonder if violence isn't a riddle as if you're wondering how bad can this get and how far this can go.
+description: What you gonna do when they will come for you? I wonder if violence isn't a riddle as if you're wondering how bad can this get and how far can this go.
 author: Nicolas Sursock
 date: 2020-07-19T11:22:00Z
 time: 3m 40s
