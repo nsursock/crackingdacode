@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <meta charset="UTF-8">
     <meta name="description" content="{{ description }}">
     <meta name="author" content="{{ author }}">
@@ -38,6 +39,11 @@
         </script>
       {% endif %}
     {% endblock %}
+    <meta property='og:title' content="{{ title + ' ' + title2 }}"/>
+    <meta property='og:image' content="{{ featured }}"/>
+    <meta property='og:description' content="{{ description }}"/>
+    <meta property='og:url' content="{{ 'http://nsursock.netlify.app' + page.url }}" />
+    <meta property=”og:type” content="article" />
   </head>
   <body hx-boost="true" class="{{ 'debug-screens' if env.devMode }}" x-data="{ showCta: false }">
     {% if page.url != '/' %}
