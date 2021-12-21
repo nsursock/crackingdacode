@@ -10,6 +10,10 @@ featured: https://images.unsplash.com/photo-1499428665502-503f6c608263?ixlib=rb-
 tags: [Culture,Environment,Psychology,Society,blog]
 layout: blogout.njk
 affiliate_link: https://apple.co/3sbvKXM
+track: Tryin' to Throw Your Arms Around the World
+versions:
+    - artist: U2
+      link: https://apple.co/3edVc6L
 ---
 
 I've had my share of violence in my life. You keep saying no, but the story never ends. I was watching the rape scene of Monica Belluci in the movie Irreversible and thought: "it's so strange, she keeps saying no, and the guy never stops."

@@ -9,7 +9,12 @@ location: Paris, France
 featured: https://images.unsplash.com/photo-1605712916066-e143c317df72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80
 tags: [Life,Business,Humor,Wellness,blog]
 layout: blogout.njk
-affiliate_link: https://apple.co/3md2ufc
+track: Just
+versions:
+    - artist: Radiohead
+      link: https://apple.co/3md2ufc
+    - artist: Mark Ronson
+      link: https://apple.co/3yQy1ZQ
 ---
 
 Based on a song from Radiohead, I think a just solution is a relaxing one for every trouble we have. For example, at the moment, I have a problem with women. I had a horrible experience with one girl and ended up almost ruined and almost alone.

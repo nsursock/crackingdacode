@@ -55,6 +55,7 @@
       {% include './header.html' %}
     {% endif %}
     {% block body %}
+      {% include './partials/affiliate.html' %}
       <!-- This example requires Tailwind CSS v2.0+ -->
       <div class="relative bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto">
@@ -122,11 +123,10 @@
           {{ content | safe }}
         </div>
         <aside class="order-first md:order-none pl-7 pr-10 sm:w-2/5 lg:w-1/5 md:h-screen md:sticky md:top-0 sm:flex md:flex-col
-            md:justify-center">
-          
+            md:justify-end">
           <img class="m-4 rounded-full border-4 border-white" src="/static/img/{{ author.split(' ').join('-') }}.jpg" alt=""/>
           <div class="flex flex-col justify-between">
-              <div class="flex items-center justify-center m-5 md:order-last">
+            <div class="flex items-center justify-center m-5 md:order-last">
               <a
                 rel="noopener"
                 target="_blank"
@@ -175,7 +175,7 @@
                 rel="noopener"
                 target="_blank"
                 href="https://www.linkedin.com/sharing/share-offsite/?url=https://nsursock.netlify.app{{ page.url }}"
-                class=" -ml-px relative inline-flex items-center p-3 text-sm font-medium border bg-white border-gray-300 text-gray-500
+                class="rounded-r-lg -ml-px relative inline-flex items-center p-3 text-sm font-medium border bg-white border-gray-300 text-gray-500
                   hover:bg-gray-50">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -196,7 +196,7 @@
                   <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
                 </svg>
               </a>
-              <a rel="noopener" target="_blank" href="{{ affiliate_link }}" class="rounded-r-lg -ml-px relative inline-flex items-center p-3 text-sm font-medium border bg-white border-gray-300 text-gray-500 hover:bg-gray-50">
+              {# <a rel="noopener" target="_blank" href="{{ affiliate_link }}" class="rounded-r-lg -ml-px relative inline-flex items-center p-3 text-sm font-medium border bg-white border-gray-300 text-gray-500 hover:bg-gray-50">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="h-6 w-6 stroke-current"
@@ -210,10 +210,9 @@
                     d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2
                       1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
                 </svg>
-              </a>
+              </a> #}
             </div>
             <div class="m-4 md:m-0 flex md:flex-col">
-              
               <div class="">
                 <h2 class=" text-base text-indigo-600 font-semibold tracking-wide uppercase ">
                   Written by
@@ -279,7 +278,6 @@
             <p class="hidden xl:block mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto dark:bg-indigo-900 dark:text-gray-200 ">
               {{ description }}
             </p>
-            
           </div>
         </aside>
       </div>

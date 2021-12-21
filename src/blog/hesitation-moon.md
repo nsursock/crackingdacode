@@ -9,7 +9,14 @@ location: Beirut, Lebanon
 featured: https://images.unsplash.com/photo-1530902888127-5930bd44b5dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80
 tags: [Justice,Health,Creativity,Life,blog]
 layout: blogout.njk
-affiliate_link: https://apple.co/3E2n9Ja
+track: Cajun Moon
+versions:
+    - artist: J.J. Cale
+      link: https://apple.co/3E2n9Ja
+    - artist: Herbie Mann
+      link: https://apple.co/3H40BJQ
+    - artist: Eric Clapton
+      link: https://apple.co/3GZMYeQ
 ---
 
 I hope my legs don’t break writing seriously on life; guts help me please! I’ll try my best to remain modest with that brutal honesty. For your information, I have included the song to listen to at the end of the post, along with the lyrics. With time, I was surprised by a lot of English modern songs, talking about the moon.
