@@ -9,7 +9,15 @@ location: Beirut, Lebanon
 featured: https://images.unsplash.com/photo-1613679074451-9ddcc1103cc8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80
 tags: [Philosophy,Education,World,blog]
 layout: blogout.njk
-affiliate_link: https://apple.co/3mcIB88
+affiliate_link: 
+track: Strange Brew
+versions:
+    - artist: Cream
+      link: https://apple.co/3mcIB88
+    - artist: Buddy Guy
+      link: https://apple.co/3peG3IK
+    - artist: Nick Moran Trio
+      link: https://apple.co/3Ejnkjw
 ---
 
 I hear you: if you feel entirely messed up, it's because of intolerance. Whether you run a country, a city, a sports club, or you're just confused in your head, then this post is for you.
