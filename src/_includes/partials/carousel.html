@@ -1,4 +1,4 @@
-<div class="py-8" x-data="dataCar()">
+<div class="py-8" x-data="{ showModal: false, activeSlide: 1 }">
   <div class="max-w-4xl mx-auto relative">
     <!-- Slides -->
     <div
@@ -168,7 +168,7 @@
           focus:outline-none
         "
         type="button"
-        @click="toggleModal"
+        @click="showModal = !showModal"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -188,15 +188,3 @@
     </div>
   </div>
 </div>
-
-<script>
-  function dataCar() {
-    return {
-      showModal: false,
-      toggleModal() {
-        this.showModal = !this.showModal
-      },
-      activeSlide: 1,
-    }
-  }
-</script>
