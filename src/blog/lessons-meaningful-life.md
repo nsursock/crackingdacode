@@ -4,7 +4,6 @@ title2: No. 1 Is Hell
 description: When you have 40 years of experience, you start wondering what life lessons are important. Revenge and rivalry are critical for people.
 author: Nicolas Sursock
 date: 2019-04-08T18:45:21Z
-time: 4m 36s
 location: Paris, France
 featured: https://images.unsplash.com/photo-1541000020894-321f175f5a69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80
 tags: [Education,Future,History,Wellness,blog]

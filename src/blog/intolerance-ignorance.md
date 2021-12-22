@@ -4,7 +4,6 @@ title2: The Ugly Baby Of Ignorance?
 description: Can we tolerate everything, even the most disturbing thoughts, stories or ideas? The last time I was sober I couldn't tolerate anymore the mess we're in.
 author: Nicolas Sursock
 date: 2019-12-18T11:50:33Z
-time: 4m 09s
 location: Beirut, Lebanon
 featured: https://images.unsplash.com/photo-1613679074451-9ddcc1103cc8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80
 tags: [Philosophy,Education,World,blog]

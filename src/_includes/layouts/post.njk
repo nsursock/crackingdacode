@@ -236,7 +236,7 @@
                   </svg>
                   {{ location }}
                 </div>
-                <div class="mt-2 flex items-center text-sm text-gray-500">
+                <div class="mt-2 flex items-center text-sm text-gray-500" x-data="{ time: {{ content.split(' ').length / 200 }} }">
                   <svg
                     class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400"
                     xmlns="http://www.w3.org/2000/svg"
@@ -255,7 +255,7 @@
                         101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z"
                       clip-rule="evenodd"/>
                   </svg>
-                  {{ time.split(' ')[0] }}in read
+                  <span x-text="`${ Math.round(time).toString().split('.')[0] } min read`"/>
                 </div>
                 <div class="mt-2 flex items-center text-sm text-gray-500">
                   <svg
@@ -287,8 +287,8 @@
             More to read
           </p>
           <p class=" mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto dark:bg-indigo-900 dark:text-gray-200 ">
-            Check out other articles on this blog. They're written with all our hearts: we want peace on Earth and end to war.
-            We need a miracle but it might have happened.
+            Check out other articles on this blog. They're written with all our hearts: we want peace on Earth and end to war. We
+            need a miracle but it might have happened.
           </p>
         </div>
         <ul
@@ -311,7 +311,8 @@
                     <h2 class=" text-sm text-indigo-600 font-semibold tracking-wide uppercase text-center ">
                       {{ previousPost.data.tags[0] }}
                     </h2>
-                    <p class="line-clamp-2 mt-2 text-xl leading-8 font-bold tracking-tight text-gray-900 sm:text-2xl dark:bg-indigo-900 dark:text-gray-200 ">
+                    <p class="line-clamp-2 mt-2 text-xl leading-8 font-bold tracking-tight text-gray-900 sm:text-2xl dark:bg-indigo-900
+                        dark:text-gray-200 ">
                       {{ previousPost.data.title + ' ' + previousPost.data.title2 }}
                     </p>
                     <p class="line-clamp-4 mt-4 max-w-2xl text-md text-gray-500 lg:mx-auto dark:bg-indigo-900 dark:text-gray-200 ">
@@ -323,10 +324,10 @@
                       class="h-12 w-12 rounded-full"
                       src="/static/img/{{ previousPost.data.author.split(' ').join('-') }}-small.jpg"
                       alt=""/>
-                    <div class="ml-3 flex flex-col">
+                    <div class="ml-3 flex flex-col" x-data="{ time: {{ previousPost.templateContent.split(' ').length / 200 }} }">
                       <span class="text-sm font-semibold">{{ previousPost.data.author }}</span>
                       <span class="text-sm text-gray-500">
-                        {{ previousPost.data.date | date("MMM dd, yyyy") }} • {{ previousPost.data.time.split(' ')[0] }}in read
+                        {{ previousPost.data.date | date("MMM dd, yyyy") }} • <span x-text="`${Math.round(time).toString().split('.')[0]} min read`"/>
                       </span>
                     </div>
                   </div>
@@ -348,7 +349,8 @@
                     <h2 class=" text-sm text-indigo-600 font-semibold tracking-wide uppercase text-center ">
                       {{ nextPost.data.tags[0] }}
                     </h2>
-                    <p class="line-clamp-2 mt-2 text-xl leading-8 font-bold tracking-tight text-gray-900 sm:text-2xl dark:bg-indigo-900 dark:text-gray-200 ">
+                    <p class="line-clamp-2 mt-2 text-xl leading-8 font-bold tracking-tight text-gray-900 sm:text-2xl dark:bg-indigo-900
+                        dark:text-gray-200 ">
                       {{ nextPost.data.title + ' ' + nextPost.data.title2 }}
                     </p>
                     <p class="line-clamp-4 mt-4 max-w-2xl text-md text-gray-500 lg:mx-auto dark:bg-indigo-900 dark:text-gray-200 ">
@@ -357,10 +359,10 @@
                   </div>
                   <div class="mt-4 pt-4 flex items-center">
                     <img class="h-12 w-12 rounded-full" src="/static/img/{{ nextPost.data.author.split(' ').join('-') }}-small.jpg" alt=""/>
-                    <div class="ml-3 flex flex-col">
+                    <div class="ml-3 flex flex-col" x-data="{ time: {{ nextPost.templateContent.split(' ').length / 200 }} }">
                       <span class="text-sm font-semibold">{{ nextPost.data.author }}</span>
                       <span class="text-sm text-gray-500">
-                        {{ nextPost.data.date | date("MMM dd, yyyy") }} • {{ nextPost.data.time.split(' ')[0] }}in read
+                        {{ nextPost.data.date | date("MMM dd, yyyy") }} • <span x-text="`${Math.round(time).toString().split('.')[0]} min read`"/>
                       </span>
                     </div>
                   </div>

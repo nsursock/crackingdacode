@@ -4,7 +4,6 @@ title2: Matter Of Intrigue?
 description: What you gonna do when they will come for you? I wonder if violence isn't a riddle as if you're wondering how bad can this get and how far can this go.
 author: Nicolas Sursock
 date: 2020-07-19T11:22:00Z
-time: 3m 40s
 location: Beirut, Lebanon
 featured: https://images.unsplash.com/photo-1499428665502-503f6c608263?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80
 tags: [Culture,Environment,Psychology,Society,blog]

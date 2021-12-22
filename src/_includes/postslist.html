@@ -67,9 +67,12 @@
           />
           <div class="ml-3 flex flex-col">
             <span class="text-sm font-semibold">{{ post.data.author }}</span>
-            <span class="text-sm text-gray-500">
-              {{ post.data.date | date("MMM dd, yyyy") }} • {{
-              post.data.time.split(' ')[0] }}in read
+            <span
+              class="text-sm text-gray-500"
+              x-data="{ time: {{ post.templateContent.split(' ').length / 200 }} }"
+            >
+              {{ post.data.date | date("MMM dd, yyyy") }} •
+              <span x-text="`${Math.round(time).toString().split('.')[0]} min read`" />
             </span>
           </div>
         </div>
