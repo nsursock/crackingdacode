@@ -10,6 +10,9 @@ module.exports = {
       position: ['bottom', 'right'],
     },
     extend: {
+      // fontFamily: {
+      //   indie: ['Indie Flower', 'cursive'],
+      // },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
       },
@@ -22,6 +25,6 @@ module.exports = {
   ],
   purge: {
     content: ['./src/**/*.{html,js,md,njk,svg}'],
-    enabled: process.env.NODE_ENV.startsWith('prod')
+    enabled: process.env.NODE_ENV.startsWith('prod'),
   },
 }
