@@ -125,8 +125,9 @@
         <aside class="order-first md:order-none px-7 sm:w-2/5 lg:w-1/5 md:h-screen md:sticky md:top-0 sm:flex sm:items-center
             md:flex-col md:justify-end">
           <img
+            x-intersect.once.ratio-0="$el.src = $el.dataset.src"
             class="m-4 rounded-full w-40 h-40 border-4 border-white mx-auto"
-            src="/static/img/{{ author.split(' ').join('-') }}.jpg"
+            data-src="/static/img/{{ author.split(' ').join('-') }}-small.jpg"
             alt=""/>
           <div class="flex flex-col justify-between">
             <div class="flex items-center justify-center m-5 md:order-last">
@@ -276,18 +277,18 @@
             Previous / Next
           </p>
           {# <p
-                class="
-                  mt-4
-                  max-w-2xl
-                  text-xl text-gray-500
-                  lg:mx-auto
-                  dark:bg-indigo-900 dark:text-gray-200
-                "
-              >
-                Are you interested in a particular subject? Browse the categories below
-                and get a list of all posts on the matter. Or you can read the latest
-                published posts, fresh from the oven!
-              </p> #}
+                          class="
+                            mt-4
+                            max-w-2xl
+                            text-xl text-gray-500
+                            lg:mx-auto
+                            dark:bg-indigo-900 dark:text-gray-200
+                          "
+                        >
+                          Are you interested in a particular subject? Browse the categories below
+                          and get a list of all posts on the matter. Or you can read the latest
+                          published posts, fresh from the oven!
+                        </p> #}
         </div>
         <ul
           x-data="{ showArticle: false }"
