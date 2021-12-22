@@ -38,6 +38,7 @@
   "homepage": "https://github.com/mattwaler/tea-stack#readme",
   "dependencies": {
     "@alpinejs/intersect": "^3.2.2",
+    "@tailwindcss/line-clamp": "^0.3.0",
     "alpinejs": "^3.7.0",
     "critical": "^4.0.1",
     "date-fns": "^2.27.0",

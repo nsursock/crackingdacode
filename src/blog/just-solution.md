@@ -8,7 +8,7 @@ time: 4m 14s
 location: Paris, France
 featured: https://images.unsplash.com/photo-1605712916066-e143c317df72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80
 tags: [Life,Business,Humor,Wellness,blog]
-layout: blogout.njk
+layout: layouts/post.njk
 track: Just
 versions:
     - artist: Radiohead
