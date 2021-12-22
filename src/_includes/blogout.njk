@@ -122,9 +122,12 @@
         <div class="container py-8 prose lg:prose-xl md:w-3/5">
           {{ content | safe }}
         </div>
-        <aside class="order-first md:order-none px-7 sm:w-2/5 lg:w-1/5 md:h-screen md:sticky md:top-0 sm:flex sm:items-center md:flex-col
-            md:justify-end">
-          <img class="m-4 rounded-full w-40 h-40 border-4 border-white mx-auto" src="/static/img/{{ author.split(' ').join('-') }}.jpg" alt=""/>
+        <aside class="order-first md:order-none px-7 sm:w-2/5 lg:w-1/5 md:h-screen md:sticky md:top-0 sm:flex sm:items-center
+            md:flex-col md:justify-end">
+          <img
+            class="m-4 rounded-full w-40 h-40 border-4 border-white mx-auto"
+            src="/static/img/{{ author.split(' ').join('-') }}.jpg"
+            alt=""/>
           <div class="flex flex-col justify-between">
             <div class="flex items-center justify-center m-5 md:order-last">
               <a
@@ -175,8 +178,8 @@
                 rel="noopener"
                 target="_blank"
                 href="https://www.linkedin.com/sharing/share-offsite/?url=https://nsursock.netlify.app{{ page.url }}"
-                class="rounded-r-lg -ml-px relative inline-flex items-center p-3 text-sm font-medium border bg-white border-gray-300 text-gray-500
-                  hover:bg-gray-50">
+                class="rounded-r-lg -ml-px relative inline-flex items-center p-3 text-sm font-medium border bg-white border-gray-300
+                  text-gray-500 hover:bg-gray-50">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   class="icon icon-tabler icon-tabler-brand-linkedin"
@@ -196,21 +199,6 @@
                   <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
                 </svg>
               </a>
-              {# <a rel="noopener" target="_blank" href="{{ affiliate_link }}" class="rounded-r-lg -ml-px relative inline-flex items-center p-3 text-sm font-medium border bg-white border-gray-300 text-gray-500 hover:bg-gray-50">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6 stroke-current"
-                  fill="none"
-                  viewbox="0 0 24 24"
-                  stroke="currentColor">
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2
-                      1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
-                </svg>
-              </a> #}
             </div>
             <div class="m-4 md:m-0 flex md:flex-col">
               <div class="">
@@ -280,6 +268,105 @@
             </p>
           </div>
         </aside>
+      </div>
+      <div id="posts" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:text-center mt-8">
+          <p class=" mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl dark:bg-indigo-900
+              dark:text-gray-200 ">
+            Previous / Next
+          </p>
+          {# <p
+                class="
+                  mt-4
+                  max-w-2xl
+                  text-xl text-gray-500
+                  lg:mx-auto
+                  dark:bg-indigo-900 dark:text-gray-200
+                "
+              >
+                Are you interested in a particular subject? Browse the categories below
+                and get a list of all posts on the matter. Or you can read the latest
+                published posts, fresh from the oven!
+              </p> #}
+        </div>
+        <ul
+          x-data="{ showArticle: false }"
+          class="md:h-screen mx-3 mt-6 flex flex-col space-y-2 sm:space-y-0 sm:flex-row sm:space-x-3  justify-center"
+          x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')">
+          {% set previousPost = collections.blog | getPreviousCollectionItem(page) %}
+          {% set nextPost = collections.blog | getNextCollectionItem(page) %}
+          {% if previousPost %}
+            <li
+              x-show="showArticle"
+              x-transition:enter="transform transition ease-in-out duration-1000"
+              x-transition:enter-start="-rotate-180 scale-50 opacity-25"
+              x-transition:enter-end="rotate-0 scale-100 opacity-100"
+              class="bg-white shadow-lg border border-gray-200 rounded-lg max-w-sm h-full">
+              <a href="{{ previousPost.url }}">
+                <img class="rounded-t-lg" data-src="{{ previousPost.data.featured }}" alt="" x-intersect.once.ratio-0="showArticle = true; $el.src = $el.dataset.src"/>
+                <div class="flex flex-col p-7 divide-y divide-gray-300 justify-between">
+                  <div class="">
+                    <h2 class=" text-sm text-indigo-600 font-semibold tracking-wide uppercase text-center ">
+                      {{ previousPost.data.tags[0] }}
+                    </h2>
+                    <p class=" mt-2 text-xl leading-8 font-bold tracking-tight text-gray-900 sm:text-2xl dark:bg-indigo-900 dark:text-gray-200 ">
+                      {{ previousPost.data.title + ' ' + previousPost.data.title2 }}
+                    </p>
+                    <p class=" mt-4 max-w-2xl text-md text-gray-500 lg:mx-auto dark:bg-indigo-900 dark:text-gray-200 ">
+                      {{ previousPost.data.description }}
+                    </p>
+                  </div>
+                  <div class="mt-4 pt-4 flex items-center">
+                    <img
+                      class="h-12 w-12 rounded-full"
+                      src="/static/img/{{ previousPost.data.author.split(' ').join('-') }}-small.jpg"
+                      alt=""/>
+                    <div class="ml-3 flex flex-col">
+                      <span class="text-sm font-semibold">{{ previousPost.data.author }}</span>
+                      <span class="text-sm text-gray-500">
+                        {{ previousPost.data.date | date("MMM dd, yyyy") }} • {{ previousPost.data.time.split(' ')[0] }}in read
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          {% endif %}
+          {% if nextPost %}
+            <li
+              x-show="showArticle"
+              x-transition:enter="transform transition ease-in-out duration-1000"
+              x-transition:enter-start="-rotate-180 scale-50 opacity-25"
+              x-transition:enter-end="rotate-0 scale-100 opacity-100"
+              class="bg-white shadow-lg border border-gray-200 rounded-lg max-w-sm h-full">
+              <a href="{{ nextPost.url }}">
+                <img class="rounded-t-lg" data-src="{{ nextPost.data.featured }}" alt="" x-intersect.once.ratio-0="showArticle = true; $el.src = $el.dataset.src"/>
+                <div class="flex flex-col p-7 divide-y divide-gray-300 justify-between">
+                  <div class="">
+                    <h2 class=" text-sm text-indigo-600 font-semibold tracking-wide uppercase text-center ">
+                      {{ nextPost.data.tags[0] }}
+                    </h2>
+                    <p class=" mt-2 text-xl leading-8 font-bold tracking-tight text-gray-900 sm:text-2xl dark:bg-indigo-900 dark:text-gray-200 ">
+                      {{ nextPost.data.title + ' ' + nextPost.data.title2 }}
+                    </p>
+                    <p class=" mt-4 max-w-2xl text-md text-gray-500 lg:mx-auto dark:bg-indigo-900 dark:text-gray-200 ">
+                      {{ nextPost.data.description }}
+                    </p>
+                  </div>
+                  <div class="mt-4 pt-4 flex items-center">
+                    <img class="h-12 w-12 rounded-full" src="/static/img/{{ nextPost.data.author.split(' ').join('-') }}-small.jpg" alt=""/>
+                    <div class="ml-3 flex flex-col">
+                      <span class="text-sm font-semibold">{{ nextPost.data.author }}</span>
+                      <span class="text-sm text-gray-500">
+                        {{ nextPost.data.date | date("MMM dd, yyyy") }} • {{ nextPost.data.time.split(' ')[0] }}in read
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          {% endif %}
+        </ul>
       </div>
     {% endblock %}
     {% include 'sections/cta.html' %}
