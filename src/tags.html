@@ -17,6 +17,7 @@ permalink: /tags/{{ tag | slug }}/
 ---
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"></div>
+{%- include './_includes/tagslist.html' -%}
 <div>
   {% set postslist = collections[ tag ] %} {% include
   "./_includes/postslist.html" %}
