@@ -22,6 +22,7 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
     require('tailwindcss-debug-screens'),
+    require('@tailwindcss/line-clamp'),
   ],
   purge: {
     content: ['./src/**/*.{html,js,md,njk,svg}'],

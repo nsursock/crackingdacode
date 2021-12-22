@@ -14,6 +14,16 @@
     <title>{{ title + ' ' + title2 }} | Sursock Labs</title>
     {% block head %}
       {% if env.environment == "production" %}
+        <script type="text/javascript">
+          window._mfq = window._mfq || [];
+          (function () {
+            var mf = document.createElement("script");
+            mf.type = "text/javascript";
+            mf.defer = true;
+            mf.src = "//cdn.mouseflow.com/projects/c54181a0-d412-45f8-bb8a-efad19eaa07b.js";
+            document.getElementsByTagName("head")[0].appendChild(mf);
+          })();
+        </script>
         <!-- Hotjar Tracking Code for https://nsursock.netlify.app/ -->
         <script>
           (function (h, o, t, j, a, r) {
@@ -52,10 +62,10 @@
   </head>
   <body hx-boost="true" class="{{ 'debug-screens' if env.devMode }}" x-data="{ showCta: false }">
     {% if page.url != '/' %}
-      {% include './header.html' %}
+      {% include '../header.html' %}
     {% endif %}
     {% block body %}
-      {% include './partials/affiliate.html' %}
+      {% include '../partials/affiliate.html' %}
       <!-- This example requires Tailwind CSS v2.0+ -->
       <div class="relative bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto">
@@ -274,21 +284,12 @@
         <div class="lg:text-center mt-8">
           <p class=" mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl dark:bg-indigo-900
               dark:text-gray-200 ">
-            Previous / Next
+            More to read
           </p>
-          {# <p
-                          class="
-                            mt-4
-                            max-w-2xl
-                            text-xl text-gray-500
-                            lg:mx-auto
-                            dark:bg-indigo-900 dark:text-gray-200
-                          "
-                        >
-                          Are you interested in a particular subject? Browse the categories below
-                          and get a list of all posts on the matter. Or you can read the latest
-                          published posts, fresh from the oven!
-                        </p> #}
+          <p class=" mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto dark:bg-indigo-900 dark:text-gray-200 ">
+            Check out other articles on this blog. They're written with all our hearts: we want peace on Earth and end to war.
+            We need a miracle but it might have happened.
+          </p>
         </div>
         <ul
           x-data="{ showArticle: false }"
@@ -310,10 +311,10 @@
                     <h2 class=" text-sm text-indigo-600 font-semibold tracking-wide uppercase text-center ">
                       {{ previousPost.data.tags[0] }}
                     </h2>
-                    <p class=" mt-2 text-xl leading-8 font-bold tracking-tight text-gray-900 sm:text-2xl dark:bg-indigo-900 dark:text-gray-200 ">
+                    <p class="line-clamp-2 mt-2 text-xl leading-8 font-bold tracking-tight text-gray-900 sm:text-2xl dark:bg-indigo-900 dark:text-gray-200 ">
                       {{ previousPost.data.title + ' ' + previousPost.data.title2 }}
                     </p>
-                    <p class=" mt-4 max-w-2xl text-md text-gray-500 lg:mx-auto dark:bg-indigo-900 dark:text-gray-200 ">
+                    <p class="line-clamp-4 mt-4 max-w-2xl text-md text-gray-500 lg:mx-auto dark:bg-indigo-900 dark:text-gray-200 ">
                       {{ previousPost.data.description }}
                     </p>
                   </div>
@@ -347,10 +348,10 @@
                     <h2 class=" text-sm text-indigo-600 font-semibold tracking-wide uppercase text-center ">
                       {{ nextPost.data.tags[0] }}
                     </h2>
-                    <p class=" mt-2 text-xl leading-8 font-bold tracking-tight text-gray-900 sm:text-2xl dark:bg-indigo-900 dark:text-gray-200 ">
+                    <p class="line-clamp-2 mt-2 text-xl leading-8 font-bold tracking-tight text-gray-900 sm:text-2xl dark:bg-indigo-900 dark:text-gray-200 ">
                       {{ nextPost.data.title + ' ' + nextPost.data.title2 }}
                     </p>
-                    <p class=" mt-4 max-w-2xl text-md text-gray-500 lg:mx-auto dark:bg-indigo-900 dark:text-gray-200 ">
+                    <p class="line-clamp-4 mt-4 max-w-2xl text-md text-gray-500 lg:mx-auto dark:bg-indigo-900 dark:text-gray-200 ">
                       {{ nextPost.data.description }}
                     </p>
                   </div>

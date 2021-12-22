@@ -10,7 +10,7 @@ pagination:
     - posts
     - tagList
   addAllPagesToCollections: true
-layout: pageout.njk
+layout: layouts/page.njk
 eleventyComputed:
   title: Tagged “{{ tag }}”
 permalink: /tags/{{ tag | slug }}/

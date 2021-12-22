@@ -14,17 +14,33 @@
     <title>{{ title }} | Sursock Labs</title>
     {% block head %}
       {% if env.environment == "production" %}
-      <!-- Hotjar Tracking Code for https://nsursock.netlify.app/ -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:2754548,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
+        <script type="text/javascript">
+          window._mfq = window._mfq || [];
+          (function () {
+            var mf = document.createElement("script");
+            mf.type = "text/javascript";
+            mf.defer = true;
+            mf.src = "//cdn.mouseflow.com/projects/c54181a0-d412-45f8-bb8a-efad19eaa07b.js";
+            document.getElementsByTagName("head")[0].appendChild(mf);
+          })();
+        </script>
+        <!-- Hotjar Tracking Code for https://nsursock.netlify.app/ -->
+        <script>
+          (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () {
+              (h.hj.q = h.hj.q || []).push(arguments)
+            };
+            h._hjSettings = {
+              hjid: 2754548,
+              hjsv: 6
+            };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script');
+            r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+          })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+        </script>
         <script defer data-domain="nsursock.netlify.app" src="https://plausible.io/js/plausible.js"></script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-C3CETTNJHN"></script>
         <script>
@@ -41,7 +57,7 @@
   </head>
   <body hx-boost="true" class="{{ 'debug-screens' if env.devMode }}" x-data="{ showCta: false }">
     {% if page.url != '/' %}
-      {% include './header.html' %}
+      {% include '../header.html' %}
     {% endif %}
     {% block body %}
       <!-- This example requires Tailwind CSS v2.0+ -->
