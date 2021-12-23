@@ -1,7 +1,7 @@
 ---
 title: Is There A Blissful Standard 
 title2: Procedure For Broken Hearts?
-description: The best thing to do when your heart is broken is to do something crazy and absolutely wrong. Because you could wait for the miracle for a long time.
+description: The best thing to do when your heart is broken is to do something crazy and absolutely wrong. Because you could wait for the miracle a long time.
 author: Nicolas Sursock
 date: 2020-07-18T18:52:03Z
 location: Beirut, Lebanon
