@@ -1,12 +1,12 @@
 ---
-title: Should You Prepare For
-title2: Haters When Writing A Post?
-description: The way to avoid criticism is to do nothing, feel nothing and think nothing. It's about taking risks and imagining what to do in case of failure.
+title: Should You Be Wary Of Haters 
+title2: When Taking A Risk?
+description: The way to avoid criticism is to do nothing, feel nothing and think nothing. Life's about taking risks and imagining what to do in case of failure.
 author: Nicolas Sursock
 date: 2020-01-06T23:42:43Z
 location: Paris, France
 featured: https://images.unsplash.com/photo-1600411106965-fb4a66f92166?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
-tags: [Creativity, Education, Environment, Justice, blog]
+tags: [Life, Creativity, Education, Environment, Justice, blog]
 layout: layouts/post.njk
 track: Don't Tread On Me
 versions:

@@ -1,12 +1,12 @@
 ---
-title: What Should You Do When
-title2: Your Heart Is Broken?
+title: Is There A Blissful Standard 
+title2: Procedure For Broken Hearts?
 description: The best thing to do when your heart is broken is to do something crazy and absolutely wrong. Because you could wait for the miracle for a long time.
 author: Nicolas Sursock
 date: 2020-07-18T18:52:03Z
 location: Beirut, Lebanon
 featured: https://images.unsplash.com/photo-1516822003754-cca485356ecb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
-tags: [Health, Future, Wellness, Culture, blog]
+tags: [Art, Health, Future, Wellness, Culture, blog]
 layout: layouts/post.njk
 track: Livin' On The Edge
 versions:
