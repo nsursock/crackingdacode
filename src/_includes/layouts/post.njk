@@ -55,7 +55,7 @@
       {% endif %}
     {% endblock %}
     <meta property='og:title' content="{{ title + ' ' + title2 }}"/>
-    <meta property='og:image' content="{{ featured }}"/>
+    <meta property='og:image' content="{{ featured }}&q=80&w=1920&h=1280"/>
     <meta property='og:description' content="{{ description }}"/>
     <meta property='og:url' content="{{ 'http://nsursock.netlify.app' + page.url }}"/>
     <meta property="”og:type”" content="article"/>
@@ -121,9 +121,9 @@
         </div>
         <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
           <picture>
-            <source media="(max-width: 799px)" srcset="{{ featured.replace('1080', '320') }}"/>
-            <source media="(min-width: 800px)" srcset="{{ featured }}"/>
-            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="{{ featured }}" alt=""/>
+            <source media="(max-width: 799px)" srcset="{{ featured }}&q=80&w=480&h=320"/>
+            <source media="(min-width: 800px)" srcset="{{ featured }}&q=80&w=1080&h=720"/>
+            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="{{ featured }}&q=80&w=1920&h=1280" alt=""/>
           </picture>
         </div>
       </div>
@@ -305,7 +305,7 @@
               x-transition:enter-end="rotate-0 scale-100 opacity-100"
               class="bg-white shadow-lg border border-gray-200 rounded-lg max-w-sm h-full">
               <a href="{{ previousPost.url }}">
-                <img class="rounded-t-lg" data-src="{{ previousPost.data.featured }}" alt="" x-intersect.once.ratio-0="showArticle = true; $el.src = $el.dataset.src"/>
+                <img class="rounded-t-lg" data-src="{{ previousPost.data.featured }}&q=80&w=480&h=320" alt="" x-intersect.once.ratio-0="showArticle = true; $el.src = $el.dataset.src"/>
                 <div class="flex flex-col p-7 divide-y divide-gray-300 justify-between">
                   <div class="">
                     <h2 class=" text-sm text-indigo-600 font-semibold tracking-wide uppercase text-center ">
@@ -343,7 +343,7 @@
               x-transition:enter-end="rotate-0 scale-100 opacity-100"
               class="bg-white shadow-lg border border-gray-200 rounded-lg max-w-sm h-full">
               <a href="{{ nextPost.url }}">
-                <img class="rounded-t-lg" data-src="{{ nextPost.data.featured }}" alt="" x-intersect.once.ratio-0="showArticle = true; $el.src = $el.dataset.src"/>
+                <img class="rounded-t-lg" data-src="{{ nextPost.data.featured }}&q=80&w=480&h=320" alt="" x-intersect.once.ratio-0="showArticle = true; $el.src = $el.dataset.src"/>
                 <div class="flex flex-col p-7 divide-y divide-gray-300 justify-between">
                   <div class="">
                     <h2 class=" text-sm text-indigo-600 font-semibold tracking-wide uppercase text-center ">

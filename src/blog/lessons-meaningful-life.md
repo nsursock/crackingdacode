@@ -5,7 +5,7 @@ description: When you have 40 years of experience, you start wondering what life
 author: Nicolas Sursock
 date: 2019-04-08T18:45:21Z
 location: Paris, France
-featured: https://images.unsplash.com/photo-1541000020894-321f175f5a69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80
+featured: https://images.unsplash.com/photo-1541000020894-321f175f5a69?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
 tags: [Education,Future,History,Wellness,blog]
 layout: layouts/post.njk
 track: At Last
