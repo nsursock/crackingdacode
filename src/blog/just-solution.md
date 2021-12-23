@@ -1,6 +1,6 @@
 ---
-title: What Do You Mean A
-title2: Just Solution?
+title: What Do You Mean A Really
+title2: Relaxed And Just Solution?
 description: Business is about solving problems. You have a burning issue and someone will find a cure. So, what's the hint for humanity to become the best version of itself?
 author: Nicolas Sursock
 date: 2019-06-09T14:32:01Z
