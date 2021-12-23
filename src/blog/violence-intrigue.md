@@ -1,6 +1,6 @@
 ---
-title: Is Violence Strictly A
-title2: Matter Of Intrigue?
+title: Is One Of The Reasons For Violence 
+title2: Fascinating Intrigue?
 description: What you gonna do when they will come for you? I wonder if violence isn't a riddle as if you're wondering how bad can this get and how far can this go.
 author: Nicolas Sursock
 date: 2020-07-19T11:22:00Z
@@ -13,6 +13,10 @@ track: Tryin' to Throw Your Arms Around the World
 versions:
     - artist: U2
       link: https://apple.co/3edVc6L
+    - artist: Matt Nathanson
+      link: https://apple.co/3qoBU4j
+    - artist: Ed Cogan
+      link: https://apple.co/3FnE6PS
 ---
 
 I've had my share of violence in my life. You keep saying no, but the story never ends. I was watching the rape scene of Monica Belluci in the movie Irreversible and thought: "it's so strange, she keeps saying no, and the guy never stops."
