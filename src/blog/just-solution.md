@@ -5,7 +5,7 @@ description: Business is about solving problems. You have a burning issue and so
 author: Nicolas Sursock
 date: 2019-06-09T14:32:01Z
 location: Paris, France
-featured: https://images.unsplash.com/photo-1605712916066-e143c317df72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1080&q=80
+featured: https://images.unsplash.com/photo-1605712916066-e143c317df72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
 tags: [Life,Business,Humor,Wellness,blog]
 layout: layouts/post.njk
 track: Just

@@ -13,8 +13,8 @@
   >
     <a href="{{ post.url }}">
       <img
-        class="rounded-t-lg"
-        data-src="{{ post.data.featured }}"
+        class="rounded-t-lg object-cover"
+        data-src="{{ post.data.featured }}&q=80&w=480&h=320"
         alt=""
         x-intersect.once.ratio-0="showArticle = true; $el.src = $el.dataset.src"
       />
