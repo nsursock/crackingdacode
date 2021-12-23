@@ -1,6 +1,6 @@
 ---
 title: 8 Great Travel Destinations
-title2: When You Get Older
+title2: When You Get Old And Wise
 description: When you're too broke to travel or don't have the energy, a little bit of nostalgia and taking a trip down memory lane can make you revitalized.
 author: Nicolas Sursock
 date: 2018-06-18T23:53:09Z

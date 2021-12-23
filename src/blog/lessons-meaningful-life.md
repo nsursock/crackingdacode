@@ -1,6 +1,6 @@
 ---
-title: 5 Lessons For A Meaningful Life, 
-title2: No. 1 Is Hell
+title: 5 Lessons For A Meaningful Life,
+title2: Number 1 Is Hell Or Paradise
 description: When you have 40 years of experience, you start wondering what life lessons are important. Revenge and rivalry are critical for people.
 author: Nicolas Sursock
 date: 2019-04-08T18:45:21Z

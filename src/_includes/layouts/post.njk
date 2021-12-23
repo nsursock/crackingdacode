@@ -132,7 +132,7 @@
         <div class="container py-8 prose lg:prose-xl md:w-3/5">
           {{ content | safe }}
         </div>
-        <aside class="order-first md:order-none px-7  lg:w-2/5 xl:w-1/5 md:h-screen md:sticky md:top-0 sm:flex sm:items-center
+        <aside class="order-first md:order-none px-7 lg:w-2/5 xl:w-1/5 md:h-screen md:sticky md:top-0 sm:flex sm:items-center
             md:flex-col md:justify-end">
           <img
             x-intersect.once.ratio-0="$el.src = $el.dataset.src"
@@ -293,7 +293,7 @@
         </div>
         <ul
           x-data="{ showArticle: false }"
-          class="md:h-screen mx-3 mt-6 flex flex-col space-y-2 sm:space-y-0 sm:flex-row sm:space-x-3  justify-center"
+          class="md:h-screen mt-6 flex flex-col space-y-2 sm:space-y-0 sm:flex-row sm:space-x-3 items-center justify-center"
           x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')">
           {% set previousPost = collections.blog | getPreviousCollectionItem(page) %}
           {% set nextPost = collections.blog | getNextCollectionItem(page) %}
@@ -311,7 +311,7 @@
                     <h2 class=" text-sm text-indigo-600 font-semibold tracking-wide uppercase text-center ">
                       {{ previousPost.data.tags[0] }}
                     </h2>
-                    <p class="line-clamp-2 mt-2 text-xl leading-8 font-bold tracking-tight text-gray-900 sm:text-2xl dark:bg-indigo-900
+                    <p class="line-clamp-2 mt-2 text-lg leading-6 font-bold tracking-tight text-gray-900 sm:text-xl dark:bg-indigo-900
                         dark:text-gray-200 ">
                       {{ previousPost.data.title + ' ' + previousPost.data.title2 }}
                     </p>
@@ -349,7 +349,7 @@
                     <h2 class=" text-sm text-indigo-600 font-semibold tracking-wide uppercase text-center ">
                       {{ nextPost.data.tags[0] }}
                     </h2>
-                    <p class="line-clamp-2 mt-2 text-xl leading-8 font-bold tracking-tight text-gray-900 sm:text-2xl dark:bg-indigo-900
+                    <p class="line-clamp-2 mt-2 text-lg leading-6 font-bold tracking-tight text-gray-900 sm:text-xl dark:bg-indigo-900
                         dark:text-gray-200 ">
                       {{ nextPost.data.title + ' ' + nextPost.data.title2 }}
                     </p>
