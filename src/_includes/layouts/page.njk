@@ -15,7 +15,12 @@
     <title>{{ title }} | Sursock Labs</title>
     {% block head %}
       {% if env.environment == "production" %}
-        <script defer data-domain="nsursock.netlify.app" src="https://plausible.io/js/plausible.js"></script>
+       <script defer data-domain="nsursock.netlify.app" src="https://plausible.io/js/plausible.js"></script>
+        <script>
+          window.plausible = window.plausible || function () {
+            (window.plausible.q = window.plausible.q || []).push(arguments)
+          }
+        </script>
       {% endif %}
     {% endblock %}
   </head>

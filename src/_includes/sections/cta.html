@@ -195,6 +195,7 @@
         currency: 'USD',
         stripe: null,
         async pay() {
+          plausible('Donated')
           await loadScript('https://js.stripe.com/v3')
           this.stripe = Stripe('{{env.stripeKey}}')
 
