@@ -335,6 +335,7 @@
           {% endif %}
         </ul>
       </div>
+      {% endblock %}
       {% include 'sections/cta.html' %}
       {% include 'footer.html' %}
       {% if env.environment == "production" %}
@@ -365,6 +366,6 @@
           gtag('config', 'AW-824380923');
         </script>
       {% endif %}
-    {% endblock %}
+    
   </body>
 </html>
