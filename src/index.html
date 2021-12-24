@@ -496,7 +496,7 @@ Experiments in Europe' %} {% extends "layouts/page.njk" %} {% block body %}
   </div>
 </div>
 
-<div id="posts" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section id="posts" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
   <div class="lg:text-center mt-8">
     <p
       class="
@@ -529,5 +529,7 @@ Experiments in Europe' %} {% extends "layouts/page.njk" %} {% block body %}
 
   {%- include './_includes/tagslist.html' -%} {%- set postslist =
   collections.blog -%} {%- include './_includes/postslist.html' -%}
-</div>
+</section>
+
+{% include './_includes/sections/faq.html' %}
 {% endblock %}
