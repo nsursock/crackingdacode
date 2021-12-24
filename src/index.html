@@ -419,9 +419,9 @@ Experiments in Europe' %} {% extends "layouts/page.njk" %} {% block body %}
               lg:mx-0
             "
           >
-            Welcome to this blog! We're trying to change the world and build a
+            Welcome to the modern Donnie Brasco's blog! We're trying to change the world and build a
             better humanity here. Inspired by the music we love, we write about
-            any topic.
+            any topic. We found a code hidden in music that could free humanity.
           </p>
           <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
             <div class="rounded-md shadow">
@@ -529,7 +529,9 @@ Experiments in Europe' %} {% extends "layouts/page.njk" %} {% block body %}
 
   {%- include './_includes/tagslist.html' -%} {%- set postslist =
   collections.blog -%} {%- include './_includes/postslist.html' -%}
-</section>
 
-{% include './_includes/sections/faq.html' %}
+  {% include './_includes/sections/faq.html' %}
+  </div>
+
+
 {% endblock %}
