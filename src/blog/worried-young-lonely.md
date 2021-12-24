@@ -6,7 +6,7 @@ author: Nicolas Sursock
 date: 2021-12-23T16:25:34Z
 location: Paris, France
 featured: https://images.unsplash.com/photo-1527137342181-19aab11a8ee8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
-tags: [Relationships, Culture, Society, Environment, blog]
+tags: [Relationships, Culture, Society, Environment, Love, blog]
 layout: layouts/post.njk
 track: Frozen
 versions:

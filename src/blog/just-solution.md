@@ -6,7 +6,7 @@ author: Nicolas Sursock
 date: 2019-06-09T14:32:01Z
 location: Paris, France
 featured: https://images.unsplash.com/photo-1605712916066-e143c317df72?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
-tags: [Life, Business, Humor, Wellness, blog]
+tags: [Life, Business, Humor, Wellness, Entertainment, blog]
 layout: layouts/post.njk
 track: Just
 versions:
