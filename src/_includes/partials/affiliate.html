@@ -42,7 +42,7 @@
           flex-shrink-0
           w-full
           sm:order-2 sm:mt-0 sm:w-auto
-          flex flex-wrap 
+          flex flex-wrap
         "
       >
         <!-- <a
@@ -68,6 +68,7 @@
 
         {% for version in versions %}
         <a
+          @click="plausible('Listened')"
           rel="noopener"
           target="_blank"
           href="{{ version.link }}"
