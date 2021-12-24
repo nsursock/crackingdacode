@@ -14,7 +14,7 @@
     <title>{{ title }} | Sursock Labs</title>
     {% block head %}
       {% if env.environment == "production" %}
-        <script type="text/javascript">
+        {# <script type="text/javascript">
           window._mfq = window._mfq || [];
           (function () {
             var mf = document.createElement("script");
@@ -23,7 +23,7 @@
             mf.src = "//cdn.mouseflow.com/projects/c54181a0-d412-45f8-bb8a-efad19eaa07b.js";
             document.getElementsByTagName("head")[0].appendChild(mf);
           })();
-        </script>
+        </script> #}
         <!-- Hotjar Tracking Code for https://nsursock.netlify.app/ -->
         <script>
           (function (h, o, t, j, a, r) {
