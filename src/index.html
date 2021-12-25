@@ -527,8 +527,10 @@ Experiments in Europe' %} {% extends "layouts/page.njk" %} {% block body %}
     </p>
   </div>
 
-  {%- include './_includes/tagslist.html' -%} {%- set postslist =
-  collections.blog -%} {%- include './_includes/postslist.html' -%}
+  {%- include './_includes/tagslist.html' -%} 
+
+  {%- set postslist = collections.blog | reverse -%} 
+  {%- include './_includes/postslist.html' -%}
 
   {% include './_includes/sections/faq.html' %}
   </div>
