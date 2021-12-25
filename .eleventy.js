@@ -2,7 +2,6 @@ const { strictEqual } = require('assert')
 const yaml = require('js-yaml')
 const format = require('date-fns/format')
 const fetch = require('node-fetch-commonjs')
-const { log } = require('console')
 
 module.exports = (config) => {
   config.addFilter('date', function (date, dateFormat) {
