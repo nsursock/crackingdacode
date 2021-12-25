@@ -341,6 +341,10 @@
             </li>
           {% endif %}
         </ul>
+        <section id="top">
+          {%- set postslist = collections.blog | top -%} 
+          {%- include 'postslist.html' -%}
+        </section>
       </div>
     {% endblock %}
     {% include 'sections/cta.html' %}
