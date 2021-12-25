@@ -3,7 +3,7 @@
   class="md:h-screen mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
   x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')"
 >
-  {%- for post in postslist | reverse -%}
+  {%- for post in postslist -%}
   <li
     x-show="showArticle"
     x-transition:enter="transform transition ease-in-out duration-1000"
