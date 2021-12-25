@@ -53,7 +53,8 @@ module.exports = (config) => {
       {
         method: 'GET',
         headers: {
-          Authorization: `Bearer ${process.env.PLAUSIBLE_KEY}`,
+          // Authorization: `Bearer ${process.env.PLAUSIBLE_KEY}`,
+          Authorization: `Bearer 2K985BK3VVcjSZIpdUo6mbWti2118_DoDvoi9k2nxxZwMPoOmrYFYpARCPUhbR97`,
         },
       }
     )
