@@ -521,16 +521,27 @@ Experiments in Europe' %} {% extends "layouts/page.njk" %} {% block body %}
         dark:bg-indigo-900 dark:text-gray-200
       "
     >
-      Are you interested in a particular subject? Browse the categories below
+      Discover the most viewed posts of this blog below. 
+      Or are you interested in a particular subject? Browse the categories
       and get a list of all posts on the matter. Or you can read the latest
       published posts, fresh from the oven!
     </p>
   </div>
 
-  {%- include './_includes/tagslist.html' -%} 
-
-  {%- set postslist = collections.blog | reverse -%} 
-  {%- include './_includes/postslist.html' -%}
+  <section id="top">
+    {%- set postslist = collections.blog | top -%} 
+    {%- include './_includes/postslist.html' -%}
+  </section>
+  
+  <section> 
+    {%- include './_includes/tagslist.html' -%} 
+  </section>
+ 
+  <section>
+    {%- set postslist = collections.blog | reverse -%} 
+    {%- include './_includes/postslist.html' -%}
+  </section>
+  
 
   {% include './_includes/sections/faq.html' %}
   </div>

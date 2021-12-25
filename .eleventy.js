@@ -48,22 +48,28 @@ module.exports = (config) => {
     return (str + '').split(sep)
   })
 
-  // config.addFilter('top', async function (posts) {
-  //   let data = await fetch(
-  //     'https://plausible.io/api/v1/stats/breakdown?site_id=nsursock.netlify.app&period=6mo&property=event:page',
-  //     {
-  //       method: 'GET',
-  //       headers: {
-  //         Authorization:
-  //           `Bearer ${process.env.PLAUSIBLE_KEY}`,
-  //       },
-  //     }
-  //   )
-  //   let json = (await data.json()).results
-  //   let tops = json.filter((item) => item.page.includes('/blog/')).slice(0, 3)
+  config.addNunjucksAsyncFilter('top', async function (posts, callback) {
+    let data = await fetch(
+      'https://plausible.io/api/v1/stats/breakdown?site_id=nsursock.netlify.app&period=6mo&property=event:page',
+      {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${process.env.PLAUSIBLE_KEY}`,
+        },
+      }
+    )
+    let json = (await data.json()).results
+    let tops = json.filter((item) => item.page.includes('/blog/')).slice(0, 3)
+    // console.log(tops);
 
-  //   return tops.map((top) => posts[posts.findIndex((post) => post.url === top.page)])
-  // })
+    callback(
+      null,
+      tops.map((top) => {
+        const index = posts.findIndex((post) => post.url === top.page)
+        if (index !== -1) return posts[index]
+      })
+    )
+  })
 
   return {
     dir: {
