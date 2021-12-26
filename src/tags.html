@@ -89,7 +89,7 @@ permalink: /tags/{{ tag | slug }}/
               lg:mx-0
             "
           >
-            {{ collections[tag].length }} posts in this category
+            {{ collections[tag].length }} post(s) in this category
           </p>
           <div
             class="
@@ -128,4 +128,9 @@ permalink: /tags/{{ tag | slug }}/
   "./_includes/postslist.html" %}
 </div>
 {%- include './_includes/tagslist.html' -%}
+
+  <section id="top">
+    {%- set postslist = collections.blog | top -%} 
+    {%- include './_includes/postslist.html' -%}
+  </section>
 </div>

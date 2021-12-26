@@ -10,10 +10,12 @@ module.exports = {
       position: ['bottom', 'right'],
     },
     extend: {
-      // fontFamily: {
-      //   erica: ['Erica One', 'cursive'],
-      //   poppins: ['Poppins', 'sans-serif']
-      // },
+      fontFamily: {
+        //   erica: ['Erica One', 'cursive'],
+        //   poppins: ['Poppins', 'sans-serif']
+        // marker: ['Permanent Marker', 'cursive'],
+        // indie: ['Indie Flower', 'cursive'],
+      },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
       },
