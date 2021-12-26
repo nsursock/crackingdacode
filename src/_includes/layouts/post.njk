@@ -257,8 +257,8 @@
             More to read
           </p>
           <p class=" mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto dark:bg-indigo-900 dark:text-gray-200 ">
-            Check out other articles on this blog. They're written with all our hearts: we want peace on Earth and end to war. We
-            need a miracle but it might have happened.
+            Check out other articles on this blog. Below find the previous and next ones. You can also browse the top 3 posts of the
+            blog.
           </p>
         </div>
         <ul
@@ -342,7 +342,7 @@
           {% endif %}
         </ul>
         <section id="top">
-          {%- set postslist = collections.blog | top -%} 
+          {%- set postslist = collections.blog | top -%}
           {%- include 'postslist.html' -%}
         </section>
       </div>
@@ -351,21 +351,21 @@
     {% include 'footer.html' %}
     {% if env.environment == "production" %}
       {# <script>
-        (function (h, o, t, j, a, r) {
-          h.hj = h.hj || function () {
-            (h.hj.q = h.hj.q || []).push(arguments)
-          };
-          h._hjSettings = {
-            hjid: 2754548,
-            hjsv: 6
-          };
-          a = o.getElementsByTagName('head')[0];
-          r = o.createElement('script');
-          r.async = 1;
-          r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-          a.appendChild(r);
-        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-      </script> #}
+                    (function (h, o, t, j, a, r) {
+                      h.hj = h.hj || function () {
+                        (h.hj.q = h.hj.q || []).push(arguments)
+                      };
+                      h._hjSettings = {
+                        hjid: 2754548,
+                        hjsv: 6
+                      };
+                      a = o.getElementsByTagName('head')[0];
+                      r = o.createElement('script');
+                      r.async = 1;
+                      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+                      a.appendChild(r);
+                    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+                  </script> #}
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-C3CETTNJHN"></script>
       <script>
         window.dataLayer = window.dataLayer || [];

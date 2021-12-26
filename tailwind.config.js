@@ -11,8 +11,8 @@ module.exports = {
     },
     extend: {
       // fontFamily: {
-      //   heading: ['Erica One', 'cursive'],
-      //   all: ['Poppins', 'sans-serif']
+      //   erica: ['Erica One', 'cursive'],
+      //   poppins: ['Poppins', 'sans-serif']
       // },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
