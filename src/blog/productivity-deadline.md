@@ -1,7 +1,7 @@
 ---
 title: Did You Feel Confident Discovering 
 title2: Productivity Is About A Deadline?
-description: A discovery I made in the last 3 years is that creating a song with a deadline gives birth to a sweet sound. The due date allows to make plans.
+description: A discovery I made recently is that creating a song without overthinking gives birth to a sweet sound. The due date allows to make plans.
 author: Nicolas Sursock
 date: 2018-07-02T00:15:34Z
 location: Beirut, Lebanon
