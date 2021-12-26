@@ -16,6 +16,8 @@ versions:
       link: https://apple.co/3z82SkI
     - artist: Esther Phillips
       link: https://apple.co/3prbsYv
+    - artist: Dan Sinasac
+      link: https://apple.co/3EyWX97
 ---
 
 I think we all had to face that one day: you're in a social gathering, and nobody talks to you. The anxiety that results from that treatment means you're experiencing oppression as if you were in a totalitarian state.
