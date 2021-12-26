@@ -292,7 +292,8 @@
                   <div class="mt-4 pt-4 flex items-center">
                     <img
                       class="h-12 w-12 rounded-full"
-                      src="/static/img/{{ previousPost.data.author.split(' ').join('-') }}-small.jpg"
+                      data-src="/static/img/{{ previousPost.data.author.split(' ').join('-') }}-small.jpg"
+                      x-intersect.once.ratio-0="$el.src = $el.dataset.src"
                       alt=""/>
                     <div class="ml-3 flex flex-col" x-data="{ time: {{ previousPost.templateContent.split(' ').length / 200 }} }">
                       <span class="text-sm font-semibold">{{ previousPost.data.author }}</span>
@@ -328,7 +329,11 @@
                     </p>
                   </div>
                   <div class="mt-4 pt-4 flex items-center">
-                    <img class="h-12 w-12 rounded-full" src="/static/img/{{ nextPost.data.author.split(' ').join('-') }}-small.jpg" alt=""/>
+                    <img
+                      class="h-12 w-12 rounded-full"
+                      data-src="/static/img/{{ nextPost.data.author.split(' ').join('-') }}-small.jpg"
+                      alt=""
+                      x-intersect.once.ratio-0="$el.src = $el.dataset.src"/>
                     <div class="ml-3 flex flex-col" x-data="{ time: {{ nextPost.templateContent.split(' ').length / 200 }} }">
                       <span class="text-sm font-semibold">{{ nextPost.data.author }}</span>
                       <span class="text-sm text-gray-500">
@@ -351,21 +356,21 @@
     {% include 'footer.html' %}
     {% if env.environment == "production" %}
       {# <script>
-                    (function (h, o, t, j, a, r) {
-                      h.hj = h.hj || function () {
-                        (h.hj.q = h.hj.q || []).push(arguments)
-                      };
-                      h._hjSettings = {
-                        hjid: 2754548,
-                        hjsv: 6
-                      };
-                      a = o.getElementsByTagName('head')[0];
-                      r = o.createElement('script');
-                      r.async = 1;
-                      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-                      a.appendChild(r);
-                    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-                  </script> #}
+                                (function (h, o, t, j, a, r) {
+                                  h.hj = h.hj || function () {
+                                    (h.hj.q = h.hj.q || []).push(arguments)
+                                  };
+                                  h._hjSettings = {
+                                    hjid: 2754548,
+                                    hjsv: 6
+                                  };
+                                  a = o.getElementsByTagName('head')[0];
+                                  r = o.createElement('script');
+                                  r.async = 1;
+                                  r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+                                  a.appendChild(r);
+                                })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+                              </script> #}
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-C3CETTNJHN"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
