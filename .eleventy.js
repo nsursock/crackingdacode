@@ -59,12 +59,11 @@ module.exports = (config) => {
       }
     )
     let json = (await data.json()).results
-    let tops = json.filter((item) => item.page.includes('/blog/')).slice(0, 3)
-    // console.log(tops);
+    let tops = json?.filter((item) => item.page.includes('/blog/')).slice(0, 3)
 
     callback(
       null,
-      tops.map((top) => {
+      tops?.map((top) => {
         const index = posts.findIndex((post) => post.url === top.page)
         if (index !== -1) return posts[index]
       })
