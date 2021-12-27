@@ -530,20 +530,13 @@ author: Nicolas Sursock
     </p>
   </div>
 
-  <section id="top">
-    {%- set postslist = collections.blog | top -%} 
-    {%- include './_includes/postslist.html' -%}
-  </section>
-  
-  <section> 
-    {%- include './_includes/tagslist.html' -%} 
-  </section>
- 
-  <section>
-    {%- set postslist = collections.blog | reverse -%} 
-    {%- include './_includes/postslist.html' -%}
-  </section>
-  
+  {%- set postslist = collections.blog | top -%} 
+  {%- include './_includes/postslist.html' -%}
+
+  {%- include './_includes/tagslist.html' -%} 
+
+  {%- set postslist = collections.blog | reverse -%} 
+  {%- include './_includes/postslist.html' -%}
 
   {% include './_includes/sections/faq.html' %}
   </div>
