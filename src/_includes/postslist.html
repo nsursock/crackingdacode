@@ -10,6 +10,7 @@
     x-transition:enter-start="-rotate-180 scale-50 opacity-25"
     x-transition:enter-end="rotate-0 scale-100 opacity-100"
     class="bg-white shadow-lg border border-gray-200 rounded-lg max-w-sm h-full mx-auto"
+    :class="isTopList ? 'sm:last:hidden lg:last:block' : ''"
   >
     <a href="{{ post.url }}">
       <img
