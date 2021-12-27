@@ -78,7 +78,9 @@ permalink: /tags/{{ tag | slug }}/
             "
           >
             <span class="block xl:inline">{{ title.split(' ')[0] }}</span>
-            <span class="block text-indigo-600 xl:inline">{{ title.split(' ').slice(1).join(' ') }}</span>
+            <span class="block text-indigo-600 xl:inline">
+              {{ title.split(' ').slice(1).join(' ') }}
+            </span>
           </h1>
           <p
             class="
@@ -123,14 +125,15 @@ permalink: /tags/{{ tag | slug }}/
   </div>
 </div>
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div>
-  {% set postslist = collections[tag] %} {% include
-  "./_includes/postslist.html" %}
-</div>
-{%- include './_includes/tagslist.html' -%}
+  <div x-data="{ isTopList: false }">
+    {% set postslist = collections[tag] %} {% include
+    "./_includes/postslist.html" %}
+  </div>
 
-  <section id="top">
-    {%- set postslist = collections.blog | top -%} 
-    {%- include './_includes/postslist.html' -%}
-  </section>
+  {%- include './_includes/tagslist.html' -%}
+
+  <div x-data="{ isTopList: true }">
+    {%- set postslist = collections.blog | top -%} {%- include
+    './_includes/postslist.html' -%}
+  </div>
 </div>
