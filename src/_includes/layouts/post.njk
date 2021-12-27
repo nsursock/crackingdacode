@@ -354,7 +354,7 @@
     {% endblock %}
     {% include 'sections/cta.html' %}
     {% include 'footer.html' %}
-    {% if env.environment == "production" %}
+    {# {% if env.environment == "production" %}
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-69L675SJ2T"></script>
       <script>
@@ -365,6 +365,6 @@
         gtag('js', new Date());
         gtag('config', 'G-69L675SJ2T');
       </script>
-    {% endif %}
+    {% endif %} #}
   </body>
 </html>
