@@ -16,23 +16,32 @@
     <title>{{ title }} | Sursock Labs</title>
     {% block head %}
       {% if env.environment == "production" %}
-      <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5MN6MTZ');</script>
-<!-- End Google Tag Manager -->
-        {# <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-69L675SJ2T"></script>
+        <!-- Google Tag Manager -->
         <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag() {
-            dataLayer.push(arguments);
-          }
-          gtag('js', new Date());
-          gtag('config', 'G-69L675SJ2T');
-        </script> #}
+          (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+            var f = d.getElementsByTagName(s)[0],
+              j = d.createElement(s),
+              dl = l != 'dataLayer'
+                ? '&l=' + l
+                : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+          })(window, document, 'script', 'dataLayer', 'GTM-5MN6MTZ');
+        </script>
+        <!-- End Google Tag Manager -->
+        {# <!-- Global site tag (gtag.js) - Google Analytics -->
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-69L675SJ2T"></script>
+                <script>
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag() {
+                    dataLayer.push(arguments);
+                  }
+                  gtag('js', new Date());
+                  gtag('config', 'G-69L675SJ2T');
+                </script> #}
         <script defer data-domain="nsursock.netlify.app" src="https://plausible.io/js/plausible.js"></script>
         <script>
           window.plausible = window.plausible || function () {
@@ -42,19 +51,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       {% endif %}
     {% endblock %}
   </head>
-  <body hx-boost="true" class="{{ 'debug-screens' if env.devMode }}" x-data="{ showCta: false }">
+  <body hx-boost="true" class="{{ 'debug-screens' if env.devMode }} dark:bg-gray-900" x-data="{ showCta: false }">
     {% if page.url != '/' %}
       {% include '../header.html' %}
     {% endif %}
     {% block body %}
-        {% if env.environment == "production" %}
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MN6MTZ"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    {% endif %}
+      {% if env.environment == "production" %}
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5MN6MTZ"
+            height="0"
+            width="0"
+            style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+      {% endif %}
       <!-- This example requires Tailwind CSS v2.0+ -->
-      <div class="">
+      <div>
         {{ content | safe }}
       </div>
     {% endblock %}
