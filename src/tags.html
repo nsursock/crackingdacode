@@ -17,7 +17,7 @@ permalink: /tags/{{ tag | slug }}/
 ---
 
 <!-- This example requires Tailwind CSS v2.0+ -->
-<div class="relative bg-white overflow-hidden">
+<div class="relative bg-white overflow-hidden dark:bg-gray-900">
   <div class="max-w-7xl mx-auto">
     <div
       class="
@@ -29,6 +29,7 @@ permalink: /tags/{{ tag | slug }}/
         md:pb-20
         lg:max-w-2xl lg:w-full lg:pb-28
         xl:pb-32
+        dark:bg-gray-900
       "
     >
       <svg
@@ -41,6 +42,7 @@ permalink: /tags/{{ tag | slug }}/
           h-full
           w-48
           text-white
+          dark:text-gray-900
           transform
           translate-x-1/2
         "
@@ -77,7 +79,7 @@ permalink: /tags/{{ tag | slug }}/
               md:text-6xl
             "
           >
-            <span class="block xl:inline">{{ title.split(' ')[0] }}</span>
+            <span class="block xl:inline dark:text-white">{{ title.split(' ')[0] }}</span>
             <span class="block text-indigo-600 xl:inline">
               {{ title.split(' ').slice(1).join(' ') }}
             </span>
@@ -85,7 +87,7 @@ permalink: /tags/{{ tag | slug }}/
           <p
             class="
               mt-3
-              text-base text-gray-500
+              text-base text-gray-500 dark:text-gray-400
               sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto
               md:mt-5 md:text-xl
               lg:mx-0
@@ -126,16 +128,44 @@ permalink: /tags/{{ tag | slug }}/
 </div>
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
   <div x-data="{ isTopList: false }">
-    {% set postslist = collections[tag] %} {% include
-    "./_includes/postslist.html" %}
+    {% set postslist = collections[tag] %}
+    <ol
+      x-data="{ showArticle: false }"
+      class="
+        md:h-screen
+        mt-6
+        grid grid-cols-1
+        sm:grid-cols-2
+        lg:grid-cols-3
+        gap-4
+      "
+      x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')"
+    >
+      {%- for post in postslist -%} {%- include 'partials/postcard.html' -%} {%-
+      endfor -%}
+    </ol>
   </div>
 
   {%- include './_includes/tagslist.html' -%}
 
-  {%- if env.environment == 'production' -%}
+   {%- if env.environment == 'production' -%}
   <div x-data="{ isTopList: true }">
-    {%- set postslist = collections.blog | top -%} {%- include
-    './_includes/postslist.html' -%}
+    {%- set postslist = collections.blog | top -%}
+    <ol
+      x-data="{ showArticle: false }"
+      class="
+        md:h-screen
+        mt-6
+        grid grid-cols-1
+        sm:grid-cols-2
+        lg:grid-cols-3
+        gap-4
+      "
+      x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')"
+    >
+      {%- for post in postslist -%} {%- include 'partials/postcard.html' -%} {%-
+      endfor -%}
+    </ol>
   </div>
-    {%- endif -%}
+  {%- endif -%}
 </div>

@@ -1,6 +1,15 @@
 <section
   id="faq"
-  class="mt-12 px-5 bg-white flex flex-col md:flex-row max-w-7xl mx-auto"
+  class="
+    mt-12
+    px-5
+    bg-white
+    flex flex-col
+    md:flex-row
+    max-w-7xl
+    mx-auto
+    dark:bg-gray-900
+  "
 >
   <div class="md:w-1/3 mb-8 mr-5">
     <p
@@ -12,65 +21,31 @@
         tracking-tight
         text-gray-900
         sm:text-4xl
+        dark:text-white
       "
     >
       Frequently Asked Questions
     </p>
-    <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+    <p
+      class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto dark:text-gray-400"
+    >
       Can't find the answer you're looking for? Reach out to our
       <a class="text-indigo-500 font-semibold" href="/contact">support</a>
       team.
     </p>
   </div>
+  {% if faq.faq %}
   <div class="md:w-2/3 space-y-6">
+    {% for item in faq.faq %}
     <div class="">
-      <dt class="text-lg leading-6 font-medium text-gray-900">
-        Were you really a European secret agent in the past?
+      <dt class="text-lg leading-6 font-medium text-gray-900 dark:text-white">
+        {{ item.question }}
       </dt>
-      <dd class="mt-2 text-base text-gray-500">
-        Yes I was. I participated in the War on Terror since 2001 and
-        infiltrated Ben Laden's network until 2011 when I called it quits.
+      <dd class="mt-2 text-base text-gray-500 dark:text-gray-400">
+        {{ item.answer }}
       </dd>
     </div>
-    <div class="">
-      <dt class="text-lg leading-6 font-medium text-gray-900">
-        Why do you call yourself a modern Donnie Brasco?
-      </dt>
-      <dd class="mt-2 text-base text-gray-500">
-        That's because my mission was successful but the government never paid
-        me. They owe me 25 million dollars. I had to rely on my savings and my
-        skills as a webdev and a musician.
-      </dd>
-    </div>
-    <div class="">
-      <dt class="text-lg leading-6 font-medium text-gray-900">
-        Is blogging your only occupation?
-      </dt>
-      <dd class="mt-2 text-base text-gray-500">
-        No, of course not. I'm writing a novel about my experience that should
-        be out in 6 months if everything goes well. I also love music and was
-        contacted by a record label to produce some of my tracks. .
-      </dd>
-    </div>
-    <div class="">
-      <dt class="text-lg leading-6 font-medium text-gray-900">
-        Why can't I comment on your posts?
-      </dt>
-      <dd class="mt-2 text-base text-gray-500">
-        The comment system will soon be available. Please wait a few months. In
-        the meantime, you can send me a message through the contact page.
-      </dd>
-    </div>
-    <div class="">
-      <dt class="text-lg leading-6 font-medium text-gray-900">
-        How do I leave a testimonial?
-      </dt>
-      <dd class="mt-2 text-base text-gray-500">
-        On the contact page, use the subject field and specify "Testimonial".
-        Testimonials will be featured randomly around the website. After
-        receiving your message, you might be asked for a picture to display next
-        to the testimonial.
-      </dd>
-    </div>
+    {% endfor %}
   </div>
+  {% endif %}
 </section>

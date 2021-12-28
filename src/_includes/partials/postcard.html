@@ -3,7 +3,17 @@
   x-transition:enter="transform transition ease-in-out duration-1000"
   x-transition:enter-start="-rotate-180 scale-50 opacity-25"
   x-transition:enter-end="rotate-0 scale-100 opacity-100"
-  class="bg-white shadow-lg border border-gray-200 rounded-lg max-w-sm h-full"
+  class="
+    bg-white
+    shadow-lg
+    border border-gray-200
+    rounded-lg
+    max-w-sm
+    h-full
+    mx-auto
+    dark:bg-gray-800 dark:border-gray-700
+  "
+  :class="typeof isTopList !== 'undefined' && isTopList ? 'sm:last:hidden lg:last:block' : ''"
 >
   <a href="{{ post.url }}">
     <div class="relative">
@@ -13,31 +23,41 @@
         alt=""
         x-intersect.once.ratio-0="showArticle = true; $el.src = $el.dataset.src"
       />
-      <div
-        class="
-          absolute
-          inset-0
-          flex
-          items-center
-          justify-center
-          max-w-3xl
-          text-8xl
-          font-black
-          text-white
-          filter
-          blur-sm
-          mix-blend-overlay
-          hover:filter-none
-          transition
-          ease-in-out
-          duration-500
-        "
-      >
-        <span x-text="type"></span>
-      </div>
+      <template x-if="typeof type !== 'undefined'">
+        <div
+          class="
+            absolute
+            inset-0
+            flex
+            items-center
+            justify-center
+            max-w-3xl
+            text-8xl
+            font-black
+            text-white
+            dark:text-black
+            filter
+            blur-sm
+            mix-blend-overlay
+            hover:filter-none
+            transition
+            ease-in-out
+            duration-500
+          "
+        >
+          <span x-text="type"></span>
+        </div>
+      </template>
     </div>
-
-    <div class="flex flex-col p-7 divide-y divide-gray-300 justify-between">
+    <div
+      class="
+        flex flex-col
+        p-7
+        divide-y divide-gray-300
+        dark:divide-gray-700
+        justify-between
+      "
+    >
       <div class="">
         <h2
           class="
@@ -60,7 +80,7 @@
             tracking-tight
             text-gray-900
             sm:text-xl
-            dark:bg-indigo-900 dark:text-gray-200
+            dark:text-white
           "
         >
           {{ post.data.title + ' ' + post.data.title2 }}
@@ -72,7 +92,7 @@
             max-w-2xl
             text-md text-gray-500
             lg:mx-auto
-            dark:bg-indigo-900 dark:text-gray-200
+            dark:text-gray-400
           "
         >
           {{ post.data.description }}
@@ -82,15 +102,17 @@
         <img
           class="h-12 w-12 rounded-full"
           data-src="/static/img/{{ post.data.author.split(' ').join('-') }}-small.jpg"
-          x-intersect.once.ratio-0="$el.src = $el.dataset.src"
           alt=""
+          x-intersect.once.ratio-0="$el.src = $el.dataset.src"
         />
-        <div
-          class="ml-3 flex flex-col"
-          x-data="{ time: {{ post.templateContent.split(' ').length / 200 }} }"
-        >
-          <span class="text-sm font-semibold">{{ post.data.author }}</span>
-          <span class="text-sm text-gray-500">
+        <div class="ml-3 flex flex-col">
+          <span class="text-sm font-semibold dark:text-white">
+            {{ post.data.author }}
+          </span>
+          <span
+            class="text-sm text-gray-500 dark:text-gray-400"
+            x-data="{ time: {{ post.templateContent.split(' ').length / 200 }} }"
+          >
             {{ post.data.date | date("MMM dd, yyyy") }} •
             <span
               x-text="`${Math.round(time).toString().split('.')[0]} min read`"
