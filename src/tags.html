@@ -132,8 +132,10 @@ permalink: /tags/{{ tag | slug }}/
 
   {%- include './_includes/tagslist.html' -%}
 
+  {%- if env.environment == 'production' -%}
   <div x-data="{ isTopList: true }">
     {%- set postslist = collections.blog | top -%} {%- include
     './_includes/postslist.html' -%}
   </div>
+    {%- endif -%}
 </div>
