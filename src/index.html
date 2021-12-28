@@ -6,6 +6,29 @@ author: Nicolas Sursock
 {# This page is built with nunjucks! #} {% set title = 'Home | Are You
 Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
 
+<button
+  @click="plausible('Contacted')"
+  :disabled="disableSubmit"
+  :class="{'opacity-50': disableSubmit}"
+  type="submit"
+  class="
+  hidden
+    justify-center
+    py-2
+    px-4
+    border border-transparent
+    shadow-sm
+    text-sm
+    font-medium
+    rounded-md
+    text-white
+    bg-indigo-600
+    hover:bg-indigo-700
+    focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
+  "
+>
+  Send
+</button>
 <div x-data="{symbol: '$'}" class="hidden">
   <label for="price" class="text-sm font-medium text-gray-700 hidden">
     Price
