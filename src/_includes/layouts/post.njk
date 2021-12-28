@@ -305,88 +305,24 @@
           {% set previousPost = collections.blog | getPreviousCollectionItem(page) %}
           {% set nextPost = collections.blog | getNextCollectionItem(page) %}
           {% if previousPost %}
-            <li
-              x-show="showArticle"
-              x-transition:enter="transform transition ease-in-out duration-1000"
-              x-transition:enter-start="-rotate-180 scale-50 opacity-25"
-              x-transition:enter-end="rotate-0 scale-100 opacity-100"
-              class="bg-white shadow-lg border border-gray-200 rounded-lg max-w-sm h-full">
-              <a href="{{ previousPost.url }}">
-                <img class="rounded-t-lg" data-src="{{ previousPost.data.featured }}&q=80&w=480&h=320" alt="" x-intersect.once.ratio-0="showArticle = true; $el.src = $el.dataset.src"/>
-                <div class="flex flex-col p-7 divide-y divide-gray-300 justify-between">
-                  <div class="">
-                    <h2 class=" text-sm text-indigo-600 font-semibold tracking-wide uppercase text-center ">
-                      {{ previousPost.data.tags[0] }}
-                    </h2>
-                    <p class="line-clamp-2 mt-2 text-lg leading-6 font-bold tracking-tight text-gray-900 sm:text-xl dark:bg-indigo-900
-                        dark:text-gray-200 ">
-                      {{ previousPost.data.title + ' ' + previousPost.data.title2 }}
-                    </p>
-                    <p class="line-clamp-4 mt-4 max-w-2xl text-md text-gray-500 lg:mx-auto dark:bg-indigo-900 dark:text-gray-200 ">
-                      {{ previousPost.data.description }}
-                    </p>
-                  </div>
-                  <div class="mt-4 pt-4 flex items-center">
-                    <img
-                      class="h-12 w-12 rounded-full"
-                      data-src="/static/img/{{ previousPost.data.author.split(' ').join('-') }}-small.jpg"
-                      x-intersect.once.ratio-0="$el.src = $el.dataset.src"
-                      alt=""/>
-                    <div class="ml-3 flex flex-col" x-data="{ time: {{ previousPost.templateContent.split(' ').length / 200 }} }">
-                      <span class="text-sm font-semibold">{{ previousPost.data.author }}</span>
-                      <span class="text-sm text-gray-500">
-                        {{ previousPost.data.date | date("MMM dd, yyyy") }} • <span x-text="`${Math.round(time).toString().split('.')[0]} min read`"/>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
+          <div x-data="{ type: 'Prev' }">
+            {% set post = previousPost %}
+            {% include 'partials/postcard.html' %}
+            </div>
           {% endif %}
           {% if nextPost %}
-            <li
-              x-show="showArticle"
-              x-transition:enter="transform transition ease-in-out duration-1000"
-              x-transition:enter-start="-rotate-180 scale-50 opacity-25"
-              x-transition:enter-end="rotate-0 scale-100 opacity-100"
-              class="bg-white shadow-lg border border-gray-200 rounded-lg max-w-sm h-full">
-              <a href="{{ nextPost.url }}">
-                <img class="rounded-t-lg" data-src="{{ nextPost.data.featured }}&q=80&w=480&h=320" alt="" x-intersect.once.ratio-0="showArticle = true; $el.src = $el.dataset.src"/>
-                <div class="flex flex-col p-7 divide-y divide-gray-300 justify-between">
-                  <div class="">
-                    <h2 class=" text-sm text-indigo-600 font-semibold tracking-wide uppercase text-center ">
-                      {{ nextPost.data.tags[0] }}
-                    </h2>
-                    <p class="line-clamp-2 mt-2 text-lg leading-6 font-bold tracking-tight text-gray-900 sm:text-xl dark:bg-indigo-900
-                        dark:text-gray-200 ">
-                      {{ nextPost.data.title + ' ' + nextPost.data.title2 }}
-                    </p>
-                    <p class="line-clamp-4 mt-4 max-w-2xl text-md text-gray-500 lg:mx-auto dark:bg-indigo-900 dark:text-gray-200 ">
-                      {{ nextPost.data.description }}
-                    </p>
-                  </div>
-                  <div class="mt-4 pt-4 flex items-center">
-                    <img
-                      class="h-12 w-12 rounded-full"
-                      data-src="/static/img/{{ nextPost.data.author.split(' ').join('-') }}-small.jpg"
-                      alt=""
-                      x-intersect.once.ratio-0="$el.src = $el.dataset.src"/>
-                    <div class="ml-3 flex flex-col" x-data="{ time: {{ nextPost.templateContent.split(' ').length / 200 }} }">
-                      <span class="text-sm font-semibold">{{ nextPost.data.author }}</span>
-                      <span class="text-sm text-gray-500">
-                        {{ nextPost.data.date | date("MMM dd, yyyy") }} • <span x-text="`${Math.round(time).toString().split('.')[0]} min read`"/>
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </a>
-            </li>
+          <div x-data="{ type: 'Next' }">
+             {% set post = nextPost %}
+            {% include 'partials/postcard.html' %}
+             </div>
           {% endif %}
         </ul>
+        {%- if env.environment == 'production' -%}
         <div x-data="{ isTopList: true }">
           {% set postslist = collections.blog | top %}
           {% include 'postslist.html' %}
         </div>
+          {%- endif -%}
       </div>
     {% endblock %}
     {% include 'sections/cta.html' %}
