@@ -13,17 +13,33 @@
     h-full
     mx-auto
     dark:bg-gray-800 dark:border-gray-700
+    group
   "
   :class="typeof isTopList !== 'undefined' && isTopList ? 'sm:last:hidden lg:last:block' : ''"
 >
   <a href="{{ post.url }}">
     <div class="relative">
-      <img
-        class="rounded-t-lg"
-        data-src="{{ post.data.featured }}&q=80&w=480&h=320"
-        alt=""
-        x-intersect.once.ratio-0="showArticle = true; $el.src = $el.dataset.src"
-      />
+      <div class="relative">
+        <img
+          class="rounded-t-lg"
+          data-src="{{ post.data.featured }}&q=80&w=480&h=320"
+          alt=""
+          x-intersect.once.ratio-0="showArticle = true; $el.src = $el.dataset.src"
+        />
+        <div
+          class="
+            absolute
+            inset-0
+            bg-gray-500 bg-opacity-0
+            group-hover:bg-opacity-75
+            transition-all
+            ease-in-out
+            duration-500
+            rounded-t-lg
+          "
+          aria-hidden="true"
+        />
+      </div>
       <template x-if="typeof type !== 'undefined'">
         <div
           class="
@@ -36,11 +52,10 @@
             text-8xl
             font-black
             text-white
-            dark:text-black
-            md:filter md:blur-sm
+            md:filter md:blur-lg
             mix-blend-overlay
-            hover:filter-none
-            transition
+            group-hover:filter-none
+            transition-all
             ease-in-out
             duration-500
           "
