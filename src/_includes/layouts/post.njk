@@ -15,6 +15,11 @@
     {% endif %}
     <title>{{ title + ' ' + title2 }} | Sursock Labs</title>
     {% block head %}
+      <meta property='og:title' content="{{ title + ' ' + title2 }}"/>
+      <meta property='og:image' content="{{ featured }}&q=80&w=1920&h=1280"/>
+      <meta property='og:description' content="{{ description }}"/>
+      <meta property='og:url' content="{{ 'http://nsursock.netlify.app' + page.url }}"/>
+      <meta property='og:type' content="article"/>
       {% if env.environment == "production" %}
         <!-- Google Tag Manager -->
         <script>
@@ -33,15 +38,15 @@
         </script>
         <!-- End Google Tag Manager -->
         {# <!-- Global site tag (gtag.js) - Google Analytics -->
-                                                <script async src="https://www.googletagmanager.com/gtag/js?id=G-69L675SJ2T"></script>
-                                                <script>
-                                                  window.dataLayer = window.dataLayer || [];
-                                                  function gtag() {
-                                                    dataLayer.push(arguments);
-                                                  }
-                                                  gtag('js', new Date());
-                                                  gtag('config', 'G-69L675SJ2T');
-                                                </script> #}
+                                                                <script async src="https://www.googletagmanager.com/gtag/js?id=G-69L675SJ2T"></script>
+                                                                <script>
+                                                                  window.dataLayer = window.dataLayer || [];
+                                                                  function gtag() {
+                                                                    dataLayer.push(arguments);
+                                                                  }
+                                                                  gtag('js', new Date());
+                                                                  gtag('config', 'G-69L675SJ2T');
+                                                                </script> #}
         <script defer data-domain="nsursock.netlify.app" src="https://plausible.io/js/plausible.js"></script>
         <script>
           window.plausible = window.plausible || function () {
@@ -50,11 +55,6 @@
         </script>
       {% endif %}
     {% endblock %}
-    <meta property='og:title' content="{{ title + ' ' + title2 }}"/>
-    <meta property='og:image' content="{{ featured }}&q=80&w=1920&h=1280"/>
-    <meta property='og:description' content="{{ description }}"/>
-    <meta property='og:url' content="{{ 'http://nsursock.netlify.app' + page.url }}"/>
-    <meta property="”og:type”" content="article"/>
   </head>
   <body hx-boost="true" class="{{ 'debug-screens' if env.devMode }} dark:bg-gray-900" x-data="{ showCta: false }">
     {% if page.url != '/' %}
