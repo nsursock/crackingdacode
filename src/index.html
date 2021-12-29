@@ -9,8 +9,8 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
 <button
   type="submit"
   class="
-  opacity-50
-  hidden
+    opacity-50
+    hidden
     justify-center
     py-2
     px-4
@@ -601,11 +601,11 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
       "
       x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')"
     >
-      {%- for post in postslist -%} 
+      {%- for post in postslist -%}
       <div x-data="{ type: '#{{ loop.index }}' }">
-        {%- include 'partials/postcard.html' -%} 
+        {%- include 'partials/postcard.html' -%}
       </div>
-      
+
       {%- endfor -%}
     </ol>
   </div>
@@ -616,6 +616,7 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
     <ol
       x-data="{ showArticle: false }"
       class="
+        snap-y snap-mandatory
         md:h-screen
         mt-6
         grid grid-cols-1
