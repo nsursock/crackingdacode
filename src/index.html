@@ -7,11 +7,9 @@ author: Nicolas Sursock
 Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
 
 <button
-  @click="plausible('Contacted')"
-  :disabled="disableSubmit"
-  :class="{'opacity-50': disableSubmit}"
   type="submit"
   class="
+  opacity-50
   hidden
     justify-center
     py-2
