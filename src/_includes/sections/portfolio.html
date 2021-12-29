@@ -84,7 +84,7 @@
               <div class="md:hidden mt-5">
                 <label
                   for="project"
-                  class="block text-sm font-medium text-gray-700"
+                  class="block text-sm font-medium text-gray-700 dark:text-white"
                 >
                   Project
                 </label>
@@ -100,6 +100,7 @@
                     px-3
                     border border-gray-300
                     bg-white
+                    dark:text-gray-900
                     rounded-md
                     shadow-sm
                     focus:outline-none
@@ -119,7 +120,7 @@
                 </select>
               </div>
 
-              <ul class="md:flex md:border-b hidden md:block">
+              <ul class="md:border-b hidden md:block">
                 {% for case in cases.cases %}
                 <li
                   @click="openTab = {{loop.index}}"

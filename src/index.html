@@ -188,6 +188,7 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
                     type="button"
                     class="
                       bg-white
+                      dark:bg-gray-900
                       rounded-md
                       p-2
                       inline-flex
@@ -287,6 +288,7 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
         -->
         <div
           x-show="showMenu"
+          @click.outside="showMenu = false"
           class="
             absolute
             z-10
@@ -306,6 +308,7 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
               bg-white
               ring-1 ring-black ring-opacity-5
               overflow-hidden
+              dark:bg-gray-900
             "
           >
             <div class="px-5 pt-4 flex items-center justify-between">
@@ -331,6 +334,7 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
                   type="button"
                   class="
                     bg-white
+                    dark:bg-gray-900
                     rounded-md
                     p-2
                     inline-flex
@@ -375,6 +379,7 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
                   text-base
                   font-medium
                   text-gray-700
+                  dark:text-gray-400
                   hover:text-gray-900 hover:bg-gray-50
                 "
               >
@@ -391,6 +396,7 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
                   text-base
                   font-medium
                   text-gray-700
+                  dark:text-gray-400
                   hover:text-gray-900 hover:bg-gray-50
                 "
               >
@@ -407,6 +413,7 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
                   text-base
                   font-medium
                   text-gray-700
+                  dark:text-gray-400
                   hover:text-gray-900 hover:bg-gray-50
                 "
               >
@@ -423,6 +430,7 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
                   text-base
                   font-medium
                   text-gray-700
+                  dark:text-gray-400
                   hover:text-gray-900 hover:bg-gray-50
                 "
               >
