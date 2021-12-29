@@ -5,7 +5,7 @@ description: What you gonna do when they will come for you? I wonder if violence
 author: Nicolas Sursock
 date: 2020-07-19T11:22:00Z
 location: Beirut, Lebanon
-featured: https://images.unsplash.com/photo-1499428665502-503f6c608263?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
+featured: https://images.unsplash.com/photo-1581840129423-6e3dd0206fae?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
 tags: [Culture, Environment, Psychology, Society, Fitness, blog]
 layout: layouts/post.njk
 affiliate_link: https://apple.co/3sbvKXM

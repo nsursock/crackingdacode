@@ -5,7 +5,7 @@ description: The best thing to do when your heart is broken is to do something c
 author: Nicolas Sursock
 date: 2020-07-18T18:52:03Z
 location: Beirut, Lebanon
-featured: https://images.unsplash.com/photo-1516822003754-cca485356ecb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
+featured: https://images.unsplash.com/photo-1526063402628-3cda107c8df7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
 tags: [Health, Future, Wellness, Culture, Psychology, blog]
 layout: layouts/post.njk
 track: Livin' On The Edge
