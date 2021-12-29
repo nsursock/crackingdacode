@@ -33,15 +33,15 @@
         </script>
         <!-- End Google Tag Manager -->
         {# <!-- Global site tag (gtag.js) - Google Analytics -->
-                                        <script async src="https://www.googletagmanager.com/gtag/js?id=G-69L675SJ2T"></script>
-                                        <script>
-                                          window.dataLayer = window.dataLayer || [];
-                                          function gtag() {
-                                            dataLayer.push(arguments);
-                                          }
-                                          gtag('js', new Date());
-                                          gtag('config', 'G-69L675SJ2T');
-                                        </script> #}
+                                                <script async src="https://www.googletagmanager.com/gtag/js?id=G-69L675SJ2T"></script>
+                                                <script>
+                                                  window.dataLayer = window.dataLayer || [];
+                                                  function gtag() {
+                                                    dataLayer.push(arguments);
+                                                  }
+                                                  gtag('js', new Date());
+                                                  gtag('config', 'G-69L675SJ2T');
+                                                </script> #}
         <script defer data-domain="nsursock.netlify.app" src="https://plausible.io/js/plausible.js"></script>
         <script>
           window.plausible = window.plausible || function () {
@@ -289,8 +289,7 @@
       </div>
       <div id="posts" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="lg:text-center mt-8">
-          <p class=" mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl
-                            dark:text-white ">
+          <p class=" mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl dark:text-white ">
             More to read
           </p>
           <p class=" mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto dark:text-gray-400 ">
@@ -325,7 +324,9 @@
               class="md:h-screen mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
               x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')">
               {%- for post in postslist -%}
-                {% include 'partials/postcard.html' %}
+                <div x-data="{ type: '#{{ loop.index }}' }">
+                  {%- include 'partials/postcard.html' -%}
+                </div>
               {%- endfor -%}
             </ol>
           </div>

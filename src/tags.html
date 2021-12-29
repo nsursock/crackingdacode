@@ -163,8 +163,11 @@ permalink: /tags/{{ tag | slug }}/
       "
       x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')"
     >
-      {%- for post in postslist -%} {%- include 'partials/postcard.html' -%} {%-
-      endfor -%}
+      {%- for post in postslist -%} 
+       <div x-data="{ type: '#{{ loop.index }}' }">
+        {%- include 'partials/postcard.html' -%} 
+      </div>
+      {%- endfor -%}
     </ol>
   </div>
   {%- endif -%}
