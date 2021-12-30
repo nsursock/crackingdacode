@@ -1,16 +1,16 @@
 <section
   id="contact"
-  class="md:h-screen dark:bg-indigo-900"
+  class="md:h-screen dark:bg-gray-900"
   x-intersect.once="showContact = true; $el.classList.remove('md:h-screen')"
 >
   <div
-    class="py-12 bg-white dark:bg-indigo-900"
+    class="py-12 bg-white dark:bg-gray-900"
     x-show="showContact"
     x-transition:enter="transition transform ease-out duration-1000 "
     x-transition:enter-start="opacity-0 scale-75"
     x-transition:enter-end="opacity-100 scale-100"
   >
-    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 dark:bg-indigo-900">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 dark:bg-gray-900">
       <div
         class="
           relative
@@ -18,7 +18,7 @@
           overflow-hidden
           flex flex-col
           md:flex-row
-          dark:bg-indigo-900
+          dark:bg-gray-900
         "
       >
         <div
@@ -83,14 +83,14 @@
           </span>
         </div>
         <div
-          class="m-5 md:w-3/5 dark:bg-indigo-900"
+          class="m-5 md:w-3/5 dark:bg-gray-900"
           x-show="showContact"
           x-transition:enter="transition transform ease-out duration-1000 "
           x-transition:enter-start="translate-x-full"
           x-transition:enter-end="translate-x-0"
         >
-          <div class="mt-10 md:mt-0 dark:bg-indigo-900">
-            <div class="mt-5 md:mt-0 dark:bg-indigo-900">
+          <div class="mt-10 md:mt-0 dark:bg-gray-900">
+            <div class="mt-5 md:mt-0 dark:bg-gray-900">
               <form
                 name="contact"
                 method="POST"
@@ -108,8 +108,8 @@
                     />
                   </label>
                 </p>
-                <div class="dark:bg-indigo-900">
-                  <div class="px-4 py-5 bg-white md:p-6 dark:bg-indigo-900">
+                <div class="dark:bg-gray-900">
+                  <div class="px-4 py-5 bg-white md:p-6 dark:bg-gray-900">
                     <div class="grid grid-cols-6 gap-6">
                       <div class="col-span-6 md:col-span-3">
                         <label
@@ -119,7 +119,7 @@
                             text-sm
                             font-medium
                             text-gray-700
-                            dark:bg-indigo-900 dark:text-gray-200
+                            dark:bg-gray-900 dark:text-gray-200
                           "
                         >
                           First name
@@ -152,7 +152,7 @@
                             text-sm
                             font-medium
                             text-gray-700
-                            dark:bg-indigo-900 dark:text-gray-200
+                            dark:bg-gray-900 dark:text-gray-200
                           "
                         >
                           Last name
@@ -185,7 +185,7 @@
                             text-sm
                             font-medium
                             text-gray-700
-                            dark:bg-indigo-900 dark:text-gray-200
+                            dark:bg-gray-900 dark:text-gray-200
                           "
                         >
                           Email
@@ -220,7 +220,7 @@
                             text-gray-700
                             flex
                             justify-between
-                            dark:bg-indigo-900 dark:text-gray-200
+                            dark:bg-gray-900 dark:text-gray-200
                           "
                         >
                           Phone
@@ -255,7 +255,7 @@
                             text-sm
                             font-medium
                             text-gray-700
-                            dark:bg-indigo-900 dark:text-gray-200
+                            dark:bg-gray-900 dark:text-gray-200
                           "
                         >
                           Subject
@@ -340,7 +340,7 @@
                             text-gray-700
                             flex
                             justify-between
-                            dark:bg-indigo-900 dark:text-gray-200
+                            dark:bg-gray-900 dark:text-gray-200
                           "
                         >
                           Message
@@ -395,7 +395,7 @@
                             text-gray-700
                             flex
                             justify-between
-                            dark:bg-indigo-900 dark:text-gray-200
+                            dark:bg-gray-900 dark:text-gray-200
                           "
                         >
                           <span>Question</span>

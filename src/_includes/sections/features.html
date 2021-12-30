@@ -1,10 +1,10 @@
 <section
-  class="md:h-screen dark:bg-indigo-900 dark:text-gray-200"
+  class="md:h-screen dark:bg-gray-900 dark:text-gray-200"
   id="features"
   x-intersect.once="showFeatures = true; $el.classList.remove('md:h-screen')"
 >
   <div
-    class="py-12 bg-white dark:bg-indigo-900 dark:text-gray-200"
+    class="py-12 bg-white dark:bg-gray-900 dark:text-gray-200"
     x-show="showFeatures"
     x-transition:enter="transition transform ease-out duration-1000 "
     x-transition:enter-start="opacity-0 scale-75"
@@ -37,7 +37,7 @@
             tracking-tight
             text-gray-900
             sm:text-4xl
-            dark:bg-indigo-900 dark:text-gray-200
+            dark:bg-gray-900 dark:text-white
           "
         >
           Your online presence matters
@@ -48,7 +48,7 @@
             max-w-2xl
             text-xl text-gray-500
             lg:mx-auto
-            dark:bg-indigo-900 dark:text-gray-200
+            dark:bg-gray-900 dark:text-gray-400
           "
         >
           Let me build your website with JavaScript: watch your traffic and
@@ -104,7 +104,7 @@
                   leading-6
                   font-medium
                   text-gray-900
-                  dark:bg-indigo-900 dark:text-gray-200
+                  dark:bg-gray-900 dark:text-white
                 "
               >
                 {{item.title}}
@@ -115,7 +115,7 @@
                 mt-2
                 ml-16
                 text-base text-gray-500
-                dark:bg-indigo-900 dark:text-gray-200
+                dark:bg-gray-900 dark:text-gray-400
               "
             >
               {{item.description}}

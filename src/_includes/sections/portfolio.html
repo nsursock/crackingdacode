@@ -1,10 +1,10 @@
 <section
-  class="md:h-screen dark:bg-indigo-900 dark:text-gray-200"
+  class="md:h-screen dark:bg-gray-900 dark:text-gray-200"
   id="case"
   x-intersect.once="showPortfolio = true; $el.classList.remove('md:h-screen')"
 >
   <div
-    class="py-12 bg-white dark:bg-indigo-900 dark:text-gray-200"
+    class="py-12 bg-white dark:bg-gray-900 dark:text-gray-200"
     x-show="showPortfolio"
     x-transition:enter="transition transform ease-out duration-1000 "
     x-transition:enter-start="opacity-0 scale-75"
@@ -17,7 +17,7 @@
         px-4
         md:px-6
         lg:px-8
-        dark:bg-indigo-900 dark:text-gray-200
+        dark:bg-gray-900 dark:text-gray-200
       "
     >
       <div
@@ -25,7 +25,7 @@
           relative
           bg-white
           overflow-hidden
-          dark:bg-indigo-900 dark:text-gray-200
+          dark:bg-gray-900 dark:text-gray-200
         "
       >
         <div>
@@ -53,7 +53,7 @@
                 font-extrabold
                 tracking-tight
                 md:text-4xl
-                dark:bg-indigo-900 dark:text-gray-200
+                dark:bg-gray-900 dark:text-white
               "
             >
               Selected work
@@ -63,7 +63,7 @@
                 mt-4
                 max-w-2xl
                 text-xl text-gray-500
-                dark:bg-indigo-900 dark:text-gray-200
+                dark:bg-gray-900 dark:text-gray-400
               "
             >
               I've been incredibly lucky to pick up web development. Although
@@ -84,7 +84,7 @@
               <div class="md:hidden mt-5">
                 <label
                   for="project"
-                  class="block text-sm font-medium text-gray-700 dark:text-white"
+                  class="block text-sm font-medium text-gray-700 dark:text-gray-400"
                 >
                   Project
                 </label>
@@ -100,7 +100,7 @@
                     px-3
                     border border-gray-300
                     bg-white
-                    dark:text-gray-900
+                    dark:bg-gray-800
                     rounded-md
                     shadow-sm
                     focus:outline-none
@@ -120,7 +120,7 @@
                 </select>
               </div>
 
-              <ul class="md:border-b hidden md:block">
+              <ul class="md:flex md:border-b hidden">
                 {% for case in cases.cases %}
                 <li
                   @click="openTab = {{loop.index}}"
@@ -171,7 +171,7 @@
                       shadow-xl
                       rounded-md
                       border border-gray-300
-                      dark:bg-indigo-800
+                      dark:bg-gray-800
                     "
                   >
                     {% for stat in case.stats %}
@@ -214,7 +214,7 @@
                       mt-4
                       w-full
                       text-md text-gray-500
-                      dark:bg-indigo-900 dark:text-gray-200
+                      prose dark:prose-dark
                     "
                   >
                     {% for para in case.paragraphs %} {{para.text}}
