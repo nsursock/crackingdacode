@@ -56,7 +56,7 @@ Don't underestimate the power of openness and friends of friends.
 ## An Open Face Along The Strait Of Fear And Desire?
 All in all, remaining open is the key to forming new meaningful relationships. Led Zeppelin sang it in their song "Kashmir." And Madonna confirms that "you're frozen when your heart is not open."
 
-Periodically, I stare at the palm hands where the heart transpires. What the head makes cloudy, the heart makes very clear: I'm still thinking about how a friend did me wrong and whether I should retaliate or not.
+Periodically, I stare at the palm of my hands where the heart transpires. What the head makes cloudy, the heart makes very clear: I'm still thinking about how a friend did me wrong and whether I should retaliate or not.
 
 Jesus taught us the importance of forgiving even though it seems the hardest thing to do. But don't mess up with the next person you will meet: try to be open. For example, I thought I had a good level of English. However, while writing a novel, I discovered I was below average regarding vocabulary.
 
