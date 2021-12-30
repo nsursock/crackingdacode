@@ -21,7 +21,13 @@
     <div class="relative">
       <div class="relative">
         <img
-          class="rounded-t-lg"
+          class="
+            rounded-t-lg
+            group-hover:filter group-hover:blur-md
+            transition-all
+            duration-500
+            ease-in-out
+          "
           data-src="{{ post.data.featured }}&q=80&w=480&h=320"
           alt=""
           x-intersect.once.ratio-0="showArticle = true; $el.src = $el.dataset.src"
@@ -31,7 +37,8 @@
             absolute
             inset-0
             bg-gray-500 bg-opacity-0
-            group-hover:bg-opacity-75
+            group-hover:bg-opacity-50
+            group-focus:bg-opacity-50
             transition-all
             ease-in-out
             duration-500
@@ -52,13 +59,16 @@
             text-8xl
             font-black
             text-white
-            filter blur-lg
-            mix-blend-overlay
+            opacity-0
+            group-hover:opacity-80
+            group-focus:opacity-80
+            filter
+            blur-lg
             group-hover:filter-none
             group-focus:filter-none
             transition-all
             ease-in-out
-            duration-500
+            duration-[3000ms]
           "
         >
           <span x-text="type"></span>
