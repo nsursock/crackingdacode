@@ -44,10 +44,12 @@ module.exports = {
         }
       },
       fontFamily: {
-        //   erica: ['Erica One', 'cursive'],
+        // erica: ['Erica One', 'cursive'],
         //   poppins: ['Poppins', 'sans-serif']
         // marker: ['Permanent Marker', 'cursive'],
         // indie: ['Indie Flower', 'cursive'],
+        // heading: ['Baloo Da 2', 'cursive'],
+        // paragraph: ['Lora', 'serif']
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
