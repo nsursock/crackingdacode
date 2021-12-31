@@ -51,6 +51,39 @@ module.exports = {
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
+        wiggle: 'wiggle 1s ease-in-out infinite',
+        popin: 'popin 1s',
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+        popin: {
+          '0%': {
+            transform: 'scale3d(0, 0, 0)',
+            opacity: 0,
+          },
+          '20%': {
+            opacity: 1,
+          },
+          '40%': {
+            transitionTimingFunction: 'cubic-bezier(0.47, 0, 0.745, 0.715)',
+            transform: 'scale3d(1.08, 1.08, 1.08)',
+          },
+          '60%': {
+            transitionTimingFunction: 'cubic-bezier(0.42, 0, 0.58, 1)',
+            transform: 'scale3d(1, 1, 1)',
+          },
+          '80%': {
+            transitionTimingFunction: 'cubic-bezier(0.42, 0, 0.58, 1)',
+            transform: 'scale3d(1.03, 1.03, 1.03)',
+          },
+          '100%': {
+            transitionTimingFunction: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+            transform: 'scale3d(1, 1, 1)',
+          },
+        },
       },
     },
   },
