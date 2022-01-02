@@ -20,6 +20,22 @@
       <meta property='og:description' content="{{ description }}"/>
       <meta property='og:url' content="{{ 'https://nsursock.netlify.app' + page.url }}"/>
       <meta property='og:type' content="article"/>
+      <script>
+        if (
+          localStorage.theme === 'dark' ||
+          (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+          document
+            .documentElement
+            .classList
+            .add('dark')
+        } else {
+          document
+            .documentElement
+            .classList
+            .remove('dark')
+        }
+      </script>
       {% if env.environment == "production" %}
         <!-- Google Tag Manager -->
         <script>
@@ -91,18 +107,15 @@
                 <div class="mt-4 pt-4 flex items-center sm:justify-center lg:justify-start">
                   <img
                     class="h-16 w-16 rounded-full"
-                    data-src="/static/img/{{ author.split(' ').join('-') }}-small.jpg"
+                    data-src="/static/img/{{ author.split(' ').join('-') }}.jpg"
                     alt=""
                     x-intersect.once.ratio-0="$el.src = $el.dataset.src"/>
                   <div class="ml-3 flex flex-col">
                     <span class="text-sm font-semibold dark:text-white">
                       Written by {{ author }}
                     </span>
-                    <span
-                      class="text-sm text-gray-500 dark:text-gray-400"
-                      x-data="{ time: {{ content.split(' ').length / 200 }} }">
-                       {{ date | date("MMM dd, yyyy") }} at {{ date | date("kk:mm") }} •
-                      <span x-text="`${Math.round(time).toString().split('.')[0]} min read`"/>
+                    <span class="text-sm text-gray-500 dark:text-gray-400" x-data="{ time: {{ content.split(' ').length / 200 }} }">
+                      {{ date | date("MMM dd, yyyy") }} at {{ date | date("kk:mm") }} • <span x-text="`${Math.round(time).toString().split('.')[0]} min read`"/>
                     </span>
                   </div>
                 </div>
@@ -150,9 +163,7 @@
         </div>
         <aside class="px-4  sm:w-2/5 lg:w-1/4 hidden h-screen sticky top-0 md:flex items-center justify-center flex-col"></aside>
       </div>
-
       {% include 'sections/subscription.html' %}
-      
       <div id="posts" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="lg:text-center mt-8">
           <p class=" mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl dark:text-white ">

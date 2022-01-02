@@ -1,0 +1,51 @@
+---
+menus:
+  - name: Home
+    route: /
+    icon: 'home'
+  - name: About
+    route: /about
+    icon: 'annotation'
+  - name: Services
+    route: /services
+    icon: 'ticket'
+    submenus:
+      - name: Coaching
+        description: Let me help you create a clear action plan on how to move ahead and make progress
+        route: /services/coaching
+        icon: 'eye'
+      - name: Teaching
+        description: Let me share with you the knowledge that you don't possess
+        route: /services/teaching
+        icon: 'school'
+      - name: Consulting
+        description: Let me help you work on your most challenging business problems
+        route: /services/consulting
+        icon: 'support'
+      - name: Coding
+        description: Let me help you code the next big thing, especially if it's a website
+        route: /webdev
+        icon: 'code'
+      - name: Testing
+        description: Let me help you determine the quality level of your website or app
+        route: /testing
+        icon: 'adjustments'
+  - name: Products
+    route: /products
+    icon: 'cube'
+    submenus:
+      - name: Idea
+        description: Let me help you get started for your next hit song with a short idea
+        route: /products/idea
+        icon: 'bulb'
+      - name: Playlist
+        description: Let me put you in a specific mood with a 1-hour playlist
+        route: /products/playlist
+        icon: 'collection'
+      - name: Song
+        description: Let me share with you a good song that you only have to produce
+        route: /products/song
+        icon: 'note'
+  - name: Contact
+    route: /contact
+    icon: 'at-symbol'

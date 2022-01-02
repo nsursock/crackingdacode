@@ -163,8 +163,8 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
               class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0"
             >
               <div class="flex items-center justify-between w-full md:w-auto">
-                <a href="#">
-                  <span class="sr-only">Workflow</span>
+                <div>
+                  <span class="sr-only">Sursock Labs</span>
                   <svg
                     class="h-8 w-auto sm:h-10 text-indigo-500 stroke-current"
                     fill="none"
@@ -179,7 +179,7 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
                       d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                     ></path>
                   </svg>
-                </a>
+                </div>
                 <div class="-mr-2 flex items-center md:hidden">
                   <button
                     @click="showMenu = !showMenu"
@@ -236,6 +236,18 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
               </a>
 
               <a
+                href="/about"
+                class="
+                  font-medium
+                  text-gray-500
+                  dark:text-gray-400
+                  hover:text-gray-900 hover:dark:text-gray-500
+                "
+              >
+                About
+              </a>
+
+              <a
                 href="/webdev"
                 class="
                   font-medium
@@ -244,11 +256,11 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
                   hover:text-gray-900 hover:dark:text-gray-500
                 "
               >
-                Webdev
+                Services
               </a>
 
               <a
-                href="/music"
+                href="/products"
                 class="
                   font-medium
                   text-gray-500
@@ -256,7 +268,7 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
                   hover:text-gray-900 hover:dark:text-gray-500
                 "
               >
-                Music
+                Products
               </a>
 
               <a
@@ -271,6 +283,50 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
                 Contact
               </a>
             </div>
+
+            <div
+        class="hidden md:flex items-center justify-end md:flex-1 lg:w-0"
+        x-data="{ isDarkMode: document.documentElement.classList.contains('dark') }"
+      >
+        <button
+          @click="localStorage.theme = 'light'; document.documentElement.classList.remove('dark'); isDarkMode = !isDarkMode"
+          x-show="isDarkMode"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-gray-500 dark:text-gray-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+            />
+          </svg>
+        </button>
+        <button
+          @click="localStorage.theme = 'dark'; document.documentElement.classList.add('dark'); isDarkMode = !isDarkMode"
+          x-show="!isDarkMode"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-gray-500 dark:text-gray-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+            />
+          </svg>
+        </button>
+      </div>
           </nav>
         </div>
 
@@ -306,7 +362,7 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
               bg-white
               ring-1 ring-black ring-opacity-5
               overflow-hidden
-              dark:bg-gray-900
+              dark:bg-gray-800
             "
           >
             <div class="px-5 pt-4 flex items-center justify-between">
@@ -332,7 +388,7 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
                   type="button"
                   class="
                     bg-white
-                    dark:bg-gray-900
+                    dark:bg-gray-800
                     rounded-md
                     p-2
                     inline-flex
@@ -385,6 +441,23 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
               </a>
 
               <a
+                href="/about"
+                class="
+                  block
+                  px-3
+                  py-2
+                  rounded-md
+                  text-base
+                  font-medium
+                  text-gray-700
+                  dark:text-gray-400
+                  hover:text-gray-900 hover:bg-gray-50
+                "
+              >
+                About
+              </a>
+
+              <a
                 href="/webdev"
                 class="
                   block
@@ -398,11 +471,11 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
                   hover:text-gray-900 hover:bg-gray-50
                 "
               >
-                Webdev
+                Services
               </a>
 
               <a
-                href="/music"
+                href="/products"
                 class="
                   block
                   px-3
@@ -415,7 +488,7 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
                   hover:text-gray-900 hover:bg-gray-50
                 "
               >
-                Music
+                Products
               </a>
 
               <a
@@ -482,7 +555,7 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
             Welcome to the modern Donnie Brasco's blog! We're trying to change
             the world and build a better humanity here. Inspired by the music we
             love, we write about any topic. We found a code hidden in music that
-            could free humanity.
+            could free mankind.
           </p>
           <div
             class="
