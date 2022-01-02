@@ -15,6 +15,22 @@
     {% endif %}
     <title>{{ title }} | Sursock Labs</title>
     {% block head %}
+      <script>
+        if (
+          localStorage.theme === 'dark' ||
+          (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        ) {
+          document
+            .documentElement
+            .classList
+            .add('dark')
+        } else {
+          document
+            .documentElement
+            .classList
+            .remove('dark')
+        }
+      </script>
       {% if env.environment == "production" %}
         <!-- Google Tag Manager -->
         <script>
@@ -33,15 +49,15 @@
         </script>
         <!-- End Google Tag Manager -->
         {# <!-- Global site tag (gtag.js) - Google Analytics -->
-                <script async src="https://www.googletagmanager.com/gtag/js?id=G-69L675SJ2T"></script>
-                <script>
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag() {
-                    dataLayer.push(arguments);
-                  }
-                  gtag('js', new Date());
-                  gtag('config', 'G-69L675SJ2T');
-                </script> #}
+                                <script async src="https://www.googletagmanager.com/gtag/js?id=G-69L675SJ2T"></script>
+                                <script>
+                                  window.dataLayer = window.dataLayer || [];
+                                  function gtag() {
+                                    dataLayer.push(arguments);
+                                  }
+                                  gtag('js', new Date());
+                                  gtag('config', 'G-69L675SJ2T');
+                                </script> #}
         <script defer data-domain="nsursock.netlify.app" src="https://plausible.io/js/plausible.js"></script>
         <script>
           window.plausible = window.plausible || function () {
@@ -67,10 +83,15 @@
         </noscript>
         <!-- End Google Tag Manager (noscript) -->
       {% endif %}
-      <!-- This example requires Tailwind CSS v2.0+ -->
-      <div>
-        {{ content | safe }}
-      </div>
+      {% if page.url == '/about-draft/' %}
+        <div class="container py-8 max-w-none prose lg:prose-xl dark:prose-dark dark:text-gray-400 sm:w-3/5 xl:w-2/4">
+          {{ content | safe }}
+        </div>
+      {% else %}
+        <div>
+          {{ content | safe }}
+        </div>
+      {% endif %}
     {% endblock %}
     {% include 'sections/cta.html' %}
     {% include 'footer.html' %}
