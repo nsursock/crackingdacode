@@ -7,7 +7,7 @@ menus:
     route: /about
     icon: 'annotation'
   - name: Services
-    route: /services
+    route: /webdev
     icon: 'ticket'
     submenus:
       - name: Coaching
