@@ -1,0 +1,163 @@
+{# This page is built with nunjucks! #} {% set title = 'Services' %} {% extends
+"layouts/page.njk" %} {% block body %}
+
+<!-- This example requires Tailwind CSS v2.0+ -->
+<div class="relative bg-white overflow-hidden dark:bg-gray-900">
+  <div class="max-w-7xl mx-auto">
+    <div
+      class="
+        relative
+        z-10
+        pb-8
+        bg-white
+        sm:pb-16
+        md:pb-20
+        lg:max-w-2xl lg:w-full lg:pb-28
+        xl:pb-32
+        dark:bg-gray-900
+      "
+    >
+      <svg
+        class="
+          hidden
+          lg:block
+          absolute
+          right-0
+          inset-y-0
+          h-full
+          w-48
+          text-white
+          dark:text-gray-900
+          transform
+          translate-x-1/2
+        "
+        fill="currentColor"
+        viewbox="0 0 100 100"
+        preserveaspectratio="none"
+        aria-hidden="true"
+      >
+        <polygon points="50,0 100,0 50,100 0,100" />
+      </svg>
+      <div>
+        <div class="relative pt-6 px-4 sm:px-6 lg:px-8"></div>
+      </div>
+      <main
+        class="
+          mt-10
+          mx-auto
+          max-w-7xl
+          px-4
+          sm:mt-12 sm:px-6
+          md:mt-16
+          lg:mt-20 lg:px-8
+          xl:mt-28
+        "
+      >
+        <div class="sm:text-center lg:text-left">
+          <h1
+            class="
+              text-4xl
+              tracking-tight
+              font-extrabold
+              text-gray-900
+              sm:text-5xl
+              md:text-6xl
+            "
+          >
+            <span class="block xl:inline dark:text-white">Services</span>
+          </h1>
+          <p
+            class="
+              mt-3
+              text-base text-gray-500
+              dark:text-gray-400
+              sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto
+              md:mt-5 md:text-xl
+              lg:mx-0
+            "
+          >
+            Provisioning my technical or intellectual capacity!
+          </p>
+          <div
+            class="
+              mt-5
+              sm:mt-8 sm:justify-center
+              lg:justify-start
+              flex flex-wrap
+              sm:w-4/5 sm:mx-auto
+            "
+          ></div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+    <picture>
+      <source
+        media="(max-width: 799px)"
+        srcset="https://source.unsplash.com/480x320/?{{ page.fileSlug }}"
+      />
+      <source
+        media="(min-width: 800px)"
+        srcset="https://source.unsplash.com/1080x720/?{{ page.fileSlug }}"
+      />
+      <img
+        class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+        src="https://source.unsplash.com/1920x1280/?{{ page.fileSlug }}"
+        alt=""
+      />
+    </picture>
+  </div>
+</div>
+
+{% if services.services %}
+<div class="flex flex-wrap container mt-10">
+  {% for service in services.services %}
+  <div
+    class="
+      mb-6
+      max-w-md
+      mx-auto
+      bg-white
+      rounded-xl
+      shadow-lg
+      overflow-hidden
+      md:max-w-2xl
+    "
+  >
+    <div class="md:flex">
+      <div class="md:flex-shrink-0">
+        <img
+          class="h-48 w-full object-cover md:h-full md:w-48"
+          src="https://source.unsplash.com/480x320/?{{ service.name }}"
+          alt="Man looking at item at a store"
+        />
+      </div>
+      <div class="p-8 dark:bg-gray-800">
+        <div
+          class="uppercase tracking-wide text-sm text-indigo-500 font-semibold"
+        >
+          {{ service.name }}
+        </div>
+        <a
+          href="{{ service.name | slug }}"
+          class="
+            dark:text-white
+            block
+            mt-1
+            text-lg
+            leading-tight
+            font-medium
+            text-black
+            hover:underline
+          "
+        >
+          {{ service.title }}
+        </a>
+        <p class="mt-2 text-gray-500 dark:text-gray-400">{{ service.description }}</p>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %} {% endblock %}
