@@ -24,12 +24,16 @@ menus:
         icon: 'support'
       - name: Coding
         description: Let me help you code the next big thing, especially if it's a website
-        route: /webdev
+        route: /coding
         icon: 'code'
       - name: Testing
         description: Let me help you determine the quality level of your website or app
         route: /testing
         icon: 'adjustments'
+      - name: Djing
+        description: Let me help you entertain the crowd at your wonderful party
+        route: /djing
+        icon: 'note'
   - name: Products
     route: /products
     icon: 'cube'
