@@ -223,9 +223,11 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
                 </div>
               </div>
             </div>
+            {% if nav.menus %}
             <div class="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
+              {% for menu in nav.menus %}
               <a
-                href="/"
+                href="{{ menu.route }}"
                 class="
                   font-medium
                   text-gray-500
@@ -233,57 +235,11 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
                   hover:text-gray-900 hover:dark:text-gray-500
                 "
               >
-                Home
+                {{ menu.name }}
               </a>
-
-              <a
-                href="/about"
-                class="
-                  font-medium
-                  text-gray-500
-                  dark:text-gray-400
-                  hover:text-gray-900 hover:dark:text-gray-500
-                "
-              >
-                About
-              </a>
-
-              <a
-                href="/webdev"
-                class="
-                  font-medium
-                  text-gray-500
-                  dark:text-gray-400
-                  hover:text-gray-900 hover:dark:text-gray-500
-                "
-              >
-                Services
-              </a>
-
-              <a
-                href="/products"
-                class="
-                  font-medium
-                  text-gray-500
-                  dark:text-gray-400
-                  hover:text-gray-900 hover:dark:text-gray-500
-                "
-              >
-                Products
-              </a>
-
-              <a
-                href="/contact"
-                class="
-                  font-medium
-                  text-gray-500
-                  dark:text-gray-400
-                  hover:text-gray-900 hover:dark:text-gray-500
-                "
-              >
-                Contact
-              </a>
+              {% endfor %}
             </div>
+            {% endif %}
 
             <div
               class="hidden md:flex items-center justify-end md:flex-1 lg:w-0"
@@ -385,9 +341,11 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
                 </button>
               </div>
             </div>
+            {% if nav.menus %}
             <div class="px-2 pt-2 pb-3 space-y-1">
+              {% for menu in nav.menus %}
               <a
-                href="/"
+                href="{{ menu.route }}"
                 class="
                   block
                   px-3
@@ -401,81 +359,11 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
                   dark:hover:bg-gray-700
                 "
               >
-                Home
+                {{ menu.name }}
               </a>
-
-              <a
-                href="/about"
-                class="
-                  block
-                  px-3
-                  py-2
-                  rounded-md
-                  text-base
-                  font-medium
-                  text-gray-700
-                  dark:text-gray-400
-                  hover:text-gray-900 hover:bg-gray-50
-                  dark:hover:bg-gray-700
-                "
-              >
-                About
-              </a>
-
-              <a
-                href="/webdev"
-                class="
-                  block
-                  px-3
-                  py-2
-                  rounded-md
-                  text-base
-                  font-medium
-                  text-gray-700
-                  dark:text-gray-400
-                  hover:text-gray-900 hover:bg-gray-50
-                  dark:hover:bg-gray-700
-                "
-              >
-                Services
-              </a>
-
-              <a
-                href="/products"
-                class="
-                  block
-                  px-3
-                  py-2
-                  rounded-md
-                  text-base
-                  font-medium
-                  text-gray-700
-                  dark:text-gray-400
-                  hover:text-gray-900 hover:bg-gray-50
-                  dark:hover:bg-gray-700
-                "
-              >
-                Products
-              </a>
-
-              <a
-                href="/contact"
-                class="
-                  block
-                  px-3
-                  py-2
-                  rounded-md
-                  text-base
-                  font-medium
-                  text-gray-700
-                  dark:text-gray-400
-                  hover:text-gray-900 hover:bg-gray-50
-                  dark:hover:bg-gray-700
-                "
-              >
-                Contact
-              </a>
+              {% endfor %}
             </div>
+            {% endif %}
           </div>
         </div>
       </div>
