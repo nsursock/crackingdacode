@@ -91,8 +91,10 @@
       </main>
     </div>
   </div>
-  <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-    <picture>
+  <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2" 
+    x-data="{ photoUrl: 'https://images.unsplash.com/photo-1516554646385-7642248096d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop' }"
+  >
+    <!-- <picture>
       <source
         media="(max-width: 799px)"
         srcset="https://source.unsplash.com/480x320/?{{ page.fileSlug }}"
@@ -106,30 +108,47 @@
         src="https://source.unsplash.com/1920x1280/?{{ page.fileSlug }}"
         alt=""
       />
+    </picture> -->
+     <picture>
+      <source
+        media="(max-width: 799px)"
+        :srcset="photoUrl + '&q=80&w=480&h=320'"
+      />
+      <source
+        media="(min-width: 800px)"
+        :srcset="photoUrl + '&q=80&w=1080&h=720'"
+      />
+      <img
+        class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+        :src="photoUrl + '&q=80&w=1920&h=1280'"
+        alt=""
+      />
     </picture>
   </div>
 </div>
 
 {% if services.services %}
-<div class="flex flex-wrap container mt-10">
+<div class="grid sm:grid-cols-2 xl:grid-cols-2 lg:grid-cols-3 gap-5 container mt-10">
   {% for service in services.services %}
   <div
     class="
       mb-6
       max-w-md
+      lg:max-w-lg
       mx-auto
       bg-white
       rounded-xl
       shadow-lg
       overflow-hidden
-      md:max-w-2xl
+      xl:max-w-xl
+      2xl:max-w-2xl
     "
   >
-    <div class="md:flex">
-      <div class="md:flex-shrink-0">
+    <div class="xl:flex xl:h-full">
+      <div class="xl:flex-shrink-0">
         <img
-          class="h-48 w-full object-cover md:h-full md:w-48"
-          src="https://source.unsplash.com/480x320/?{{ service.name }}"
+          class="h-48 w-full object-cover xl:h-full xl:w-48"
+          src="{{ service.photo }}&q=80&w=480&h=320"
           alt="Man looking at item at a store"
         />
       </div>
