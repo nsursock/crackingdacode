@@ -54,12 +54,47 @@ module.exports = {
       animation: {
         'spin-slow': 'spin 3s linear infinite',
         wiggle: 'wiggle 1s ease-in-out infinite',
-        popin: 'popin 1s',
+        popin: 'popin 2s',
+        swing: 'swing 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
+        jello: 'jello 1s ease 0s 1 normal forwards'
       },
       keyframes: {
         wiggle: {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' },
+        },
+        jello: {
+          '0%': {
+            transform: 'scale3d(1, 1, 1)',
+          },
+          '30%': {
+            transform: 'scale3d(1.25, 0.75, 1)',
+          },
+          '40%': {
+            transform: 'scale3d(0.75, 1.25, 1)',
+          },
+          '50%': {
+            transform: 'scale3d(1.15, 0.85, 1)',
+          },
+          '65%': {
+            transform: 'scale3d(0.95, 1.05, 1)',
+          },
+          '75%': {
+            transform: 'scale3d(1.05, 0.95, 1)',
+          },
+          '100%': {
+            transform: 'scale3d(1, 1, 1)',
+          },
+        },
+        swing: {
+          '0%': {
+            transform: 'rotateX(180deg)',
+            transformOrigin: 'top',
+          },
+          '100%': {
+            transform: 'rotateX(0)',
+            transformOrigin: 'top',
+          },
         },
         popin: {
           '0%': {
