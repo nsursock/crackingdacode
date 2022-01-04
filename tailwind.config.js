@@ -50,13 +50,14 @@ module.exports = {
         // indie: ['Indie Flower', 'cursive'],
         // heading: ['Baloo Da 2', 'cursive'],
         // paragraph: ['Lora', 'serif']
+        website: ['Work Sans', 'sans-serif'],
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
         wiggle: 'wiggle 1s ease-in-out infinite',
         popin: 'popin 2s',
         swing: 'swing 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
-        jello: 'jello 1s ease 0s 1 normal forwards'
+        jello: 'jello 1s ease 0s 1 normal forwards',
       },
       keyframes: {
         wiggle: {
