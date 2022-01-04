@@ -30,7 +30,7 @@ I get it: someone brings you into a room full of people, and they act real rude 
 
 ## Is It So Disturbing To Imagine People Needing A Purpose?
 
-<aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
+<aside class="  md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
   <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="man standing on arrow" data-src="https://images.unsplash.com/photo-1499424180600-8d243b10320a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
