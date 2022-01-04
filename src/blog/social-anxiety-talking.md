@@ -30,7 +30,7 @@ I get it: someone brings you into a room full of people, and they act real rude 
 
 ## Is It So Disturbing To Imagine People Needing A Purpose?
 
-<aside class="float-right w-2/3 -mr-56 px-8">
+<aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
   <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="man standing on arrow" data-src="https://images.unsplash.com/photo-1499424180600-8d243b10320a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
@@ -46,7 +46,7 @@ People have fought oppression throughout history, and it's too bad a vague socia
 
 ## Will People Stop Looking Back In Anger Or Sadness?
 
-<aside class="float-left w-2/3 -ml-56 px-8">
+<aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
   <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="woman looking at old photo" data-src="https://images.unsplash.com/photo-1521979548744-463128ea80d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
@@ -60,7 +60,7 @@ You will gain much respect that way. I'm a web developer, and I have ten years o
 
 ## Do You Mind Going Through This Shit With Me And Share A Memory?
 
-<aside class="float-right w-2/3 -mr-56 px-8">
+<aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
   <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="a collection of polaroids" data-src="https://images.unsplash.com/photo-1595981235363-6cf7a4a34c76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
@@ -72,7 +72,7 @@ Shared experiences and common goals can make you realize we're all part of somet
 
 ## But What If There's No More Fuel Left In The Tank?
 
-<aside class="float-left w-2/3 -ml-56 px-8">
+<aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
   <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="man filling his gas tank" data-src="https://images.unsplash.com/photo-1579445668832-329a98bdff57?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
