@@ -1,4 +1,4 @@
-{# This page is built with nunjucks! #} {% set title = 'Services' %} {% extends
+{# This page is built with nunjucks! #} {% set title = 'Products' %} {% extends
 "layouts/page.njk" %} {% block body %}
 
 <!-- This example requires Tailwind CSS v2.0+ -->
@@ -64,7 +64,7 @@
               md:text-6xl
             "
           >
-            <span class="block xl:inline dark:text-white">Services</span>
+            <span class="block xl:inline dark:text-white">Products</span>
           </h1>
           <p
             class="
@@ -76,8 +76,8 @@
               lg:mx-0
             "
           >
-            Provisioning my technical or intellectual capacity! I offer several
-            services and the first session is free.
+            Satisfying your desire or need. I offer several products related to
+            music.
           </p>
           <div
             class="
@@ -143,17 +143,17 @@
         dark:text-white
       "
     >
-      Hire me as a freelance
+      The real musipedia
     </p>
     <p
       class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto dark:text-gray-400"
     >
-      I have almost 30 years of experience in music and computer science. I'm
-      sure I can help you achieve your goals, however ambitious they are.
+      My friends think of me as a musical encyclopedia. Let me take you away
+      with a solid blend of jazz, blues, soul, rock, funk and electronic.
     </p>
   </div>
 </div>
-{% if services.services %}
+{% if products.products %}
 <div
   class="
     grid
@@ -165,7 +165,7 @@
     mt-10
   "
 >
-  {% for service in services.services %}
+  {% for product in products.products %}
   <div
     class="
       mb-6
@@ -185,7 +185,7 @@
       <div class="xl:flex-shrink-0">
         <img
           class="h-48 w-full object-cover xl:h-full xl:w-48"
-          src="{{ service.photo }}&q=80&w=480&h=320"
+          src="{{ product.photo }}&q=80&w=480&h=320"
           alt="Man looking at item at a store"
         />
       </div>
@@ -193,10 +193,10 @@
         <div
           class="uppercase tracking-wide text-sm text-indigo-500 font-semibold"
         >
-          {{ service.name }}
+          {{ product.name }}
         </div>
         <a
-          href="{{ service.name | slug }}"
+          href="{{ product.name | slug }}"
           class="
             dark:text-white
             block
@@ -208,10 +208,10 @@
             hover:underline
           "
         >
-          {{ service.title }}
+          {{ product.title }}
         </a>
         <p class="mt-2 text-gray-500 dark:text-gray-400">
-          {{ service.description }}
+          {{ product.description }}
         </p>
       </div>
     </div>
