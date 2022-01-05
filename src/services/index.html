@@ -94,7 +94,7 @@
   </div>
   <div
     class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2"
-    x-data="{ photoUrl: 'https://images.unsplash.com/photo-1516554646385-7642248096d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop' }"
+    x-data="{ photoUrl: 'https://images.unsplash.com/photo-1556745753-b2904692b3cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop' }"
   >
     <!-- <picture>
       <source
@@ -123,7 +123,7 @@
       <img
         class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
         :src="photoUrl + '&q=80&w=1920&h=1280'"
-        alt=""
+        alt="woman smiling at a person"
       />
     </picture>
   </div>
@@ -186,7 +186,7 @@
         <img
           class="h-48 w-full object-cover xl:h-full xl:w-48"
           src="{{ service.photo }}&q=80&w=480&h=320"
-          alt="Man looking at item at a store"
+          alt="{{ service.name }} overview by Nicolas Sursock"
         />
       </div>
       <div class="p-8 dark:bg-gray-800">
