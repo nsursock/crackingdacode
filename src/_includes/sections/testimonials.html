@@ -11,7 +11,7 @@
     x-cloak
   >
     <div
-      class="md:rounded-l-lg rounded-t-lg relative w-full py-2 md:py-24 bg-indigo-700 md:w-1/2 flex flex-col item-center justify-center"
+      class="md:rounded-l-lg md:rounded-tr-none rounded-t-lg relative w-full py-2 md:py-24 bg-indigo-700 md:w-1/2 flex flex-col item-center justify-center"
     >
       <div
         class="absolute top-0 left-0 z-10 grid-indigo w-16 h-16 md:w-40 md:h-40 md:ml-20 md:mt-24"
@@ -70,12 +70,12 @@
       </div>
     </div>
 
-    <div class="bg-gray-100 md:w-1/2 md:rounded-r-lg rounded-b-lg">
+    <div class="bg-gray-100 dark:bg-gray-800 md:w-1/2 md:rounded-r-lg md:rounded-bl-none rounded-b-lg">
       <div class="flex flex-col h-full relative">
         <div class="absolute top-0 left-0 mt-3 ml-4 md:mt-5 md:ml-12">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="text-indigo-200 fill-current w-12 h-12 md:w-16 md:h-16"
+            class="text-indigo-200 dark:text-indigo-700 fill-current w-12 h-12 md:w-16 md:h-16"
             viewBox="0 0 24 24"
           >
             <path
@@ -88,7 +88,7 @@
           {% for testimonial in testimonials.testimonials %}
           <div x-show.immediate="testimonialActive === {{ loop.index }}">
             <p
-              class="text-gray-600 serif font-normal italic px-6 py-6 md:px-16 md:py-10 text-xl md:text-2xl"
+              class="text-gray-500 dark:text-gray-400 serif font-normal italic px-6 py-6 md:px-16 md:py-10 text-xl md:text-2xl"
               x-show.transition="testimonialActive == {{ loop.index }}"
             >
               {{ testimonial.text }}
@@ -103,7 +103,7 @@
             x-show.immediate="testimonialActive === {{ loop.index }} || testimonialActive === {{ loop.index -1 }} || testimonialActive === {{ loop.index +1 }} || testimonialActive === 1 && {{ loop.index }} === {{ testimonials.testimonials.length }} || testimonialActive === {{ testimonials.testimonials.length }} && {{ loop.index }} === 1"
             @click.prevent="testimonialActive = {{ loop.index }}"
             class="text-center font-bold shadow-xs focus:outline-none focus:shadow-outline inline-block rounded-full mx-2"
-            :class="{'h-12 w-12 opacity-25 bg-indigo-300 text-gray-600': testimonialActive != {{ loop.index }}, 'h-16 w-16 opacity-100 bg-indigo-600 text-white': testimonialActive == {{ loop.index }} }"
+            :class="{'h-12 w-12 opacity-25 bg-indigo-300 dark:bg-indigo-700 text-gray-500 dark:text-gray-400': testimonialActive != {{ loop.index }}, 'h-16 w-16 opacity-100 bg-indigo-600 text-white': testimonialActive == {{ loop.index }} }"
           >
             {% if testimonial.photo %}
             <img
@@ -125,11 +125,11 @@
             x-show="testimonialActive == {{ loop.index }}"
           >
             <h2
-              class="text-sm md:text-base font-bold text-gray-700 leading-tight"
+              class="text-sm md:text-base font-bold text-gray-500 dark:text-gray-400 leading-tight"
             >
               {{ testimonial.person }}
             </h2>
-            <small class="text-gray-500 text-xs md:text-sm truncate">
+            <small class="text-gray-500 dark:text-gray-400 text-xs md:text-sm truncate">
               {{ testimonial.title }}
             </small>
           </div>
