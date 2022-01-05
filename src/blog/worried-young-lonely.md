@@ -27,7 +27,7 @@ I recently told with sang-froid a nonchalant childhood friend to fuck off and re
 ## Are You Amazed By Where You Got That Cold Heart?
 
 <aside class="  md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="man standing on arrow" data-src="https://images.unsplash.com/photo-1422207134147-65fb81f59e38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="cold woman with coffee" data-src="https://images.unsplash.com/photo-1422207134147-65fb81f59e38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 When I was young, transitioning from childhood to adulthood was challenging, and everyone had difficulty adjusting. That's why Jimi Hendrix once wrote that a girl had been "riding broomsticks since she was 15".
@@ -41,7 +41,7 @@ Life is a competition, and you have to be ready when happiness knocks on your do
 ## Better Be Alone And Unescorted Than With Stupid People?
 
 <aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="woman looking at old photo" data-src="https://images.unsplash.com/photo-1613905780946-26b73b6f6e11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="stupid equation and animal" data-src="https://images.unsplash.com/photo-1613905780946-26b73b6f6e11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 There's another point I would like to stress when facing loneliness: are you sure you do not think everyone is foolish? Maybe you prefer going solo than having to face insane conversations about what recent movies everybody has seen.
@@ -55,7 +55,7 @@ Now's the time to be strong: get busy and let life do the work!
 ## Is True And Deep Friendship That Hard To Find?
 
 <aside class="  md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="man standing on arrow" data-src="https://images.unsplash.com/photo-1517373116369-9bdb8cdc9f62?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="mess of cables" data-src="https://images.unsplash.com/photo-1517373116369-9bdb8cdc9f62?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 From my own sapient experience, I can tell you that "fluctuat nec mergitur." In modern French, Fluctuat nec mergitur translates to "He/she is rocked by waves, and/but does not sink." A motto that vividly suggests resilience, courage, and inner strength.
@@ -71,7 +71,7 @@ Don't underestimate the power of openness and friends of friends.
 ## An Open Face Along The Strait Of Fear And Desire?
 
 <aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="woman looking at old photo" data-src="https://images.unsplash.com/photo-1524989899036-b1c54afba1c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="sign saying we're open" data-src="https://images.unsplash.com/photo-1524989899036-b1c54afba1c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 All in all, remaining open is the key to forming new meaningful relationships. Led Zeppelin sang it in their song "Kashmir." And Madonna confirms that "you're frozen when your heart is not open."
