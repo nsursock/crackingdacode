@@ -70,7 +70,9 @@
       </div>
     </div>
 
-    <div class="bg-gray-100 dark:bg-gray-800 md:w-1/2 md:rounded-r-lg md:rounded-bl-none rounded-b-lg">
+    <div
+      class="bg-gray-100 dark:bg-gray-800 md:w-1/2 md:rounded-r-lg md:rounded-bl-none rounded-b-lg"
+    >
       <div class="flex flex-col h-full relative">
         <div class="absolute top-0 left-0 mt-3 ml-4 md:mt-5 md:ml-12">
           <svg
@@ -84,9 +86,17 @@
           </svg>
         </div>
 
-        <div class="h-full relative z-10">
+        <div class="h-full relative z-10 overflow-x-hidden">
           {% for testimonial in testimonials.testimonials %}
-          <div x-show.immediate="testimonialActive === {{ loop.index }}">
+          <div
+            x-show="testimonialActive === {{ loop.index }}"
+            x-transition:enter="md:transition md:transform md:ease-out md:duration-500 md:absolute"
+            x-transition:enter-start="opacity-0 -translate-x-full"
+            x-transition:enter-end="opacity-100 translate-x-0"
+            x-transition:leave="md:transition md:transform md:ease-in md:duration-500 md:absolute"
+            x-transition:leave-start="opacity-100 translate-x-0"
+            x-transition:leave-end="opacity-0 -translate-x-full"
+          >
             <p
               class="text-gray-500 dark:text-gray-400 serif font-normal italic px-6 py-6 md:px-16 md:py-10 text-xl md:text-2xl"
               x-show.transition="testimonialActive == {{ loop.index }}"
@@ -100,7 +110,7 @@
         <div class="flex my-4 justify-center items-center">
           {% for testimonial in testimonials.testimonials %}
           <button
-            x-show.immediate="testimonialActive === {{ loop.index }} || testimonialActive === {{ loop.index -1 }} || testimonialActive === {{ loop.index +1 }} || testimonialActive === 1 && {{ loop.index }} === {{ testimonials.testimonials.length }} || testimonialActive === {{ testimonials.testimonials.length }} && {{ loop.index }} === 1"
+            x-show="testimonialActive === {{ loop.index }} || testimonialActive === {{ loop.index -1 }} || testimonialActive === {{ loop.index +1 }} || testimonialActive === 1 && {{ loop.index }} === {{ testimonials.testimonials.length }} || testimonialActive === {{ testimonials.testimonials.length }} && {{ loop.index }} === 1"
             @click.prevent="testimonialActive = {{ loop.index }}"
             class="text-center font-bold shadow-xs focus:outline-none focus:shadow-outline inline-block rounded-full mx-2"
             :class="{'h-12 w-12 opacity-25 bg-indigo-300 dark:bg-indigo-700 text-gray-500 dark:text-gray-400': testimonialActive != {{ loop.index }}, 'h-16 w-16 opacity-100 bg-indigo-600 text-white': testimonialActive == {{ loop.index }} }"
@@ -129,7 +139,9 @@
             >
               {{ testimonial.person }}
             </h2>
-            <small class="text-gray-500 dark:text-gray-400 text-xs md:text-sm truncate">
+            <small
+              class="text-gray-500 dark:text-gray-400 text-xs md:text-sm truncate"
+            >
               {{ testimonial.title }}
             </small>
           </div>
