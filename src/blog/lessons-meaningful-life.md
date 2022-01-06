@@ -23,7 +23,7 @@ Now I’m writing as if the life I lived will soon be over. And I must say there
 ## Lesson #1: Fool If You Think It’s Over.
 
 <aside class="  md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="cold woman with coffee" data-src="https://images.unsplash.com/photo-1586435239615-a67f1ae788b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="man giving the finger" data-src="https://images.unsplash.com/photo-1586435239615-a67f1ae788b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 Revenge will surely come. In other words, mutually assured destruction (MAD). You will feel like a newborn so many times during life that at some point, you will have to think about what you’re hiding.
@@ -37,7 +37,7 @@ The importance of rivalry and vengeance will dominate your life, even unconsciou
 ## Lesson #2: Go Out Of Your Home Everyday.
 
 <aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="stupid equation and animal" data-src="https://images.unsplash.com/photo-1555086156-e6c7353d283f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="foggy mood in a club" data-src="https://images.unsplash.com/photo-1555086156-e6c7353d283f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 I know many people like to stay at home and dream on their couch of a mysterious gift of the universe because seven years ago they did or said something nice. But the real gift of life is exactly that: presence. Thinking about the past makes you angry, and the future is uncertain and full of anxiety.
@@ -51,7 +51,7 @@ Lesson #2 was about being present and exploring the world, even if it’s a smal
 ## Lesson #3: Never Ever Forget To Criticise.
 
 <aside class="  md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="cold woman with coffee" data-src="https://images.unsplash.com/photo-1544717301-9cdcb1f5940f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="man shouting on telephone" data-src="https://images.unsplash.com/photo-1544717301-9cdcb1f5940f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 Yes I hear you: you said “stop bitchin'” and now you’re saying “criticize. What I mean by criticizing is you should try to find the beauty in something. For some people it’s effortless: everything is shit, and only they know something.
@@ -63,7 +63,7 @@ When I listen to music, I always make an effort because sometimes the artist can
 ## Lesson #4: Tolerance Is A Sign Of Good Health.
 
 <aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="stupid equation and animal" data-src="https://images.unsplash.com/photo-1567336757890-c679147ac4c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="multicolor sidewalk" data-src="https://images.unsplash.com/photo-1567336757890-c679147ac4c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 I once read a book about health: it seems you can become intolerant to effort or exercise. The reason seems to be too much pressure, but I remember the days when I was tolerant: we took beautiful pictures.
@@ -75,7 +75,7 @@ Here you have it: a few of the life lessons that a 38-year-old is entitled to gi
 ## Lesson #5: Healing Adolescence Wounds Takes Time.
 
 <aside class="  md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="cold woman with coffee" data-src="https://images.unsplash.com/photo-1487541711790-6d41c9d873dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="sheeps marked for death" data-src="https://images.unsplash.com/photo-1487541711790-6d41c9d873dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 We are teenage dirtbags sometimes. They are everywhere, and your heart will hurt. Of course, remember you can reach nirvana tonight, and that will make your day a little better.
