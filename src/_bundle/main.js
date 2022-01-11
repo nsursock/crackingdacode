@@ -1,10 +1,13 @@
 import Alpine from 'alpinejs'
+import global from './global.js'
 import 'htmx.org'
 import 'lazysizes'
 // import intersect from '@alpinejs/intersect'
 
 // import moment from '@victoryoalli/alpinejs-moment'
 // Alpine.plugin(moment)
+
+Alpine.data('global', global)
 
 Alpine.directive(
   'intersect',

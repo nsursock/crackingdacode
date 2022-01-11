@@ -187,12 +187,12 @@
     function dataCta() {
       return {
         isFetching: false,
-        isPresent: false,
+        // isPresent: false,
         amount: 3,
         currency: 'USD',
         stripe: null,
         async pay() {
-          plausible('Donated')
+          typeof plausible !== 'undefined' && plausible('Donated')
           await loadScript('https://js.stripe.com/v3')
           this.stripe = Stripe('{{env.stripeKey}}')
 
