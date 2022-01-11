@@ -65,12 +65,10 @@
       {% endif %}
     {% endblock %}
   </head>
-  <body hx-boost="true" class="{{ 'debug-screens' if env.devMode }} dark:bg-gray-900" x-data="data()">
-    {% if page.url != '/' %}
+  <body hx-boost="true" class="{{ 'debug-screens' if env.devMode }} dark:bg-gray-900" x-data="global">
       <div :class="{ 'sticky top-0 z-[200] animate-swing' : isScrollingUp }">
         {% include '../header.html' %}
       </div>
-    {% endif %}
     {% block body %}
       {% if env.environment == "production" %}
         <!-- Google Tag Manager (noscript) -->
@@ -220,21 +218,3 @@
     {% include 'footer.html' %}
   </body>
 </html>
-<script>
-  function data() {
-    return {
-      showCta: false,
-      lastScrollTop: window.pageYOffset || document.documentElement.scrollTop,
-      isScrollingUp: false,
-      init() {
-        window.addEventListener("scroll", () => {
-          var st = window.pageYOffset || document.documentElement.scrollTop;
-          this.isScrollingUp = st <= this.lastScrollTop
-          this.lastScrollTop = st <= 0
-            ? 0
-            : st; // for mobile or negative scrolling
-        }, false);
-      }
-    }
-  }
-</script>

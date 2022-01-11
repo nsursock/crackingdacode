@@ -52,15 +52,15 @@
         </script>
         <!-- End Google Tag Manager -->
         {# <!-- Global site tag (gtag.js) - Google Analytics -->
-                                        <script async src="https://www.googletagmanager.com/gtag/js?id=G-69L675SJ2T"></script>
-                                        <script>
-                                          window.dataLayer = window.dataLayer || [];
-                                          function gtag() {
-                                            dataLayer.push(arguments);
-                                          }
-                                          gtag('js', new Date());
-                                          gtag('config', 'G-69L675SJ2T');
-                                        </script> #}
+                                                <script async src="https://www.googletagmanager.com/gtag/js?id=G-69L675SJ2T"></script>
+                                                <script>
+                                                  window.dataLayer = window.dataLayer || [];
+                                                  function gtag() {
+                                                    dataLayer.push(arguments);
+                                                  }
+                                                  gtag('js', new Date());
+                                                  gtag('config', 'G-69L675SJ2T');
+                                                </script> #}
         <script defer data-domain="nsursock.netlify.app" src="https://plausible.io/js/plausible.js"></script>
         <script>
           window.plausible = window.plausible || function () {
@@ -70,9 +70,18 @@
       {% endif %}
     {% endblock %}
   </head>
-  <body hx-boost="true" class="{{ 'debug-screens' if env.devMode }} dark:bg-gray-900" x-data="{ showCta: false }">
-    {% if page.url != '/' %}
+  <body hx-boost="true" class="{{ 'debug-screens' if env.devMode }} dark:bg-gray-900" x-data="global">
+    {% if page.url == '/' %}
+    <div
+      x-show="lastScrollTop > landingPageOffset"
+      :class="{ 'sticky top-0 z-[200] animate-swing' : isScrollingUp || !isScrollingUp }">
       {% include '../header.html' %}
+    </div>
+    {% else %}
+    <div
+      :class="{ 'sticky top-0 z-[200] animate-swing' : isScrollingUp || !isScrollingUp }">
+      {% include '../header.html' %}
+    </div>
     {% endif %}
     {% block body %}
       {% if env.environment == "production" %}
