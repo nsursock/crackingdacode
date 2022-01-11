@@ -42,10 +42,10 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 // Restart Alpine when the DOM is altered by HTMX.
-document.body.addEventListener('htmx:afterSwap', () => {
-  // Alpine.plugin(intersect)
-  Alpine.start()
-})
+// document.body.addEventListener('htmx:afterSwap', () => {
+//   // Alpine.plugin(intersect)
+//   Alpine.start()
+// })
 
 // Basic Store Example in Alpine.
 // window.addEventListener('alpine:initializing', () => {
