@@ -180,7 +180,7 @@
         </div>
         <ul
           x-data="{ showArticle: false }"
-          class="md:h-screen mt-6 flex flex-col space-y-2 sm:space-y-0 sm:flex-row sm:space-x-3 items-center justify-center"
+          class="md:h-screen mt-6 flex flex-col space-y-2 sm:space-y-0 sm:flex-row sm:space-x-8 items-center justify-center"
           x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')">
           {% set previousPost = collections.blog | getPreviousCollectionItem(page) %}
           {% set nextPost = collections.blog | getNextCollectionItem(page) %}

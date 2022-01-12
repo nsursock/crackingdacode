@@ -413,7 +413,7 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
     {%- set postslist = collections.blog | reverse -%}
     <ol
       x-data="{ showArticle: false }"
-      class="snap-y snap-mandatory md:h-screen mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+      class="snap-y snap-mandatory md:h-screen mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-7"
       x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')"
     >
       {%- for post in postslist -%} {%- include 'partials/postcard.html' -%} {%-
