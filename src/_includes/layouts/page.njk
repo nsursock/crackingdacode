@@ -74,7 +74,8 @@
     {% if page.url == '/' %}
     <div
       x-show="lastScrollTop > landingPageOffset"
-      :class="{ 'sticky top-0 z-[200] animate-swing' : isScrollingUp || !isScrollingUp }">
+      x-transition:enter="animate-swing "
+      :class="{ 'sticky top-0 z-[200]' : isScrollingUp || !isScrollingUp }">
       {% include '../header.html' %}
     </div>
     {% else %}
