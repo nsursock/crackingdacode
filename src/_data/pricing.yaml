@@ -1,38 +1,62 @@
 ---
 prices:
-  - mode: Pro Bono
-    price: $0
-    per: / Month
-    audience: For people trying to help the public
+  - mode: Free
+    price: €0
+    per: / Hour
+    audience: For people trying to help inform the public
     features:
-      - caption: Completely free
-      - caption: Stunning design
-      - caption: Modern stack
-      - caption: Cheap maintenance
+      - caption: 5 staff users
+      - caption: Tailwind design
+      - caption: Free analytics
+      - caption: Regular support
+      - caption: Custom subdomain
+      - caption: SEO fields
+      - caption: Netlify hosting
+      - caption: Stripe donations
+      - caption: Optional CMS
+      - caption: Automatic backups
   - mode: MVP
-    price: $2k
-    per: / Week
-    audience: For people willing to test their ideas
+    price: €20
+    per: / Hour
+    audience: For people willing to test their new ideas
     features:
-      - caption: Stunning design
-      - caption: Modern stack
-      - caption: 24/7 maintenance
-      - caption: Flexible deploys
+      - caption: 10 staff users
+      - caption: Client design
+      - caption: Various analytics
+      - caption: Regular support
+      - caption: Yearly domain
+      - caption: Custom fields
+      - caption: Netlify hosting
+      - caption: Stripe payments
+      - caption: Optional CMS
+      - caption: Automatic backups
   - mode: Website
-    price: $4k
-    per: / Week
+    price: €30
+    per: / Hour
     audience: For people with a clear vision of the future
     features:
-      - caption: Stunning design
-      - caption: Modern stack
-      - caption: 24/7 maintenance
-      - caption: Flexible deploys
-  - mode: Debug
-    price: $600
-    per: / Day
-    audience: For people looking to focus on important things
+      - caption: 20 staff users
+      - caption: Client design
+      - caption: Various analytics
+      - caption: Priority support
+      - caption: Yearly domain
+      - caption: Custom fields
+      - caption: Various hosting
+      - caption: Stripe payments
+      - caption: Optional CMS
+      - caption: Automatic backups
+  - mode: Business
+    price: €50
+    per: / Hour
+    audience: For people looking to shine on the internet
     features:
-      - caption: Overtime friendly
-      - caption: JavaScript stacks
-      - caption: 24/7 availability
-      - caption: Discord communication
+      - caption: Unlimited staff
+      - caption: Client design
+      - caption: Various analytics
+      - caption: 24/7 support
+      - caption: Yearly domain
+      - caption: Custom fields
+      - caption: Various hosting
+      - caption: Stripe payments
+      - caption: Optional CMS
+      - caption: Automatic backups
