@@ -421,6 +421,6 @@ Experienced?' %} {% extends "layouts/page.njk" %} {% block body %}
     </ol>
   </div>
 
-  {% include 'sections/faq.html' %} {% if env.environment != "production" %} {%
+  {% include 'sections/faq.njk' %} {% if env.environment != "production" %} {%
   include 'sections/testimonials.html' %} {% endif %} {% endblock %}
 </section>
