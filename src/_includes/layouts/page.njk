@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{ site.url }}{{ page.url }}" rel="canonical">
     <link rel="stylesheet" href="/assets/main.bundle.css">
-    <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
+    <link
+    rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
     {# <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=block" rel="stylesheet"> #}
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=block" rel="stylesheet"> #}
     {% if env.environment == "production" %}
       <script src="/static/js/main.bundle.js" defer></script>
     {% else %}
@@ -35,6 +36,11 @@
         }
       </script>
       {% if env.environment == "production" %}
+        <script
+          async
+          defer
+          data-website-id="67aa8132-f11c-4de2-ac88-ffef9fe5e5a0"
+          src="https://rocky-refuge-38230.herokuapp.com/umami.js"></script>
         <!-- Google Tag Manager -->
         <script>
           (function (w, d, s, l, i) {
@@ -51,38 +57,29 @@
           })(window, document, 'script', 'dataLayer', 'GTM-5MN6MTZ');
         </script>
         <!-- End Google Tag Manager -->
-        {# <!-- Global site tag (gtag.js) - Google Analytics -->
-                                                <script async src="https://www.googletagmanager.com/gtag/js?id=G-69L675SJ2T"></script>
-                                                <script>
-                                                  window.dataLayer = window.dataLayer || [];
-                                                  function gtag() {
-                                                    dataLayer.push(arguments);
-                                                  }
-                                                  gtag('js', new Date());
-                                                  gtag('config', 'G-69L675SJ2T');
-                                                </script> #}
         <script defer data-domain="nsursock.netlify.app" src="https://plausible.io/js/plausible.js"></script>
         <script>
           window.plausible = window.plausible || function () {
             (window.plausible.q = window.plausible.q || []).push(arguments)
           }
         </script>
+      {% else %}
+        <script async defer data-website-id="04e147f6-f5d6-4970-a8b0-89ac3e92fdfd" src="http://localhost:3000/umami.js"></script>
       {% endif %}
     {% endblock %}
   </head>
   <body hx-boost="true" class="{{ 'debug-screens' if env.devMode }} dark:bg-gray-900" x-data="global">
     {% if page.url == '/' %}
-    <div
-      x-show="lastScrollTop > landingPageOffset"
-      x-transition:enter="animate-swing "
-      :class="{ 'sticky top-0 z-[200]' : isScrollingUp || !isScrollingUp }">
-      {% include '../header.html' %}
-    </div>
+      <div
+        x-show="lastScrollTop > landingPageOffset"
+        x-transition:enter="animate-swing "
+        :class="{ 'sticky top-0 z-[200]' : isScrollingUp || !isScrollingUp }">
+        {% include '../header.html' %}
+      </div>
     {% else %}
-    <div
-      :class="{ 'sticky top-0 z-[200] animate-swing' : isScrollingUp || !isScrollingUp }">
-      {% include '../header.html' %}
-    </div>
+      <div :class="{ 'sticky top-0 z-[200] animate-swing' : isScrollingUp || !isScrollingUp }">
+        {% include '../header.html' %}
+      </div>
     {% endif %}
     {% block body %}
       {% if env.environment == "production" %}

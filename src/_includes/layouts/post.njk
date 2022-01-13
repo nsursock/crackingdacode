@@ -7,10 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{ site.url }}{{ page.url }}" rel="canonical">
     <link rel="stylesheet" href="/assets/main.bundle.css">
-    <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
+    <link
+    rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
     {# <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=block" rel="stylesheet"> #}
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=block" rel="stylesheet"> #}
     {% if env.environment == "production" %}
       <script src="/static/js/main.bundle.js" defer></script>
     {% else %}
@@ -40,6 +41,12 @@
         }
       </script>
       {% if env.environment == "production" %}
+        <script
+          async
+          defer
+          data-website-id="67aa8132-f11c-4de2-ac88-ffef9fe5e5a0"
+          src="https://rocky-refuge-38230.herokuapp.com/umami.js"></script>
+        <script async defer data-website-id="04e147f6-f5d6-4970-a8b0-89ac3e92fdfd" src="http://localhost:3000/umami.js"></script>
         <!-- Google Tag Manager -->
         <script>
           (function (w, d, s, l, i) {
@@ -62,13 +69,15 @@
             (window.plausible.q = window.plausible.q || []).push(arguments)
           }
         </script>
+      {% else %}
+        <script async defer data-website-id="04e147f6-f5d6-4970-a8b0-89ac3e92fdfd" src="http://localhost:3000/umami.js"></script>
       {% endif %}
     {% endblock %}
   </head>
   <body hx-boost="true" class="{{ 'debug-screens' if env.devMode }} dark:bg-gray-900" x-data="global">
-      <div :class="{ 'sticky top-0 z-[200] animate-swing' : isScrollingUp }">
-        {% include '../header.html' %}
-      </div>
+    <div :class="{ 'sticky top-0 z-[200] animate-swing' : isScrollingUp }">
+      {% include '../header.html' %}
+    </div>
     {% block body %}
       {% if env.environment == "production" %}
         <!-- Google Tag Manager (noscript) -->
@@ -162,7 +171,8 @@
       </div>
       <div class="flex flex-col md:flex-row">
         <aside class="px-4  lg:w-1/4 hidden h-screen sticky top-0 xl:flex items-center justify-center flex-col"></aside>
-        <div class="container py-8 max-w-none prose lg:prose-xl dark:prose-invert prose-p:text-justify dark:text-gray-400 sm:w-3/5 xl:w-2/4">
+        <div class="container py-8 max-w-none prose lg:prose-xl dark:prose-invert prose-p:text-justify dark:text-gray-400 sm:w-3/5
+            xl:w-2/4">
           {{ content | safe }}
         </div>
         <aside class="px-4  sm:w-2/5 lg:w-1/4 hidden h-screen sticky top-0 md:flex items-center justify-center flex-col"></aside>
