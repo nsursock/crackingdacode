@@ -10,8 +10,8 @@
     <link
     rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
     {# <link rel="preconnect" href="https://fonts.googleapis.com">
-                                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                                        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=block" rel="stylesheet"> #}
+                                                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                                                    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=block" rel="stylesheet"> #}
     {% if env.environment == "production" %}
       <script src="/static/js/main.bundle.js" defer></script>
     {% else %}
@@ -268,7 +268,30 @@
           </a>
         </aside>
         <aside class="px-4  sm:w-2/5 lg:w-1/4 hidden h-screen sticky top-0 md:flex items-center justify-center flex-col"></aside>
-      </div>
+         </div>
+        {% for auth in authors.authors %}
+          {% if auth.name == author %}
+            <div class=" mb-6 max-w-sm md:max-w-3xl lg:max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+              <div class="md:flex md:h-full">
+                <div class="md:flex-shrink-0">
+                  <img class="w-full object-cover  md:w-48" src="{{ auth.photo }}" alt="{{ service.name }} overview by Nicolas Sursock"/>
+                </div>
+                <div class="p-8 dark:bg-gray-800">
+                  <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
+                    Inspired by {{ track }} recorded by {{ versions[0].artist }}
+                  </div>
+                  <p class="dark:text-white block mt-1 text-lg leading-tight font-medium text-black hover:underline">
+                    Written by {{ auth.name }}
+                  </p>
+                  <p class="mt-2 text-gray-500 dark:text-gray-400">
+                    {{ auth.biography }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+     
       {% include 'sections/subscription.html' %}
       <div id="posts" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="lg:text-center mt-8">

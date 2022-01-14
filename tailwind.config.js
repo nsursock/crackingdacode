@@ -51,16 +51,37 @@ module.exports = {
         // heading: ['Baloo Da 2', 'cursive'],
         // paragraph: ['Lora', 'serif']
         // website: ['Work Sans', 'sans-serif'],
-        website: ['Special Elite', 'cursive']
+        website: ['Special Elite', 'cursive'],
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
         wiggle: 'wiggle 1s ease-in-out infinite',
         popin: 'popin 2s',
-        swing: 'swing 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
+        swing: 'swing 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
         jello: 'jello 2s ease 0s 1 normal forwards',
+        random: 'random 5s ease 0s 1 normal forwards',
       },
       keyframes: {
+        random: {
+          '0%, 100%': {
+            transform: 'scale3d(1, 1, 1)',
+          },
+          '25%': {
+            transform: `scale3d(${Math.random().toFixed(
+              2
+            )+1}, ${Math.random().toFixed(2)+1}, ${Math.random().toFixed(2)}+1)`,
+          },
+          '50%': {
+            transform: `scale3d(${Math.random().toFixed(
+              2
+            )}, ${Math.random().toFixed(2)}, ${Math.random().toFixed(2)})`,
+          },
+          '75%': {
+            transform: `scale3d(${Math.random().toFixed(
+              2
+            )+1}, ${Math.random().toFixed(2)+1}, ${Math.random().toFixed(2)+1})`,
+          },
+        },
         wiggle: {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' },
