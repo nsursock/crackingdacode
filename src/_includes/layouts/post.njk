@@ -10,8 +10,8 @@
     <link
     rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
     {# <link rel="preconnect" href="https://fonts.googleapis.com">
-                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=block" rel="stylesheet"> #}
+                                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                                        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=block" rel="stylesheet"> #}
     {% if env.environment == "production" %}
       <script src="/static/js/main.bundle.js" defer></script>
     {% else %}
@@ -46,7 +46,6 @@
           defer
           data-website-id="67aa8132-f11c-4de2-ac88-ffef9fe5e5a0"
           src="https://rocky-refuge-38230.herokuapp.com/umami.js"></script>
-        <script async defer data-website-id="04e147f6-f5d6-4970-a8b0-89ac3e92fdfd" src="http://localhost:3000/umami.js"></script>
         <!-- Google Tag Manager -->
         <script>
           (function (w, d, s, l, i) {
@@ -69,8 +68,6 @@
             (window.plausible.q = window.plausible.q || []).push(arguments)
           }
         </script>
-        {# {% else %}
-                <script async defer data-website-id="04e147f6-f5d6-4970-a8b0-89ac3e92fdfd" src="https://localhost:3000/umami.js"></script> #}
       {% endif %}
     {% endblock %}
   </head>
