@@ -10,8 +10,8 @@
     <link
     rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
     {# <link rel="preconnect" href="https://fonts.googleapis.com">
-                                                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                                                        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=block" rel="stylesheet"> #}
+                                                                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                                                                <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=block" rel="stylesheet"> #}
     {% if env.environment == "production" %}
       <script src="/static/js/main.bundle.js" defer></script>
     {% else %}
@@ -283,13 +283,11 @@
               </div>
               <div class="p-8 dark:bg-gray-800">
                 <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
-                  Inspired by {{ track }} recorded by
-                  {{ versions[0].artist }}
+                  Written by {{ auth.name }}
                 </div>
-                <p class="dark:text-white block mt-1 text-lg leading-tight font-medium text-black hover:underline">
-                  Written by
-                  {{ auth.name }}
-                </p>
+                <a rel="noopener" target="_blank" href="{{ versions[0].link }}" class="dark:text-white block mt-1 text-lg leading-tight font-medium text-black hover:underline">
+                  Inspired by {{ track }} recorded by {{ versions[0].artist }}
+                </a>
                 <p class="mt-2 text-gray-500 dark:text-gray-400">
                   {{ auth.biography }}
                 </p>
