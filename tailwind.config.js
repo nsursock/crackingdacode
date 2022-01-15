@@ -56,10 +56,10 @@ module.exports = {
       animation: {
         'spin-slow': 'spin 3s linear infinite',
         wiggle: 'wiggle 1s ease-in-out infinite',
-        popin: 'popin 2s',
-        swing: 'swing 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
-        jello: 'jello 2s ease 0s 1 normal forwards',
-        random: 'random 5s ease 0s 1 normal forwards',
+        popin: 'popin 1s',
+        swing: 'swing 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
+        jello: 'jello 1s ease 0s 1 normal forwards',
+        random: 'random 2s ease 0s 1 normal forwards',
       },
       keyframes: {
         random: {
