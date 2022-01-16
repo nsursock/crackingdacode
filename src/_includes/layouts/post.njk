@@ -10,8 +10,8 @@
     <link
     rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
     {# <link rel="preconnect" href="https://fonts.googleapis.com">
-                                                                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                                                                    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=block" rel="stylesheet"> #}
+                                                                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                                                                        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=block" rel="stylesheet"> #}
     {% if env.environment == "production" %}
       <script src="/static/js/main.bundle.js" defer></script>
     {% else %}
@@ -114,19 +114,23 @@
                   {{ description }}
                 </p>
                 <div class="mt-4 pt-4 flex items-center sm:justify-center lg:justify-start">
-                  <img
-                    class="h-16 w-16 rounded-full"
-                    data-src="/static/img/{{ author.split(' ').join('-') }}.jpg"
-                    alt=""
-                    x-intersect.once.ratio-0="$el.src = $el.dataset.src"/>
-                  <div class="ml-3 flex flex-col">
-                    <span class="text-sm font-semibold dark:text-white">
-                      Written by {{ author }}
-                    </span>
-                    <span class="text-sm text-gray-500 dark:text-gray-400" x-data="{ time: {{ content.split(' ').length / 200 }} }">
-                      {{ date | date("MMM dd, yyyy") }} at {{ date | date("kk:mm") }} • <span x-text="`${Math.round(time).toString().split('.')[0]} min read`"/>
-                    </span>
-                  </div>
+                  {% for auth in authors.authors %}
+                    {% if auth.name == author %}
+                      <img
+                        class="h-16 w-16 rounded-full"
+                        data-src="{{ auth.photo }}-small.jpg"
+                        alt="Photo of author {{ auth.name }}"
+                        x-intersect.once.ratio-0="$el.src = $el.dataset.src"/>
+                      <div class="ml-3 flex flex-col">
+                        <span class="text-sm font-semibold dark:text-white">
+                          Written by {{ auth.name }}
+                        </span>
+                        <span class="text-sm text-gray-500 dark:text-gray-400" x-data="{ time: {{ content.split(' ').length / 200 }} }">
+                          {{ date | date("MMM dd, yyyy") }} at {{ date | date("kk:mm") }} • <span x-text="`${Math.round(time).toString().split('.')[0]} min read`"/>
+                        </span>
+                      </div>
+                    {% endif %}
+                  {% endfor %}
                 </div>
                 <div class="mt-5 sm:mt-8 sm:justify-center lg:justify-start flex flex-wrap lg:max-w-md ">
                   {% for tag in tags %}
@@ -162,7 +166,7 @@
           <picture>
             <source media="(max-width: 799px)" srcset="{{ featured }}&q=80&w=480&h=320"/>
             <source media="(min-width: 800px)" srcset="{{ featured }}&q=80&w=1080&h=720"/>
-            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="{{ featured }}&q=80&w=1920&h=1280" alt=""/>
+            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="{{ featured }}&q=80&w=1920&h=1280" alt="{{ title1 + ' ' + title2 }}"/>
           </picture>
         </div>
       </div>
@@ -306,7 +310,7 @@
           <div class=" mb-6 max-w-sm md:max-w-3xl lg:max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
             <div class="md:flex md:h-full">
               <div class="md:flex-shrink-0">
-                <img class="w-full object-cover md:h-full md:w-48" src="{{ auth.photo }}" alt="{{ service.name }} overview by Nicolas Sursock"/>
+                <img class="w-full object-cover md:h-full md:w-48" src="{{ auth.photo }}.jpg" alt="Photo of author {{ auth.name }}"/>
               </div>
               <div class="p-8 dark:bg-gray-800">
                 <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">
@@ -343,13 +347,13 @@
           {% if previousPost %}
             <div x-data="{ type: 'Prev' }">
               {% set post = previousPost %}
-              {% include 'partials/postcard.html' %}
+              {% include 'partials/postcard.njk' %}
             </div>
           {% endif %}
           {% if nextPost %}
             <div x-data="{ type: 'Next' }">
               {% set post = nextPost %}
-              {% include 'partials/postcard.html' %}
+              {% include 'partials/postcard.njk' %}
             </div>
           {% endif %}
         </ul>
@@ -362,7 +366,7 @@
               x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')">
               {%- for post in postslist -%}
                 <div x-data="{ type: '#{{ loop.index }}' }">
-                  {%- include 'partials/postcard.html' -%}
+                  {%- include 'partials/postcard.njk' -%}
                 </div>
               {%- endfor -%}
             </ol>
