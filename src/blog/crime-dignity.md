@@ -89,3 +89,43 @@ I don’t know if you would have liked the atmosphere since 2001. Every home was
 
 I guess we know the root cause of all this mess: just when we fall in love again, people say that all good things must end.
 
+```
+[Verse 1]
+Think of all the things we've done and now
+You've decided I'm not the one
+A love like ours just can't go on
+Run away baby have your fun but
+
+[Chorus]
+I, I, I, I, don't wanna hurt you I don't wanna see you cry
+I, I, I, I, just wanna hold you love tonight
+You owe me some kind of love
+
+[Verse 2]
+I don't wanna see you sad I don't want you
+Feeling down I only want you to say you love me and you need me
+The way I love ya please believe me
+
+[Chorus]
+I, I, I, I, don't wanna hurt you I don't wanna see you cry
+I, I, I, I, just wanna hold you love tonight
+You owe me some kind of love
+You owe me some kind of love
+
+[Guitar Solo]
+
+[Verse 1]
+Think of all the things we've done and now
+You've decided I'm not the one
+A love like ours just can't go on
+Run away baby have your fun but
+
+
+[Chorus]
+I, I, I, I, don't wanna hurt you I don't wanna see you cry
+I, I, I, I, just want you back I don't want to fight
+I, I, I, I, just wanna hold you love tonight
+You owe me some kind of love
+You owe me some kind of love
+Help!
+```
