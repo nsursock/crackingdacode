@@ -37,11 +37,6 @@
         }
       </script>
       {% if env.environment == "production" %}
-        <script
-          async
-          defer
-          data-website-id="67aa8132-f11c-4de2-ac88-ffef9fe5e5a0"
-          src="https://rocky-refuge-38230.herokuapp.com/umami.js"></script>
         <!-- Google Tag Manager -->
         <script>
           (function (w, d, s, l, i) {
@@ -103,6 +98,6 @@
       {% endif %}
     {% endblock %}
     {% include 'sections/cta.html' %}
-    {% include 'footer.html' %}
+    {% include 'footer.njk' %}
   </body>
 </html>
