@@ -81,11 +81,13 @@
       </div>
     </div>
   </div>
-  <template x-if="!document.cookie.includes('InternalTraffic')">
-    <script
-      async="async"
-      defer="defer"
-      data-website-id="67aa8132-f11c-4de2-ac88-ffef9fe5e5a0"
-      src="https://rocky-refuge-38230.herokuapp.com/umami.js"></script>
-  </template>
+  {% if env.environment == "production" %}
+    <template x-if="!document.cookie.includes('InternalTraffic')">
+      <script
+        async="async"
+        defer="defer"
+        data-website-id="67aa8132-f11c-4de2-ac88-ffef9fe5e5a0"
+        src="https://rocky-refuge-38230.herokuapp.com/umami.js"></script>
+    </template>
+  {% endif %}
 </footer>
