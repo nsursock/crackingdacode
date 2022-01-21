@@ -5,14 +5,14 @@
     <meta name="description" content="{{ description }}">
     <meta name="author" content="{{ author }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="ElwriKJxsec5ariCaXI5cy7eo0kMlqtJZF3YOxDOO3w" />
+    <meta name="google-site-verification" content="ElwriKJxsec5ariCaXI5cy7eo0kMlqtJZF3YOxDOO3w"/>
     <link href="{{ site.url }}{{ page.url }}" rel="canonical">
     <link rel="stylesheet" href="/assets/main.bundle.css">
     <link
     rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
     {# <link rel="preconnect" href="https://fonts.googleapis.com">
-                                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                                    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=block" rel="stylesheet"> #}
+                                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                                        <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=block" rel="stylesheet"> #}
     {% if env.environment == "production" %}
       <script src="/static/js/main.bundle.js" defer></script>
     {% else %}
@@ -53,12 +53,6 @@
           })(window, document, 'script', 'dataLayer', 'GTM-5MN6MTZ');
         </script>
         <!-- End Google Tag Manager -->
-        <script defer data-domain="nsursock.netlify.app" src="https://plausible.io/js/plausible.js"></script>
-        <script>
-          window.plausible = window.plausible || function () {
-            (window.plausible.q = window.plausible.q || []).push(arguments)
-          }
-        </script>
       {% endif %}
     {% endblock %}
   </head>
