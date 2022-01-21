@@ -83,6 +83,12 @@
   </div>
   {% if env.environment == "production" %}
     <template x-if="!document.cookie.includes('InternalTraffic')">
+      <script defer="defer" data-domain="nsursock.netlify.app" src="https://plausible.io/js/plausible.js"></script>
+      <script>
+        window.plausible = window.plausible || function () {
+          (window.plausible.q = window.plausible.q || []).push(arguments)
+        }
+      </script>
       <script
         async="async"
         defer="defer"
