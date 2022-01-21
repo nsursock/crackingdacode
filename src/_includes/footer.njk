@@ -83,17 +83,19 @@
   </div>
   {% if env.environment == "production" %}
     <template x-if="!document.cookie.includes('InternalTraffic')">
-      <script defer="defer" data-domain="nsursock.netlify.app" src="https://plausible.io/js/plausible.js"></script>
-      <script>
-        window.plausible = window.plausible || function () {
-          (window.plausible.q = window.plausible.q || []).push(arguments)
-        }
-      </script>
-      <script
-        async="async"
-        defer="defer"
-        data-website-id="cc448530-e442-4d42-997c-7710b8bd9241"
-        src="https://nsursock-stats.herokuapp.com/umami.js"></script>
+      <div>
+        <script defer="defer" data-domain="nsursock.netlify.app" src="https://plausible.io/js/plausible.js"></script>
+        <script>
+          window.plausible = window.plausible || function () {
+            (window.plausible.q = window.plausible.q || []).push(arguments)
+          }
+        </script>
+        <script
+          async="async"
+          defer="defer"
+          data-website-id="cc448530-e442-4d42-997c-7710b8bd9241"
+          src="https://nsursock-stats.herokuapp.com/umami.js"></script>
+      </div>
     </template>
   {% endif %}
 </footer>
