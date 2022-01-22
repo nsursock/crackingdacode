@@ -67,9 +67,9 @@ module.exports = {
             transform: 'scale3d(1, 1, 1)',
           },
           '25%': {
-            transform: `scale3d(${Math.random().toFixed(
-              2
-            )+1}, ${Math.random().toFixed(2)+1}, ${Math.random().toFixed(2)}+1)`,
+            transform: `scale3d(${Math.random().toFixed(2) + 1}, ${
+              Math.random().toFixed(2) + 1
+            }, ${Math.random().toFixed(2)}+1)`,
           },
           '50%': {
             transform: `scale3d(${Math.random().toFixed(
@@ -77,9 +77,9 @@ module.exports = {
             )}, ${Math.random().toFixed(2)}, ${Math.random().toFixed(2)})`,
           },
           '75%': {
-            transform: `scale3d(${Math.random().toFixed(
-              2
-            )+1}, ${Math.random().toFixed(2)+1}, ${Math.random().toFixed(2)+1})`,
+            transform: `scale3d(${Math.random().toFixed(2) + 1}, ${
+              Math.random().toFixed(2) + 1
+            }, ${Math.random().toFixed(2) + 1})`,
           },
         },
         wiggle: {
@@ -156,8 +156,14 @@ module.exports = {
     require('tailwindcss-debug-screens'),
     require('@tailwindcss/line-clamp'),
   ],
-  purge: {
-    content: ['./src/**/*.{html,js,md,njk,svg}'],
-    enabled: process.env.NODE_ENV.startsWith('prod'),
-  },
+  content: ['./src/**/*.{html,js,md,njk,svg}'],
+  safelist: [
+    'md:-mr-56',
+    'md:-ml-56',
+    'md:float-right',
+    'md:float-left',
+    'w-full',
+    'md:w-2/3',
+    'md:px-8',
+  ],
 }
