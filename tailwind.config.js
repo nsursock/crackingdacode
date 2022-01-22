@@ -157,13 +157,5 @@ module.exports = {
     require('@tailwindcss/line-clamp'),
   ],
   content: ['./src/**/*.{html,js,md,njk,svg}'],
-  safelist: [
-    'md:-mr-56',
-    'md:-ml-56',
-    'md:float-right',
-    'md:float-left',
-    'w-full',
-    'md:w-2/3',
-    'md:px-8',
-  ],
+  safelist: [],
 }
