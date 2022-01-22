@@ -4,6 +4,7 @@ const format = require('date-fns/format')
 const fetch = require('node-fetch-commonjs')
 
 module.exports = (config) => {
+
   config.addFilter('date', function (date, dateFormat) {
     return format(date, dateFormat)
   })
