@@ -51,7 +51,7 @@ module.exports = {
         // heading: ['Baloo Da 2', 'cursive'],
         // paragraph: ['Lora', 'serif']
         // website: ['Work Sans', 'sans-serif'],
-        website: ['Special Elite', 'cursive'],
+        // website: ['Special Elite', 'cursive'],
       },
       animation: {
         'spin-slow': 'spin 3s linear infinite',
