@@ -9,7 +9,7 @@
     x-transition:enter-start="opacity-0 scale-75"
     x-transition:enter-end="opacity-100 scale-100">
     <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 dark:bg-gray-900 dark:text-gray-200">
-      <div class="container my-6 mx-auto px-5 text-gray-900 antialiased">
+      <div class="container my-6 mx-auto px-5 text-gray-900">
         <div class="lg:text-center">
           <h2 class=" text-base text-indigo-600 font-semibold tracking-wide uppercase ">
             Pricing
@@ -22,13 +22,13 @@
             payment is upfront (50% of the cost) and the remainder on delivery (50%).
           </p>
         </div>
-        <div class="flex justify-center items-center mt-5">
+        <div class="flex justify-center items-center mt-4">
           {% if pricing.prices %}
             <ul class="grid sm:grid-cols-2 gap-10 xl:grid-cols-4">
               {% for item in pricing.prices %}
                 <li
                   x-show="showPricing"
-                  x-transition:enter="transition transform ease-in-out duration-[2000ms] "
+                  x-transition:enter="transition transform ease-in-out duration-[2s] "
                   x-transition:enter-start="even:-translate-y-full odd:translate-y-full"
                   x-transition:enter-end="translate-y-0"
                   class="hover:dark:bg-gray-800 hover:bg-gray-100 flex flex-col p-8 rounded-2xl space-y-5 border border-transparent
