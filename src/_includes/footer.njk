@@ -82,7 +82,7 @@
     </div>
   </div>
   {% if env.environment == "production" %}
-    <template x-if="!document.cookie.includes('InternalTraffic') || !window.location.hostname.includes('localhost')">
+    <template x-if="!document.cookie.includes('InternalTraffic')">
       <div>
         <script defer="defer" data-domain="nsursock.netlify.app" src="https://plausible.io/js/plausible.js"></script>
         <script>
