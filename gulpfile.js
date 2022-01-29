@@ -8,7 +8,28 @@ task('minify', async function (cb) {
     .pipe(dest('dist/static/js'))
 })
 
+// var criticalCss = require('gulp-penthouse')
+// const injectInline = require('@exuanbo/gulp-inject-inline')
+
 task('critical', async function (cb) {
+  // src('./dist/assets/main.bundle.css')
+  //   .pipe(
+  //     criticalCss({
+  //       out: 'critical.css', // output file name
+  //       url: './dist/index.html', // url from where we want penthouse to extract critical styles
+  //       width: 1300, // max window width for critical media queries
+  //       height: 900, // max window height for critical media queries
+  //       strict: true,
+  //       // userAgent:
+  //       //   'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)', // pretend to be googlebot when grabbing critical page styles.
+  //     })
+  //   )
+  //   // .pipe(
+  //   //   cssNano({
+  //   //     safe: true, // this isn't required, but I've included cssNano to minify the output file
+  //   //   })
+  //   // )
+  //   .pipe(dest('./dist/static/css/'))
   critical.generate({
     inline: true,
     base: 'dist/',
@@ -16,20 +37,12 @@ task('critical', async function (cb) {
     css: ['assets/main.bundle.css'],
     dimensions: [
       {
-        width: 320,
-        height: 480,
+        height: 500,
+        width: 300,
       },
       {
-        width: 375,
-        height: 812,
-      },
-      {
-        width: 768,
-        height: 1024,
-      },
-      {
+        height: 720,
         width: 1280,
-        height: 960,
       },
     ],
     target: {
@@ -38,12 +51,17 @@ task('critical', async function (cb) {
       uncritical: 'static/css/rest.bundle.min.css',
     },
     extract: true,
-    ignore: {
-      atrule: ['@font-face', '@import'],
-    },
+    // ignore: {
+    //   atrule: ['@font-face', '@import'],
+    // },
   })
 })
 
+// task('critical-inject', async function (cb) {
+//   src('./dist/**/*.html').pipe(injectInline()).pipe(dest('dist'))
+// })
+
+// task('critical', series('critical-extract', 'critical-inject'))
 task('build', series('minify', 'critical'))
 
 // var gzip = require("gulp-gzip");
