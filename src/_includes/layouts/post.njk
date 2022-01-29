@@ -63,7 +63,7 @@
   </head>
   <body hx-boost="true" class="{{ 'debug-screens' if env.devMode }} dark:bg-gray-900" x-data="global">
     <div :class="{ 'sticky top-0 z-[200] animate-swing' : isScrollingUp }">
-      {% include '../header.html' %}
+      {% include '../header.njk' %}
     </div>
     {% block body %}
       {% if env.environment == "production" %}

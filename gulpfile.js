@@ -37,7 +37,7 @@ task('critical', async function (cb) {
       html: 'index.html',
       uncritical: 'static/css/rest.bundle.min.css',
     },
-    extract: false,
+    extract: true,
     ignore: {
       atrule: ['@font-face', '@import'],
     },
