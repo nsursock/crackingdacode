@@ -7,11 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="ElwriKJxsec5ariCaXI5cy7eo0kMlqtJZF3YOxDOO3w"/>
     <link href="{{ site.url }}{{ page.url }}" rel="canonical">
-   {% if env.environment == "production" %}
-    <style>
-      /* inject-inline: /dist/static/assetscritical.css */
-    </style>
-    {% endif %}
+    <link rel="preconnect" href="https://unsplash.com">
+    <link rel="dns-prefetch" href="https://unsplash.com">
     <link rel="stylesheet" href="/assets/main.bundle.css">
     <link
     rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
