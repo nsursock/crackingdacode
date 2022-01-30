@@ -42,7 +42,7 @@ module.exports = (config) => {
   // config.addPassthroughCopy({
   //   './assets/main.bundle.js': './static/js/main.bundle.js',
   // })
-  config.addPassthroughCopy('./src/static/img')
+  config.addPassthroughCopy('./src/static')
 
   config.addFilter('split', function (str, sep) {
     return (str + '').split(sep)
