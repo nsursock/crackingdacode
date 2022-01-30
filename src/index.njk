@@ -12,7 +12,7 @@ author: Nicolas Sursock
 {% endblock %}
 {% block body %}
 
-{# <div class="hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 dark:ring-opacity-25 overflow-hidden "></div>
+<div class="hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 dark:ring-opacity-25 overflow-hidden "></div>
 
 <li
   class="hidden snap-center shadow-lg border border-gray-200 rounded-lg max-w-sm h-full mx-auto bg-gray-100 dark:bg-gray-800
@@ -31,9 +31,9 @@ author: Nicolas Sursock
       </div>
     </div>
   </a>
-</li> #}
+</li>
 
-{# <img class="hidden rounded-t-lg transition-all duration-500 ease-in-out group-hover:filter group-hover:blur-md" src="" alt=""/>
+<img class="hidden rounded-t-lg transition-all duration-500 ease-in-out group-hover:filter group-hover:blur-md" src="" alt=""/>
  <div class="hidden absolute inset-0 max-w-3xl text-8xl font-black text-white opacity-0
     group-hover:opacity-80 group-focus:opacity-80 filter blur-lg group-hover:filter-none group-focus:filter-none
     transition-all ease-in-out duration-[2000ms] mix-blend-overlay ">
@@ -77,8 +77,6 @@ author: Nicolas Sursock
     <div class="absolute inset-y-0 right-0 flex items-center">
       <label for="currency" class="sr-only">Currency</label>
       <select
-        x-model="currency"
-        @change="symbol = document.querySelector(`#${event.target.id} option:checked`).dataset.symbol"
         id="currency"
         name="currency"
         class="focus:ring-indigo-500 focus:border-indigo-500 h-full py-0 pl-2 pr-7 border-transparent bg-transparent text-gray-500 text-base font-medium rounded-md"
@@ -97,7 +95,7 @@ author: Nicolas Sursock
       </select>
     </div>
   </div>
-</div> #}
+</div>
 
 
 <!-- This example requires Tailwind CSS v2.0+ -->
