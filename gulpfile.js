@@ -52,7 +52,7 @@ task('critical', async function (cb) {
     target: {
       // css: 'static/css/crit.bundle.css',
       html: 'index.html',
-      uncritical: 'static/css/rest.bundle.min.css',
+      uncritical: 'static/rest.bundle.min.css',
     },
     extract: true,
     // ignore: {
@@ -74,7 +74,7 @@ task('compress', async function (cb) {
 })
 
 // task('critical', series('critical-extract', 'critical-inject'))
-task('build', series('minify', 'compress'))
+task('build', series('minify', 'critical'))
 
 // var gzip = require("gulp-gzip");
 
