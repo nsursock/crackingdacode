@@ -12,14 +12,11 @@
     <link rel="stylesheet" href="/assets/main.bundle.css">
     <link
     rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
-    {# <link rel="preconnect" href="https://fonts.googleapis.com">
-                                                                                                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-                                                                                                <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=block" rel="stylesheet"> #}
-    {% if env.environment == "production" %}
+    {# {% if env.environment == "production" %}
       <script src="/static/js/main.bundle.js" defer></script>
-    {% else %}
+    {% else %} #}
       <script src="/assets/main.bundle.js" defer></script>
-    {% endif %}
+    {# {% endif %} #}
     <title>{{ title + ' ' + title2 }} | Sursock Labs</title>
     {% block head %}
       <meta property='og:title' content="{{ title + ' ' + title2 }}"/>
