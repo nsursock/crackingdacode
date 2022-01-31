@@ -3,8 +3,14 @@ var uglify = require('gulp-terser')
 const { dest, src, task, series } = require('gulp')
 
 task('minify', async function (cb) {
-  src('dist/assets/main.bundle.js').pipe(uglify()).pipe(dest('dist/static/js'))
+  src('dist/assets/main.bundle.js').pipe(uglify()).pipe(dest('dist/static'))
 })
+
+// task('minify', async function (cb) {
+//   src('dist/**/*.{html,css,js}')
+//     .pipe(uglify())
+//     .pipe(dest('dist'))
+// })
 
 // var criticalCss = require('gulp-penthouse')
 // const injectInline = require('@exuanbo/gulp-inject-inline')
@@ -62,7 +68,7 @@ task('critical', async function (cb) {
 var gulpBrotli = require('gulp-brotli')
 
 task('compress', async function (cb) {
-  src('dist/**/*.{html,xml,json,css,js}', { buffer: false })
+  src('dist/**/*.{html,css,js}', { buffer: false })
     .pipe(gulpBrotli.compress())
     .pipe(dest('dist'))
 })
