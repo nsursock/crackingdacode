@@ -162,7 +162,7 @@
             xl:w-2/4">
           {{ content | safe }}
         </div>
-        <div x-data="scrollProgress" class="fixed md:hidden inset-x-0 bottom-0 z-50">
+        <div class="fixed md:hidden inset-x-0 bottom-0 z-50">
           <div class="h-1 bg-indigo-500" :style="`width: ${percent}%`"></div>
         </div>
         <aside class="px-14 hidden h-screen sticky top-0 md:flex items-center justify-center flex-col dark:text-white">
@@ -287,7 +287,6 @@
             </svg>
           </a>
           <div
-            x-data="scrollProgress"
             class="inline-flex items-center justify-center overflow-hidden rounded-full bottom-5 left-5">
             <!-- Building a Progress Ring: https://css-tricks.com/building-progress-ring-quickly/ -->
             <svg class="w-20 h-20">
@@ -412,7 +411,7 @@
     {% include 'footer.njk' %}
   </body>
 </html>
-<script>
+{# <script>
   const scrollProgress = () => {
     return {
       init() {
@@ -430,4 +429,4 @@
       percent: 0
     }
   }
-</script>
+</script> #}
