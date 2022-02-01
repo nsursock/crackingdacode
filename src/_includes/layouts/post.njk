@@ -411,22 +411,3 @@
     {% include 'footer.njk' %}
   </body>
 </html>
-{# <script>
-  const scrollProgress = () => {
-    return {
-      init() {
-        window.addEventListener('scroll', () => {
-          const target = document.querySelector('#article')
-          const winTop = window.pageYOffset || document.documentElement.scrollTop;
-          const targetBottom = target.offsetTop + target.scrollHeight;
-          const windowBottom = winTop + window.outerHeight;
-          this.percent = Math.min(Math.round(100 - ((
-            (targetBottom - windowBottom + window.outerHeight / 3) / (targetBottom - window.outerHeight + window.outerHeight / 3)
-          ) * 100)), 100)
-        })
-      },
-      circumference: 30 * 2 * Math.PI,
-      percent: 0
-    }
-  }
-</script> #}
