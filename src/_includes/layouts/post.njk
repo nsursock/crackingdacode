@@ -13,9 +13,9 @@
     <link
     rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
     {# {% if env.environment == "production" %}
-      <script src="/static/main.bundle.js" defer></script>
-    {% else %} #}
-      <script src="/assets/main.bundle.js" defer></script>
+                                  <script src="/static/main.bundle.js" defer></script>
+                                {% else %} #}
+    <script src="/assets/main.bundle.js" defer></script>
     {# {% endif %} #}
     <title>{{ title + ' ' + title2 }} | Sursock Labs</title>
     {% block head %}
@@ -157,9 +157,13 @@
             aside.classList.remove('md:-mr-56'), aside.classList.add('md:-mr-24') });
             Array.from($el.getElementsByClassName('md:float-left')).forEach((aside) => { aside.classList.remove('md:-ml-56'),
             aside.classList.add('md:-ml-24') })"
+          id="article"
           class="container py-8 max-w-none prose lg:prose-xl dark:prose-invert prose-p:text-justify dark:text-gray-400 sm:w-3/5
             xl:w-2/4">
           {{ content | safe }}
+        </div>
+        <div x-data="scrollProgress" class="fixed md:hidden inset-x-0 bottom-0 z-50">
+          <div class="h-1 bg-indigo-500" :style="`width: ${percent}%`"></div>
         </div>
         <aside class="px-14 hidden h-screen sticky top-0 md:flex items-center justify-center flex-col dark:text-white">
           Share
@@ -282,6 +286,26 @@
               <path d="M16 16v-3a2 2 0 0 0 -4 0"></path>
             </svg>
           </a>
+          <div
+            x-data="scrollProgress"
+            class="inline-flex items-center justify-center overflow-hidden rounded-full bottom-5 left-5">
+            <!-- Building a Progress Ring: https://css-tricks.com/building-progress-ring-quickly/ -->
+            <svg class="w-20 h-20">
+              <circle class="text-gray-300" stroke-width="2" stroke="currentColor" fill="transparent" r="30" cx="40" cy="40"/>
+              <circle
+                class="text-indigo-600"
+                stroke-width="5"
+                :stroke-dasharray="circumference"
+                :stroke-dashoffset="circumference - percent / 100 * circumference"
+                stroke-linecap="round"
+                stroke="currentColor"
+                fill="transparent"
+                r="30"
+                cx="40"
+                cy="40"/>
+            </svg>
+            <span class="absolute text-xl text-indigo-700" x-text="`${percent}%`"></span>
+          </div>
         </aside>
         <aside class="px-4  sm:w-2/5 lg:w-1/4 hidden h-screen sticky top-0 md:flex items-center justify-center flex-col"></aside>
       </div>
@@ -388,3 +412,22 @@
     {% include 'footer.njk' %}
   </body>
 </html>
+<script>
+  const scrollProgress = () => {
+    return {
+      init() {
+        window.addEventListener('scroll', () => {
+          const target = document.querySelector('#article')
+          const winTop = window.pageYOffset || document.documentElement.scrollTop;
+          const targetBottom = target.offsetTop + target.scrollHeight;
+          const windowBottom = winTop + window.outerHeight;
+          this.percent = Math.min(Math.round(100 - ((
+            (targetBottom - windowBottom + window.outerHeight / 3) / (targetBottom - window.outerHeight + window.outerHeight / 3)
+          ) * 100)), 100)
+        })
+      },
+      circumference: 30 * 2 * Math.PI,
+      percent: 0
+    }
+  }
+</script>
