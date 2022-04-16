@@ -2,6 +2,6 @@
 
 module.exports = function () {
   return {
-    url: 'https://nsursock.netlify.app'
+    url: 'https://crackingdacode.netlify.app'
   }
 }
