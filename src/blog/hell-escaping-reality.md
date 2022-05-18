@@ -61,6 +61,7 @@ I used to go out every night to listen to music in caves: jazz, blues, soul, roc
 Fast forward a few years later: I don't play the guitar daily, and I became a spectator. When I witness the level of musicianship out there, the groove, the virtuosity, suddenly I have two choices:
  - I can go back home and sit and cry, thinking I will never reach that level,
  - Or I can go back home, take my guitar and practice.
+
 I'm using option one right now, and let me tell you, it's a strange hell to think you're an impostor even though you listen to music 8 hours a day minimum.
 
 Andre Agassi used to do challenger tournaments to regain his confidence to prepare for big ones. Always increase the difficulty level in steps.
