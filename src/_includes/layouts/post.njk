@@ -10,10 +10,11 @@
     <link rel="preconnect" href="https://unsplash.com">
     <link rel="dns-prefetch" href="https://unsplash.com">
     <link rel="stylesheet" href="/assets/main.bundle.css">
-    <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
+    <link
+    rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
     {# {% if env.environment == "production" %}
-                                  <script src="/static/main.bundle.js" defer></script>
-                                {% else %} #}
+                                          <script src="/static/main.bundle.js" defer></script>
+                                        {% else %} #}
     <script src="/assets/main.bundle.js" defer></script>
     {# {% endif %} #}
     <title>{{ title + ' ' + title2 }} | Sursock Labs</title>
@@ -289,7 +290,14 @@
             class="inline-flex items-center justify-center overflow-hidden rounded-full bottom-5 left-5 ">
             <!-- Building a Progress Ring: https://css-tricks.com/building-progress-ring-quickly/ -->
             <svg class="w-20 h-20">
-              <circle class="text-gray-300 dark:text-gray-700" stroke-width="2" stroke="currentColor" fill="transparent" r="30" cx="40" cy="40"/>
+              <circle
+                class="text-gray-300 dark:text-gray-700"
+                stroke-width="2"
+                stroke="currentColor"
+                fill="transparent"
+                r="30"
+                cx="40"
+                cy="40"/>
               <circle
                 class="text-indigo-600"
                 stroke-width="5"
@@ -406,7 +414,12 @@
         {%- endif -%}
       </div>
     {% endblock %}
-    {% include 'sections/cta.html' %}
-    {% include 'footer.njk' %}
+    <section id="footer">
+      {% include 'sections/cta.html' %}
+      {% include 'footer.njk' %}
+    </section>
+    <div x-show="showPopup">
+      {% include 'partials/popup.njk' %}
+    </div>
   </body>
 </html>
