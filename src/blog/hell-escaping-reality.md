@@ -1,6 +1,6 @@
 ---
 title: Is A Little Frantic Hell Trying  
-title2: To Escape a Backstabbing Reality?
+title2: To Escape A Backstabbing Reality?
 description: Reality is when you start to experience a headache. Unfortunately, our teenagers are prone to this because of cruelty. But not only them!
 author: Nicolas Sursock
 date: 2022-05-18T17:36:00Z
@@ -12,6 +12,8 @@ track: Virtual Insanity
 versions:
     - artist: Jamiroquai
       link: https://apple.co/38uI1iI
+    - artist: Giacomo Turra
+      link: https://apple.co/3aadPK5
 ---
 
 I've got a message for everyone: watch out for the years when you're 14 or 15. I'm still trying to digest my first encounter with severity and cruelty as far as I'm concerned.
