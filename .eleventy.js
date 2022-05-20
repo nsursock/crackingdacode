@@ -22,6 +22,30 @@ module.exports = (config) => {
     return filterTagList([...tagSet]).sort()
   })
 
+  function capitalize(str) {
+    return str[0].toUpperCase() + str.substring(1);
+  }
+
+  config.addCollection('stats', async function (collection) {
+    let data = await fetch(
+      'https://plausible.io/api/v1/stats/aggregate?site_id=nsursock.netlify.app&period=6mo&metrics=visitors,pageviews,bounce_rate,visit_duration',
+      {
+        method: 'GET',
+        headers: {
+          // Authorization: `Bearer ${process.env.PLAUSIBLE_KEY}`,
+          Authorization: `Bearer 2K985BK3VVcjSZIpdUo6mbWti2118_DoDvoi9k2nxxZwMPoOmrYFYpARCPUhbR97`,
+        },
+      }
+    )
+    let json = (await data.json()).results
+    let stats = []
+    for (const prop in json) {
+      stats.push({ name: prop.split('_').map((w) => capitalize(w)).join(' '), value: json[prop].value})
+    }
+    stats.push({ name: 'Views / Visitor', value: (json.pageviews.value / json.visitors.value).toFixed(2) })
+    return stats
+  })
+
   config.addPassthroughCopy({ public: './' })
   config.setBrowserSyncConfig({
     files: ['dist/**/*'],
@@ -46,6 +70,29 @@ module.exports = (config) => {
 
   config.addFilter('split', function (str, sep) {
     return (str + '').split(sep)
+  })
+
+  config.addNunjucksAsyncFilter('views', async function (posts, callback) {
+    let data = await fetch(
+      'https://plausible.io/api/v1/stats/breakdown?site_id=nsursock.netlify.app&period=6mo&property=event:page',
+      {
+        method: 'GET',
+        headers: {
+          // Authorization: `Bearer ${process.env.PLAUSIBLE_KEY}`,
+          Authorization: `Bearer 2K985BK3VVcjSZIpdUo6mbWti2118_DoDvoi9k2nxxZwMPoOmrYFYpARCPUhbR97`,
+        },
+      }
+    )
+    let json = (await data.json()).results
+    let views = json?.filter((item) => item.page.includes('/blog/'))
+
+      callback(
+        null,
+        views?.map((view) => {
+          const index = posts.findIndex((post) => post.url === view.page)
+          if (index !== -1) return { post: posts[index], views: view.visitors }
+        })
+      )
   })
 
   config.addNunjucksAsyncFilter('top', async function (posts, callback) {
