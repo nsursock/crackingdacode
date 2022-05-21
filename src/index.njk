@@ -1,6 +1,10 @@
 ---
 description: Ambition doesn't make me ugly. I try to put an end to human perplexity and root for world peace. Because I'm also an artist at war with the world.
 author: Nicolas Sursock
+pagination:
+  data: collections.blog
+  size: 9
+  reverse: true
 ---
 
 {# This page is built with nunjucks! #}
@@ -18,88 +22,88 @@ author: Nicolas Sursock
         {% endblock %}
         {% block body %}
           {# <div class="hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 dark:ring-opacity-25 overflow-hidden "></div>
-          
-          <li
-            class="hidden snap-center shadow-lg border border-gray-200 rounded-lg max-w-sm h-full mx-auto bg-gray-100 dark:bg-gray-800
-              dark:border-gray-700 group transform transition duration-500 ease-in-out hover:scale-105 active:scale-105 ">
-            <a href="#">
-              <div class="relative">
-                <div class="relative">
-                  <img class="rounded-t-lg transition-all duration-500 ease-in-out group-hover:filter group-hover:blur-md" />
-                    <div
-                      class=" absolute inset-0 bg-gray-500 bg-opacity-0 group-hover:bg-opacity-50 group-focus:bg-opacity-50 transition-all ease-in-out duration-500 rounded-t-lg "
-                      aria-hidden="true"/>
-                </div>
-                <div class=" absolute inset-0 flex items-center justify-center max-w-3xl text-8xl font-black text-white opacity-0
-                    group-hover:opacity-80 group-focus:opacity-80 filter blur-lg group-hover:filter-none group-focus:filter-none
-                    transition-all ease-in-out duration-[2000ms] mix-blend-overlay ">
-                </div>
-              </div>
-            </a>
-          </li> #}
+                    
+                    <li
+                      class="hidden snap-center shadow-lg border border-gray-200 rounded-lg max-w-sm h-full mx-auto bg-gray-100 dark:bg-gray-800
+                        dark:border-gray-700 group transform transition duration-500 ease-in-out hover:scale-105 active:scale-105 ">
+                      <a href="#">
+                        <div class="relative">
+                          <div class="relative">
+                            <img class="rounded-t-lg transition-all duration-500 ease-in-out group-hover:filter group-hover:blur-md" />
+                              <div
+                                class=" absolute inset-0 bg-gray-500 bg-opacity-0 group-hover:bg-opacity-50 group-focus:bg-opacity-50 transition-all ease-in-out duration-500 rounded-t-lg "
+                                aria-hidden="true"/>
+                          </div>
+                          <div class=" absolute inset-0 flex items-center justify-center max-w-3xl text-8xl font-black text-white opacity-0
+                              group-hover:opacity-80 group-focus:opacity-80 filter blur-lg group-hover:filter-none group-focus:filter-none
+                              transition-all ease-in-out duration-[2000ms] mix-blend-overlay ">
+                          </div>
+                        </div>
+                      </a>
+                    </li> #}
           {# <img class="hidden rounded-t-lg transition-all duration-500 ease-in-out group-hover:filter group-hover:blur-md" src="" alt=""/>
-           <div class="hidden absolute inset-0 max-w-3xl text-8xl font-black text-white opacity-0
-              group-hover:opacity-80 group-focus:opacity-80 filter blur-lg group-hover:filter-none group-focus:filter-none
-              transition-all ease-in-out duration-[2000ms] mix-blend-overlay ">
-          </div>
-          
-          <div class="flex-1 min-w-0 hidden">
-            <label for="email" class="sr-only">Email address</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email address"
-              class="block w-full px-5 py-3 text-base text-gray-900 placeholder-gray-500 border border-transparent rounded-md shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-500"
-            />
-          </div>
-          
-          <button
-            type="submit"
-            class="opacity-50 hidden justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-          >
-            Send
-          </button>
-          <div x-data="{symbol: '$'}" class="hidden">
-            <label for="price" class="text-sm font-medium text-gray-700 hidden">
-              Price
-            </label>
-            <div class="relative">
-              <div
-                class="absolute inset-y-0 left-0 ml-3 pl-2 flex items-center pointer-events-none"
-              >
-                <span class="text-gray-500 text-base font-medium" x-text="symbol"></span>
-              </div>
-              <input
-                x-model.number="amount"
-                type="text"
-                name="price"
-                id="price"
-                class="ml-2 inline-flex items-center justify-center px-7 py-3 border text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 border-gray-300"
-                placeholder="0.00"
-              />
-              <div class="absolute inset-y-0 right-0 flex items-center">
-                <label for="currency" class="sr-only">Currency</label>
-                <select
-                  id="currency"
-                  name="currency"
-                  class="focus:ring-indigo-500 focus:border-indigo-500 h-full py-0 pl-2 pr-7 border-transparent bg-transparent text-gray-500 text-base font-medium rounded-md"
-                >
-                  <option data-symbol="$" data-placeholder="0.00">USD</option>
-                  <option data-symbol="€" data-placeholder="0.00">EUR</option>
-                  <option data-symbol="£" data-placeholder="0.00">GBP</option>
-                  <option data-symbol="¥" data-placeholder="0.00">JPY</option>
-                  <option data-symbol="$" data-placeholder="0.00">CAD</option>
-                  <option data-symbol="$" data-placeholder="0.00">AUD</option>
-                  <option data-symbol="F" data-placeholder="0.00">CHF</option>
-                  <option data-symbol="₹" data-placeholder="0.00">INR</option>
-                  <option data-symbol="元" data-placeholder="0.00">CNY</option>
-                  <option data-symbol="R" data-placeholder="0.00">BRL</option>
-                  <option data-symbol="L" data-placeholder="0.00">LBP</option>
-                </select>
-              </div>
-            </div>
-          </div> #}
+                     <div class="hidden absolute inset-0 max-w-3xl text-8xl font-black text-white opacity-0
+                        group-hover:opacity-80 group-focus:opacity-80 filter blur-lg group-hover:filter-none group-focus:filter-none
+                        transition-all ease-in-out duration-[2000ms] mix-blend-overlay ">
+                    </div>
+                    
+                    <div class="flex-1 min-w-0 hidden">
+                      <label for="email" class="sr-only">Email address</label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Email address"
+                        class="block w-full px-5 py-3 text-base text-gray-900 placeholder-gray-500 border border-transparent rounded-md shadow-sm focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-500"
+                      />
+                    </div>
+                    
+                    <button
+                      type="submit"
+                      class="opacity-50 hidden justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    >
+                      Send
+                    </button>
+                    <div x-data="{symbol: '$'}" class="hidden">
+                      <label for="price" class="text-sm font-medium text-gray-700 hidden">
+                        Price
+                      </label>
+                      <div class="relative">
+                        <div
+                          class="absolute inset-y-0 left-0 ml-3 pl-2 flex items-center pointer-events-none"
+                        >
+                          <span class="text-gray-500 text-base font-medium" x-text="symbol"></span>
+                        </div>
+                        <input
+                          x-model.number="amount"
+                          type="text"
+                          name="price"
+                          id="price"
+                          class="ml-2 inline-flex items-center justify-center px-7 py-3 border text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 border-gray-300"
+                          placeholder="0.00"
+                        />
+                        <div class="absolute inset-y-0 right-0 flex items-center">
+                          <label for="currency" class="sr-only">Currency</label>
+                          <select
+                            id="currency"
+                            name="currency"
+                            class="focus:ring-indigo-500 focus:border-indigo-500 h-full py-0 pl-2 pr-7 border-transparent bg-transparent text-gray-500 text-base font-medium rounded-md"
+                          >
+                            <option data-symbol="$" data-placeholder="0.00">USD</option>
+                            <option data-symbol="€" data-placeholder="0.00">EUR</option>
+                            <option data-symbol="£" data-placeholder="0.00">GBP</option>
+                            <option data-symbol="¥" data-placeholder="0.00">JPY</option>
+                            <option data-symbol="$" data-placeholder="0.00">CAD</option>
+                            <option data-symbol="$" data-placeholder="0.00">AUD</option>
+                            <option data-symbol="F" data-placeholder="0.00">CHF</option>
+                            <option data-symbol="₹" data-placeholder="0.00">INR</option>
+                            <option data-symbol="元" data-placeholder="0.00">CNY</option>
+                            <option data-symbol="R" data-placeholder="0.00">BRL</option>
+                            <option data-symbol="L" data-placeholder="0.00">LBP</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div> #}
           <!-- This example requires Tailwind CSS v2.0+ -->
             <div class="relative bg-white overflow-hidden dark:bg-gray-900" x-data="{ showMenu: false }"> <div class="max-w-7xl mx-auto dark:bg-gray-900">
               <div class="dark:bg-gray-900 relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
@@ -349,25 +353,84 @@ author: Nicolas Sursock
               </div>
             {%- endif -%}
             {# {%- set stats = collections.stats -%}
-              {%- include 'partials/stats.njk' -%} #}
+                          {%- include 'partials/stats.njk' -%} #}
             {%- include './_includes/tagslist.html' -%}
-            <div x-data="{ isTopList: false }">
-              {%- set postslist = collections.blog | reverse -%}
+            <div
+              x-data="{ isTopList: false }">
+              {# {%- set postslist = collections.blog | reverse -%} #}
               <ol
                 x-data="{ showArticle: false }"
                 class="snap-y snap-mandatory md:h-screen mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-7"
                 x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')">
-                {%- for post in postslist -%}
+                {%- for post in pagination.items -%}
                   {# {% set views = post.views %}
-                  {% set post = post.post %}
-                  <div class="relative"> #}
-                    {%- include 'partials/postcard.njk' -%}
-                    {# <div class='-mx-3 -my-2 w-12 h-12 flex items-center justify-center bg-white rounded-full border  absolute bottom-0 right-0'>
-                      <span>{{ views }}</span>
-                    </div>
-                  </div> #}
+                                    {% set post = post.post %}
+                                    <div class="relative"> #}
+                  {%- include 'partials/postcard.njk' -%}
+                  {# <div class='-mx-3 -my-2 w-12 h-12 flex items-center justify-center bg-white rounded-full border  absolute bottom-0 right-0'>
+                                        <span>{{ views }}</span>
+                                      </div>
+                                    </div> #}
                 {%- endfor -%}
               </ol>
+              <!-- This example requires Tailwind CSS v2.0+ -->
+              <nav class="mt-5 border-t border-gray-200 px-4 flex items-center justify-between sm:px-0">
+                <div class="-mt-px w-0 flex-1 flex">
+                  {% if pagination.href.previous %}
+                    <a
+                      href="{{ pagination.href.previous }}#posts" class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+                      <!-- Heroicon name: solid/arrow-narrow-left -->
+                      <svg
+                        class="mr-3 h-5 w-5 text-gray-400"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        aria-hidden="true">
+                        <path
+                          fill-rule="evenodd"
+                          d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1
+                            1 0 010 1.414z"
+                          clip-rule="evenodd"/>
+                      </svg>
+                      Prev
+                    </a>
+                  {% endif %}
+                </div>
+                <div class="hidden md:-mt-px md:flex">
+                  {% for page_entry in pagination.pages %}
+                    {%- set page_url = pagination.hrefs[loop.index0] -%}
+                    <!-- Current: "border-indigo-500 text-indigo-600", Default: "border-transparent text-gray-500 hover:text-gray-700
+                    hover:border-gray-300" -->
+                    <a href="{{ page_url }}#posts" {% if page.url == page_url %} class="border-indigo-500 text-indigo-600 border-t-2 pt-4 px-4 inline-flex items-center text-sm font-medium" {% endif %} class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 border-t-2 pt-4 px-4 inline-flex items-center text-sm font-medium" aria-current="page">
+                      {{ loop.index }}
+                    </a>
+                    {# <span class="border-transparent text-gray-500 border-t-2 pt-4 px-4 inline-flex items-center text-sm font-medium"> ... </span> #}
+                  {% endfor %}
+                </div>
+                <div class="-mt-px w-0 flex-1 flex justify-end">
+                  {% if pagination.href.next %}
+                  <a
+                    href="{{ pagination.href.next }}#posts"
+                    class="border-t-2 border-transparent pt-4 pl-1 inline-flex items-center text-sm font-medium text-gray-500
+                      hover:text-gray-700 hover:border-gray-300">
+                    Next
+                    <!-- Heroicon name: solid/arrow-narrow-right -->
+                    <svg
+                      class="ml-3 h-5 w-5 text-gray-400"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true">
+                      <path
+                        fill-rule="evenodd"
+                        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0
+                          110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                        clip-rule="evenodd"/>
+                    </svg>
+                  </a>
+                  {% endif %}
+                </div>
+              </nav>
             </div>
             {% include 'sections/faq.njk' %}
             {# {% if env.environment != "production" %} #}
