@@ -55,7 +55,7 @@
     {% endblock %}
   </head>
   <body hx-boost="true" class="{{ 'debug-screens' if env.devMode }} dark:bg-gray-900" x-data="global">
-    {% if page.url == '/' %}
+    {% if page.url == '/' or page.url | isPaginated %}
       <div
         x-show="lastScrollTop > landingPageOffset"
         x-transition:enter="animate-swing "

@@ -22,6 +22,9 @@ module.exports = (config) => {
     return filterTagList([...tagSet]).sort()
   })
 
+  config.addFilter('isPaginated', (url) => new RegExp('^/[0-9]+/$').test(url))
+
+
   function capitalize(str) {
     return str[0].toUpperCase() + str.substring(1);
   }
