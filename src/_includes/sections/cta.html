@@ -202,7 +202,8 @@
           }
 
           this.isFetching = true
-          fetch('/.netlify/functions/payment', {
+          fetch('/api/payment', {
+            // fetch('/.netlify/functions/payment', {
             // fetch('{{env.apiUrl}}' + '/payment', {
             method: 'POST',
             headers: {
