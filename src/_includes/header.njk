@@ -1,3 +1,8 @@
+<style>
+  [x-cloak] {
+    display: none;
+  }
+</style>
 <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
   <symbol id="icon-adjustments" fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path
@@ -144,7 +149,7 @@
         </button>
       </div>
       {% if nav.menus %}
-        <nav class="hidden md:flex space-x-10">
+        <nav class="hidden md:flex space-x-10" x-cloak="x-cloak">
           {% for menu in nav.menus %}
             {% if menu.submenus %}
               <div

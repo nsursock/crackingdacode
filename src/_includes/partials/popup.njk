@@ -1,6 +1,10 @@
-<!-- This example requires Tailwind CSS v2.0+ -->
+<style>
+  [x-cloak] {
+    display: none;
+  }
+</style>
 <div
-    class="relative z-[500]" aria-labelledby="modal-title" role="dialog" aria-modal="true" x-show="showPopup">
+    class="relative z-[500]" aria-labelledby="modal-title" role="dialog" aria-modal="true" x-show="showPopup" x-cloak="x-cloak">
     <!-- Background backdrop, show/hide based on modal state.
     
     Entering: "ease-out duration-300"
