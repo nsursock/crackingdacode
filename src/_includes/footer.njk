@@ -1,8 +1,8 @@
 <footer x-data="{ year: new Date().getFullYear() }">
   <div class="relative bg-white dark:bg-gray-900 dark:text-gray-400">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 dark:bg-gray-900 dark:text-gray-400">
-      <div class="text-gray-500 bg-white text-base font-medium flex flex-col md:flex-row justify-between items-center
-          py-9 dark:bg-gray-900 dark:text-gray-400 ">
+      <div class="text-gray-500 bg-white text-base font-medium flex flex-col md:flex-row justify-between items-center py-9
+          dark:bg-gray-900 dark:text-gray-400 ">
         <div class="md:mt-2 text-center">
           © 2017 -
           <span x-text="year"></span>
@@ -85,16 +85,21 @@
     <template x-if="!document.cookie.includes('InternalTraffic') && window.location.hostname !== 'localhost'">
       <div>
         {# <script defer="defer" data-domain="crackingdacode.netlify.app" src="https://plausible.io/js/plausible.js"></script>
-        <script>
-          window.plausible = window.plausible || function () {
-            (window.plausible.q = window.plausible.q || []).push(arguments)
-          }
-        </script> #}
+                <script>
+                  window.plausible = window.plausible || function () {
+                    (window.plausible.q = window.plausible.q || []).push(arguments)
+                  }
+                </script> #}
+        {# <script
+                  async="async"
+                  defer="defer"
+                  data-website-id="cc448530-e442-4d42-997c-7710b8bd9241"
+                  src="https://nsursock-stats.herokuapp.com/umami.js"></script> #}
         <script
           async="async"
           defer="defer"
-          data-website-id="cc448530-e442-4d42-997c-7710b8bd9241"
-          src="https://nsursock-stats.herokuapp.com/umami.js"></script>
+          data-website-id="feffd5c3-f369-4b60-97a8-4133dd02bf57"
+          src="https://statumami-production.up.railway.app/umami.js"> </script>
         <script type='text/javascript'>
           window.smartlook || (function (d) {
             var o = smartlook = function () {
@@ -113,21 +118,21 @@
         </script>
         <!-- Hotjar Tracking Code for https://nsursock.netlify.app/ -->
         {# <script>
-                  (function (h, o, t, j, a, r) {
-                    h.hj = h.hj || function () {
-                      (h.hj.q = h.hj.q || []).push(arguments)
-                    };
-                    h._hjSettings = {
-                      hjid: 2754548,
-                      hjsv: 6
-                    };
-                    a = o.getElementsByTagName('head')[0];
-                    r = o.createElement('script');
-                    r.async = 1;
-                    r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-                    a.appendChild(r);
-                  })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-                </script> #}
+                          (function (h, o, t, j, a, r) {
+                            h.hj = h.hj || function () {
+                              (h.hj.q = h.hj.q || []).push(arguments)
+                            };
+                            h._hjSettings = {
+                              hjid: 2754548,
+                              hjsv: 6
+                            };
+                            a = o.getElementsByTagName('head')[0];
+                            r = o.createElement('script');
+                            r.async = 1;
+                            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+                            a.appendChild(r);
+                          })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+                        </script> #}
       </div>
     </template>
   {% endif %}
