@@ -2,6 +2,6 @@
 
 module.exports = function () {
   return {
-    url: 'https://crackingdacode.netlify.app'
+    url: 'https://crackingdacode.vercel.app'
   }
 }
