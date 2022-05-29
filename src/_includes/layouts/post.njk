@@ -6,7 +6,7 @@
     <meta name="author" content="{{ author }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="ElwriKJxsec5ariCaXI5cy7eo0kMlqtJZF3YOxDOO3w"/>
-    <meta name="google-site-verification" content="7vYNlTRmTJb9pmvaEh_GlsH96x_SDxGchzvmF0Mp2m4" />
+    <meta name="google-site-verification" content="7vYNlTRmTJb9pmvaEh_GlsH96x_SDxGchzvmF0Mp2m4"/>
     <link href="{{ site.url }}{{ page.url }}" rel="canonical">
     <link rel="preconnect" href="https://unsplash.com">
     <link rel="dns-prefetch" href="https://unsplash.com">
@@ -14,8 +14,8 @@
     <link
     rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
     {# {% if env.environment == "production" %}
-                                          <script src="/static/main.bundle.js" defer></script>
-                                        {% else %} #}
+                                              <script src="/static/main.bundle.js" defer></script>
+                                            {% else %} #}
     <script src="/assets/main.bundle.js" defer></script>
     {# {% endif %} #}
     <title>{{ title + ' ' + title2 }} | Sursock Labs</title>
@@ -42,21 +42,22 @@
         }
       </script>
       {% if env.environment == "production" %}
+        <script async="async" src="https://cdn.splitbee.io/sb.js"></script>
         <!-- Google Tag Manager -->
-        {# <script>
-          (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
-            var f = d.getElementsByTagName(s)[0],
-              j = d.createElement(s),
-              dl = l != 'dataLayer'
-                ? '&l=' + l
-                : '';
-            j.async = true;
-            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-          })(window, document, 'script', 'dataLayer', 'GTM-5MN6MTZ');
-        </script> #}
+      {# <script>
+                (function (w, d, s, l, i) {
+                  w[l] = w[l] || [];
+                  w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
+                  var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer'
+                      ? '&l=' + l
+                      : '';
+                  j.async = true;
+                  j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+                  f.parentNode.insertBefore(j, f);
+                })(window, document, 'script', 'dataLayer', 'GTM-5MN6MTZ');
+              </script> #}
         <!-- End Google Tag Manager -->
       {% endif %}
     {% endblock %}
