@@ -1,3 +1,4 @@
+const { devMode } = require('./src/_data/env')
 const { Appsignal } = require('@appsignal/nodejs')
 
 const appsignal = new Appsignal({
@@ -9,10 +10,8 @@ const { strictEqual } = require('assert')
 const yaml = require('js-yaml')
 const format = require('date-fns/format')
 const fetch = require('node-fetch-commonjs')
-const { devMode } = require('./src/_data/env')
 
 module.exports = (config) => {
-
   config.addFilter('date', function (date, dateFormat) {
     return format(date, dateFormat)
   })
@@ -32,9 +31,8 @@ module.exports = (config) => {
 
   config.addFilter('isPaginated', (url) => new RegExp('^/[0-9]+/$').test(url))
 
-
   function capitalize(str) {
-    return str[0].toUpperCase() + str.substring(1);
+    return str[0].toUpperCase() + str.substring(1)
   }
 
   config.addCollection('stats', async function (collection) {
@@ -51,9 +49,18 @@ module.exports = (config) => {
     let json = (await data.json()).results
     let stats = []
     for (const prop in json) {
-      stats.push({ name: prop.split('_').map((w) => capitalize(w)).join(' '), value: json[prop].value})
+      stats.push({
+        name: prop
+          .split('_')
+          .map((w) => capitalize(w))
+          .join(' '),
+        value: json[prop].value,
+      })
     }
-    stats.push({ name: 'Views / Visitor', value: (json.pageviews.value / json.visitors.value).toFixed(2) })
+    stats.push({
+      name: 'Views / Visitor',
+      value: (json.pageviews.value / json.visitors.value).toFixed(2),
+    })
     return stats
   })
 
@@ -97,13 +104,13 @@ module.exports = (config) => {
     let json = (await data.json()).results
     let views = json?.filter((item) => item.page.includes('/blog/'))
 
-      callback(
-        null,
-        views?.map((view) => {
-          const index = posts.findIndex((post) => post.url === view.page)
-          if (index !== -1) return { post: posts[index], views: view.visitors }
-        })
-      )
+    callback(
+      null,
+      views?.map((view) => {
+        const index = posts.findIndex((post) => post.url === view.page)
+        if (index !== -1) return { post: posts[index], views: view.visitors }
+      })
+    )
   })
 
   config.addNunjucksAsyncFilter('top', async function (posts, callback) {
