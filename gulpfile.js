@@ -3,7 +3,7 @@ var uglify = require('gulp-terser')
 const { dest, src, task, series } = require('gulp')
 
 task('minify', async function (cb) {
-  src('dist/assets/main.bundle.js').pipe(uglify()).pipe(dest('dist/static'))
+  src('dist/assets/main.bundle.js').pipe(uglify()).pipe(dest('dist/assets'))
 })
 
 // task('minify', async function (cb) {
