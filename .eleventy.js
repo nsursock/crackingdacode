@@ -1,10 +1,10 @@
 const { devMode } = require('./src/_data/env')
-const { Appsignal } = require('@appsignal/nodejs')
+// const { Appsignal } = require('@appsignal/nodejs')
 
-const appsignal = new Appsignal({
-  active: !devMode,
-  name: 'CrackingDaCode',
-})
+// const appsignal = new Appsignal({
+//   active: !devMode,
+//   name: 'CrackingDaCode',
+// })
 
 const { strictEqual } = require('assert')
 const yaml = require('js-yaml')
