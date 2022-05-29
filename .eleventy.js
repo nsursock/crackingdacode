@@ -1,7 +1,15 @@
+const { Appsignal } = require('@appsignal/nodejs')
+
+const appsignal = new Appsignal({
+  active: !devMode,
+  name: 'CrackingDaCode',
+})
+
 const { strictEqual } = require('assert')
 const yaml = require('js-yaml')
 const format = require('date-fns/format')
 const fetch = require('node-fetch-commonjs')
+const { devMode } = require('./src/_data/env')
 
 module.exports = (config) => {
 
