@@ -271,7 +271,7 @@ pagination:
       </div>
     {%- endif -%}
     {# {%- set stats = collections.stats -%}
-                                                {%- include 'partials/stats.njk' -%} #}
+                                                            {%- include 'partials/stats.njk' -%} #}
     {%- include './_includes/tagslist.njk' -%}
     <div
       x-data="{ isTopList: false }">
@@ -282,18 +282,18 @@ pagination:
         x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')">
         {%- for post in pagination.items -%}
           {# {% set views = post.views %}
-                                                                            {% set post = post.post %}
-                                                                            <div class="relative"> #}
+                                                                                                          {% set post = post.post %}
+                                                                                                          <div class="relative"> #}
           {%- include 'partials/postcard.njk' -%}
           {# <div class='-mx-3 -my-2 w-12 h-12 flex items-center justify-center bg-white rounded-full border  absolute bottom-0 right-0'>
-                                                                                <span>{{ views }}</span>
-                                                                              </div>
-                                                                            </div> #}
+                                                                                                              <span>{{ views }}</span>
+                                                                                                            </div>
+                                                                                                          </div> #}
         {%- endfor -%}
       </ol>
       <!-- This example requires Tailwind CSS v2.0+ -->
       <nav class="mt-5 border-t border-gray-200 dark:border-gray-700 px-4 flex items-center justify-between sm:px-0">
-        <div class="-mt-px w-0 flex-1 flex">
+        <div class="-mt-px w-0 flex-1 flex justify-end">
           {% if pagination.href.previous %}
             <a
               href="{{ pagination.href.previous }}#posts" class="border-t-2 border-transparent pt-4 pr-1 inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
@@ -313,6 +313,11 @@ pagination:
               Prev
             </a>
           {% endif %}
+          {% if page.url != pagination.href.first %}
+            <a href="{{ pagination.href.first }}#posts" class="ml-2 border-t-2 border-transparent pt-4 pr-1 inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+              First
+            </a>
+          {% endif %}
         </div>
         <div class="hidden md:-mt-px md:flex">
           {% for page_entry in pagination.pages %}
@@ -325,10 +330,14 @@ pagination:
             {# <span class="border-transparent text-gray-500 border-t-2 pt-4 px-4 inline-flex items-center text-sm font-medium"> ... </span> #}
           {% endfor %}
         </div>
-        <div class="-mt-px w-0 flex-1 flex justify-end">
+        <div class="-mt-px w-0 flex-1 flex ">
+          {% if page.url != pagination.href.last %}
+            <a href="{{ pagination.href.last }}#posts" class="mr-2 border-t-2 border-transparent pt-4 pl-1 inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
+              Last
+            </a>
+          {% endif %}
           {% if pagination.href.next %}
-            <a href="{{ pagination.href.next }}#posts" class="border-t-2 border-transparent pt-4 pl-1 inline-flex items-center text-sm font-medium text-gray-500
-                                                                                hover:text-gray-700 hover:border-gray-300">
+            <a href="{{ pagination.href.next }}#posts" class="border-t-2 border-transparent pt-4 pl-1 inline-flex items-center text-sm font-medium text-gray-500 hover:text-gray-700 hover:border-gray-300">
               Next
               <!-- Heroicon name: solid/arrow-narrow-right -->
               <svg
