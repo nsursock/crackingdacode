@@ -68,13 +68,13 @@
     {% block body %}
       {% if env.environment == "production" %}
         <!-- Google Tag Manager (noscript) -->
-        <noscript>
+        {# <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-5MN6MTZ"
             height="0"
             width="0"
             style="display:none;visibility:hidden"></iframe>
-        </noscript>
+        </noscript> #}
         <!-- End Google Tag Manager (noscript) -->
       {% endif %}
       {% include '../partials/affiliate.njk' %}
@@ -338,7 +338,7 @@
           </div>
         {% endif %}
       {% endfor %}
-      {% include 'sections/subscription.html' %}
+      {% include 'sections/subscription.njk' %}
       <div id="posts" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="lg:text-center mt-8">
           <p class=" mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl dark:text-white ">
