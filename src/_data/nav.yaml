@@ -4,8 +4,17 @@ menus:
     route: /
     icon: 'home'
   - name: About
-    route: /about
+    route: /webdev
     icon: 'annotation'
+    submenus:
+      - name: Biography
+        description: A brief history of this website's author so that he looks legitimate
+        route: /biography
+        icon: 'dna'
+      - name: Portfolio
+        description: In case you wonder who made this website and what are his skills
+        route: /webdev
+        icon: 'folio'
   - name: Services
     route: /services
     icon: 'ticket'

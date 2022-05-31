@@ -103,6 +103,37 @@
       stroke-width="2"
       d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z"/>
   </symbol>
+  <symbol
+    id="icon-dna"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    stroke-width="2"
+    stroke="currentColor"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    <circle transform="rotate(-45 12 12)" cx="12" cy="12" r="4"></circle>
+    <path d="M9.172 20.485a4 4 0 1 0 -5.657 -5.657"></path>
+    <path d="M14.828 3.515a4 4 0 1 0 5.657 5.657"></path>
+  </symbol>
+  <symbol
+    id="icon-folio"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    stroke-width="2"
+    stroke="currentColor"
+    fill="none"
+    stroke-linecap="round"
+    stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    <circle cx="12" cy="12" r="9"></circle>
+    <path d="M9 3.6c5 6 7 10.5 7.5 16.2"></path>
+    <path d="M6.4 19c3.5 -3.5 6 -6.5 14.5 -6.4"></path>
+    <path d="M3.1 10.75c5 0 9.814 -.38 15.314 -5"></path>
+  </symbol>
 </svg>
 <!-- This example requires Tailwind CSS v2.0+ -->
 <div class="relative bg-white dark:bg-gray-900" x-data="{ showMobile: false }" @click.outside="showMobile = false">
@@ -219,6 +250,7 @@
                         </a>
                       {% endfor %}
                     </div>
+                    {# {% if not menu.footer == false %}
                     <div class="px-5 py-5 bg-gray-50 dark:bg-gray-700 space-y-6 sm:flex sm:justify-around sm:space-y-0 sm:space-x-10 sm:px-8">
                       <div class="flow-root">
                         <a
@@ -267,6 +299,7 @@
                         </a>
                       </div>
                     </div>
+                    {% endif %} #}
                   </div>
                 </div>
               </div>
@@ -300,7 +333,8 @@
     x-transition:leave-end="opacity-0 scale-95"
     x-show="showMobile"
     class=" absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden ">
-    <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 dark:ring-opacity-25 bg-white divide-y-2 divide-gray-50 dark:bg-gray-800 ">
+    <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 dark:ring-opacity-25 bg-white divide-y-2 divide-gray-50
+        dark:bg-gray-800 ">
       <div class="pt-5 pb-6 px-5">
         <div class="flex items-center justify-between">
           <div>
