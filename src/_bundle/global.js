@@ -16,28 +16,28 @@ export default () => ({
   init() {
     // document.addEventListener('DOMContentLoaded', () => {
       // desktop
-      document.addEventListener('mouseout', (event) => {
-        if (!event.toElement && !event.relatedTarget) {
-          setTimeout(() => {
-            this.showPopup = true
-          }, 1000)
-        }
-      })
+      // document.addEventListener('mouseout', (event) => {
+      //   if (!event.toElement && !event.relatedTarget) {
+      //     setTimeout(() => {
+      //       this.showPopup = true
+      //     }, 1000)
+      //   }
+      // })
 
-      // mobile
-      window.addEventListener(
-        'scroll',
-        (event) => {
-          if (!event.toElement && !event.relatedTarget) {
-            if (this.isMobile() && window.scrollY === 0) {
-              setTimeout(() => {
-                this.showPopup = true
-              }, 1000)
-            }
-          }
-        },
-        { passive: true }
-      )
+      // // mobile
+      // window.addEventListener(
+      //   'scroll',
+      //   (event) => {
+      //     if (!event.toElement && !event.relatedTarget) {
+      //       if (this.isMobile() && window.scrollY === 0) {
+      //         setTimeout(() => {
+      //           this.showPopup = true
+      //         }, 1000)
+      //       }
+      //     }
+      //   },
+      //   { passive: true }
+      // )
     // })
 
     window.addEventListener(
