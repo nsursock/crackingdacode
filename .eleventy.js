@@ -64,6 +64,98 @@ module.exports = (config) => {
   //   return stats
   // })
 
+  config.addCollection('stats', async function (collection) {
+    let token = await fetch(
+      'https://statumami-production.up.railway.app/api/auth/login',
+      {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username: 'admin',
+          password: statPwd,
+        }),
+      }
+    )
+    token = (await token.json()).token
+
+    const today = new Date(new Date().setHours(0, 0, 0, 0))
+    let endAt = today.getTime() + 1 * 24 * 60 * 60 * 1000
+    let startAt = today.getTime()
+
+    let data = await fetch(
+      `https://statumami-production.up.railway.app/api/website/1/stats?start_at=${startAt}&end_at=${endAt}`,
+      {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    )
+    let json = await data.json()
+    // const statNames = {
+    //   bounces: 'Bounce Rate',
+    //   pageviews: 'Views',
+    //   totaltime: 'Average Time',
+    //   uniques: 'Visitors',
+    // }
+
+    let stats = []
+    // for (const prop in json) {
+    //   stats.push({
+    //     name: statNames[prop],
+    //     value: json[prop].value,
+    //   })
+    // }
+
+    stats.push({
+      name: 'Views',
+      value: json.pageviews.value,
+      change:
+        (json.pageviews.change / (json.pageviews.value - json.pageviews.change) * 100).toFixed(),
+    })
+    stats.push({
+      name: 'Visitors',
+      value: json.uniques.value,
+      change: (
+        (json.uniques.change / (json.uniques.value - json.uniques.change)) *
+        100
+      ).toFixed(),
+    })
+    stats.push({
+      name: 'Average Time (s)',
+      value: (json.totaltime.value / json.uniques.value).toFixed(2),
+      change: (
+        (json.totaltime.change /
+          (json.totaltime.value - json.totaltime.change)) *
+        100
+      ).toFixed(),
+    })
+    stats.push({
+      name: 'Bounce Rate (%)',
+      value: ((json.bounces.value / json.uniques.value) * 100).toFixed(2),
+      change: (
+        (json.bounces.change / (json.bounces.value - json.bounces.change)) *
+        100
+      ).toFixed(),
+    })
+
+    // const curr = (json.pageviews.value / json.uniques.value).toFixed(2)
+    // const prev = 
+    // stats.push({
+    //   name: 'Per Visitor',
+    //   value: pvisit,
+    //   change: (
+    //     (json.pageviews.change /
+    //       (json.pageviews.value - json.pageviews.change)) *
+    //     100
+    //   ).toFixed(),
+    // })
+    return stats
+  })
+
   config.addPassthroughCopy({ public: './' })
   config.setBrowserSyncConfig({
     files: ['dist/**/*'],
@@ -154,7 +246,7 @@ module.exports = (config) => {
     token = (await token.json()).token
 
     let endAt = new Date().getTime()
-      startAt = new Date().getTime() - (7 * 24 * 60 * 60 * 1000)
+    startAt = new Date().getTime() - 7 * 24 * 60 * 60 * 1000
 
     let data = await fetch(
       `https://statumami-production.up.railway.app/api/website/1/metrics?start_at=${startAt}&end_at=${endAt}&type=url`,
