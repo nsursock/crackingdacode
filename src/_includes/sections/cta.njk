@@ -1,29 +1,16 @@
 <section
   class="md:h-screen dark:bg-gray-900 dark:text-gray-200"
-  x-intersect.once="showCta = true; $el.classList.remove('md:h-screen')"
->
+  x-intersect.once="showCta = true; $el.classList.remove('md:h-screen')">
   <div
     class="dark:bg-gray-900 dark:text-gray-200"
     x-data="dataCta()"
     x-show="showCta"
     x-transition:enter="transition transform ease-out duration-1000 "
     x-transition:enter-start="opacity-0 translate-y-full"
-    x-transition:enter-end="opacity-100 translate-y-0"
-  >
-    <div
-      class="
-        max-w-7xl
-        mx-auto
-        py-12
-        px-4
-        sm:px-6
-        lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between
-        dark:bg-gray-900 dark:text-gray-200
-      "
-    >
-      <h2
-        class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl"
-      >
+    x-transition:enter-end="opacity-100 translate-y-0">
+    <div class=" max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between dark:bg-gray-900
+        dark:text-gray-200 ">
+      <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
         <span class="block dark:text-gray-200">Need to make a payment?</span>
         <span class="block text-indigo-600">
           You can even make a donation or buy me a coffee.
@@ -31,53 +18,21 @@
       </h2>
       <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0 space-x-1">
         <div x-data="{symbol: '$'}">
-          <label
-            for="amount"
-            class="text-sm font-medium text-gray-700 hidden"
-          >
+          <label for="amount" class="text-sm font-medium text-gray-700 hidden">
             Amount
           </label>
           <div class="relative">
-            <div
-              class="
-                absolute
-                inset-y-0
-                left-0
-                ml-3
-                pl-2
-                flex
-                items-center
-                pointer-events-none
-              "
-            >
-              <span
-                class="text-gray-500 text-base font-medium"
-                x-text="symbol"
-              ></span>
+            <div class=" absolute inset-y-0 left-0 ml-3 pl-2 flex items-center pointer-events-none ">
+              <span class="text-gray-500 text-base font-medium" x-text="symbol"></span>
             </div>
             <input
               x-model.number="amount"
               type="text"
               name="amount"
               id="amount"
-              class="
-                ml-2
-                inline-flex
-                items-center
-                justify-center
-                px-7
-                py-3
-                border
-                text-base
-                font-medium
-                rounded-md
-                text-indigo-600
-                bg-white
-                hover:bg-indigo-50
-                border-gray-300
-              "
-              placeholder="0.00"
-            />
+              class=" ml-2 inline-flex items-center justify-center px-7 py-3 border text-base font-medium rounded-md text-indigo-600
+                bg-white hover:bg-indigo-50 border-gray-300 "
+              placeholder="0.00"/>
             <div class="absolute inset-y-0 right-0 flex items-center">
               <label for="currency" class="sr-only">Currency</label>
               <select
@@ -85,19 +40,8 @@
                 @change="symbol = document.querySelector(`#${event.target.id} option:checked`).dataset.symbol"
                 id="currency"
                 name="currency"
-                class="
-                  focus:ring-indigo-500 focus:border-indigo-500
-                  h-full
-                  py-0
-                  pl-2
-                  pr-7
-                  border-transparent
-                  bg-transparent
-                  text-gray-500 text-base
-                  font-medium
-                  rounded-md
-                "
-              >
+                class=" focus:ring-indigo-500 focus:border-indigo-500 h-full py-0 pl-2 pr-7 border-transparent bg-transparent
+                  text-gray-500 text-base font-medium rounded-md ">
                 <option data-symbol="$" data-placeholder="0.00">USD</option>
                 <option data-symbol="€" data-placeholder="0.00">EUR</option>
                 <option data-symbol="£" data-placeholder="0.00">GBP</option>
@@ -113,31 +57,14 @@
             </div>
           </div>
         </div>
-
         <div class="inline-flex rounded-md shadow">
           <button
             @click="pay"
             id="payment"
-            class="
-              inline-flex
-              items-center
-              justify-center
-              px-5
-              py-3
-              border border-indigo-500
-              text-base
-              font-medium
-              rounded-md
-              text-white
-              bg-indigo-600
-              hover:bg-indigo-700
-            "
-          >
-            <!-- <template
-              x-if="!isFetching && !(document.getElementById('pay-button') || false)"
-            >
-              <span id="pay-button">Pay</span>
-            </template> -->
+            class=" inline-flex items-center justify-center px-5 py-3 border border-indigo-500 text-base font-medium rounded-md
+              text-white bg-indigo-600 hover:bg-indigo-700 umami--click--donate-button">
+            <!-- <template x-if="!isFetching && !(document.getElementById('pay-button') || false)" > <span
+            id="pay-button">Pay</span> </template> -->
             <span x-show="!isFetching" id="pay-button">Pay</span>
             <!-- <template x-if="isFetching"> -->
             <svg
@@ -145,21 +72,12 @@
               class="animate-spin h-5 w-5 text-white"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
-              viewBox="0 0 24 24"
-            >
-              <circle
-                class="opacity-25"
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="currentColor"
-                stroke-width="4"
-              ></circle>
+              viewBox="0 0 24 24">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
               <path
                 class="opacity-75"
                 fill="currentColor"
-                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-              ></path>
+                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
             </svg>
             <!-- </template> -->
           </button>
@@ -167,7 +85,6 @@
       </div>
     </div>
   </div>
-
   <script>
     function loadScript(src) {
       return new Promise(function (resolve, reject) {
@@ -183,7 +100,6 @@
         }
       })
     }
-
     function dataCta() {
       return {
         isFetching: false,
@@ -191,31 +107,24 @@
         amount: 3,
         currency: 'USD',
         stripe: null,
-        async pay() {
-          typeof plausible !== 'undefined' && plausible('Donated')
+        async pay() { // typeof plausible !== 'undefined' && plausible('Donated')
           await loadScript('https://js.stripe.com/v3')
-          this.stripe = Stripe('{{env.stripeKey}}')
-
+          this.stripe = Stripe('{{ env.stripeKey }}')
           var purchase = {
             amount: this.amount,
-            currency: this.currency,
+            currency: this.currency
           }
-
           this.isFetching = true
-          fetch('/api/payment', {
-            // fetch('/.netlify/functions/payment', {
-            // fetch('{{env.apiUrl}}' + '/payment', {
+          fetch('/api/payment', { // fetch('/.netlify/functions/payment', { fetch('{{env.apiUrl}}' + '/payment', {
             method: 'POST',
             headers: {
-              'Content-Type': 'application/json',
+              'Content-Type': 'application/json'
             },
-            body: JSON.stringify(purchase),
+            body: JSON.stringify(purchase)
           })
             .then((response) => response.json())
             .then((session) => {
-              this.stripe.redirectToCheckout({
-                sessionId: session.id,
-              })
+              this.stripe.redirectToCheckout({sessionId: session.id})
             })
             .then(function (result) {
               if (result.error) {
@@ -225,7 +134,7 @@
             .catch(function (error) {
               console.error('Error:', error)
             })
-        },
+        }
       }
     }
   </script>
