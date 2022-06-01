@@ -1,6 +1,6 @@
 import Alpine from 'alpinejs'
 import global from './global.js'
-import 'htmx.org'
+// import 'htmx.org'
 import 'lazysizes'
 // import intersect from '@alpinejs/intersect'
 
