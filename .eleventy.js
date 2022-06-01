@@ -82,8 +82,9 @@ module.exports = (config) => {
     token = (await token.json()).token
 
     const today = new Date(new Date().setHours(0, 0, 0, 0))
+    // const today = new Date()
     let endAt = today.getTime() + 1 * 24 * 60 * 60 * 1000
-    let startAt = today.getTime()
+    let startAt = today.getTime() 
 
     let data = await fetch(
       `https://statumami-production.up.railway.app/api/website/1/stats?start_at=${startAt}&end_at=${endAt}`,
