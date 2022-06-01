@@ -270,8 +270,7 @@ pagination:
         </ol>
       </div>
     {%- endif -%}
-    {# {%- set stats = collections.stats -%}
-                                                            {%- include 'partials/stats.njk' -%} #}
+    
     {%- include './_includes/tagslist.njk' -%}
     <div
       x-data="{ isTopList: false }">
@@ -282,13 +281,13 @@ pagination:
         x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')">
         {%- for post in pagination.items -%}
           {# {% set views = post.views %}
-                                                                                                          {% set post = post.post %}
-                                                                                                          <div class="relative"> #}
+                                                                                                                    {% set post = post.post %}
+                                                                                                                    <div class="relative"> #}
           {%- include 'partials/postcard.njk' -%}
           {# <div class='-mx-3 -my-2 w-12 h-12 flex items-center justify-center bg-white rounded-full border  absolute bottom-0 right-0'>
-                                                                                                              <span>{{ views }}</span>
-                                                                                                            </div>
-                                                                                                          </div> #}
+                                                                                                                        <span>{{ views }}</span>
+                                                                                                                      </div>
+                                                                                                                    </div> #}
         {%- endfor -%}
       </ol>
       <!-- This example requires Tailwind CSS v2.0+ -->
@@ -360,6 +359,8 @@ pagination:
     {% include 'sections/faq.njk' %}
     {# {% if env.environment != "production" %} #}
     {% include 'sections/testimonials.njk' %}
+    {%- set stats = collections.stats -%}
+    {%- include 'partials/stats.njk' -%}
     {# {% endif %} #}
   </section>
 {% endblock %}
