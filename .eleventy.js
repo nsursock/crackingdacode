@@ -127,7 +127,7 @@ module.exports = (config) => {
     })
     stats.push({
       name: 'Average Time (s)',
-      value: (json.totaltime.value / json.uniques.value).toFixed(2),
+      value: (json.totaltime.value / json.uniques.value).toFixed(),
       change: (
         (json.totaltime.change /
           (json.totaltime.value - json.totaltime.change)) *
@@ -136,7 +136,7 @@ module.exports = (config) => {
     })
     stats.push({
       name: 'Bounce Rate (%)',
-      value: ((json.bounces.value / json.uniques.value) * 100).toFixed(2),
+      value: ((json.bounces.value / json.uniques.value) * 100).toFixed(),
       change: (
         (json.bounces.change / (json.bounces.value - json.bounces.change)) *
         100
