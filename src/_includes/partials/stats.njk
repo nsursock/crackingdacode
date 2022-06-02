@@ -1,11 +1,11 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <div>
-  <h3 class="text-lg leading-6 font-medium text-gray-900">Today's Mood</h3>
-  <dl class="mt-5 grid grid-cols-1 rounded-lg bg-white overflow-hidden shadow divide-y divide-gray-200 md:grid-cols-4
-      md:divide-y-0 md:divide-x">
+  <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-white">Today's Mood</h3>
+  <dl class="mt-5 grid grid-cols-1 rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow divide-y divide-gray-200 md:grid-cols-4
+      md:divide-y-0 md:divide-x dark:md:divide-gray-700">
     {%- for stat in stats -%}
       <div class="px-4 py-5 sm:p-6">
-        <dt class="text-base font-normal text-gray-900">{{ stat.name }}</dt>
+        <dt class="text-base font-normal text-gray-900 dark:text-white">{{ stat.name }}</dt>
         <dd class="mt-1 flex justify-between items-baseline md:block lg:flex">
           <div class="flex items-baseline text-2xl font-semibold text-indigo-600">
             {{ stat.value }}
