@@ -20,20 +20,26 @@ html {
 }
 
 @layer base {
-  /* special-elite-regular - latin */
+  /* aldrich-regular - latin */
   @font-face {
-    font-family: 'Special Elite';
+    font-family: 'Aldrich';
     font-style: normal;
     font-weight: 400;
-    font-display: block;
+    src: url('/static/fonts/aldrich/aldrich-v17-latin-regular.eot'); /* IE9 Compat Modes */
     src: local(''),
-      /* IE6-IE8 */ url('/static/fonts/special-elite-v16-latin-regular.woff2')
+      url('/static/fonts/aldrich/aldrich-v17-latin-regular.eot?#iefix')
+        format('embedded-opentype'),
+      /* IE6-IE8 */ url('/static/fonts/aldrich/aldrich-v17-latin-regular.woff2')
         format('woff2'),
       /* Super Modern Browsers */
-        url('/static/fonts/special-elite-v16-latin-regular.woff') format('woff'),
+        url('/static/fonts/aldrich/aldrich-v17-latin-regular.woff')
+        format('woff'),
       /* Modern Browsers */
-        url('/static/fonts/special-elite-v16-latin-regular.ttf')
-        format('truetype');
+        url('/static/fonts/aldrich/aldrich-v17-latin-regular.ttf')
+        format('truetype'),
+      /* Safari, Android, iOS */
+        url('/static/fonts/aldrich/aldrich-v17-latin-regular.svg#Aldrich')
+        format('svg'); /* Legacy iOS */
   }
 }
 
