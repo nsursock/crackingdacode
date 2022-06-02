@@ -21,27 +21,27 @@ menus:
     submenus:
       - name: Coaching
         description: Let me help you create a clear action plan on how to move ahead and make progress
-        route: /services/coaching
+        route: /services
         icon: 'eye'
       - name: Teaching
         description: Let me share with you the knowledge that you don't possess
-        route: /services/teaching
+        route: /services
         icon: 'school'
       - name: Consulting
         description: Let me help you work on your most challenging business problems
-        route: /services/consulting
+        route: /services
         icon: 'support'
       - name: Coding
         description: Let me help you code the next big thing, especially if it's a website
-        route: /coding
+        route: /services
         icon: 'code'
       - name: Testing
         description: Let me help you determine the quality level of your website or app
-        route: /testing
+        route: /services
         icon: 'adjustments'
       - name: Djing
         description: Let me help you entertain the crowd at your wonderful party
-        route: /djing
+        route: /services
         icon: 'note'
   - name: Products
     route: /products
@@ -49,15 +49,15 @@ menus:
     submenus:
       - name: Idea
         description: Let me help you get started for your next hit song with a short idea
-        route: /products/idea
+        route: /products
         icon: 'bulb'
       - name: Playlist
         description: Let me put you in a specific mood with a 1-hour playlist
-        route: /products/playlist
+        route: /products
         icon: 'collection'
       - name: Song
         description: Let me share with you a good song that you only have to produce
-        route: /products/song
+        route: /products
         icon: 'note'
   - name: Contact
     route: /contact
