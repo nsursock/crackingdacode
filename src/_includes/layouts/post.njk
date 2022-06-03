@@ -398,7 +398,7 @@
             </div>
           {% endif %}
         </ul>
-        {%- if env.environment == 'production' -%}
+        {# {%- if env.environment == 'production' -%} #}
           <div x-data="{ isTopList: true }">
             {% set postslist = collections.blog | top %}
             <ol
@@ -412,7 +412,7 @@
               {%- endfor -%}
             </ol>
           </div>
-        {%- endif -%}
+        {# {%- endif -%} #}
       </div>
     {% endblock %}
     <section id="footer">

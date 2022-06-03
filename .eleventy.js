@@ -83,7 +83,7 @@ module.exports = (config) => {
 
     // const today = new Date(new Date().setHours(0, 0, 0, 0))
     const today = new Date()
-    let endAt = today.getTime() 
+    let endAt = today.getTime()
     let startAt = today.getTime() - 1 * 24 * 60 * 60 * 1000
 
     let data = await fetch(
@@ -114,12 +114,17 @@ module.exports = (config) => {
     stats.push({
       name: 'Views',
       value: json.pageviews.value,
-      change:
-        (json.pageviews.change / (json.pageviews.value - json.pageviews.change) * 100).toFixed(),
+      prev: json.pageviews.value - json.pageviews.change,
+      change: (
+        (json.pageviews.change /
+          (json.pageviews.value - json.pageviews.change)) *
+        100
+      ).toFixed(),
     })
     stats.push({
       name: 'Visitors',
       value: json.uniques.value,
+      prev: json.uniques.value - json.uniques.change,
       change: (
         (json.uniques.change / (json.uniques.value - json.uniques.change)) *
         100
@@ -128,23 +133,39 @@ module.exports = (config) => {
     stats.push({
       name: 'Average Time (s)',
       value: (json.totaltime.value / json.uniques.value).toFixed(),
+      prev: (
+        (json.totaltime.value - json.totaltime.change) /
+        (json.uniques.value - json.uniques.change)
+      ).toFixed(),
       change: (
-        (json.totaltime.change /
-          (json.totaltime.value - json.totaltime.change)) *
+        ((json.totaltime.value / json.uniques.value -
+          (json.totaltime.value - json.totaltime.change) /
+            (json.uniques.value - json.uniques.change)) /
+          ((json.totaltime.value - json.totaltime.change) /
+            (json.uniques.value - json.uniques.change))) *
         100
       ).toFixed(),
     })
     stats.push({
       name: 'Bounce Rate (%)',
       value: ((json.bounces.value / json.uniques.value) * 100).toFixed(),
+      prev: (
+        ((json.bounces.value - json.bounces.change) /
+          (json.uniques.value - json.uniques.change)) *
+        100
+      ).toFixed(),
       change: (
-        (json.bounces.change / (json.bounces.value - json.bounces.change)) *
+        (((json.bounces.value / json.uniques.value) -
+          ((json.bounces.value - json.bounces.change) /
+            (json.uniques.value - json.uniques.change))) /
+          ((json.bounces.value - json.bounces.change) /
+            (json.uniques.value - json.uniques.change))) *
         100
       ).toFixed(),
     })
 
     // const curr = (json.pageviews.value / json.uniques.value).toFixed(2)
-    // const prev = 
+    // const prev =
     // stats.push({
     //   name: 'Per Visitor',
     //   value: pvisit,

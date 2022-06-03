@@ -9,7 +9,7 @@
         <dd class="mt-1 flex justify-between items-baseline md:block lg:flex">
           <div class="flex items-baseline text-2xl font-semibold text-indigo-600">
             {{ stat.value }}
-            {# <span class="ml-2 text-sm font-medium text-gray-500"> from 70,946 </span> #}
+            <span class="ml-2 text-sm font-medium text-gray-500"> from {{ stat.prev }} </span>
           </div>
           {% if not stat.name.includes('Bounce') %}
             {% if stat.change >= 0 %}
