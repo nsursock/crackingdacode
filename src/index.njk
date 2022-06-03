@@ -256,7 +256,7 @@ pagination:
         and get a list of all posts on the matter. Or you can read the latest published posts, fresh from the oven!
       </p>
     </div>
-    {%- if env.environment == 'production' -%}
+    {# {%- if env.environment == 'production' -%} #}
       <div x-data="{ isTopList: true }">
         {%- set postslist = collections.blog | top -%}
         <ol
@@ -270,7 +270,7 @@ pagination:
           {%- endfor -%}
         </ol>
       </div>
-    {%- endif -%}
+    {# {%- endif -%} #}
     {%- include './_includes/tagslist.njk' -%}
     <div
       x-data="{ isTopList: false }">
