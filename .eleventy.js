@@ -155,26 +155,26 @@ module.exports = (config) => {
         100
       ).toFixed(),
       change: (
-        (((json.bounces.value / json.uniques.value) -
-          ((json.bounces.value - json.bounces.change) /
-            (json.uniques.value - json.uniques.change))) /
+        ((json.bounces.value / json.uniques.value -
+          (json.bounces.value - json.bounces.change) /
+            (json.uniques.value - json.uniques.change)) /
           ((json.bounces.value - json.bounces.change) /
             (json.uniques.value - json.uniques.change))) *
         100
       ).toFixed(),
     })
 
-    // const curr = (json.pageviews.value / json.uniques.value).toFixed(2)
-    // const prev =
-    // stats.push({
-    //   name: 'Per Visitor',
-    //   value: pvisit,
-    //   change: (
-    //     (json.pageviews.change /
-    //       (json.pageviews.value - json.pageviews.change)) *
-    //     100
-    //   ).toFixed(),
-    // })
+    const curr = (json.pageviews.value / json.uniques.value).toFixed(1)
+    const prev = (
+      (json.pageviews.value -
+      json.pageviews.change) / (json.uniques.value -
+      json.uniques.change)).toFixed(1)
+    stats.push({
+      name: 'Views Per Visitor',
+      value: curr,
+      prev: prev,
+      change: (( (curr - prev) / prev) * 100).toFixed(),
+    })
     return stats
   })
 

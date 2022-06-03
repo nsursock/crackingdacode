@@ -1,18 +1,18 @@
 <!-- This example requires Tailwind CSS v2.0+ -->
 <div>
   <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-white">Today's Mood</h3>
-  <dl class="mt-5 grid grid-cols-1 rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow divide-y divide-gray-200 md:grid-cols-4
+  <dl class="mt-5 grid grid-cols-1 rounded-lg bg-white dark:bg-gray-800 overflow-hidden shadow divide-y divide-gray-200 md:grid-cols-5
       md:divide-y-0 md:divide-x dark:md:divide-gray-700">
     {%- for stat in stats -%}
       <div class="px-4 py-5 sm:p-6">
         <dt class="text-base font-normal text-gray-900 dark:text-white">{{ stat.name }}</dt>
         <dd class="mt-1 flex justify-between items-baseline md:block lg:flex">
-          <div class="flex items-baseline text-2xl font-semibold text-indigo-600">
+          <div class="flex flex-col items-baseline text-2xl font-semibold text-indigo-600">
             {{ stat.value }}
-            <span class="ml-2 text-sm font-medium text-gray-500"> from {{ stat.prev }} </span>
+            <span class="text-sm font-medium text-gray-500"> from {{ stat.prev }} </span>
           </div>
           {% if not stat.name.includes('Bounce') %}
-            {% if stat.change >= 0 %}
+            {% if stat.change > 0 %}
               <div
                 class="inline-flex items-baseline px-2.5 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800 md:mt-2
                   lg:mt-0">
@@ -34,7 +34,7 @@
                 </span>
                 {{ stat.change }}%
               </div>
-            {% else %}
+            {% elif stat.change < 0 %}
               <div
                 class="inline-flex items-baseline px-2.5 py-0.5 rounded-full text-sm font-medium bg-red-100 text-red-800 md:mt-2 lg:mt-0">
                 <!-- Heroicon name: solid/arrow-sm-down -->
@@ -79,7 +79,7 @@
                 </span>
                 {{ stat.change }}%
               </div>
-            {% else %}
+            {% elif stat.change > 0 %}
               <div
                 class="inline-flex items-baseline px-2.5 py-0.5 rounded-full text-sm font-medium bg-red-100 text-red-800 md:mt-2 lg:mt-0">
                 <!-- Heroicon name: solid/arrow-sm-down -->
