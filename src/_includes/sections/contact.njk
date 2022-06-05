@@ -16,7 +16,7 @@
           x-transition:enter="transition transform ease-in-out duration-[2000ms] "
           x-transition:enter-start="-translate-x-full"
           x-transition:enter-end="translate-x-0">
-          <p class=" mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-100 md:text-4xl ">
+          <p id="my-form-status" class=" mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-100 md:text-4xl ">
             Let's work together
           </p>
           <p class="mt-4 max-w-2xl text-xl lg:mx-auto text-gray-200">
@@ -63,12 +63,8 @@
           x-transition:enter-start="translate-x-full"
           x-transition:enter-end="translate-x-0">
           <div class="mt-10 md:mt-0 dark:bg-gray-900">
-            <div class="mt-5 md:mt-0 dark:bg-gray-900">
-              <form
-                action="https://formspree.io/f/xpzbbyvk"
-                method="POST"
-                name="contact"
-                x-data="{ disableSubmit: true, inputText: null, messageText: null }">
+            <div class="mt-5 md:mt-0 dark:bg-gray-900" x-data="{ disableSubmit: true, inputText: null, messageText: null }">
+              <form x-data="form" id="my-form" action="https://formspree.io/f/xpzbbyvk" method="POST" name="contact">
                 <div class="dark:bg-gray-900">
                   <div class="px-4 py-5 bg-white md:p-6 dark:bg-gray-900">
                     <div class="grid grid-cols-6 gap-6">
@@ -233,14 +229,12 @@
                                   ></div> -->
                   <div class="px-4 py-3 md:px-6 text-right">
                     <button
-                      id="contact-button"
                       @click="umami.trackEvent('contact-button', 'click')"
                       :disabled="disableSubmit"
                       :class="{'opacity-50': disableSubmit}"
                       type="submit"
-                      class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm
-                        font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2
-                        focus:ring-indigo-500 ">
+                      class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white
+                        bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 ">
                       Send
                     </button>
                   </div>
