@@ -83,7 +83,7 @@
   </div>
   {% if env.environment == "production" %}
     <template x-if="!document.cookie.includes('InternalTraffic') && window.location.hostname !== 'localhost'">
-      {# <div>
+      <div>
         <script
           async="async"
           defer="defer"
@@ -106,7 +106,7 @@
           })(document);
           smartlook('init', '5e75fd45cb1c9ca751db0bdba820fb61dcbcdcb2');
         </script>
-      </div> #}
+      </div>
     </template>
   {% endif %}
 </footer>
