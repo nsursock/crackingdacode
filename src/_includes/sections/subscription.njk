@@ -1,31 +1,6 @@
 <div class="relative mt-8">
   <div class="relative mt-8 sm:mt-16 sm:py-16">
-    <div
-      aria-hidden="true" class="hidden sm:block"><!-- <div class="absolute inset-y-0 left-0 w-1/2 bg-gray-50 rounded-r-3xl" ></div> <svg class="absolute -ml-3 top-8
-        left-1/2" width="404" height="392" fill="none" viewBox="0 0 404 392" > <defs>
-                            <pattern
-                              id="8228f071-bcee-4ec8-905a-2a059a2cc4fb"
-                              x="0"
-                              y="0"
-                              width="20"
-                              height="20"
-                              patternUnits="userSpaceOnUse"
-                            >
-                              <rect
-                                x="0"
-                                y="0"
-                                width="4"
-                                height="4"
-                                class="text-gray-200"
-                                fill="currentColor"
-                              ></rect>
-                            </pattern>
-                        </defs> <rect
-                            width="404"
-                            height="392"
-                            fill="url(#8228f071-bcee-4ec8-905a-2a059a2cc4fb)"
-                        ></rect> </svg> -->
-    </div>
+    <div aria-hidden="true" class="hidden sm:block"></div>
     <div class="max-w-md px-4 mx-auto sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
       <div class="relative py-10 overflow-hidden bg-indigo-500 shadow-xl rounded-2xl sm:px-12 sm:py-20">
         <div aria-hidden="true" class="absolute inset-0 -mt-72 sm:-mt-32 md:mt-0">
@@ -50,11 +25,13 @@
             <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
               Always stay in the loop!
             </h2>
-            <p class="max-w-2xl mx-auto mt-6 text-lg text-indigo-100">
+            <p id="my-form-status" class="max-w-2xl mx-auto mt-6 text-lg text-indigo-100">
               The latest content from the blog is regularly sent by email.
             </p>
           </div>
           <form
+            x-data="form"
+            id="my-form"
             action="https://formspree.io/f/mdobbplr"
             method="POST"
             name="subscription"
@@ -70,13 +47,12 @@
                   focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2
                   focus:ring-offset-indigo-500"/>
             </div>
-            <div class="mt-4 sm:mt-0 sm:ml-3">
+            <div class="mt-4 sm:mt-0 sm:ml-3 flex flex-col">
               <button
-                id="subscribe-button"
                 @click="umami.trackEvent('subscribe-button', 'click')"
-                type="submit"
                 class="block w-full px-5 py-3 text-base font-medium text-white bg-gray-900 border border-transparent shadow rounded-md
-                  hover:bg-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-500 sm:px-10">
+                  hover:bg-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-500
+                  sm:px-10">
                 Subscribe
               </button>
             </div>
