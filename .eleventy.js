@@ -31,9 +31,9 @@ module.exports = (config) => {
 
   config.addFilter('isPaginated', (url) => new RegExp('^/[0-9]+/$').test(url))
 
-  function capitalize(str) {
-    return str[0].toUpperCase() + str.substring(1)
-  }
+  // function capitalize(str) {
+  //   return str[0].toUpperCase() + str.substring(1)
+  // }
 
   // config.addCollection('stats', async function (collection) {
   //   let data = await fetch(
@@ -96,21 +96,8 @@ module.exports = (config) => {
       }
     )
     let json = await data.json()
-    // const statNames = {
-    //   bounces: 'Bounce Rate',
-    //   pageviews: 'Views',
-    //   totaltime: 'Average Time',
-    //   uniques: 'Visitors',
-    // }
 
     let stats = []
-    // for (const prop in json) {
-    //   stats.push({
-    //     name: statNames[prop],
-    //     value: json[prop].value,
-    //   })
-    // }
-
     stats.push({
       name: 'Views',
       value: json.pageviews.value,
