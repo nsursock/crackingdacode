@@ -84,6 +84,7 @@
   {% if env.environment == "production" %}
     <template x-if="!document.cookie.includes('InternalTraffic') && window.location.hostname !== 'localhost'">
       <div>
+        {# analytics code #}
         <script
           async="async"
           defer="defer"
