@@ -73,8 +73,9 @@
             <div class="mt-4 sm:mt-0 sm:ml-3">
               <button
                 id="subscribe-button"
+                @click="umami.trackEvent('subscribe-button', 'click')"
                 type="submit"
-                class="umami--click--subscribe-button block w-full px-5 py-3 text-base font-medium text-white bg-gray-900 border border-transparent shadow rounded-md
+                class="block w-full px-5 py-3 text-base font-medium text-white bg-gray-900 border border-transparent shadow rounded-md
                   hover:bg-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-500 sm:px-10">
                 Subscribe
               </button>

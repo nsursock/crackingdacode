@@ -234,10 +234,11 @@
                   <div class="px-4 py-3 md:px-6 text-right">
                     <button
                       id="contact-button"
+                      @click="umami.trackEvent('contact-button', 'click')"
                       :disabled="disableSubmit"
                       :class="{'opacity-50': disableSubmit}"
                       type="submit"
-                      class="umami--click--contact-button inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm
+                      class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm
                         font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2
                         focus:ring-indigo-500 ">
                       Send
