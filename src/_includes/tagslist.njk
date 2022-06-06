@@ -1,7 +1,9 @@
 <div
   x-data="{ showTag: false }"
-  class="md:h-screen mt-5 sm:mt-8 sm:flex sm:justify-center flex flex-wrap"
+  class="md:h-screen mt-10"
   x-intersect.once="showTag = true; $el.classList.remove('md:h-screen')">
+  <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-white">Categories</h3>
+  <div class="sm:flex sm:justify-center flex flex-wrap">
   {% for tag in collections.tagList %}
     {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
     <div class="mt-3 mr-2" x-show="showTag" x-transition:enter="animate-jello">
@@ -14,4 +16,5 @@
       </a>
     </div>
   {% endfor %}
+  </div>
 </div>
