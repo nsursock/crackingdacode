@@ -257,7 +257,8 @@ pagination:
       </p>
     </div>
     {# {%- if env.environment == 'production' -%} #}
-      <div x-data="{ isTopList: true }">
+      <div x-data="{ isTopList: true }" class="mt-10">
+        <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-white">Most Viewed Posts</h3>
         {%- set postslist = collections.blog | top -%}
         <ol
           x-data="{ showArticle: false }"
@@ -273,7 +274,8 @@ pagination:
     {# {%- endif -%} #}
     {%- include './_includes/tagslist.njk' -%}
     <div
-      x-data="{ isTopList: false }">
+      x-data="{ isTopList: false }" class="mt-10">
+      <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-white">Latest Posts</h3>
       {# {%- set postslist = collections.blog | reverse -%} #}
       <ol
         x-data="{ showArticle: false }"

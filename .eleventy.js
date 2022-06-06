@@ -255,7 +255,7 @@ module.exports = (config) => {
     token = (await token.json()).token
 
     let endAt = new Date().getTime()
-    startAt = new Date().getTime() - 7 * 24 * 60 * 60 * 1000
+    startAt = new Date().getTime() - 12 * 30 * 24 * 60 * 60 * 1000
 
     let data = await fetch(
       `https://statumami-production.up.railway.app/api/website/1/metrics?start_at=${startAt}&end_at=${endAt}&type=url`,
