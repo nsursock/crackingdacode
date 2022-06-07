@@ -5,10 +5,12 @@ pagination:
   data: collections.blog
   size: 9
   reverse: true
+eleventyComputed:
+  title: Home | Cracking Da Code (Page {{ pagination.pageNumber + 1 }})
 ---
 
 {# This page is built with nunjucks! #}
-{% set title = 'Home | Cracking Da Code' %}
+{# {% set title = 'Home | Cracking Da Code' %} #}
 {% extends "layouts/page.njk" %}
 {% block head %}
   <link
