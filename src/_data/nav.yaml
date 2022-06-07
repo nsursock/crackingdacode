@@ -9,7 +9,7 @@ menus:
     submenus:
       - name: Biography
         description: A brief history of this website's author so that he looks legitimate
-        route: /biography
+        route: /about
         icon: 'dna'
       - name: Portfolio
         description: In case you wonder who made this website and what are his skills
