@@ -4,4 +4,6 @@ module.exports = {
   environment: process.env.NODE_ENV || 'development',
   stripeKey: process.env.ELEVENTY_STRIPE_KEY,
   statPwd: process.env.UMAMI_ADMIN_PWD,
+  supaUrl: process.env.SUPABASE_URL,
+  supaKey: process.env.SUPABASE_KEY,
 }
