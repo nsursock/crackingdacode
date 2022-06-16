@@ -1,141 +1,74 @@
-<style>
-  [x-cloak] {
-    display: none;
-  }
-</style>
-<section class="antialiased">
-  <div
-    class="my-10 md:my-24 container mx-auto flex flex-col md:flex-row shadow-sm overflow-hidden"
-    x-data="{ testimonialActive: 1 }"
-    x-cloak>
-    <div class="md:rounded-l-lg md:rounded-tr-none rounded-t-lg relative w-full py-2 md:py-24 bg-indigo-700 md:w-1/2 flex flex-col
-        item-center justify-center">
-      <div class="absolute top-0 left-0 z-10 grid-indigo w-16 h-16 md:w-40 md:h-40 md:ml-20 md:mt-24"></div>
-      <div class="relative text-2xl md:text-5xl py-2 px-6 md:py-6 md:px-1 md:w-64 md:mx-auto text-indigo-100 font-semibold
-          leading-tight tracking-tight mb-0 z-20">
-        <span class="md:block">What Our</span>
-        <span class="md-block">Readers</span>
-        <span class="block">Are Saying</span>
-        {# <button
-          type="button"
-          class="inline-flex items-center mt-5 px-6 py-3 border border-transparent shadow-sm text-base font-medium rounded-md
-            text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-          <!-- Heroicon name: solid/mail -->
-          <svg
-            class="-ml-1 mr-3 h-5 w-5"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            aria-hidden="true">
-            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-          </svg>
-          Leave a testimonial
-        </button> #}
-        {# {% include '../partials/testimonial-modal.njk' %} #}
-      </div>
-      <!-- Prev/Next Arrows -->
-      <div class="absolute right-0 top-0 mr-4 mt-4 hidden md:flex -space-x-px">
+<section class="flex items-center justify-center py-16 min-w-screen">
+  <div class="max-w-6xl px-12 mx-auto md:px-16 xl:px-10" x-data="{ showInput: false, isFetching: false }">
+    <div class="flex flex-col items-center lg:flex-row" x-data="supa">
+      <div
+        class="flex flex-col items-start justify-center w-full h-full pr-8 mb-10 lg:mb-0 lg:w-1/2">
+        <p class="mb-2 text-base font-medium tracking-tight text-indigo-500 uppercase">Lily was here</p>
+        <h2 class="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 dark:text-white sm:text-5xl sm:leading-none md:text-6xl
+            lg:text-5xl xl:text-6xl">
+          Testimonials</h2>
+        <p class="my-6 text-lg text-gray-600 dark:text-gray-400">This is the place where readers pay tribute to the website. You can also leave a
+          trace of your visit here!</p>
         <button
-          class="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium
-            text-gray-500 hover:bg-gray-50 focus:outline-none"
-          x-on:click="testimonialActive = testimonialActive === 1 ? {{ testimonials.testimonials.length }} : testimonialActive - 1">
-          <span class="sr-only">Previous</span>
-          <!-- Heroicon name: solid/chevron-left -->
-          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path
-              fill-rule="evenodd"
-              d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
-              clip-rule="evenodd"/>
-          </svg>
-        </button>
-        <button
-          class="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium
-            text-gray-500 hover:bg-gray-50 focus:outline-none"
-          x-on:click="testimonialActive = testimonialActive >= {{ testimonials.testimonials.length }} ? 1 : testimonialActive + 1">
-          <span class="sr-only">Next</span>
-          <!-- Heroicon name: solid/chevron-right -->
-          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path
-              fill-rule="evenodd"
-              d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-              clip-rule="evenodd"/>
-          </svg>
-        </button>
+          @click="showInput = true"
+          class="flex items-center justify-center px-8 py-3 text-base font-medium leading-6 text-white transition duration-150
+            ease-in-out bg-indigo-600 border border-transparent rounded-md shadow hover:bg-indigo-500 focus:outline-none
+            focus:border-indigo-700 focus:shadow-outline-indigo md:py-4 md:text-lg md:px-10">
+          Write a testimonial</button>
+        {% include '../partials/testimonial-modal.njk' %}
       </div>
-    </div>
-    <div class="bg-gray-100 dark:bg-gray-800 md:w-1/2 md:rounded-r-lg md:rounded-bl-none rounded-b-lg">
-      <div class="flex flex-col h-full relative">
-        <div class="absolute top-0 left-0 mt-3 ml-4 md:mt-5 md:ml-12">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="text-indigo-200 dark:text-indigo-700 fill-current w-12 h-12 md:w-16 md:h-16"
-            viewBox="0 0 24 24">
-            <path d="M6.5 10c-.223
-            0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35.208-.086.39-.16.539-.222.302-.125.474-.197.474-.197L9.758
-            4.03c0 0-.218.052-.597.144C8.97 4.222 8.737 4.278 8.472 4.345c-.271.05-.56.187-.882.312C7.272 4.799 6.904 4.895 6.562
-            5.123c-.344.218-.741.4-1.091.692C5.132 6.116 4.723 6.377 4.421 6.76c-.33.358-.656.734-.909 1.162C3.219 8.33 3.02 8.778
-            2.81 9.221c-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014 1.315.028
-            1.747.015.204.043.402.063.539.017.109.025.168.025.168l.026-.006C2.535 17.474 4.338 19 6.5 19c2.485 0 4.5-2.015
-            4.5-4.5S8.985 10 6.5 10zM17.5 10c-.223
-            0-.437.034-.65.065.069-.232.14-.468.254-.68.114-.308.292-.575.469-.844.148-.291.409-.488.601-.737.201-.242.475-.403.692-.604.213-.21.492-.315.714-.463.232-.133.434-.28.65-.35.208-.086.39-.16.539-.222.302-.125.474-.197.474-.197L20.758
-            4.03c0
-            0-.218.052-.597.144-.191.048-.424.104-.689.171-.271.05-.56.187-.882.312-.317.143-.686.238-1.028.467-.344.218-.741.4-1.091.692-.339.301-.748.562-1.05.944-.33.358-.656.734-.909
-            1.162C14.219 8.33 14.02 8.778 13.81 9.221c-.19.443-.343.896-.468 1.336-.237.882-.343 1.72-.384 2.437-.034.718-.014
-            1.315.028 1.747.015.204.043.402.063.539.017.109.025.168.025.168l.026-.006C13.535 17.474 15.338 19 17.5 19c2.485 0
-            4.5-2.015 4.5-4.5S19.985 10 17.5 10z"/>
-          </svg>
-        </div>
-        <div class="h-full relative z-10 overflow-x-hidden">
-          {% for testimonial in testimonials.testimonials %}
-            <div
-              x-show="testimonialActive === {{ loop.index }}"
-              x-transition:enter="md:transition md:transform md:ease-out md:duration-500 md:absolute"
-              x-transition:enter-start="opacity-0 -translate-x-full"
-              x-transition:enter-end="opacity-100 translate-x-0"
-              x-transition:leave="md:transition md:transform md:ease-in md:duration-500 md:absolute"
-              x-transition:leave-start="opacity-100 translate-x-0"
-              x-transition:leave-end="opacity-0 -translate-x-full">
-              <p
-                class="text-gray-500 dark:text-gray-400 serif font-normal italic px-6 py-6 md:px-16 md:py-10 text-xl md:text-2xl"
-                x-show.transition="testimonialActive == {{ loop.index }}">
-                {{ testimonial.text }}
-              </p>
+      <div
+        class="w-full lg:w-2/3 h-96 overflow-y-scroll no-scrollbar px-5"
+        x-data="{ items: [] }"
+        x-init="items = (await (await fetch('/api/testimonials-select')).json()).data">
+        {% for testimonial in testimonials.testimonials %}
+          <blockquote class="flex flex-col sm:flex-row items-center justify-between w-full col-span-1 p-6 my-2 mx-2 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+            <div class="flex flex-col pr-8">
+              <div class="relative pl-12">
+                <svg
+                  class="absolute left-0 w-10 h-10 text-indigo-500 fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 100 125">
+                  <path d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9
+                    5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6
+                    29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"></path>
+                </svg>
+                <p class="mt-2 text-sm text-gray-600 dark:text-gray-400 sm:text-base lg:text-sm xl:text-base">{{ testimonial.text }}</p>
+              </div>
+              <h3 class="pl-12 mt-3 text-sm font-medium leading-5 text-gray-800 truncate sm:text-base lg:text-sm lg:text-base">
+                <span class="dark:text-white">{{ testimonial.person }}</span>
+                <span class="mt-1 text-sm leading-5 text-gray-500 truncate">{{ testimonial.title }}</span>
+              </h3>
             </div>
-          {% endfor %}
-        </div>
-        <div class="flex my-4 justify-center items-center">
-          {% for testimonial in testimonials.testimonials %}
-            <button
-              x-show="testimonialActive === {{ loop.index }} || testimonialActive === {{ loop.index -1 }} || testimonialActive === {{
-                loop.index +1 }} || testimonialActive === 1 && {{ loop.index }} === {{ testimonials.testimonials.length }} ||
-                testimonialActive === {{ testimonials.testimonials.length }} && {{ loop.index }} === 1"
-              @click.prevent="testimonialActive = {{ loop.index }}"
-              class="text-center font-bold shadow-xs focus:outline-none focus:shadow-outline inline-block rounded-full mx-2"
-              :class="{'h-12 w-12 opacity-25 bg-indigo-300 dark:bg-indigo-700 text-gray-500 dark:text-gray-400': testimonialActive !=
-                {{ loop.index }}, 'h-16 w-16 opacity-100 bg-indigo-600 text-white': testimonialActive == {{ loop.index }} }">
-              {% if testimonial.photo %}
-                <img class="rounded-full" data-src="{{ testimonial.photo }}" alt="Photo of {{ testimonial.person }}" x-intersect.once.ratio-0="$el.src = $el.dataset.src"/>
-              {% else %}
-                {{ testimonial.person.split(' ')[0][0] +
-            testimonial.person.split(' ')[1][0] }}
-              {% endif %}
-            </button>
-          {% endfor %}
-        </div>
-        <div class="flex justify-center px-6 pt-2 pb-6 md:py-6">
-          {% for testimonial in testimonials.testimonials %}
-            <div class="text-center" x-show="testimonialActive == {{ loop.index }}">
-              <h2 class="text-sm md:text-base font-bold text-gray-500 dark:text-gray-400 leading-tight">
-                {{ testimonial.person }}
-              </h2>
-              <small class="text-gray-500 dark:text-gray-400 text-xs md:text-sm truncate">
-                {{ testimonial.title }}
-              </small>
+            <img class="mt-3 flex-shrink-0 w-20 h-20 bg-gray-300 rounded-full xl:w-24 xl:h-24" data-src="{{ testimonial.photo }}" alt="Photo of {{ testimonial.person }}" x-intersect.once.ratio-0="$el.src = $el.dataset.src"/>
+          </blockquote>
+        {% endfor %}
+        <template x-for="item in items">
+          <blockquote class="flex flex-col sm:flex-row items-center justify-between w-full col-span-1 p-6 my-2 mx-2 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+            <div class="flex flex-col pr-8">
+              <div class="relative pl-12">
+                <svg
+                  class="absolute left-0 w-10 h-10 text-indigo-500 fill-current"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 100 125">
+                  <path d="M30.7 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2C12.7 83.1 5 72.6 5 61.5c0-19.2 18-44.6 29.2-44.6 2.8 0 7.9 2 7.9
+                    5.4S30.7 31.6 30.7 42zM82.4 42c0 6.1 12.6 7 12.6 22 0 11-7.9 19.2-18.9 19.2-11.8 0-19.5-10.5-19.5-21.6 0-19.2 18-44.6
+                    29.2-44.6 2.8 0 7.9 2 7.9 5.4S82.4 31.6 82.4 42z"></path>
+                </svg>
+                <p class="mt-2 text-sm text-gray-600 dark:text-gray-400 sm:text-base lg:text-sm xl:text-base" x-text="item.description"></p>
+              </div>
+              <h3 class="pl-12 mt-3 text-sm font-medium leading-5 text-gray-800 truncate sm:text-base lg:text-sm lg:text-base">
+                <span class="dark:text-white" x-text="item.name"></span>
+                <span class="mt-1 text-sm leading-5 text-gray-500 truncate" x-text="item.occupation"></span>
+              </h3>
             </div>
-          {% endfor %}
+            <img
+              class="mt-3 flex-shrink-0 w-20 h-20 bg-gray-300 rounded-full xl:w-24 xl:h-24"
+              :data-src="item.picture"
+              :alt="`Photo of ${item.name}`"
+              x-intersect.once.ratio-0="$el.src = $el.dataset.src"></blockquote>
+          </template>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>

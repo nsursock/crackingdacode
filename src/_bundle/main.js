@@ -1,6 +1,7 @@
 import Alpine from 'alpinejs'
 import global from './global.js'
 import form from "./form.js"
+import supa from './supa.js'
 // import 'htmx.org'
 import 'lazysizes'
 // import intersect from '@alpinejs/intersect'
@@ -10,6 +11,7 @@ import 'lazysizes'
 
 Alpine.data('global', global)
 Alpine.data('form', form)
+Alpine.data('supa', supa)
 
 Alpine.directive(
   'intersect',

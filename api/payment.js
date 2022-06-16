@@ -21,7 +21,7 @@ export default async function handler(request, response) {
       },
     ],
     mode: 'payment',
-    success_url: `${YOUR_DOMAIN}/thanks`,
+    success_url: `${YOUR_DOMAIN}/thanks.html`,
     cancel_url: `${YOUR_DOMAIN}`,
   })
 
