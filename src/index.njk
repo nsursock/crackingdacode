@@ -12,8 +12,7 @@ eleventyComputed:
 {# This page is built with nunjucks! #}
 {# {% set title = 'Home | Cracking Da Code' %} #}
 {% extends "layouts/page.njk" %}
-{% block head %}
-  <link
+  {% block head %} <link
     rel="preload"
     as="image"
     media="(max-width: 799px)"
@@ -21,6 +20,22 @@ eleventyComputed:
   <link rel="preload" href="/static/fonts/aldrich/aldrich-v17-latin-regular.woff2" as="font" crossorigin/>
   <link rel="preload" href="/static/fonts/aldrich/aldrich-v17-latin-regular.woff" as="font" crossorigin/>
   <link rel="preload" href="/static/fonts/aldrich/aldrich-v17-latin-regular.ttf" as="font" crossorigin/>
+  <script>
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document
+        .documentElement
+        .classList
+        .add('dark')
+    } else {
+      document
+        .documentElement
+        .classList
+        .remove('dark')
+    }
+  </script>
 {% endblock %}
 {% block body %}
   <!-- This example requires Tailwind CSS v2.0+ -->
@@ -57,7 +72,7 @@ eleventyComputed:
                     </svg>
                   </div>
                   <div class="-mr-2 flex items-center md:hidden">
-                    {% include 'partials/darkmode.html' %}
+                    {% include 'partials/darkmode.njk' %}
                     <button
                       @click="showMenu = !showMenu"
                       type="button"
@@ -89,7 +104,7 @@ eleventyComputed:
                 </div>
               {% endif %}
               <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                {% include 'partials/darkmode.html' %}
+                {% include 'partials/darkmode.njk' %}
               </div>
             </nav>
           </div>
@@ -259,24 +274,23 @@ eleventyComputed:
       </p>
     </div>
     {# {%- if env.environment == 'production' -%} #}
-      <div x-data="{ isTopList: true }" class="mt-10">
-        <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-white">Most Viewed Posts</h3>
-        {%- set postslist = collections.blog | top -%}
-        <ol
-          x-data="{ showArticle: false }"
-          class="md:h-screen mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
-          x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')">
-          {%- for post in postslist -%}
-            <div x-data="{ type: '#{{ loop.index }}' }">
-              {%- include 'partials/postcard.njk' -%}
-            </div>
-          {%- endfor -%}
-        </ol>
-      </div>
+    <div x-data="{ isTopList: true }" class="mt-10">
+      <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-white">Most Viewed Posts</h3>
+      {%- set postslist = collections.blog | top -%}
+      <ol
+        x-data="{ showArticle: false }"
+        class="md:h-screen mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+        x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')">
+        {%- for post in postslist -%}
+          <div x-data="{ type: '#{{ loop.index }}' }">
+            {%- include 'partials/postcard.njk' -%}
+          </div>
+        {%- endfor -%}
+      </ol>
+    </div>
     {# {%- endif -%} #}
     {%- include './_includes/tagslist.njk' -%}
-    <div
-      x-data="{ isTopList: false }" class="mt-10">
+    <div x-data="{ isTopList: false }" class="mt-10">
       <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-white">Latest Posts</h3>
       {# {%- set postslist = collections.blog | reverse -%} #}
       <ol
@@ -285,13 +299,13 @@ eleventyComputed:
         x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')">
         {%- for post in pagination.items -%}
           {# {% set views = post.views %}
-                                                                                                                              {% set post = post.post %}
-                                                                                                                              <div class="relative"> #}
+                                                                                                                                        {% set post = post.post %}
+                                                                                                                                        <div class="relative"> #}
           {%- include 'partials/postcard.njk' -%}
           {# <div class='-mx-3 -my-2 w-12 h-12 flex items-center justify-center bg-white rounded-full border  absolute bottom-0 right-0'>
-                                                                                                                                  <span>{{ views }}</span>
-                                                                                                                                </div>
-                                                                                                                              </div> #}
+                                                                                                                                            <span>{{ views }}</span>
+                                                                                                                                          </div>
+                                                                                                                                        </div> #}
         {%- endfor -%}
       </ol>
       <!-- This example requires Tailwind CSS v2.0+ -->
