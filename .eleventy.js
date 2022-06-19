@@ -11,6 +11,11 @@ const yaml = require('js-yaml')
 const format = require('date-fns/format')
 const fetch = require('node-fetch-commonjs')
 
+const https = require('https')
+const httpsAgent = new https.Agent({
+  rejectUnauthorized: false,
+})
+
 module.exports = (config) => {
   config.addFilter('date', function (date, dateFormat) {
     return format(date, dateFormat)
@@ -77,6 +82,7 @@ module.exports = (config) => {
           username: 'admin',
           password: statPwd,
         }),
+        agent: httpsAgent,
       }
     )
     token = (await token.json()).token
@@ -93,6 +99,7 @@ module.exports = (config) => {
         headers: {
           Authorization: `Bearer ${token}`,
         },
+        agent: httpsAgent,
       }
     )
     let json = await data.json()
@@ -250,6 +257,7 @@ module.exports = (config) => {
           username: 'admin',
           password: statPwd,
         }),
+        agent: httpsAgent,
       }
     )
     token = (await token.json()).token
@@ -264,6 +272,7 @@ module.exports = (config) => {
         headers: {
           Authorization: `Bearer ${token}`,
         },
+        agent: httpsAgent,
       }
     )
     let json = await data.json()
