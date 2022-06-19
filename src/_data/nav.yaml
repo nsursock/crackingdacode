@@ -19,6 +19,14 @@ menus:
     route: /services
     icon: 'ticket'
     submenus:
+      - name: Healing
+        description: Let me help you heal from the pain with music therapy
+        route: /services
+        icon: 'happy'
+      - name: Djing
+        description: Let me help you entertain the crowd at your wonderful party
+        route: /services
+        icon: 'note'
       - name: Coaching
         description: Let me help you create a clear action plan on how to move ahead and make progress
         route: /services
@@ -39,10 +47,6 @@ menus:
         description: Let me help you determine the quality level of your website or app
         route: /services
         icon: 'adjustments'
-      - name: Djing
-        description: Let me help you entertain the crowd at your wonderful party
-        route: /services
-        icon: 'note'
   - name: Products
     route: /products
     icon: 'cube'
