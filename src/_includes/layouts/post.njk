@@ -150,15 +150,14 @@
         </div>
       </div>
       <div class="flex flex-col md:flex-row">
-        <aside class="px-4  lg:w-1/4 hidden h-screen sticky top-0 xl:flex items-center justify-center flex-col"></aside>
+        <aside class="px-4 hidden h-screen sticky top-0 xl:flex items-center justify-center flex-col"></aside>
         <div
           x-intersect.once.ratio-0="Array.from($el.getElementsByClassName('md:float-right')).forEach((aside) => {
             aside.classList.remove('md:-mr-56'), aside.classList.add('md:-mr-24') });
             Array.from($el.getElementsByClassName('md:float-left')).forEach((aside) => { aside.classList.remove('md:-ml-56'),
             aside.classList.add('md:-ml-24') })"
           id="article"
-          class="container py-8 max-w-none prose lg:prose-xl dark:prose-invert prose-p:text-justify dark:text-gray-400 sm:w-3/5
-            xl:w-2/4">
+          class="container py-8 prose lg:prose-xl dark:prose-invert prose-p:text-justify dark:text-gray-400">
           {{ content | safe }}
         </div>
         <div class="fixed md:hidden inset-x-0 bottom-0 z-50">
@@ -201,7 +200,7 @@
             <span class="absolute text-xl text-indigo-700" x-text="`${percent}%`"></span>
           </div>
         </aside>
-        <aside class="px-4  sm:w-2/5 lg:w-1/4 hidden h-screen sticky top-0 md:flex items-center justify-center flex-col"></aside>
+        <aside class="px-4 hidden h-screen sticky top-0 md:flex items-center justify-center flex-col"></aside>
       </div>
       {# <div class="flex items-center justify-center mb-8">
                           {% set mobile = true %}
