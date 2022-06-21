@@ -29,7 +29,7 @@ The just solution (not necessarily the correct one) would be a performance stand
 ## Why Don't You Evaluate The Code?
 
 <aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="secret door in library" data-src="https://images.unsplash.com/photo-1511075675422-c8e008f749d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="secret door in library" data-src="https://images.unsplash.com/photo-1511075675422-c8e008f749d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 4 years ago, I found a code supposed to free humanity. It could mean several things, but the first thing that comes to mind is alliances. Now since then, I'm feeling dizzy every day.
@@ -45,7 +45,7 @@ So my ally advised me not to do something. Even though I felt it was a good idea
 ## What About The Physical Solution?
 
 <aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="chalkboard with equations" data-src="https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1674&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="chalkboard with equations" data-src="https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 Recently I had an illumination. I can't explain the reasoning behind this equation, but I think it's the equation of the future: Vy = PnG2. It means the height velocity depends on pressure, gravity squared, and a normality coefficient (or a strangeness coefficient).
@@ -57,7 +57,7 @@ This solution might not be correct or just, but it could explain many things. We
 ## Should You Have A Talk With God?
 
 <aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="God gives life to Adam" data-src="https://images.unsplash.com/photo-1574626647213-a5cc26f91021?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="God gives life to Adam" data-src="https://images.unsplash.com/photo-1574626647213-a5cc26f91021?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 When you think your life is too hard, what should you do? With God, you will always have an interesting point of view. Once I talked with God, I only remember that he spoke to me about fundamentals.
@@ -71,7 +71,7 @@ Yes, talking to God is an obvious thing to do: let's remember it's just a point 
 ## Do We Need Sometimes To Lie?
 
 <aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="old woman with honest smile" data-src="https://images.unsplash.com/flagged/photo-1570084787226-c77bdc6a1705?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="old woman with honest smile" data-src="https://images.unsplash.com/flagged/photo-1570084787226-c77bdc6a1705?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 We've been living a lie: there's nothing inside. A brilliant civilization still incapable of traveling the Milky Way but stuck in the atmosphere with stratocumulus is a beautiful sight to see. And that's where the code will come in handy: of course, we're afraid of space travels because it's so disturbing (heights, atmosphere, comets).
