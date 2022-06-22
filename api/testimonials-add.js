@@ -8,6 +8,10 @@ async function handler(req, res) {
     process.env.SUPABASE_URL,
     process.env.SUPABASE_KEY
   )
+  
+  const storageName = process.env.NODE_ENV.startsWith('dev')
+    ? 'testimonials.dev'
+    : 'testimonials'
 
   const uploadFile = async () => {
     // eslint-disable-next-line
@@ -17,7 +21,7 @@ async function handler(req, res) {
         // filepath = filepath.replace(/\s/g, '-') // IN CASE YOU NEED TO REPLACE SPACE OF THE IMAGE NAME
         const rawData = fs.readFileSync(files.picture.filepath)
         const { error } = await supabase.storage
-          .from('testimonials')
+          .from(storageName)
           .upload(filepath, rawData, {
             contentType: files.picture.mimetype,
           })
@@ -26,12 +30,11 @@ async function handler(req, res) {
           return reject({ success: false })
         }
         // YOU DO NOT NEED BELOW UNLESS YOU WANT TO SAVE PUBLIC URL OF THE IMAGE TO THE DATABASE
-        await supabase.from('testimonials').insert({
+        await supabase.from(storageName).insert({
           description: fields.description,
           name: fields.identity.split('/')[0].trim(),
           occupation: fields.identity.split('/')[1].trim(),
-          picture:
-            `https://qroiybphgipjhkmfsvnj.supabase.co/storage/v1/object/public/testimonials/${filepath}`
+          picture: `https://qroiybphgipjhkmfsvnj.supabase.co/storage/v1/object/public/${storageName}/${filepath}`,
         })
        
         resolve({ success: true })

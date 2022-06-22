@@ -131,12 +131,14 @@ module.exports = {
         '.no-scrollbar::-webkit-scrollbar': {
           display: 'none',
         },
-
         /* Hide scrollbar for IE, Edge and Firefox */
         '.no-scrollbar': {
           '-ms-overflow-style': 'none' /* IE and Edge */,
           'scrollbar-width': 'none' /* Firefox */,
         },
+        // '.rotate-y-m180': {
+        //   transform: 'rotateY(-180deg)',
+        // },
       })
     }),
   ],
