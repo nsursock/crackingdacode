@@ -5,7 +5,7 @@ export default () => ({
   description: '',
   saveTestimonial(evt) {
     this.isFetching = true
-    
+
     const file = evt.target[2].files[0]
     const data = new FormData()
     data.append('description', this.description)
@@ -16,7 +16,12 @@ export default () => ({
       method: 'POST',
       body: data,
     })
-      .then(() => (this.showInput = false))
+      .then(async () => {
+        this.showInput = false
+        // this.items = (
+        //   await (await fetch('/api/testimonials-select')).json()
+        // ).data
+      })
       .catch((error) => console.log(error))
   },
 
