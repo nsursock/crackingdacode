@@ -60,11 +60,11 @@
       <div
         x-show="lastScrollTop > landingPageOffset"
         x-transition:enter="animate-swing "
-        :class="{ 'sticky top-0 z-[200]' : isScrollingUp || !isScrollingUp }">
+        :class="{ 'sticky top-0 z-50' : isScrollingUp || !isScrollingUp }">
         {% include '../header.njk' %}
       </div>
     {% else %}
-      <div :class="{ 'sticky top-0 z-[200] animate-swing' : isScrollingUp || !isScrollingUp }">
+      <div :class="{ 'sticky top-0 z-50 animate-swing' : isScrollingUp || !isScrollingUp }">
         {% include '../header.njk' %}
       </div>
     {% endif %}

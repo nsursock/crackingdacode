@@ -1,14 +1,16 @@
 <section class="flex items-center justify-center py-16 min-w-screen">
-  <div class="max-w-6xl  mx-auto md:px-16 xl:px-10" x-data="{ showInput: false, isFetching: false }">
+  <div
+    class="max-w-6xl  mx-auto md:px-16 xl:px-10"
+    x-data="{ showInput: false, isFetching: false, items: [] }"
+    x-init="items = (await (await fetch('/api/testimonials-select')).json()).data">
     <div class="flex flex-col items-center lg:flex-row" x-data="supa">
-      <div
-        class="flex flex-col items-center sm:items-start justify-center mx-3 w-full h-full pr-4 mb-5 lg:mb-0 lg:w-2/5">
+      <div class="flex flex-col items-center sm:items-start justify-center mx-3 w-full h-full pr-4 mb-5 lg:mb-0 lg:w-2/5">
         <p class="mb-2 text-base font-medium tracking-tight text-indigo-500 uppercase">Lily was here</p>
-        <h2 class="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 dark:text-white sm:text-5xl sm:leading-none md:text-6xl
-            lg:text-5xl xl:text-6xl">
+        <h2 class="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 dark:text-white sm:text-5xl sm:leading-none
+            md:text-6xl lg:text-5xl xl:text-6xl">
           Testimonials</h2>
-        <p class="text-center sm:text-left my-6 text-lg text-gray-600 dark:text-gray-400">This is the place where readers pay tribute to the website. You can also leave a
-          trace of your visit here!</p>
+        <p class="text-center sm:text-left my-6 text-lg text-gray-600 dark:text-gray-400">This is the place where readers pay
+          tribute to the website. You can also leave a trace of your visit here!</p>
         <button
           @click="showInput = true"
           class="flex items-center justify-center px-8 py-3 text-base font-medium leading-6 text-white transition duration-150
@@ -17,12 +19,10 @@
           Write a testimonial</button>
         {% include '../partials/testimonial-modal.njk' %}
       </div>
-      <div
-        class="w-full lg:w-3/5 h-96 overflow-y-scroll no-scrollbar px-5"
-        x-data="{ items: [] }"
-        x-init="items = (await (await fetch('/api/testimonials-select')).json()).data">
+      <div class="w-full lg:w-3/5 h-96 overflow-y-scroll no-scrollbar px-5">
         {% for testimonial in testimonials.testimonials %}
-          <blockquote class="flex flex-col sm:flex-row items-center justify-between w-full col-span-1 p-6 my-2 mx-2 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+          <blockquote class="flex flex-col sm:flex-row items-center justify-between w-full col-span-1 p-6 my-2 mx-2 bg-white dark:bg-gray-800
+              rounded-lg shadow-md">
             <div class="flex flex-col pr-8">
               <div class="relative pl-12">
                 <svg
@@ -44,7 +44,8 @@
           </blockquote>
         {% endfor %}
         <template x-for="item in items">
-          <blockquote class="flex flex-col sm:flex-row items-center justify-between w-full col-span-1 p-6 my-2 mx-2 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+          <blockquote class="flex flex-col sm:flex-row items-center justify-between w-full col-span-1 p-6 my-2 mx-2 bg-white dark:bg-gray-800
+              rounded-lg shadow-md">
             <div class="flex flex-col pr-8">
               <div class="relative pl-12">
                 <svg
