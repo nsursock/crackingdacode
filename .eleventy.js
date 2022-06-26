@@ -82,7 +82,7 @@ module.exports = (config) => {
           username: 'admin',
           password: statPwd,
         }),
-        agent: httpsAgent,
+        // agent: httpsAgent,
       }
     )
     token = (await token.json()).token
@@ -272,7 +272,7 @@ module.exports = (config) => {
         headers: {
           Authorization: `Bearer ${token}`,
         },
-        agent: httpsAgent,
+        // agent: httpsAgent,
       }
     )
     let json = await data.json()
