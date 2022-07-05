@@ -1,7 +1,7 @@
 <style>
-    [x-cloak] {
-        display: none;
-    }
+  [x-cloak] {
+    display: none;
+  }
 </style>
 <!-- This example requires Tailwind CSS v2.0+ -->
 <div
@@ -111,156 +111,153 @@
                                         <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-800">
                                             <template x-for="item in items">
                                                 <li class="py-4">
-                                                    <div
-                                                        class="flex space-x-3">
+                                                    <div class="flex space-x-3">
                                                         {# <img
-                                                                                                                    class="h-6 w-6 rounded-full"
-                                                                                                                    src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
-                                                                                                                    alt=""> #}
-                                                        <div class="flex-1 space-y-1">
-                                                            <div class="flex flex-col sm:flex-row items-center justify-between">
-                                                                <h3 class="text-sm font-medium dark:text-white">
-                                                                    <span x-text="item.author.name"></span>
-                                                                </h3>
-                                                                <p class="text-sm text-gray-500">
-                                                                    <span x-text="new Date(item.created_at).toLocaleString()"></span>
-                                                                    {# <span x-text="formatDate(item.created_at, 'MMM dd, yyyy') + ' at ' + formatDate(item.created_at, 'kk:mm')"></span> #}
+                                                            class="h-6 w-6 rounded-full"
+                                                            src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
+                                                            alt=""> #}
+                                                            <div class="flex-1 space-y-1">
+                                                                <div class="flex flex-col sm:flex-row items-center justify-between">
+                                                                    <h3 class="text-sm font-medium dark:text-white">
+                                                                        <span x-text="item.author.name"></span>
+                                                                    </h3>
+                                                                    <p class="text-sm text-gray-500">
+                                                                        <span x-text="new Date(item.created_at).toLocaleString()"></span>
+                                                                        {# <span x-text="formatDate(item.created_at, 'MMM dd, yyyy') + ' at ' + formatDate(item.created_at, 'kk:mm')"></span> #}
+                                                                    </p>
+                                                                </div>
+                                                                <p class="text-sm text-gray-500 text-justify">
+                                                                    <span x-text="item.content"></span>
                                                                 </p>
                                                             </div>
-                                                            <p class="text-sm text-gray-500 text-justify">
-                                                                <span x-text="item.content"></span>
-                                                            </p>
                                                         </div>
-                                                    </div>
-                                                </li>
-                                            </template>
-                                            <!-- More items... -->
-                                        </ul>
-                                    </div>
-                                </template>
-                                <!-- /End replace -->
-                            </div>
-                        </div>
-                        <div class="px-4 py-4">
-                            {# <div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Sign in with</p>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="my-3 flex justify-around space-x-4"></div>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div> #}
-                            <!-- This example requires Tailwind CSS v2.0+ This example requires some changes to your config: ``` //
-                            tailwind.config.js module.exports = {
-                                // ...
-                                plugins: [
-                                  // ...
-                                  require('@tailwindcss/forms'),
-                                ],
-                            } ``` -->
-                                <div class=""> <label for="comment" class="block text-sm font-medium text-gray-700 dark:text-gray-400">
-                                    Add your comment</label>
-                                <div class="mt-1">
-                                    <textarea
-                                        x-model="comment"
-                                        :rows="!$store.auth.user ? 1 : 4"
-                                        name="comment"
-                                        id="comment"
-                                        class="dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 shadow-sm focus:ring-indigo-500 focus:border-indigo-500
-                                            block w-full sm:text-sm border-gray-300 rounded-md"></textarea>
-                                    <p class=" mt-2 text-sm text-gray-500 dark:text-gray-200 ">
-                                        <template x-if="!$store.auth.user">
-                                            <span>You must authenticate before posting</span>
-                                        </template>
-                                        <template x-if="$store.auth.user">
-                                            <span x-text="'Logged in as ' + $store.auth.user.name"></span>
-                                        </template>
-                                    </p>
+                                                    </li>
+                                                </template>
+                                                <!-- More items... -->
+                                            </ul>
+                                        </div>
+                                    </template>
+                                    <!-- /End replace -->
                                 </div>
                             </div>
-                            <div class="flex flex-shrink-0 justify-end py-4">
-                                <template x-if="$store.auth.user">
-                                    <button
-                                        @click="localStorage.removeItem('crdacode_token'); $store.auth.user = null"
-                                        type="button"
-                                        class="ml-4 rounded-md border border-gray-300 bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 py-2 px-4
-                                            text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500
-                                            focus:ring-offset-2">
-                                        Log Out</button>
-                                </template>
-                                <template x-if="!$store.auth.user">
-                                    <div>
+                            <div class="px-4 py-4">
+                                {# <div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <p class="text-sm font-medium text-gray-700 dark:text-gray-300">Sign in with</p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="my-3 flex justify-around space-x-4"></div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </div> #}
+                                <!-- This example requires Tailwind CSS v2.0+ This example requires some changes to your config: ``` //
+                                tailwind.config.js module.exports = {
+                                    // ...
+                                    plugins: [
+                                      // ...
+                                      require('@tailwindcss/forms'),
+                                    ],
+                                } ``` -->
+                                    <div class=""> <label for="comment" class="block text-sm font-medium text-gray-700 dark:text-gray-400">
+                                        Add your comment</label>
+                                    <div class="mt-1">
+                                        <textarea
+                                            x-model="comment"
+                                            :rows="!$store.auth.user ? 1 : 4"
+                                            name="comment"
+                                            id="comment"
+                                            class="dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 shadow-sm focus:ring-indigo-500 focus:border-indigo-500
+                                                block w-full sm:text-sm border-gray-300 rounded-md"></textarea>
+                                        <p class=" mt-2 text-sm text-gray-500 dark:text-gray-200 ">
+                                            <template x-if="!$store.auth.user">
+                                                <span>You must authenticate before posting</span>
+                                            </template>
+                                            <template x-if="$store.auth.user">
+                                                <span x-text="'Logged in as ' + $store.auth.user.name"></span>
+                                            </template>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-shrink-0 justify-end py-4">
+                                    <template x-if="$store.auth.user">
                                         <button
-                                            @click="showAuthSignupModal = true"
-                                            type="button"
-                                            class="rounded-md border border-gray-300 bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 py-2 px-4
-                                                text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500
-                                                focus:ring-offset-2">
-                                            Sign Up</button>
-                                        <button
-                                            @click="showAuthLoginModal = true"
+                                            @click="localStorage.removeItem('crdacode_token'); $store.auth.user = null"
                                             type="button"
                                             class="ml-4 rounded-md border border-gray-300 bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 py-2 px-4
                                                 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500
                                                 focus:ring-offset-2">
-                                            Log In</button>
-                                    </div>
-                                </template>
-                                <button
-                                    @click="submit"
-                                    type="submit"
-                                    :disabled="!$store.auth.user"
-                                    :class="{ 'opacity-50': !$store.auth.user }"
-                                    class="ml-4 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium
-                                        text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
-                                    Submit</button>
+                                            Log Out</button>
+                                    </template>
+                                    <template x-if="!$store.auth.user">
+                                        <div>
+                                            <button
+                                                @click="showAuthSignupModal = true"
+                                                type="button"
+                                                class="rounded-md border border-gray-300 bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 py-2 px-4
+                                                    text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500
+                                                    focus:ring-offset-2">
+                                                Sign Up</button>
+                                            <button
+                                                @click="showAuthLoginModal = true"
+                                                type="button"
+                                                class="ml-4 rounded-md border border-gray-300 bg-white dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 py-2 px-4
+                                                    text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500
+                                                    focus:ring-offset-2">
+                                                Log In</button>
+                                        </div>
+                                    </template>
+                                    <button
+                                        @click="submit"
+                                        type="submit"
+                                        :disabled="!$store.auth.user"
+                                        :class="{ 'opacity-50': !$store.auth.user }"
+                                        class="ml-4 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium
+                                            text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                                        Submit</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        {% include './auth-login-modal.njk' %}
+        {% include './auth-signup-modal.njk' %}
     </div>
-    {% include './auth-login-modal.njk' %}
-    {% include './auth-signup-modal.njk' %}
-</div>
-<script>
-    {
-        # import {format} from 'date-fns' #
-    }
-    function dataComments() {
-        return {
-            showAuthLoginModal: false,
-            showAuthSignupModal: false,
-            email: '',
-            name: '',
-            password: '',
-            comment: '',
-            submit() {
-                var data = {
-                    author: Alpine
-                        .store('auth')
-                        .user
-                        .email,
-                    article: window.location.pathname,
-                    content: this.comment
+    <script>
+        {# import {format} from 'date-fns' #}
+        function dataComments() {
+            return {
+                showAuthLoginModal: false,
+                showAuthSignupModal: false,
+                email: '',
+                name: '',
+                password: '',
+                comment: '',
+                submit() {
+                    var data = {
+                        author: Alpine
+                            .store('auth')
+                            .user
+                            .email,
+                        article: window.location.pathname,
+                        content: this.comment
+                    }
+                    fetch('/api/comments-add', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    })
+                        .then((response) => response.json())
+                        .then((message) => {
+                            if (!message.success) 
+                                this.error = message.error
+                             else {
+                                this.showCommentsPanel = false
+                            }
+                        })
+                        .catch((error) => {
+                            console.log(error)
+                            this.error = error
+                        })
                 }
-                fetch('/api/comments-add', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                })
-                    .then((response) => response.json())
-                    .then((message) => {
-                        if (!message.success) 
-                            this.error = message.error
-                         else {
-                            this.showCommentsPanel = false
-                        }
-                    })
-                    .catch((error) => {
-                        console.log(error)
-                        this.error = error
-                    })
             }
         }
-    }
-</script>
+    </script>
