@@ -1,11 +1,14 @@
+import { createClient } from '@supabase/supabase-js'
 export default () => ({
   showCta: false,
+  showTests: false,
   showPopup: false,
   landingPageOffset: 400,
   lastScrollTop: window.pageYOffset || document.documentElement.scrollTop,
   isScrollingUp: false,
   circumference: 30 * 2 * Math.PI,
   percent: 0,
+  showCommentsPanel: true,
 
   isMobile() {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -13,31 +16,34 @@ export default () => ({
     )
   },
 
-  init() {
-    // document.addEventListener('DOMContentLoaded', () => {
-      // desktop
-      // document.addEventListener('mouseout', (event) => {
-      //   if (!event.toElement && !event.relatedTarget) {
-      //     setTimeout(() => {
-      //       this.showPopup = true
-      //     }, 1000)
-      //   }
-      // })
+  async init() {
+    // const secrets = await (await fetch('/api/socials')).json()
+    // this.supabase = createClient(secrets.url, secrets.key)
 
-      // // mobile
-      // window.addEventListener(
-      //   'scroll',
-      //   (event) => {
-      //     if (!event.toElement && !event.relatedTarget) {
-      //       if (this.isMobile() && window.scrollY === 0) {
-      //         setTimeout(() => {
-      //           this.showPopup = true
-      //         }, 1000)
-      //       }
-      //     }
-      //   },
-      //   { passive: true }
-      // )
+    // document.addEventListener('DOMContentLoaded', () => {
+    // desktop
+    // document.addEventListener('mouseout', (event) => {
+    //   if (!event.toElement && !event.relatedTarget) {
+    //     setTimeout(() => {
+    //       this.showPopup = true
+    //     }, 1000)
+    //   }
+    // })
+
+    // // mobile
+    // window.addEventListener(
+    //   'scroll',
+    //   (event) => {
+    //     if (!event.toElement && !event.relatedTarget) {
+    //       if (this.isMobile() && window.scrollY === 0) {
+    //         setTimeout(() => {
+    //           this.showPopup = true
+    //         }, 1000)
+    //       }
+    //     }
+    //   },
+    //   { passive: true }
+    // )
     // })
 
     window.addEventListener(

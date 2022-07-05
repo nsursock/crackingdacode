@@ -1,7 +1,7 @@
 import Alpine from 'alpinejs'
 import global from './global.js'
-import form from "./form.js"
-import supa from './supa.js'
+import form from './form.js'
+import testimonials from './testimonials.js'
 // import 'htmx.org'
 import 'lazysizes'
 // import intersect from '@alpinejs/intersect'
@@ -11,7 +11,7 @@ import 'lazysizes'
 
 Alpine.data('global', global)
 Alpine.data('form', form)
-Alpine.data('supa', supa)
+Alpine.data('testimonials', testimonials)
 
 Alpine.directive(
   'intersect',
@@ -52,17 +52,24 @@ window.addEventListener('DOMContentLoaded', () => {
 // })
 
 // Basic Store Example in Alpine.
-// window.addEventListener('alpine:initializing', () => {
-//   Alpine.store('nav', {
-//     isOpen: false,
-//     close() {
-//       return (this.isOpen = false)
-//     },
-//     open() {
-//       return (this.isOpen = true)
-//     },
-//     toggle() {
-//       return (this.isOpen = !this.isOpen)
-//     },
-//   })
-// })
+window.addEventListener('alpine:initializing', () => {
+  Alpine.store('auth', {
+    user: null,
+    setUser(user) {
+      this.user = user
+    },
+    init() {
+      const token = localStorage.getItem('crdacode_token')
+      if (token) {
+        fetch('/api/auth-me-query', {
+          method: 'POST',
+          body: token,
+        })
+          .then((response) => response.json())
+          .then((message) => {
+            if (message.success) this.user = message.user
+          })
+      }
+    },
+  })
+})
