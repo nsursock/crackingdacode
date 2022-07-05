@@ -6,12 +6,13 @@ export default async function handler(request, response) {
       process.env.SUPABASE_URL,
       process.env.SUPABASE_KEY
     )
-    const storageName = process.env.NODE_ENV.startsWith('dev')
-      ? 'testimonials.dev'
-      : 'testimonials'
+    const storageName = 'testimonials'
+    // process.env.NODE_ENV.startsWith('dev')
+    //   ? 'testimonials.dev'
+    //   : 'testimonials'
     const data = (await supabase.from(storageName).select()).data
     response.status(200).json({ data })
   } catch (error) {
-    response.status(500).json({ message: 'Failed to fetch testimonials.' })
+    response.status(400).json({ message: 'Failed to fetch testimonials.' })
   }
 }

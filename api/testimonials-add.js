@@ -9,9 +9,10 @@ async function handler(req, res) {
     process.env.SUPABASE_KEY
   )
   
-  const storageName = process.env.NODE_ENV.startsWith('dev')
-    ? 'testimonials.dev'
-    : 'testimonials'
+  const storageName = 'testimonials'
+  // process.env.NODE_ENV.startsWith('dev')
+  //   ? 'testimonials.dev'
+  //   : 'testimonials'
 
   const uploadFile = async () => {
     // eslint-disable-next-line

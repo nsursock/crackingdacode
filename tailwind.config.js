@@ -30,8 +30,14 @@ module.exports = {
         swing: 'swing 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
         jello: 'jello 1s ease 0s 1 normal forwards',
         random: 'random 2s ease 0s 1 normal forwards',
+        show: 'show 0.7s',
       },
+
       keyframes: {
+        show: {
+          '0%, 49.99%': { opacity: 0, 'z-index': 10 },
+          '50%, 100%': { opacity: 1, 'z-index': 50 },
+        },
         random: {
           '0%, 100%': {
             transform: 'scale3d(1, 1, 1)',

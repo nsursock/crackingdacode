@@ -1,9 +1,18 @@
-<section class="flex items-center justify-center py-16 min-w-screen">
+<section
+  x-intersect.once="showTests = true; $el.classList.remove('md:h-screen')"
+  class="flex items-center justify-center py-16 min-w-screen md:h-screen">
   <div
+    x-show="showTests"
+    x-transition:enter="transition ease-in-out duration-500 transform"
+    x-transition:enter-start="opacity-0 scale-x-0 -translate-x-1/2"
+    x-transition:enter-end="opacity-100 scale-x-100 translate-x-0"
+    x-transition:leave="transition ease-in-out duration-500 transform"
+    x-transition:leave-start="opacity-100 scale-x-100 translate-x-0"
+    x-transition:leave-end="opacity-0 scale-x-0 -translate-x-1/2"
     class="max-w-6xl  mx-auto md:px-16 xl:px-10"
     x-data="{ showInput: false, isFetching: false, items: [] }"
     x-init="items = (await (await fetch('/api/testimonials-select')).json()).data">
-    <div class="flex flex-col items-center lg:flex-row" x-data="supa">
+    <div class="flex flex-col items-center lg:flex-row" x-data="testimonials">
       <div class="flex flex-col items-center sm:items-start justify-center mx-3 w-full h-full pr-4 mb-5 lg:mb-0 lg:w-2/5">
         <p class="mb-2 text-base font-medium tracking-tight text-indigo-500 uppercase">Lily was here</p>
         <h2 class="text-4xl font-extrabold leading-10 tracking-tight text-gray-900 dark:text-white sm:text-5xl sm:leading-none
