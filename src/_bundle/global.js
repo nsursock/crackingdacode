@@ -9,17 +9,19 @@ export default () => ({
   circumference: 30 * 2 * Math.PI,
   percent: 0,
   showCommentsPanel: true,
+  showAuthLoginModal: false,
+  showAuthSignupModal: false,
+  email: '',
+  name: '',
+  password: '',
 
-  isMobile() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    )
-  },
+  // isMobile() {
+  //   return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+  //     navigator.userAgent
+  //   )
+  // },
 
   async init() {
-    // const secrets = await (await fetch('/api/socials')).json()
-    // this.supabase = createClient(secrets.url, secrets.key)
-
     // document.addEventListener('DOMContentLoaded', () => {
     // desktop
     // document.addEventListener('mouseout', (event) => {

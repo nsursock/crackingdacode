@@ -198,6 +198,7 @@
               this.error = message.error
             else {
               this.showAuthSignupModal = false
+              this.showCommentsPanel = true; 
               localStorage.setItem('crdacode_token', message.user.token);
               Alpine.store('auth').setUser(message.user)
               }
