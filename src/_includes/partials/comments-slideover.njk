@@ -42,6 +42,7 @@
                     From: "translate-x-0"
                     To: "translate-x-full" -->
                 <div
+                x-data="{ count: 0 }"
                     @click.outside="showCommentsPanel = !showCommentsPanel"
                     x-show="percent == 100 && showCommentsPanel"
                     x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700 "
@@ -55,7 +56,7 @@
                         <div class="flex min-h-0 flex-1 flex-col overflow-y-scroll py-6">
                             <div class="px-4 sm:px-6">
                                 <div class="flex items-start justify-between">
-                                    <h2 class="text-lg font-medium text-gray-900 dark:text-gray-400" id="slide-over-title">Comments</h2>
+                                    <h2 class="text-lg font-medium text-gray-900 dark:text-gray-400" id="slide-over-title">Comments (<span x-text="count"></span>)</h2>
                                     <div class="ml-3 flex h-7 items-center">
                                         <button
                                             @click="showCommentsPanel = !showCommentsPanel"
@@ -82,7 +83,7 @@
                                 class="relative mt-6 flex-1 px-4 sm:px-6"
                                 x-data="{ items: [] }"
                                 x-init="items = (await (await fetch('/api/comments-select', { method: 'POST', body: window.location.pathname
-                                    })).json()).data">
+                                    })).json()).data; count = items.length">
                                 <!-- Replace with your content -->
                                 <template
                                     x-if="items.length === 0">
