@@ -6,7 +6,7 @@ author: Nicolas Sursock
 date: 2018-06-18T23:53:09Z
 location: Beirut, Lebanon
 featured: https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
-tags: [Economy, Humor, Life, Basic Income, blog]
+tags: [Economy, Humor, Life, Basic Income, Wellness, blog]
 layout: layouts/post.njk
 track: Some Days Are Better Than Others
 versions:

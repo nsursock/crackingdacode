@@ -6,7 +6,7 @@ author: Nicolas Sursock
 date: 2021-08-20T02:05:46Z
 location: Beirut, Lebanon
 featured: https://images.unsplash.com/photo-1588011930968-eadac80e6a5a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
-tags: [Humor, Society, Equality, World, blog]
+tags: [Humor, Society, Equality, World, Health, blog]
 layout: layouts/post.njk
 track: All Along The Watchtower
 versions:
