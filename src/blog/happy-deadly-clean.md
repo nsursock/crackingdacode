@@ -5,7 +5,7 @@ description: One friendly face is all you need to see. In a chaotic world where 
 author: Nicolas Sursock
 date: 2020-01-23T23:46:34Z
 location: Paris, France
-featured: https://images.unsplash.com/photo-1541438172900-795bdb8165b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
+featured: https://images.unsplash.com/photo-1621063573999-5af1e96634f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
 tags: [Life, Health, Humor, Wellness, Psychology, blog]
 layout: layouts/post.njk
 track: Ultra Violet (Light My Way)
