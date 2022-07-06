@@ -37,11 +37,24 @@ Alpine.directive(
   }
 )
 
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date()
+  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000)
+  let expires = 'expires=' + d.toUTCString()
+  document.cookie = cname + '=' + cvalue + ';' + expires// + ';path=/'
+}
+
 window.Alpine = Alpine
 
 // Start Alpine when the page is ready.
 window.addEventListener('DOMContentLoaded', () => {
   // Alpine.plugin(intersect)
+
+  if (window.location.search.includes('InternalTraffic')) {
+    // console.log(window.location.search)
+    setCookie('InternalTraffic', 'true', 1000)
+  }
+
   Alpine.start()
 })
 
