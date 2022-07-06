@@ -6,7 +6,7 @@ author: Nicolas Sursock
 date: 2019-12-18T11:50:33Z
 location: Beirut, Lebanon
 featured: https://images.unsplash.com/photo-1613679074451-9ddcc1103cc8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
-tags: [Philosophy, Education, World, blog]
+tags: [Philosophy, Education, World, Health, Wellness, blog]
 layout: layouts/post.njk
 affiliate_link: 
 track: Strange Brew

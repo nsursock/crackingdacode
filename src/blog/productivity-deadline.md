@@ -6,7 +6,7 @@ author: Nicolas Sursock
 date: 2018-07-02T00:15:34Z
 location: Beirut, Lebanon
 featured: https://images.unsplash.com/photo-1633265486501-0cf524a07213?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
-tags: [Productivity, Business, Future, Psychology, blog]
+tags: [Productivity, Business, Future, Psychology, Creativity, blog]
 layout: layouts/post.njk
 track: Naive Song
 versions:

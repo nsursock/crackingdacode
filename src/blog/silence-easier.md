@@ -5,7 +5,7 @@ description: An observer is never neutral. There could be several reasons to rem
 author: Nicolas Sursock
 date: 2020-08-31T16:39:21Z
 featured: https://images.unsplash.com/photo-1543324406-0e40e0b7e44b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
-tags: [Relationships, Life, Wellness, Equality, blog]
+tags: [Relationships, Life, Wellness, Equality, Philosophy, blog]
 layout: layouts/post.njk
 track: Enjoy The Silence
 versions:
