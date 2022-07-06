@@ -77,7 +77,7 @@
   </div>
   {% if env.environment == "production" %}
     {# <template x-if="!document.cookie.includes('InternalTraffic') && window.location.hostname !== 'localhost'"> #}
-    <template x-if="$store.auth.user && $store.auth.user.email !== 'nicolas.sursock@gmail.com'">
+    <template x-if="!$store.auth.user || $store.auth.user && $store.auth.user.email !== 'nicolas.sursock@gmail.com'">
       <div>
         {# analytics code #}
         <script
