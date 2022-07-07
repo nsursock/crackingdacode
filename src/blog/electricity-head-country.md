@@ -34,6 +34,10 @@ I'm having troubles with my intimate life, and that's why I'm over-analyzing. I 
 
 ## When Will I Be Free From The Spell?
 
+<aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="wand on top of bowl" data-src="https://images.unsplash.com/photo-1551269901-5c5e14c25df7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 Someone put a spell on me because they wanted to make her yours. Who needs actions when you got words? I watched an interview of someone two days ago, mentioning you use the word spelling.
 
 Thunder only happens when it's raining. We all know the song. But what they didn't tell you is that hurricanes happen when low pressure meets high pressure.
@@ -46,6 +50,10 @@ I found a deadline for my heartache: November 22.
 
 ## Who's On The Road, And What Will That Person Do?
 
+<aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="empty blacktop road" data-src="https://images.unsplash.com/photo-1531511604766-a47cf2c908c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 When your brain contains so much electricity, you'd better grab an umbrella and head for your favorite pub, bar, or coffee shop. You might need that human touch.
 
 I'm on the road again, and I got nobody to call my special friend. It wasn't always that way. See, the goal of existence is to find coherence. When you're ill, try to wonder if everything is limpid in your life.
@@ -56,6 +64,10 @@ I got sick and tired of state terrorism. When security forces abuse their power,
 
 ## What If It Only Was An Adaptation Problem?
 
+<aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="dinosaurs running on brown field" data-src="https://images.unsplash.com/photo-1583307359900-dbefeb18e3cc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 Yes, now you know what my heartache is: state terrorism and jumping jack flash. I've got PTSD and flashbacks of killers on the road because they never had a heart of their own. I know the president of France wanted his secret service to be without pity.
 
 Recently I learned that the universe is cruel with fraud. I also learned that weak people are brutal. If only fools are kind, then it might be wise to be inhuman. I don't share that opinion.
@@ -63,6 +75,10 @@ Recently I learned that the universe is cruel with fraud. I also learned that we
 Good things come to those who wait. The turn of a friendly card: that's all we ask in Lebanon. And let's not forget we're part of something bigger called Earth. Are we all children of the sun (even in Paris bathed by an oceanic degraded climate)?
 
 ## Are There Things You Can Forgo?
+
+<aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="pink and yellow neon sign" data-src="https://images.unsplash.com/photo-1543332164-6e82f355badc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
 
 All in all, I think there's one thing important down here for us humans: solidarity. Life is an extreme experience, and without solidarity, we won't go very far. And that may be why my mind is electric at the moment.
 
