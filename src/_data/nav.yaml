@@ -4,7 +4,7 @@ menus:
     route: /
     icon: 'home'
   - name: About
-    route: /webdev
+    route: /about
     icon: 'annotation'
     submenus:
       - name: Biography
