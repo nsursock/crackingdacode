@@ -5,7 +5,7 @@ description: Reality is when you start to experience a headache. Unfortunately, 
 author: Nicolas Sursock
 date: 2022-05-18T17:36:00Z
 location: Paris, France
-featured: https://images.unsplash.com/photo-1544244688-4165905762c1?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
+featured: https://images.unsplash.com/photo-1495996146452-1737b3678c78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
 tags: [Society, Education, Humor, Wellness, Culture, blog]
 layout: layouts/post.njk
 track: Virtual Insanity
