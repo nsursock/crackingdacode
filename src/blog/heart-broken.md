@@ -24,6 +24,10 @@ It's like a jungle sometimes. That message was clearly understood on YouTube wit
 
 ## Who Can It Be Who Broke Your Heart?
 
+<aside class="  md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="silhouette of man illustration" data-src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 That's a question I know it's making you burn. The person who broke your heart tends to aggravate and complicate your condition. Instead of calming things, they will engage in dangerous behaviors.
 
 The person who broke your heart is someone close. Someone trusted in your circle. They say a circle is only as strong as the weakest link. It's not that simple but one thing is sure though: you might imitate someone who broke your heart.
@@ -34,6 +38,10 @@ They say that you are the reflection of the 5 people you spend the most time wit
 
 ## Does The Heart Have Reasons The Reason Doesn't Know?
 
+<aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="red heart wall décor" data-src="https://images.unsplash.com/photo-1571172964276-91faaa704e1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 The heart tries to speak sometimes but one thing I noticed is that the heart isn't reliable. I know oriental medicine thinks the heart is the most important vital organ. But today I'm proud to announce the heart is too vague to be trusted.
 
 And that may be why a heart can be broken. If you want to mend it and can't afford to buy a new one, you must try to be precise. For example, today I'm writing in a state of total confusion.
@@ -43,6 +51,10 @@ I spent too much time with an undercover agent for the blues.
 I never lost my head even when I was kind of dead. Thanks to music but also thanks to my humanity. What happened to humanity exactly? It seems we're stuck in madness aka mutually assured destruction.
 
 ## Is There One Thing Not To Do In Case Of A Broken Heart?
+
+<aside class="  md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="white arrow on bricked pavement" data-src="https://images.unsplash.com/photo-1567864137076-68340c0ab735?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
 
 That's a good question: I guess there must be things not to do in case of a broken heart. In that case, mother nature has let you down — because you don't know right from wrong anymore.
 
@@ -57,6 +69,10 @@ I guess the only thing that matters is information. Of course, people can manipu
 Mediocrity is dangerous. Having a quality of life is important like 2 months of holidays in summer or being able to sleep comfortably.
 
 ## Does A Broken Heart Happen When Quality Is Bad?
+
+<aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="yellow stars rating" data-src="https://images.unsplash.com/photo-1633613286991-611fe299c4be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
 
 All in all, a broken heart might be about quality. Ask yourself if mediocrity isn't responsible for the pain you experience. Ask yourself if moderation isn't responsible for that broken heart.
 
