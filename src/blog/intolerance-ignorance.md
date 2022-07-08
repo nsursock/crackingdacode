@@ -29,6 +29,10 @@ He is the youngest of five siblings. Zidane is a Muslim of Algerian Kabyle desce
 
 ## The Epic Confession That Will Make You Wise
 
+<aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="yellow tulips in clear glass vase" data-src="https://images.unsplash.com/photo-1582592910328-6ed84d453cbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 It's an interesting thesis that intolerance is the daughter of ignorance, and I guess I have a strong case to make. When I was between 22 and 25, I had 2 major identity crisis to handle.
 
 The first one was about a friend who had a military chief on his back. He had dated the daughter of the guy, it ended badly with a mix of love and hate, and the father decided to abuse his power. At the time, I didn't know who my friend had on his back, and I almost decided to let him out of my life.
@@ -39,6 +43,10 @@ Today I discovered 4 years ago the responsible for my heartache was this militar
 
 ## Can Intolerance Actually Kill Any Profit?
 
+<aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="candlestick chart" data-src="https://images.unsplash.com/photo-1634542984003-e0fb8e200e91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 I guess intolerance can kill what's inside of you. But maybe it's linked to an atmosphere and pressure or a memory from your lonesome past.
 
 As Jimi Hendrix once said, "I try to get up every day." But you can become intolerant to exercise when you spent your life dealing with pressure. Those with a lot of enemies are at risk because the importance of rivalry and vengeance is enormous.
@@ -47,6 +55,10 @@ But the most crucial thing about intolerance is that it might mess up your brain
 
 ## Is It Important To Know Yourself Quickly?
 
+<aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="matrix movie still photo" data-src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 When I was a child, the days were long sometimes. But I always managed to be interested in something, be it ski jumping or music. I decided that I would wait until I'm a little older to have a definite opinion on myself.
 
 Lebanon is a small country like an industry: it's a small world. Needless to say, the planet is getting smaller every day. And Lebanon might have an edge in the future in that case.
@@ -54,6 +66,10 @@ Lebanon is a small country like an industry: it's a small world. Needless to say
 I know myself even though there are some things I hate about me like a few demons and desires that prevent me from doing some basic stuff. But as soon as you accept yourself, the more you become tolerant to what life is all about: worthy of investigation.
 
 ## If You Get Out Of Boredom You Will Be Tolerant
+
+<aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="woman with head resting on hand" data-src="https://images.unsplash.com/photo-1508440767412-59ce0b206bbc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
 
 Boredom is a strange word. I think another definition could be vague melancholia. And we all know we need to be precise. At the moment, something is messing up my head: a drug deemed an atomic bomb to treat acne vulgaris. They say that was once chemotherapy that was recycled.
 
