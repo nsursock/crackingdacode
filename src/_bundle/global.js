@@ -7,7 +7,12 @@ export default () => ({
   isScrollingUp: false,
   circumference: 30 * 2 * Math.PI,
   percent: 0,
-  showCommentsPanel: this.isMobile() ? true : false,
+  showCommentsPanel:
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+      ? true
+      : false,
   showAuthLoginModal: false,
   showAuthSignupModal: false,
   email: '',
