@@ -273,22 +273,7 @@ eleventyComputed:
         and get a list of all posts on the matter. Or you can read the latest published posts, fresh from the oven!
       </p>
     </div>
-    {# {%- if env.environment == 'production' -%} #}
-    <div x-data="{ isTopList: true }" class="mt-10">
-      <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-white">Most Viewed Posts</h3>
-      {%- set postslist = collections.blog | top -%}
-      <ol
-        x-data="{ showArticle: false }"
-        class="md:h-screen mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
-        x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')">
-        {%- for post in postslist -%}
-          <div x-data="{ type: '#{{ loop.index }}' }">
-            {%- include 'partials/postcard.njk' -%}
-          </div>
-        {%- endfor -%}
-      </ol>
-    </div>
-    {# {%- endif -%} #}
+
     {%- include './_includes/tagslist.njk' -%}
     <div x-data="{ isTopList: false }" class="mt-10">
       <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-white">Latest Posts</h3>
@@ -374,6 +359,22 @@ eleventyComputed:
         </div>
       </nav>
     </div>
+        {# {%- if env.environment == 'production' -%} #}
+    <div x-data="{ isTopList: true }" class="mt-10">
+      <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-white">Most Viewed Posts</h3>
+      {%- set postslist = collections.blog | top -%}
+      <ol
+        x-data="{ showArticle: false }"
+        class="md:h-screen mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+        x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')">
+        {%- for post in postslist -%}
+          <div x-data="{ type: '#{{ loop.index }}' }">
+            {%- include 'partials/postcard.njk' -%}
+          </div>
+        {%- endfor -%}
+      </ol>
+    </div>
+    {# {%- endif -%} #}
     {% include 'sections/faq.njk' %}
     {# {% if env.environment != "production" %} #}
     {% include 'sections/testimonials.njk' %}
