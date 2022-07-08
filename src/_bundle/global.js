@@ -1,4 +1,3 @@
-import { createClient } from '@supabase/supabase-js'
 export default () => ({
   showCta: false,
   showTests: false,
@@ -15,11 +14,11 @@ export default () => ({
   name: '',
   password: '',
 
-  // isMobile() {
-  //   return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-  //     navigator.userAgent
-  //   )
-  // },
+  isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    )
+  },
 
   async init() {
     // document.addEventListener('DOMContentLoaded', () => {
