@@ -29,6 +29,10 @@ If you keep your game uptight but don't take your secrets underground, then you 
 
 ## When It Comes To Cruel Violence, Talking Is The Cure?
 
+<aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="close up of cutout decors" data-src="https://images.unsplash.com/photo-1461958508236-9a742665a0d5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 Yes, dear reader: if you wonder what to do after being the victim of a strange affair (like when sunny gets blue), I will help you get rid of the cruelty. Talking and words are the cure, and that's why I'm writing a blog.
 
 I was surprised most of the time when I'm songwriting: my music is strictly instrumental. I can't find the words, and they all look meaningless.
@@ -38,6 +42,10 @@ When I'm writing this blog, this is an awful pain, and I decided to write withou
 I was shocked when U2 wrote that women don't men. Suddenly, I remembered James Brown: it's a man's world, but it would be nothing without a woman's arms.
 
 ## Can Something Positive Come From Violence?
+
+<aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="person holding smiley paper" data-src="https://images.unsplash.com/photo-1516302752625-fcc3c50ae61f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
 
 Sting used to sing that we forget how fragile we are. He also sang that this final act was meant to explain that violence is useless. Violence is about destruction. Building something might not be more simple.
 
@@ -51,6 +59,10 @@ With violence, you want to create a comic or grotesque effect. This definition m
 
 ## Is Violence The Perceived Failure Of Civilisation?
 
+<aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="brown concrete building near green trees" data-src="https://images.unsplash.com/photo-1586818079715-23345e13f2c8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 Lately, I read that crime hasn't always existed. It's a rather new thing that appeared maybe 5000 years ago. This fact might mean that the ancients knew about the mishaps and failure of life. And they were correctly prepared to face them.
 
 Today my life is a crime every day. Because I couldn't anticipate the future, or maybe I'm a failure at expressing myself. What's convenient about the words is the body. If I don't speak, my body is sending a lot of messages.
@@ -60,6 +72,10 @@ But anyway the subject of this post isn't classy: it tries to understand what vi
 You have one and only one obsession: gotta find a partner...
 
 ## Is The World Violent Because Of A Small Cave?
+
+<aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="sun rays inside cave" data-src="https://images.unsplash.com/photo-1521106581851-da5b6457f674?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
 
 All in all, violence might be the result of a place. It's not even about time and space. It's about a place and a shelter.
 

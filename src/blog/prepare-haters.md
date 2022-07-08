@@ -23,6 +23,11 @@ But the song I chose today is understandable: we have to prepare for war. And th
 When writing a post, I guess you should also prepare for haters. I wrote once a post about post-traumatic stress disorder. I had no comments except a few haters who rated the article 1 out of 5 stars. Then I decided to rewrite the article, but I had no feedback.
 
 ## Do You Think Haters Love You In Some Way?
+
+<aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="woman on man's stomach" data-src="https://images.unsplash.com/photo-1524604889898-0f803deb1664?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 The contrary of love is not hatred; it’s, of course, indifference. But how can you make sure to ignore something or someone? I guess it can happen by mistake when you’re busy.
 
 Sometimes you can think people don’t love you or hate you. But they are busy people trying to manage their time the best way they can. Don’t hate anybody because you will lose a lot of time and energy.
@@ -32,6 +37,11 @@ I know it can be hard sometimes because if you love, then if things go wrong, yo
 Most depressed people don’t perceive the next challenges of their life and identify everything as a burden. But if you can be courageous enough to bet on the bright side of humanity, then you can be rewarded. Granted: pessimism is much more comfortable.
 
 ## What’s The Importance Of Lack Of Rest?
+
+<aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="orange cat sleeping on bed" data-src="https://images.unsplash.com/photo-1541188495357-ad2dc89487f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 Try not to rest every day or every night. During the day, I can’t get any rest because something drives me crazy. 24/7 surveillance is a daunting task, but I guess it can be useful if you can save lives.
 
 New York City is the city that never sleeps, and it’s no wonder they were attacked in 2001. Maybe then the town that will save humanity is New York.
@@ -41,6 +51,11 @@ It’s the most populous city in the United States. With an estimated 2018 popul
 Located at the southern tip of the state of New York, the city is the center of the New York metropolitan area, the largest metropolitan area in the world by urban landmass and one of the world’s most populous megacities, with an estimated 19,979,477 people in its 2018.
 
 ## How Can Things Get Pretty Strange?
+
+<aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="melted building" data-src="https://images.unsplash.com/photo-1521196428899-53b435d58ee2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 A global power city, New York City has been described as the cultural, financial, and media capital of the world. It exerts a significant impact upon commerce, entertainment, research, technology, education, politics, tourism, art, fashion, and sports. Home to the headquarters of the United Nations, New York is an important center for international diplomacy.
 
 The city’s fast pace has inspired the term New York minute.
@@ -50,6 +65,11 @@ I guess things can get pretty strange quickly for one reason: integrity. Integri
 Now it’s evident what the problem is: hypocrisy can sometimes be mistaken with politeness.
 
 ## How Can You Instantly Restore Your Health?
+
+<aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="person giving the thumb up" data-src="https://images.unsplash.com/photo-1603725500773-9c78db8a914a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 All in all, it sounds like a good idea to have a trick to be up and running in no time. After all, you never know who’s looking on: a perfect body with an ideal face.
 
 Someone transformed you into a holy cow, and that’s because you tend to ruminate and have intense emotions. But you get a fever instead of understanding the feeling, which means you acknowledge the intensity but don’t allow the passion to appear.
