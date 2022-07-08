@@ -5,7 +5,7 @@
 </style>
 <!-- This example requires Tailwind CSS v2.0+ -->
 <div
-    x-show="percent == 100 && showCommentsPanel"
+    x-show="isMobile() && percent == 100 && showCommentsPanel || !isMobile() && showCommentsPanel"
     class="relative z-50"
     x-data="dataComments()"
     x-cloak="x-cloak"
@@ -21,7 +21,7 @@
         From: "opacity-100"
         To: "opacity-0" -->
     <div
-        x-show="percent == 100 && showCommentsPanel"
+        x-show="isMobile() && percent == 100 && showCommentsPanel || !isMobile() && showCommentsPanel"
         x-transition:enter="ease-in-out duration-500 "
         x-transition:enter-start="opacity-0 "
         x-transition:enter-end="opacity-100  "
@@ -44,7 +44,7 @@
                 <div
                 x-data="{ count: 0 }"
                     @click.outside="showCommentsPanel = !showCommentsPanel"
-                    x-show="percent == 100 && showCommentsPanel"
+                    x-show="isMobile() && percent == 100 && showCommentsPanel || !isMobile() && showCommentsPanel"
                     x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700 "
                     x-transition:enter-start="translate-x-full "
                     x-transition:enter-end="translate-x-0 "
