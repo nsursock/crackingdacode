@@ -85,8 +85,14 @@
           <template x-for="item in items" :key="item.id">
             <blockquote
               x-show="activeSlide + 11 === item.id"
+              x-transition:enter="transition transform ease-out duration-500 absolute"
+              x-transition:enter-start="opacity-0 -translate-x-full"
+              x-transition:enter-end="opacity-100 translate-x-0"
+              x-transition:leave="transition transform ease-in duration-500 absolute"
+              x-transition:leave-start="opacity-100 translate-x-0"
+              x-transition:leave-end="opacity-0 -translate-x-full"
               class=" p-6 my-2 mx-2 bg-white dark:bg-gray-800
-                              rounded-lg shadow-md">
+                                              rounded-lg shadow-md">
               <div class="flex flex-col">
                 <div class="relative pl-12">
                   <aside class="float-right ml-3">
