@@ -17,6 +17,11 @@ const httpsAgent = new https.Agent({
 })
 
 module.exports = (config) => {
+  config.addFilter('getRandom', function (items) {
+    let selected = items[Math.floor(Math.random() * items.length)]
+    return selected
+  })
+
   config.addFilter('date', function (date, dateFormat) {
     return format(date, dateFormat)
   })
@@ -160,14 +165,14 @@ module.exports = (config) => {
 
     const curr = (json.pageviews.value / json.uniques.value).toFixed(1)
     const prev = (
-      (json.pageviews.value -
-      json.pageviews.change) / (json.uniques.value -
-      json.uniques.change)).toFixed(1)
+      (json.pageviews.value - json.pageviews.change) /
+      (json.uniques.value - json.uniques.change)
+    ).toFixed(1)
     stats.push({
       name: 'Views Per Visitor',
       value: curr,
       prev: prev,
-      change: (( (curr - prev) / prev) * 100).toFixed(),
+      change: (((curr - prev) / prev) * 100).toFixed(),
     })
     return stats
   })

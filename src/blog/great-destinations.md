@@ -23,6 +23,11 @@ Anyway, traveling creates a complex identity.
 Am I a musician or a spy? I have crossed that river as a winner twice. And now, ignorance has taken over, and someone took power back.
 
 ## The Gypsy Was Right With The Prejudice.
+
+<aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="man kneeling down near shore" data-src="https://images.unsplash.com/photo-1473993702977-1706a7f23164?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 I’m so vain I probably think this song is about me. A baby is a fragile human being, and someone gave him 18 years to become adapted to his environment.
 
 Of course, some days are better than others. Sometimes I feel like a bit of a student. Always learning, never knowing: that is the chief complaint.
@@ -34,6 +39,11 @@ Do I have to paint a picture in your mind?
 The definition of a caricature is a picture, description, or imitation of a person in which specific striking characteristics are exaggerated to create a comic or grotesque effect. Do you feel like sometimes looking for your 12-year-old and your mother?
 
 ## We All Had That Dream To Be A Family.
+
+<aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="snow covered ground under starry night" data-src="https://images.unsplash.com/photo-1610963196817-7d1415647029?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 Until you’re 8 years old, life is lovely. You spend time playing with your friends, and parents are still in a sentimental mood.
 
 I remember when we could play football with random strangers in the street. Suddenly, you could become the hero of the day. They never forget you until somebody new comes around.
@@ -44,6 +54,11 @@ The superego is a strange thing. It hits you like a bad case of influenza.
 And then you wake the morning in a stranger’s coat. From Vegas to nowhere; in other words, from silence to a dead end.
 
 ## A Good Education On The Subject Of Fights!
+
+<aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="man kneeling down near shore" data-src="https://images.unsplash.com/photo-1473993702977-1706a7f23164?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 When you’re 10-years-old, you start understanding what it’s all about. When your ally comes to greet you, you think you’re invincible. And our partner may be a free association.
 
 Without the liberty of dissociation, there’s no good association.
@@ -54,6 +69,11 @@ At the moment, I’m wondering if my work on that blog will set me free. I’m a
 While I commit my social suicide, I will remember those lines are embarrassing. Because the bug who tested us is a bit special: “Arbeit Macht Frei.”
 
 ## Accuracy and Efficacy: A Sign Of Childish Unanimity.
+
+<aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="snow covered ground under starry night" data-src="https://images.unsplash.com/photo-1610963196817-7d1415647029?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 The only thing that turns me on is statistics. Mission improbable has started. Behind numbers, there is always a complex reality that dreams are supposed to describe best.
 
 Lately, I had 3 dreams in a short span. And my reality is explained much better now. 3 main ideas: kidnapping, orgies, and the city.
@@ -65,6 +85,11 @@ That’s why I decided to make a special section in that blog to discuss dreams 
 Struggle within, it suits us fine. We’re growing. At age 12, it’s not a surprise!
 
 ## Did The Love Of Gold Make You Cold?
+
+<aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="man kneeling down near shore" data-src="https://images.unsplash.com/photo-1473993702977-1706a7f23164?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 We all faced trouble and pressure at age 14. But it seems it’s the average age for everybody for the Chernobyl incident. The first friend I lost was at age 14.
 
 The love of gold is somewhat disturbing. Some say obsession can pay sometimes. Some say you should never mind. But the truth is it’s the one defining moment that will haunt you all your life.
@@ -76,6 +101,11 @@ Maybe this blog is being read like “Mein Kampf” or Apple magazine when Apple
 Nobody loves no one. What a wicked game! Players don’t stand a chance. That’s where the audience is essential. I remember when I was dating my ex-girlfriend, everybody was wondering what was going on.
 
 ## That Was The Good Side, Here Comes The Bad!
+
+<aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="snow covered ground under starry night" data-src="https://images.unsplash.com/photo-1610963196817-7d1415647029?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 If you taste it, it will haunt you. Drawing lines is essential, but what happened to the flexibility of the dragon? It’s not easy to understand that line.
 
 At 17, I fell in love with a drug sweet as can be. To this day, I can’t get rid of her. Maybe I can whisper in her ear, and then she will become frightened.
@@ -87,6 +117,11 @@ Thank God they had the same problems in Afghanistan. The 20th-century bitches ar
 Kinky girl, back in the days… What made you want to change?
 
 ## Crime Is Decreasing, Police Officers Become Friends.
+
+<aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="man kneeling down near shore" data-src="https://images.unsplash.com/photo-1473993702977-1706a7f23164?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 At 21, the world is yours. No rise and fall, mercy is everywhere. You start bonding with beautiful people. Of course, you have the right to remain silent because 10 years later, they will talk about it.
 
 Everything turns to blue, and my eyes fill with knowledge as I scan those holidays. Hell is behind us, and paradise is just a shot away. Newspaper shout a new style is growing.
@@ -98,6 +133,11 @@ No more private investigations. The reason is apparent: you are a member of a co
 Who profits from that mess? That’s why I venture into a hypothesis: maybe wars are sponsored by doctors! When I analyze this, it makes a lot of sense.
 
 ## If You Don’t Tolerate This, It’s A Good Thing.
+
+<aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="snow covered ground under starry night" data-src="https://images.unsplash.com/photo-1610963196817-7d1415647029?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 When you’re 28, it gets better. No more naive people and no more dark people. You find a balance between music and money. You see a way to relax younger people.
 
 I almost do what I want. Like meeting friends in a bar, making connections with incredible musicians. But some people decided otherwise.
