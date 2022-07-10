@@ -25,7 +25,7 @@ Am I a musician or a spy? I have crossed that river as a winner twice. And now, 
 ## The Gypsy Was Right With The Prejudice.
 
 <aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="man kneeling down near shore" data-src="https://images.unsplash.com/photo-1473993702977-1706a7f23164?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="green and yellow concrete pathway" data-src="https://images.unsplash.com/photo-1592266682471-112397be9459?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 I’m so vain I probably think this song is about me. A baby is a fragile human being, and someone gave him 18 years to become adapted to his environment.
@@ -41,7 +41,7 @@ The definition of a caricature is a picture, description, or imitation of a pers
 ## We All Had That Dream To Be A Family.
 
 <aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="snow covered ground under starry night" data-src="https://images.unsplash.com/photo-1610963196817-7d1415647029?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="man, woman and child holding hands on seashore" data-src="https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 Until you’re 8 years old, life is lovely. You spend time playing with your friends, and parents are still in a sentimental mood.
@@ -56,7 +56,7 @@ And then you wake the morning in a stranger’s coat. From Vegas to nowhere; in 
 ## A Good Education On The Subject Of Fights!
 
 <aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="man kneeling down near shore" data-src="https://images.unsplash.com/photo-1473993702977-1706a7f23164?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="person holding persons hand" data-src="https://images.unsplash.com/photo-1602865597998-b39c7a370110?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 When you’re 10-years-old, you start understanding what it’s all about. When your ally comes to greet you, you think you’re invincible. And our partner may be a free association.
@@ -71,7 +71,7 @@ While I commit my social suicide, I will remember those lines are embarrassing. 
 ## Accuracy and Efficacy: A Sign Of Childish Unanimity.
 
 <aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="snow covered ground under starry night" data-src="https://images.unsplash.com/photo-1610963196817-7d1415647029?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="five children smiling while doing peace hand sign" data-src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 The only thing that turns me on is statistics. Mission improbable has started. Behind numbers, there is always a complex reality that dreams are supposed to describe best.
@@ -87,7 +87,7 @@ Struggle within, it suits us fine. We’re growing. At age 12, it’s not a surp
 ## Did The Love Of Gold Make You Cold?
 
 <aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="man kneeling down near shore" data-src="https://images.unsplash.com/photo-1473993702977-1706a7f23164?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="heart-shaped white Love decor" data-src="https://images.unsplash.com/photo-1562609952-39b034eec024?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 We all faced trouble and pressure at age 14. But it seems it’s the average age for everybody for the Chernobyl incident. The first friend I lost was at age 14.
@@ -103,7 +103,7 @@ Nobody loves no one. What a wicked game! Players don’t stand a chance. That’
 ## That Was The Good Side, Here Comes The Bad!
 
 <aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="snow covered ground under starry night" data-src="https://images.unsplash.com/photo-1610963196817-7d1415647029?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="rotten green apple" data-src="https://images.unsplash.com/photo-1542014740373-51ad6425eb7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 If you taste it, it will haunt you. Drawing lines is essential, but what happened to the flexibility of the dragon? It’s not easy to understand that line.
@@ -119,7 +119,7 @@ Kinky girl, back in the days… What made you want to change?
 ## Crime Is Decreasing, Police Officers Become Friends.
 
 <aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="man kneeling down near shore" data-src="https://images.unsplash.com/photo-1473993702977-1706a7f23164?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="blue bmw car in a dark room" data-src="https://images.unsplash.com/photo-1608095476825-d4e0f916372f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 At 21, the world is yours. No rise and fall, mercy is everywhere. You start bonding with beautiful people. Of course, you have the right to remain silent because 10 years later, they will talk about it.
@@ -135,7 +135,7 @@ Who profits from that mess? That’s why I venture into a hypothesis: maybe wars
 ## If You Don’t Tolerate This, It’s A Good Thing.
 
 <aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="snow covered ground under starry night" data-src="https://images.unsplash.com/photo-1610963196817-7d1415647029?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="two white-and-red sheeps" data-src="https://images.unsplash.com/photo-1487541711790-6d41c9d873dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 When you’re 28, it gets better. No more naive people and no more dark people. You find a balance between music and money. You see a way to relax younger people.
