@@ -22,6 +22,10 @@ Or maybe was it just a question of opportunism and swot analysis? In marketing, 
 
 ## Society Tells Us Deviance Becomes The Norm
 
+<aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="man in black playing electric piano" data-src="https://images.unsplash.com/photo-1598870930331-18c9292c1733?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 When you’re stranded in the jungle like me, the dominant idea is simple: you’re the master of your fate and the captain of your soul. You got 10 years to lose if someone catches you fighting that ghetto blues.
 
 The jungle has new animals thanks to humanity basics that is self-criticism. Do you want to reconnect with your animality? It’s simple: the less you self-criticize, the more your animality will be renewed.
@@ -34,6 +38,10 @@ Spending time insulting your feet and knees (and maybe your penis or vagina) is 
 
 ## Dream Has Gone But You Remain A Star
 
+<aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="footprint in snow" data-src="https://images.unsplash.com/photo-1517764415784-a0a8e4e659e8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 The thing about dreams is maybe your narcissism is faltering and no one takes into account your singularity. I was born in the land of the sun and I can’t leave Paris (the land of strange influences, but Seattle also).
 
 Oceanic climate has a strange feature sometimes called degraded. Those influences remind us that communism is a wonderful idea and that capitalism is bad. But the best system that will unlock our potential is “reboundism”.
@@ -45,6 +53,10 @@ Until 200 million years reminds you the test of time is a surprising one. You co
 Nature is alive and animals are everywhere. Even doctors are animals, yet strange, but animals indeed. I spent 24,000 euros in one month in rehab. I got a very clear message here: my woman friends are beautiful and no one should be able to approach me.
 
 ## A Promise I Kept Thanks To Forgetfulness
+
+<aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="woman image disappearing" data-src="https://images.unsplash.com/photo-1617818195753-a90d286cdbb2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
 
 If you had to choose between adolescence and childhood, which one would you choose? Who is more important? A child or an immature human being?
 
@@ -60,6 +72,10 @@ It’s a dirty job but someone got to do it.
 
 ## The Past Has Gone, And So Did The Future
 
+<aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="person holding clear glass" data-src="https://images.unsplash.com/photo-1546188994-07c34f6e5e1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 When you’re lost at sea, you might make promises you forget easily. But anyway, who knows what promise will be kept?
 
 Lately, I was thinking about respect. I thought that the only thing important was the horizon. Of course, you have sometimes to have a little respect, from time to time.
@@ -74,6 +90,10 @@ One thing I’m sure of is: pay attention to your company because it will deeply
 
 ## Crisis, Who Will Profit From That Trick?
 
+<aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="coins and plant in glass" data-src="https://images.unsplash.com/photo-1633158829875-e5316a358c6f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 Our job is to make sure that no one will profit from those strange behaviors. Crime doesn’t pay, everybody knows it. To me, a crime is something detrimental to society.
 
 In 2010, I left investment banking very much alive. But bad outlaws have left a tattoo on my body. That was the year we made contact with our cousins on other planets.
@@ -85,6 +105,10 @@ When our cousins will turn their back on us, we will wonder. After all, competit
 Who cares about your star if you remain in the habitable zone where liquid water is possible? We have a big crisis here on Earth and we must look above because it doesn’t matter if you’re Christian, Jewish or Muslim. We got to have diversity.
 
 ## Hesitation Move and Straight to the Top
+
+<aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="woman in black tank top" data-src="https://images.unsplash.com/photo-1601629777196-6bffd7f788d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
 
 When I’m one on one with somebody, I like to look that person in the eyes. It’s the only way to make contact. Through my eyes, we have intolerable valleys related to money, sex, and fights.
 
@@ -98,6 +122,10 @@ Here in Lebanon, some people speak fluently Arabic, French and English. This is 
 
 ## Feelings That You Just Can’t Shake
 
+<aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="woman holding glass jar" data-src="https://images.unsplash.com/photo-1563417994892-38ee47f9d1f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 Don’t look surprised. No one knows what respect is. They think respect is the horizon. But it’s not the case. That’s why I get a feeling I’ve seen the last of you.
 
 You people who in the long run only focus on money and killing costs. That sweet spot where you find the right partners, only the very best (a reasonable request).
@@ -110,6 +138,10 @@ No soft fascination is gonna make me crawl.
 
 ## Effortless Attention Towards Anarchy And Spoofing
 
+<aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="stack of jigsaw puzzle pieces" data-src="https://images.unsplash.com/photo-1494059980473-813e73ee784b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
+
 The main subject of that post was existence. Don’t look surprised if you have a heart attack. The toxic artwork of WW2 and its aftermaths have left our children wondering what kind of game it was!
 
 The question of treachery and treason should be simple. When you feel like a thief, you know the police was there. When you feel like a joker, you know boys don’t cry.
@@ -121,6 +153,10 @@ On the dodgy subject of health, there are two subjects that are always mentioned
 How come Byzantine empire lasted for 1000 years? How come that illness lasted 22 years?
 
 ## Don’t Look Surprised: There Are Pretenders Among Us
+
+<aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="green bearded dragon" data-src="https://images.unsplash.com/photo-1545772841-878d09094ef1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+</aside>
 
 As a conclusion, we shouldn’t be surprised by existence.
 
