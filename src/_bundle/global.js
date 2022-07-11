@@ -7,6 +7,7 @@ export default () => ({
   isScrollingUp: false,
   circumference: 30 * 2 * Math.PI,
   percent: 0,
+  prevPercent: 0,
   showCommentsPanel:
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
@@ -55,6 +56,7 @@ export default () => ({
     window.addEventListener(
       'scroll',
       () => {
+        this.prevPercent = this.percent
         var st = window.pageYOffset || document.documentElement.scrollTop
         this.isScrollingUp = st <= this.lastScrollTop
         this.lastScrollTop = st <= 0 ? 0 : st // for mobile or negative scrolling
@@ -76,6 +78,8 @@ export default () => ({
             ),
             100
           )
+          if (this.percent === 100 && this.prevPercent < this.percent)
+            umami.trackEvent('article-end', 'scroll')
         }
       },
       false
