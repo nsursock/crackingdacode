@@ -246,6 +246,7 @@
                                 this.error = message.error
                              else {
                                 this.showCommentsPanel = false
+                                umami.trackEvent('comment-button', 'click')
                             }
                         })
                         .catch((error) => {
