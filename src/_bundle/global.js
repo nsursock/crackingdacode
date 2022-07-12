@@ -8,6 +8,7 @@ export default () => ({
   circumference: 30 * 2 * Math.PI,
   percent: 0,
   prevPercent: 0,
+  currStep: '0',
   showCommentsPanel:
     /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
       navigator.userAgent
@@ -83,14 +84,20 @@ export default () => ({
             ),
             100
           )
-          if (this.percent >= 25 && this.percent < 50)
+          if (this.percent >= 25 && this.percent < 50 && this.currStep === '0') {
+            this.currStep = 'article-25'
             umami.trackEvent('article-25', 'scroll')
-          else if (this.percent >= 50 && this.percent < 75)
+          }
+          else if (this.percent >= 50 && this.percent < 75 && this.currStep.includes('25')) {
+            this.currStep = 'article-50'
             umami.trackEvent('article-50', 'scroll')
-          else if (this.percent >= 75 && this.percent < 100)
+          }
+          else if (this.percent >= 75 && this.percent < 100 && this.currStep.includes('50')) {
+            this.currStep = 'article-75'
             umami.trackEvent('article-75', 'scroll')
-          else if (this.percent === 100 && this.prevPercent < this.percent) {
-            umami.trackEvent('article-end', 'scroll')
+          } else if (this.percent === 100 && this.currStep.includes('75')) {
+            this.currStep = 'article-100'
+            umami.trackEvent('article-100', 'scroll')
             // this.showPopup = true
           }
         }
