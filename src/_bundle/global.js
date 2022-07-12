@@ -27,6 +27,11 @@ export default () => ({
   },
 
   async init() {
+
+    // setTimeout(() => {
+    //   this.showPopup = true
+    // }, 1000)
+
     // document.addEventListener('DOMContentLoaded', () => {
     // desktop
     // document.addEventListener('mouseout', (event) => {
@@ -78,8 +83,16 @@ export default () => ({
             ),
             100
           )
-          if (this.percent === 100 && this.prevPercent < this.percent)
+          if (this.percent >= 25 && this.percent < 50)
+            umami.trackEvent('article-25', 'scroll')
+          else if (this.percent >= 50 && this.percent < 75)
+            umami.trackEvent('article-50', 'scroll')
+          else if (this.percent >= 75 && this.percent < 100)
+            umami.trackEvent('article-75', 'scroll')
+          else if (this.percent === 100 && this.prevPercent < this.percent) {
             umami.trackEvent('article-end', 'scroll')
+            // this.showPopup = true
+          }
         }
       },
       false
