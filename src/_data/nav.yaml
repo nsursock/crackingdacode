@@ -63,6 +63,9 @@ menus:
         description: Let me share with you a good song that you only have to produce
         route: /products
         icon: 'note'
+  # - name: Blog
+  #   route: /blog
+  #   icon: 'pencil'
   - name: Contact
     route: /contact
     icon: 'at-symbol'
