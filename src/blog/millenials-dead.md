@@ -80,3 +80,45 @@ Millennials should rest a lot because of new challenges like Generation Z being 
 
 Millennials should take care of their image. They could try austerity and take the high-percentage shots. Or they could use the ignorance of their persecutor in a scientific experiment to make a giant leap forward for our humanity: vocabulary and curiosity.
 
+```
+[Verse 1]
+Ooo-oooh, yeah!
+You think you're on top of the world
+But you know it's really over
+Running 'round with diamond rings
+And coke spoons that are overflowing
+Rock and roll is dead
+But all the money in the world
+Can't buy you from the place you're going to
+Ooo-oooh, yeah
+
+
+[Chorus]
+Rock and roll is dead
+Rock and roll is dead
+Rock and roll is dead
+
+[Verse 2]
+You can't even sing or play an instrument
+So you just scream instead
+Oooh, yeah
+You're living for an image
+So you got five hundred women in your bed
+Oooh, yeah!
+Rock and roll is dead
+But it's real hard to be yourself
+When you're living with those demons in your head
+Ooo-oooh, yeah!
+
+[Chorus]
+Rock and roll is dead
+Rock and roll is dead
+Rock and roll is dead
+Rock and roll is dead
+Rock and roll is dead
+Rock and roll is dead
+Rock and roll is dead
+Rock and roll is dead
+Rock and roll is dead
+Rock and roll is dead
+```
