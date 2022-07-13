@@ -22,7 +22,7 @@ The memory is an alleged public rape scene during a party where I wasn’t invit
 
 I guess I could also try to decompose the Civil war in Lebanon (1975 – 1990). I have a friend who already wrote a comic book about it. It seems the Civil War started with a Palestinian bus who was shot by some Christians.
 
-Since my post are 4 paragraphs long I will also try to decompose being alone in Paris during the 2006 war between Lebanon and Israel; and also another souvenir from an ex-lover who was toying with a knife while we were investigating anonymous letters.
+Since my posts are 4 paragraphs long I will also try to decompose being alone in Paris during the 2006 war between Lebanon and Israel; and also another souvenir from an ex-lover who was toying with a knife while we were investigating anonymous letters.
 
 Of course, all those traumatic memories will be decomposed using a song. But let’s first tackle the dodgy subject of witnessing a friend being kinda raped.
 
