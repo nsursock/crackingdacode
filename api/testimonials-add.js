@@ -8,17 +8,18 @@ async function handler(req, res) {
     process.env.SUPABASE_URL,
     process.env.SUPABASE_KEY
   )
-  
-  const storageName = 'testimonials'
-  // process.env.NODE_ENV.startsWith('dev')
-  //   ? 'testimonials.dev'
-  //   : 'testimonials'
+
+  const storageName = process.env.NODE_ENV.startsWith('dev')
+    ? 'testimonials.dev'
+    : 'testimonials'
 
   const uploadFile = async () => {
     // eslint-disable-next-line
     return new Promise((resolve, reject) => {
       form.parse(req, async function (err, fields, files) {
-        let filepath = `public/${files.picture.newFilename}.${files.picture.mimetype.split('/').pop()}`
+        let filepath = `public/${
+          files.picture.newFilename
+        }.${files.picture.mimetype.split('/').pop()}`
         // filepath = filepath.replace(/\s/g, '-') // IN CASE YOU NEED TO REPLACE SPACE OF THE IMAGE NAME
         const rawData = fs.readFileSync(files.picture.filepath)
         const { error } = await supabase.storage
@@ -37,7 +38,7 @@ async function handler(req, res) {
           occupation: fields.identity.split('/')[1].trim(),
           picture: `https://qroiybphgipjhkmfsvnj.supabase.co/storage/v1/object/public/${storageName}/${filepath}`,
         })
-       
+
         resolve({ success: true })
       })
     })

@@ -6,10 +6,9 @@ export default async function handler(request, response) {
       process.env.SUPABASE_URL,
       process.env.SUPABASE_KEY
     )
-    const storageName = 'testimonials'
-    // process.env.NODE_ENV.startsWith('dev')
-    //   ? 'testimonials.dev'
-    //   : 'testimonials'
+    const storageName = process.env.NODE_ENV.startsWith('dev')
+      ? 'testimonials.dev'
+      : 'testimonials'
     const data = (await supabase.from(storageName).select()).data
     response.status(200).json({ data })
   } catch (error) {
