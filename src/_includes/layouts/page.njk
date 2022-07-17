@@ -5,19 +5,13 @@
     <meta name="description" content="{{ description }}">
     <meta name="author" content="{{ author }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {# <meta name="google-site-verification" content="ElwriKJxsec5ariCaXI5cy7eo0kMlqtJZF3YOxDOO3w"/>
-    <meta name="google-site-verification" content="7vYNlTRmTJb9pmvaEh_GlsH96x_SDxGchzvmF0Mp2m4" /> #}
-    <meta name="google-site-verification" content="HzJK7D_XB4FuBYkhve3Rmk2O5zcGeKEbvgZYXLiTKHM" />
+    <meta name="google-site-verification" content="HzJK7D_XB4FuBYkhve3Rmk2O5zcGeKEbvgZYXLiTKHM"/>
     <link href="{{ site.url }}{{ page.url }}" rel="canonical">
     <link rel="preconnect" href="https://unsplash.com">
     <link rel="dns-prefetch" href="https://unsplash.com">
     <link rel="stylesheet" href="/assets/main.bundle.css">
     <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
-    {# {% if env.environment == "production" %}
-      <script src="/static/main.bundle.js" defer></script>
-    {% else %} #}
-      <script src="/assets/main.bundle.js" defer></script>
-    {# {% endif %} #}
+    <script src="/assets/main.bundle.js" defer></script>
     <title>{{ title }} | Sursock Labs</title>
     {% block head %}
       <script>
@@ -36,24 +30,6 @@
             .remove('dark')
         }
       </script>
-      {% if env.environment == "production" %}
-        <!-- Google Tag Manager -->
-        {# <script>
-          (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
-            var f = d.getElementsByTagName(s)[0],
-              j = d.createElement(s),
-              dl = l != 'dataLayer'
-                ? '&l=' + l
-                : '';
-            j.async = true;
-            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-          })(window, document, 'script', 'dataLayer', 'GTM-5MN6MTZ');
-        </script> #}
-        <!-- End Google Tag Manager -->
-      {% endif %}
     {% endblock %}
   </head>
   <body hx-boost="true" class="{{ 'debug-screens' if env.devMode }} dark:bg-gray-900" x-data="global">
@@ -70,17 +46,6 @@
       </div>
     {% endif %}
     {% block body %}
-      {% if env.environment == "production" %}
-        <!-- Google Tag Manager (noscript) -->
-        {# <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-5MN6MTZ"
-            height="0"
-            width="0"
-            style="display:none;visibility:hidden"></iframe>
-        </noscript> #}
-        <!-- End Google Tag Manager (noscript) -->
-      {% endif %}
       {% if page.url == '/about/' %}
         <div class="container py-8 max-w-none prose lg:prose-xl dark:prose-dark dark:text-gray-400 sm:w-3/5 xl:w-2/4">
           {{ content | safe }}
@@ -96,8 +61,8 @@
       {% include 'footer.njk' %}
     </section>
     {# <div x-show="showPopup">
-      {% include 'partials/popup.njk' %}
-    </div> #}
+              {% include 'partials/popup.njk' %}
+            </div> #}
     {# <script type='text/javascript' src='//pl17474445.highperformancegate.com/0d/54/f3/0d54f3140bf62864ce27c25208bea0be.js'></script> #}
   </body>
 </html>
