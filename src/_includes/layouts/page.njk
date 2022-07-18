@@ -14,6 +14,18 @@
     <script src="/assets/main.bundle.js" defer></script>
     <title>{{ title }} | Sursock Labs</title>
     {% block head %}
+      {% if env.environment == 'production' %}
+        <!-- Global site tag (gtag.js) - Google Ads: 824380923 -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-824380923"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', 'AW-824380923');
+        </script>
+      {% endif %}
       <script>
         if (
           localStorage.theme === 'dark' ||
@@ -61,7 +73,7 @@
       {% include 'footer.njk' %}
     </section>
     {# <div x-show="showPopup">
-              {% include 'partials/popup.njk' %}
-            </div> #}
+                  {% include 'partials/popup.njk' %}
+                </div> #}
   </body>
 </html>
