@@ -20,6 +20,23 @@ export default () => ({
   email: '',
   name: '',
   password: '',
+  paymentMade: false,
+  currentStep: 1,
+
+  async checkPermission() {
+    const res = await fetch('/api/payment-code-check', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        user: Alpine.store('auth').user.email,
+        article: window.location.pathname,
+      }),
+    })
+    const json = await res.json()
+    return json.data.length !== 0
+  },
 
   isMobile() {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -28,7 +45,6 @@ export default () => ({
   },
 
   async init() {
-
     // setTimeout(() => {
     //   this.showPopup = true
     // }, 1000)
@@ -84,15 +100,25 @@ export default () => ({
             ),
             100
           )
-          if (this.percent >= 25 && this.percent < 50 && this.currStep === '0') {
+          if (
+            this.percent >= 25 &&
+            this.percent < 50 &&
+            this.currStep === '0'
+          ) {
             this.currStep = 'article-25'
             umami.trackEvent('article-25', 'scroll')
-          }
-          else if (this.percent >= 50 && this.percent < 75 && this.currStep.includes('25')) {
+          } else if (
+            this.percent >= 50 &&
+            this.percent < 75 &&
+            this.currStep.includes('25')
+          ) {
             this.currStep = 'article-50'
             umami.trackEvent('article-50', 'scroll')
-          }
-          else if (this.percent >= 75 && this.percent < 100 && this.currStep.includes('50')) {
+          } else if (
+            this.percent >= 75 &&
+            this.percent < 100 &&
+            this.currStep.includes('50')
+          ) {
             this.currStep = 'article-75'
             umami.trackEvent('article-75', 'scroll')
           } else if (this.percent === 100 && this.currStep.includes('75')) {
