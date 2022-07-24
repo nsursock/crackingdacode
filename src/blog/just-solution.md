@@ -8,6 +8,7 @@ location: Paris, France
 featured: https://images.unsplash.com/photo-1590588935033-47cf2a942394?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
 tags: [Life, Business, Humor, Wellness, Entertainment, blog]
 layout: layouts/post.njk
+protection: 99.95
 track: Just
 versions:
     - artist: Radiohead
