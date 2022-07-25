@@ -77,8 +77,8 @@
                         </div>
                         <div class="mt-5 sm:mt-6">
                             <button
-                                @click="currentStep++"
-                                class="umami--focus--step1-button inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4
+                                @click="currentStep++; umami.trackEvent('step1', 'focus')"
+                                class="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4
                                     py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2
                                     focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">
                                 Proceed</button>
@@ -111,8 +111,8 @@
                         <template x-if="$store.auth.user">
                             <div class="mt-5 sm:mt-6">
                                 <button
-                                    @click="currentStep++"
-                                    class="umami--focus--step2-button inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4
+                                    @click="currentStep++; umami.trackEvent('step2', 'focus')"
+                                    class=" inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4
                                         py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2
                                         focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">
                                     Next</button>
@@ -195,7 +195,7 @@
                                         <div>
                                             <button
                                                 type="submit"
-                                                class="umami--focus--step2-button group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm
+                                                class=" group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm
                                                     font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2
                                                     focus:ring-indigo-500">
                                                 <span
@@ -267,7 +267,7 @@
                                         <div>
                                             <button
                                                 type="submit"
-                                                class="umami--focus--step2-button group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm
+                                                class=" group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm
                                                     font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2
                                                     focus:ring-indigo-500">
                                                 <span
@@ -339,7 +339,7 @@
                             </div>
                             <button
                                 id="submit"
-                                class="umami--focus--step3-button mt-5 sm:mt-6 inline-flex justify-center w-full rounded-md border border-transparent
+                                class=" mt-5 sm:mt-6 inline-flex justify-center w-full rounded-md border border-transparent
                                     shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2
                                     focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">
                                 Pay
@@ -390,7 +390,7 @@
                         </div>
                         <div class="mt-5 sm:mt-6">
                             <button
-                                @click="processFinished = true"
+                                @click="processFinished = true; umami.trackEvent('step4', 'focus')"
                                 class="umami--focus--step4-button inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4
                                     py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2
                                     focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">
@@ -464,6 +464,7 @@
         return {
             error: '',
             login() {
+                umami.trackEvent('step2', 'focus')
                 this.error = ''
                 var data = {
                     email: this.email,
@@ -486,7 +487,8 @@
                                 .store('auth')
                                 .setUser(message.user)
                                 this
-                                .currentStep ++
+                                .currentStep++
+                                
                         }
                     })
                     .catch((error) => {
@@ -494,6 +496,7 @@
                     })
             },
             signup() {
+                umami.trackEvent('step2', 'focus')
                 this.error = ''
                 var data = {
                     email: this.email,
@@ -517,7 +520,8 @@
                                 .store('auth')
                                 .setUser(message.user)
                                 this
-                                .currentStep ++
+                                .currentStep++
+                                
                         }
                     })
                     .catch((error) => {
@@ -573,6 +577,7 @@
                 paymentElement.mount('#payment-element');
             },
             async pay() {
+                umami.trackEvent('step3', 'focus')
                 const {error} = await this.stripe.confirmPayment({ // `Elements` instance that was used to create the Payment Element
                     elements: this.elements,
                     redirect: 'if_required',
