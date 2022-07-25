@@ -23,6 +23,10 @@ export default () => ({
   paymentMade: false,
   currentStep: 1,
 
+  shouldTrack() {
+    return '{{ env.devMode }}' === false && !document.cookie.includes('InternalTraffic')
+  },
+
   async checkPermission() {
     const res = await fetch('/api/payment-code-check', {
       method: 'POST',
@@ -106,24 +110,24 @@ export default () => ({
             this.currStep === '0'
           ) {
             this.currStep = 'article-25'
-             umami && umami.trackEvent('article-25', 'scroll')
+             this.shouldTrack() && umami.trackEvent('article-25', 'scroll')
           } else if (
             this.percent >= 50 &&
             this.percent < 75 &&
             this.currStep.includes('25')
           ) {
             this.currStep = 'article-50'
-             umami && umami.trackEvent('article-50', 'scroll')
+             this.shouldTrack() && umami.trackEvent('article-50', 'scroll')
           } else if (
             this.percent >= 75 &&
             this.percent < 100 &&
             this.currStep.includes('50')
           ) {
             this.currStep = 'article-75'
-             umami && umami.trackEvent('article-75', 'scroll')
+             this.shouldTrack() && umami.trackEvent('article-75', 'scroll')
           } else if (this.percent === 100 && this.currStep.includes('75')) {
             this.currStep = 'article-100'
-             umami && umami.trackEvent('article-100', 'scroll')
+             this.shouldTrack() && umami.trackEvent('article-100', 'scroll')
             // this.showPopup = true
           }
         }
