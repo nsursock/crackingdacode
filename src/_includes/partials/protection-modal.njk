@@ -77,7 +77,7 @@
                         </div>
                         <div class="mt-5 sm:mt-6">
                             <button
-                                @click="currentStep++; umami !== undefined && umami.trackEvent('step1', 'focus')"
+                                @click="currentStep++; (typeof umami !== 'undefined') && umami.trackEvent('step1', 'focus')"
                                 class="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4
                                     py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2
                                     focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">
@@ -111,7 +111,7 @@
                         <template x-if="$store.auth.user">
                             <div class="mt-5 sm:mt-6">
                                 <button
-                                    @click="currentStep++; umami !== undefined && umami.trackEvent('step2', 'focus')"
+                                    @click="currentStep++; (typeof umami !== 'undefined') && umami.trackEvent('step2', 'focus')"
                                     class=" inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4
                                         py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2
                                         focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">
@@ -390,7 +390,7 @@
                         </div>
                         <div class="mt-5 sm:mt-6">
                             <button
-                                @click="processFinished = true; umami !== undefined && umami.trackEvent('step4', 'focus')"
+                                @click="processFinished = true; (typeof umami !== 'undefined') && umami.trackEvent('step4', 'focus')"
                                 class="umami--focus--step4-button inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4
                                     py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2
                                     focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">
@@ -464,7 +464,7 @@
         return {
             error: '',
             login() {
-                umami !== undefined && umami.trackEvent('step2', 'focus')
+                (typeof umami !== 'undefined') && umami.trackEvent('step2', 'focus')
                 this.error = ''
                 var data = {
                     email: this.email,
@@ -496,7 +496,7 @@
                     })
             },
             signup() {
-                umami !== undefined && umami.trackEvent('step2', 'focus')
+                (typeof umami !== 'undefined') && umami.trackEvent('step2', 'focus')
                 this.error = ''
                 var data = {
                     email: this.email,
@@ -577,7 +577,7 @@
                 paymentElement.mount('#payment-element');
             },
             async pay() {
-                umami !== undefined && umami.trackEvent('step3', 'focus')
+                (typeof umami !== 'undefined') && umami.trackEvent('step3', 'focus')
                 const {error} = await this.stripe.confirmPayment({ // `Elements` instance that was used to create the Payment Element
                     elements: this.elements,
                     redirect: 'if_required',
