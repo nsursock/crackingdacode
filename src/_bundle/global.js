@@ -24,7 +24,11 @@ export default () => ({
   currentStep: 1,
 
   shouldTrack() {
-    return '{{ env.devMode }}' === false && !document.cookie.includes('InternalTraffic')
+    console.log('{{ env.environment }}')
+    return (
+      '{{ env.environment }}'.startsWith('prod') &&
+      !document.cookie.includes('InternalTraffic')
+    )
   },
 
   async checkPermission() {
