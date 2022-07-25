@@ -23,13 +23,13 @@ export default () => ({
   paymentMade: false,
   currentStep: 1,
 
-  shouldTrack() {
-    console.log('{{ env.environment }}')
-    return (
-      '{{ env.environment }}'.startsWith('prod') &&
-      !document.cookie.includes('InternalTraffic')
-    )
-  },
+  // shouldTrack() {
+  //   console.log('{{ env.environment }}')
+  //   return (
+  //     '{{ env.environment }}'.startsWith('prod') &&
+  //     !document.cookie.includes('InternalTraffic')
+  //   )
+  // },
 
   async checkPermission() {
     const res = await fetch('/api/payment-code-check', {
@@ -114,24 +114,24 @@ export default () => ({
             this.currStep === '0'
           ) {
             this.currStep = 'article-25'
-             this.shouldTrack() && umami.trackEvent('article-25', 'scroll')
+             umami !== undefined && umami.trackEvent('article-25', 'scroll')
           } else if (
             this.percent >= 50 &&
             this.percent < 75 &&
             this.currStep.includes('25')
           ) {
             this.currStep = 'article-50'
-             this.shouldTrack() && umami.trackEvent('article-50', 'scroll')
+             umami !== undefined && umami.trackEvent('article-50', 'scroll')
           } else if (
             this.percent >= 75 &&
             this.percent < 100 &&
             this.currStep.includes('50')
           ) {
             this.currStep = 'article-75'
-             this.shouldTrack() && umami.trackEvent('article-75', 'scroll')
+             umami !== undefined && umami.trackEvent('article-75', 'scroll')
           } else if (this.percent === 100 && this.currStep.includes('75')) {
             this.currStep = 'article-100'
-             this.shouldTrack() && umami.trackEvent('article-100', 'scroll')
+             umami !== undefined && umami.trackEvent('article-100', 'scroll')
             // this.showPopup = true
           }
         }
