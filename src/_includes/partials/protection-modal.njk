@@ -464,7 +464,7 @@
         return {
             error: '',
             login() {
-                shouldTrack() && umami.trackEvent('step2', 'focus')
+                this.shouldTrack() && umami.trackEvent('step2', 'focus')
                 this.error = ''
                 var data = {
                     email: this.email,
@@ -496,7 +496,7 @@
                     })
             },
             signup() {
-                shouldTrack() && umami.trackEvent('step2', 'focus')
+                this.shouldTrack() && umami.trackEvent('step2', 'focus')
                 this.error = ''
                 var data = {
                     email: this.email,
@@ -577,7 +577,7 @@
                 paymentElement.mount('#payment-element');
             },
             async pay() {
-                shouldTrack() && umami.trackEvent('step3', 'focus')
+                this.shouldTrack() && umami.trackEvent('step3', 'focus')
                 const {error} = await this.stripe.confirmPayment({ // `Elements` instance that was used to create the Payment Element
                     elements: this.elements,
                     redirect: 'if_required',
