@@ -113,24 +113,24 @@ export default () => ({
             this.percent < 50 &&
             this.currStep === '0'
           ) {
-            this.currStep = 'article-25'
+            this.currStep = 'article-25';
              (typeof umami !== 'undefined') && umami.trackEvent('article-25', 'scroll')
           } else if (
             this.percent >= 50 &&
             this.percent < 75 &&
             this.currStep.includes('25')
           ) {
-            this.currStep = 'article-50'
+            this.currStep = 'article-50';
              (typeof umami !== 'undefined') && umami.trackEvent('article-50', 'scroll')
           } else if (
             this.percent >= 75 &&
             this.percent < 100 &&
             this.currStep.includes('50')
           ) {
-            this.currStep = 'article-75'
+            this.currStep = 'article-75';
              (typeof umami !== 'undefined') && umami.trackEvent('article-75', 'scroll')
           } else if (this.percent === 100 && this.currStep.includes('75')) {
-            this.currStep = 'article-100'
+            this.currStep = 'article-100';
              (typeof umami !== 'undefined') && umami.trackEvent('article-100', 'scroll')
             // this.showPopup = true
           }
