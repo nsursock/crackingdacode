@@ -151,10 +151,10 @@
                                         <input type="hidden" name="remember" value="true">
                                         <div class="rounded-md shadow-sm -space-y-px">
                                             <div>
-                                                <label for="email-address" class="sr-only">Email address</label>
+                                                <label for="email-address-signup-protect" class="sr-only">Email address</label>
                                                 <input
                                                     x-model="email"
-                                                    id="email-address"
+                                                    id="email-address-signup-protect"
                                                     name="email"
                                                     type="email"
                                                     autocomplete="email"
@@ -165,10 +165,10 @@
                                                     placeholder="Email address">
                                             </div>
                                             <div>
-                                                <label for="display-name" class="sr-only">Display name</label>
+                                                <label for="display-name-signup-protect" class="sr-only">Display name</label>
                                                 <input
                                                     x-model="name"
-                                                    id="display-name"
+                                                    id="display-name-signup-protect"
                                                     name="name"
                                                     type="name"
                                                     required
@@ -178,10 +178,10 @@
                                                     placeholder="Display name">
                                             </div>
                                             <div>
-                                                <label for="password" class="sr-only">Password</label>
+                                                <label for="password-signup-protect" class="sr-only">Password</label>
                                                 <input
                                                     x-model="password"
-                                                    id="password"
+                                                    id="password-signup-protect"
                                                     name="password"
                                                     type="password"
                                                     autocomplete="current-password"
@@ -194,6 +194,7 @@
                                         </div>
                                         <div>
                                             <button
+                                                :disabled="isFetching"
                                                 type="submit"
                                                 class=" group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm
                                                     font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2
@@ -201,7 +202,8 @@
                                                 <span
                                                     class="absolute left-0 inset-y-0 flex items-center pl-3">
                                                     <!-- Heroicon name: solid/lock-closed -->
-                                                    <svg
+                                                    <svg 
+                                                         x-show="!isFetching"
                                                         class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400"
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         viewbox="0 0 20 20"
@@ -212,6 +214,18 @@
                                                             d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
                                                             clip-rule="evenodd"/>
                                                     </svg>
+                                                    <svg
+                                                        x-show="isFetching"
+                                                        class="animate-spin h-5 w-5 text-white"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24">
+                                                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                                        <path
+                                                            class="opacity-75"
+                                                            fill="currentColor"
+                                                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                                        </svg>
                                                 </span>
                                                 Sign up
                                             </button>
@@ -236,10 +250,10 @@
                                         <input type="hidden" name="remember" value="true">
                                         <div class="rounded-md shadow-sm -space-y-px">
                                             <div>
-                                                <label for="email-address" class="sr-only">Email address</label>
+                                                <label for="email-address-login-protect" class="sr-only">Email address</label>
                                                 <input
                                                     x-model="email"
-                                                    id="email-address"
+                                                    id="email-address-login-protect"
                                                     name="email"
                                                     type="email"
                                                     autocomplete="email"
@@ -250,10 +264,10 @@
                                                     placeholder="Email address">
                                             </div>
                                             <div>
-                                                <label for="password" class="sr-only">Password</label>
+                                                <label for="password-login-protect" class="sr-only">Password</label>
                                                 <input
                                                     x-model="password"
-                                                    id="password"
+                                                    id="password-login-protect"
                                                     name="password"
                                                     type="password"
                                                     autocomplete="current-password"
@@ -266,6 +280,7 @@
                                         </div>
                                         <div>
                                             <button
+                                                :disabled="isFetching"
                                                 type="submit"
                                                 class=" group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm
                                                     font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2
@@ -274,6 +289,7 @@
                                                     class="absolute left-0 inset-y-0 flex items-center pl-3">
                                                     <!-- Heroicon name: solid/lock-closed -->
                                                     <svg
+                                                        x-show="!isFetching"
                                                         class="h-5 w-5 text-indigo-500 group-hover:text-indigo-400"
                                                         xmlns="http://www.w3.org/2000/svg"
                                                         viewbox="0 0 20 20"
@@ -284,6 +300,18 @@
                                                             d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
                                                             clip-rule="evenodd"/>
                                                     </svg>
+                                                    <svg
+                                                        x-show="isFetching"
+                                                        class="animate-spin h-5 w-5 text-white"
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24">
+                                                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                                        <path
+                                                            class="opacity-75"
+                                                            fill="currentColor"
+                                                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                                        </svg>
                                                 </span>
                                                 Log in
                                             </button>
@@ -338,12 +366,28 @@
                                 id="payment-element"><!-- Elements will create form elements here -->
                             </div>
                             <button
+                                :disabled="isFetching"
                                 id="submit"
                                 class=" mt-5 sm:mt-6 inline-flex justify-center w-full rounded-md border border-transparent
                                     shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2
                                     focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">
+                                    <span x-show="isFetching" class="inline-flex">
+                                    <svg
+                                        class="animate-spin h-5 w-5 text-white mr-3"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        fill="none"
+                                        viewBox="0 0 24 24">
+                                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                        <path
+                                            class="opacity-75"
+                                            fill="currentColor"
+                                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                        </svg>
+                                        Processing...
+                                        </span>
+                                        <span x-show="!isFetching">
                                 Pay
-                                {{ protection }}€</button>
+                                {{ protection }}€</span></button>
                             <template x-if="error">
                                 <div
                                     class="flex items-center py-2 px-3 border border-transparent text-sm font-medium rounded-md text-red-100 bg-red-600 mt-1"
@@ -462,8 +506,10 @@
     }
     function dataCodeAuth() {
         return {
+            isFetching: false,
             error: '',
             login() {
+                this.isFetching = true;
                 (typeof umami !== 'undefined') && umami.trackEvent('step2', 'focus')
                 this.error = ''
                 var data = {
@@ -479,8 +525,10 @@
                 })
                     .then((response) => response.json())
                     .then((message) => {
-                        if (!message.success) 
+                        if (!message.success) {
+                            this.isFetching = false
                             this.error = message.error
+                        }
                          else {
                             localStorage.setItem('crdacode_token', message.user.token);
                             Alpine
@@ -492,10 +540,12 @@
                         }
                     })
                     .catch((error) => {
+                        this.isFetching = false
                         this.error = error
                     })
             },
             signup() {
+                this.isFetching = true;
                 (typeof umami !== 'undefined') && umami.trackEvent('step2', 'focus')
                 this.error = ''
                 var data = {
@@ -512,8 +562,10 @@
                 })
                     .then((response) => response.json())
                     .then((message) => {
-                        if (!message.success) 
+                        if (!message.success) {
+                            this.isFetching = false
                             this.error = message.error
+                        }
                          else {
                             localStorage.setItem('crdacode_token', message.user.token);
                             Alpine
@@ -525,6 +577,7 @@
                         }
                     })
                     .catch((error) => {
+                        this.isFetching = false
                         this.error = error
                     })
             }
@@ -532,6 +585,7 @@
     }
     function dataCodePayment() {
         return {
+            isFetching: false,
             email: '',
             error: '',
             stripe: null,
@@ -577,6 +631,7 @@
                 paymentElement.mount('#payment-element');
             },
             async pay() {
+                this.isFetching = true;
                 (typeof umami !== 'undefined') && umami.trackEvent('step3', 'focus')
                 const {error} = await this.stripe.confirmPayment({ // `Elements` instance that was used to create the Payment Element
                     elements: this.elements,
@@ -599,6 +654,7 @@
                 if (error) {
                     // This point will only be reached if there is an immediate error when confirming the payment. Show error to your
                     // customer (for example, payment details incomplete)
+                    this.isFetching = false
                     this.error = error.message;
                 } else {
                     var data = {
@@ -617,14 +673,16 @@
                     })
                         .then((response) => response.json())
                         .then((message) => {
-                            if (!message.success) 
+                            if (!message.success) {
+                                this.isFetching = false
                                 this.error = message.error
+                            }
                              else {
                                 this.currentStep ++
                             }
                         })
                         .catch((error) => {
-                            console.log(error)
+                            this.isFetching = false
                             this.error = error
                         })
                     // Your customer will be redirected to your `return_url`. For some payment methods like iDEAL, your customer will be
