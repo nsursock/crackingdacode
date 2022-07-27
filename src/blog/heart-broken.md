@@ -8,6 +8,7 @@ location: Beirut, Lebanon
 featured: https://images.unsplash.com/photo-1526063402628-3cda107c8df7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
 tags: [Health, Future, Wellness, Culture, Psychology, blog]
 layout: layouts/post.njk
+protection: 49.95
 track: Livin' On The Edge
 versions:
     - artist: Aerosmith
