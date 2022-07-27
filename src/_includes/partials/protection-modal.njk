@@ -99,7 +99,7 @@
                                 <div class="mt-2">
                                     <template x-if="$store.auth.user">
                                         <p class="text-sm text-gray-500 dark:text-gray-400">
-                                            <span class="flex items-center justify-center mt-2" x-text="`You are logged in as ${$store.auth.user.name}.`"></span>All you need to do now is make a payment of {{ protection }}€ to unlock the article.</p>
+                                            <span class="flex items-center justify-center mt-2" x-text="`You are logged in as ${$store.auth.user?.name}.`"></span>All you need to do now is make a payment of {{ protection }}€ to unlock the article.</p>
                                     </template>
                                     <template x-if="!$store.auth.user">
                                         <p class="text-sm text-gray-500 dark:text-gray-400">If you're already a member, use the login panel. Otherwise, you can
