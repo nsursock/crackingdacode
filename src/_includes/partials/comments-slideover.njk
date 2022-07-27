@@ -170,7 +170,7 @@
                                                 <span>You must authenticate before posting</span>
                                             </template>
                                             <template x-if="$store.auth.user">
-                                                <span x-text="'Logged in as ' + $store.auth.user.name"></span>
+                                                <span x-text="'Logged in as ' + $store.auth.user?.name"></span>
                                             </template>
                                         </p>
                                     </div>
