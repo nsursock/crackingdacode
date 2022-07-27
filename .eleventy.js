@@ -17,6 +17,9 @@ const httpsAgent = new https.Agent({
 })
 
 module.exports = (config) => {
+
+  // config.ignores.add('src/settings.njk')
+
   config.addFilter('getRandom', function (items) {
     let selected = items[Math.floor(Math.random() * items.length)]
     return selected
