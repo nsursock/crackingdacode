@@ -8,7 +8,6 @@ location: Beirut, Lebanon
 featured: https://images.unsplash.com/photo-1579071073209-18af6f8b1a20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
 tags: [Wellness, Sexuality, Health, Life, Psychology, blog]
 layout: layouts/post.njk
-protection: 69.95
 track: Creep
 versions:
     - artist: Radiohead
