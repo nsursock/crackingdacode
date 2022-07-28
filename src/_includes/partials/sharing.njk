@@ -2,7 +2,7 @@
     rel="noopener"
     target="_blank"
     href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ page.url }}"
-    class="rounded-t-lg relative inline-flex items-center p-3 text-sm font-medium border bg-white border-gray-300
+    class="{{ 'rounded-l-lg' if mobile else 'rounded-t-lg' }} relative inline-flex items-center p-3 text-sm font-medium border bg-white border-gray-300
         text-gray-500 hover:bg-gray-50 dark:bg-gray-900 dark:border-gray-800 dark:hover:bg-gray-800 umami--click--share-button">
     <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +96,7 @@
     rel="noopener"
     target="_blank"
     href="https://www.linkedin.com/sharing/share-offsite/?url={{ site.url }}{{ page.url }}"
-    class="rounded-b-lg -mt-px relative inline-flex items-center p-3 text-sm font-medium border bg-white border-gray-300
+    class="{{ 'rounded-r-lg' if mobile else 'rounded-b-lg' }} -mt-px relative inline-flex items-center p-3 text-sm font-medium border bg-white border-gray-300
         text-gray-500 hover:bg-gray-50 dark:bg-gray-900 dark:border-gray-800 dark:hover:bg-gray-800 umami--click--share-button">
     <svg
         xmlns="http://www.w3.org/2000/svg"
