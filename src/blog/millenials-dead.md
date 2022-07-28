@@ -52,7 +52,7 @@ Millennials have had their share of strange things. They were wondering who thos
 
 We could have been on top of the world. But now we hit rock bottom. We’re never treated like we should.
 
-## Never Complain, Never Explain: I’m On Plane!
+## Never Complain, Never Explain: I’m On A Plane!
 
 <aside class="md:-mr-56 md:float-right w-full md:w-2/3 md:px-8">
   <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="sunloungers fronting buildings near mountain" data-src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
