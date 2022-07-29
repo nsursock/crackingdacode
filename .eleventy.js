@@ -17,6 +17,21 @@ const httpsAgent = new https.Agent({
 })
 
 module.exports = (config) => {
+  config.addCollection('postsByYear', (collection) => {
+    const posts = collection.getFilteredByTag('blog').reverse()
+    const years = posts.map((post) => post.date.getFullYear())
+    const uniqueYears = [...new Set(years)]
+
+    const postsByYear = uniqueYears.reduce((prev, year) => {
+      const filteredPosts = posts.filter(
+        (post) => post.date.getFullYear() === year
+      )
+
+      return [...prev, [year, filteredPosts]]
+    }, [])
+
+    return postsByYear
+  })
 
   // config.ignores.add('src/settings.njk')
 
