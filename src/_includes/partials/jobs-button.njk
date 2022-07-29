@@ -1,4 +1,4 @@
-<div x-show="window.location.pathname !== '/jobs/'" class="animate-pulse p-3 m-2 fixed right-0 bottom-0">
+<div x-show="!window.location.pathname.startsWith('/jobs')" class="animate-pulse p-3 m-2 fixed right-0 bottom-0">
     <a
         href="/jobs"
         class="umami--click--jobs-button inline-flex items-center p-3 border border-transparent rounded-full shadow-sm text-white bg-red-600
