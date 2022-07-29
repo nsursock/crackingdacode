@@ -286,11 +286,10 @@ eleventyComputed:
         Explore the blog
       </p>
       <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto dark:text-gray-400">
-        Discover the most viewed posts of this blog below. Or are you interested in a particular subject? Browse the categories
-        and get a list of all posts on the matter. Or you can read the latest published posts, fresh from the oven!
+        Discover the most viewed posts of this blog below. Or you can read the latest published posts, fresh from the oven!
       </p>
     </div>
-    {%- include './_includes/tagslist.njk' -%}
+    {# {%- include './_includes/tagslist.njk' -%} #}
     <div x-data="{ isTopList: false }" class="mt-10">
       <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-white">Latest Posts</h3>
       {# {%- set postslist = collections.blog | reverse -%} #}
