@@ -1,6 +1,6 @@
 ---
-layout: layouts/post.njk
-title: The Search For Oneself 
+layout: layouts/page.njk
+title: About 
 title2: And The Grail
 description: An artist at war with the world because the dead rule the living. Music is the only way out!
 date: 2022-06-07T04:40:32Z
@@ -70,7 +70,7 @@ I was looking for a way to bring back peace in the Middle East, a beautiful regi
 
 On this journey, I met God: his/her existence is 100% sure for me. And I was helped to discover a code that would make us light in the long run. A code hidden in music I'm trying now to crack, and I'm writing this blog for this reason: I want to end perplexity.
 
-```
+<!-- ```
 [Intro]
 
 [Verse 1]
@@ -93,4 +93,4 @@ Fly on, little wing
 
 [Outro]
 Yeah, yeah, yeah, yeah, little wing
-```
+``` -->
