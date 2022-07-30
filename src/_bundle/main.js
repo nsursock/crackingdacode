@@ -41,7 +41,7 @@ function setCookie(cname, cvalue, exdays) {
   const d = new Date()
   d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000)
   let expires = 'expires=' + d.toUTCString()
-  document.cookie = cname + '=' + cvalue + ';' + expires// + ';path=/'
+  document.cookie = cname + '=' + cvalue + ';' + expires // + ';path=/'
 }
 
 window.Alpine = Alpine
@@ -54,10 +54,11 @@ window.addEventListener('DOMContentLoaded', () => {
     // console.log(window.location.search)
     setCookie('crdacode_InternalTraffic', 'true', 1000)
   }
-  setCookie('crdacode_NewUser', 'true', 1000) // first visit
+
   if (document.cookie.includes('crdacode_NewUser')) {
-    setCookie('crdacode_ReturningUser', 'true', 1000)
-  }
+    if (!document.cookie.includes('crdacode_ReturningUser'))
+      setCookie('crdacode_ReturningUser', 'true', 1000)
+  } else setCookie('crdacode_NewUser', 'true', 1000) // first visit
 
   Alpine.start()
 })
