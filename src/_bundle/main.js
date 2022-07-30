@@ -52,7 +52,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
   if (window.location.search.includes('InternalTraffic')) {
     // console.log(window.location.search)
-    setCookie('InternalTraffic', 'true', 1000)
+    setCookie('crdacode_InternalTraffic', 'true', 1000)
+  }
+  setCookie('crdacode_NewUser', 'true', 1000) // first visit
+  if (document.cookie.includes('crdacode_NewUser')) {
+    setCookie('crdacode_ReturningUser', 'true', 1000)
   }
 
   Alpine.start()
