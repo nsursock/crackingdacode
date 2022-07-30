@@ -10,10 +10,10 @@ tags: [Life, Business, Humor, Wellness, Entertainment, blog]
 layout: layouts/post.njk
 protection: 99.95
 lantern:
-  - text: The code was discovered after 10 years of hard work with music and free association.
-  - text: It's not clear what its magic power is yet but, as of today, it helps you meditate.
-  - text: A series of articles will be written that aim to decipher the code. Stay tuned.
-  - text: Getting the code is the first step to become a member of this website.
+  - text: The code was discovered after 10 years of hard work and free association.
+  - text: Its magic power is to free your mind and to help you meditate.
+  - text: A series of articles will be written that aim to decipher the code.
+  - text: The code is a word located in the last paragraph of this article. 
 track: Just
 versions:
     - artist: Radiohead
