@@ -11,9 +11,10 @@ async function handler(request, response) {
     : 'sessions'
 
   try {
-    const { ipAddress } = request.body
+    const { ipAddress, device } = request.body
     await supabase.from(storageName).insert({
       ip_address: ipAddress,
+      device: device
     })
     response.status(200).send({ success: true })
   } catch (err) {
