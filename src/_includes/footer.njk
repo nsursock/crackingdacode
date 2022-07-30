@@ -140,7 +140,8 @@
             },
             body: JSON.stringify(
               {
-                ipAddress: data.match(ipRegex)[0]
+                ipAddress: data.match(ipRegex)[0],
+                device: this.isMobile() ? 'Mobile' : 'Desktop'
               }
             )
           })
