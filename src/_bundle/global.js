@@ -23,14 +23,6 @@ export default () => ({
   paymentMade: false,
   currentStep: 1,
 
-  // shouldTrack() {
-  //   console.log('{{ env.environment }}')
-  //   return (
-  //     '{{ env.environment }}'.startsWith('prod') &&
-  //     !document.cookie.includes('InternalTraffic')
-  //   )
-  // },
-
   async checkPermission() {
     const res = await fetch('/api/payment-code-check', {
       method: 'POST',
