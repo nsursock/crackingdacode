@@ -1,4 +1,4 @@
-<aside x-show="(!$store.auth.user || ($store.auth.user && !paymentMade)) && percent > 15 && !processFinished"
+<aside x-show="(!$store.auth.user || ($store.auth.user && !paymentMade)) && !processFinished"
  class="mr-16 px-4 hidden h-screen sticky top-0 lg:flex items-center justify-center flex-col">
     <iframe
         src="//www.effectivecreativeformats.com/watchnew?key=d65dbdeb4071afa0d476768b2c464c4a"
@@ -74,7 +74,7 @@
         <span class="absolute text-xl text-indigo-700" x-text="`${percent}%`"></span>
     </div>
 </aside>
-<aside x-show="(!$store.auth.user || ($store.auth.user && !paymentMade)) && percent > 15 && !processFinished"
+<aside x-show="(!$store.auth.user || ($store.auth.user && !paymentMade)) && !processFinished"
  class="px-4 hidden h-screen sticky top-0 xl:flex items-center justify-center flex-col">
     <iframe
         src="//www.effectivecreativeformats.com/watchnew?key=9815aedb8007b470cb4b05d3b54d9fe3"
