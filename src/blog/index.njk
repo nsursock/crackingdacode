@@ -59,7 +59,7 @@ title: Blog | Cracking Da Code
     </ol>
   </div>
   {%- include '../_includes/tagslist.njk' -%}
-  {# {%- if env.environment == 'production' -%} #}
+  {%- if env.environment == 'production' -%}
     <div x-data="{ isTopList: true }">
       {%- set postslist = collections.blog | top -%}
       <ol
@@ -73,5 +73,5 @@ title: Blog | Cracking Da Code
         {%- endfor -%}
       </ol>
     </div>
-  {# {%- endif -%} #}
+  {%- endif -%}
 </div>

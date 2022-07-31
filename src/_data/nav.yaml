@@ -8,13 +8,17 @@ menus:
     icon: 'annotation'
     submenus:
       - name: Biography
-        description: A brief history of this website's author so that he looks legitimate
+        description: A brief history of this website's author so you understand him 
         route: /about
         icon: 'dna'
       - name: Portfolio
         description: In case you wonder who made this website and what are his skills
         route: /webdev
         icon: 'folio'
+      - name: Blog
+        description: A complete list of articles published on this anti-war music blog
+        route: /blog
+        icon: 'bolt'
   - name: Services
     route: /services
     icon: 'ticket'
