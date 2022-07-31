@@ -193,14 +193,15 @@ module.exports = (config) => {
       change: (((curr - prev) / prev) * 100).toFixed(),
     })
     
-    // const p = await fetch('/api/stats-ip-percent', {
+    // const p = await fetch('/api/stats-ip-log', {
     //   method: 'POST',
     //   headers: {
     //     'Content-Type': 'application/json',
     //   },
     //   body: JSON.stringify({
     //     startDate: startAt,
-    //     endDate: endAt
+    //     endDate: endAt,
+    //     mode: 'percent'
     //   }),
     // })
     // const d = (await p.json()).data
