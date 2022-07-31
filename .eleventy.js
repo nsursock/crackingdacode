@@ -113,7 +113,7 @@ module.exports = (config) => {
     // const today = new Date(new Date().setHours(0, 0, 0, 0))
     const today = new Date()
     let endAt = today.getTime()
-    let startAt = today.getTime() - 3 * 30 * 24 * 60 * 60 * 1000
+    let startAt = today.getTime() - 24 * 60 * 60 * 1000
 
     let data = await fetch(
       `https://statumami-production.up.railway.app/api/website/1/stats?start_at=${startAt}&end_at=${endAt}`,
@@ -192,6 +192,25 @@ module.exports = (config) => {
       prev: prev,
       change: (((curr - prev) / prev) * 100).toFixed(),
     })
+    
+    // const p = await fetch('/api/stats-ip-percent', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify({
+    //     startDate: startAt,
+    //     endDate: endAt
+    //   }),
+    // })
+    // const d = (await p.json()).data
+    // stats.push({
+    //   name: 'Returning Users (%)',
+    //   value: (d.filter(r => r.status === 'Returning').length / d.length * 100).toFixed(2),
+    //   prev: 0,
+    //   change: 0
+    // })
+
     return stats
   })
 
@@ -286,7 +305,7 @@ module.exports = (config) => {
     token = (await token.json()).token
 
     let endAt = new Date().getTime()
-    startAt = new Date().getTime() - 3 * 30 * 24 * 60 * 60 * 1000
+    startAt = new Date().getTime() - 24 * 60 * 60 * 1000
 
     let data = await fetch(
       `https://statumami-production.up.railway.app/api/website/1/metrics?start_at=${startAt}&end_at=${endAt}&type=url`,
