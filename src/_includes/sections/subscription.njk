@@ -49,7 +49,7 @@
             </div>
             <div class="mt-4 sm:mt-0 sm:ml-3 flex flex-col">
               <button
-                @click="umami.trackEvent('subscribe-button', 'click')"
+                @click="if (typeof umami !== 'undefined') { umami.trackEvent('subscribe-button', 'click'); mixpanel.track('Subscribed') }"
                 class="block w-full px-5 py-3 text-base font-medium text-white bg-gray-900 border border-transparent shadow rounded-md
                   hover:bg-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-500
                   sm:px-10">

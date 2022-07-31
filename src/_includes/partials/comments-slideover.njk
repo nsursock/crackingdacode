@@ -246,7 +246,10 @@
                                 this.error = message.error
                              else {
                                 this.showCommentsPanel = false
-                                umami.trackEvent('comment-button', 'click')
+                                if (typeof umami !== 'undefined') {
+                                    umami.trackEvent('comment-button', 'click')
+                                    mixpanel.track('Commented')
+                                }
                             }
                         })
                         .catch((error) => {
