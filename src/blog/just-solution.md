@@ -10,10 +10,10 @@ tags: [Life, Business, Humor, Wellness, Entertainment, blog]
 layout: layouts/post.njk
 protection: 99.95
 lantern:
-  - text: The code was discovered after 10 years of hard work and free association.
-  - text: Its magic power is to free your mind and to help you meditate.
-  - text: A series of articles will be written that aim to decipher the code.
-  - text: The code is a word located in the last paragraph of this article. 
+  - text: The code was discovered in late 2015 after 15 years of hard work and free association. It was located in a song by Serge Gainsbourg.
+  - text: Its magic power is to free you, make you lighthearted and help you meditate. But it's not clear yet what else the code can do.
+  - text: A series of articles will be written that aim to decipher the code. For example, it might mean that dissuasion could create a perfect society.
+  - text: The code is a word located in the last paragraph of this article. Fans of Led Zeppelin will find it easily.
 track: Just
 versions:
     - artist: Radiohead

@@ -8,5 +8,5 @@ export default async function handler(request, response) {
     automatic_payment_methods: { enabled: true },
   })
 
-  response.status(200).json({ client_secret: intent.client_secret })
+  response.status(200).json({ client_secret: intent.client_secret, intentId: intent.id })
 }
