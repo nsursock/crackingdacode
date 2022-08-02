@@ -71,6 +71,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Basic Store Example in Alpine.
 window.addEventListener('alpine:initializing', () => {
+  // Alpine.store('data', {
+  //   consent: false,
+  // })
   Alpine.store('auth', {
     user: null,
     setUser(user) {
