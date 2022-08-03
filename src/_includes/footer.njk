@@ -83,7 +83,7 @@
     </div>
   </div>
   {% if env.environment == "production" %}
-    <template x-if="!document.cookie.includes('crdacode_InternalTraffic') && window.location.hostname !== 'localhost'">
+    <template x-if="!('crdacode_InternalTraffic' in localStorage) && window.location.hostname !== 'localhost'">
       <div
         x-data="dataFooter()">
         {# analytics code #}
@@ -155,7 +155,7 @@
                 device: this.isMobile()
                   ? 'Mobile'
                   : 'Desktop',
-                status: document.cookie.includes('crdacode_ReturningUser')
+                status: localStorage.getItem('crdacode_ReturningUser')
                   ? 'Returning'
                   : 'New'
               })

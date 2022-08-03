@@ -60,9 +60,9 @@
                                                                                                                                                                                                 </svg> #}
                     </div>
                     <div class="mt-3 text-center sm:mt-5">
-                        <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100" id="modal-title">Cookie Consent</h3>
+                        <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-100" id="modal-title">Data Consent</h3>
                         <div class="mt-2">
-                            <p class="text-sm text-gray-500 dark:text-gray-400">We use cookies in a range of ways to improve your experience on our website, including:
+                            <p class="text-sm text-gray-500 dark:text-gray-400">We store data in a range of ways to improve your experience on our website, including:
                                 keeping you signed in and understanding how you use our website.</p>
                         </div>
                     </div>
@@ -91,8 +91,10 @@
     function dataConsent() {
         return {
             removeData() {
-                document.cookie = "crdacode_NewUser=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-                document.cookie = "crdacode_ReturningUser=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                //document.cookie = "crdacode_NewUser=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                //document.cookie = "crdacode_ReturningUser=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                localStorage.removeItem('crdacode_NewUser');
+                localStorage.removeItem('crdacode_ReturningUser');
                 localStorage.removeItem('crdacode_token');
                 Alpine.store('auth').setUser(null)
             }
