@@ -155,7 +155,7 @@
                 device: this.isMobile()
                   ? 'Mobile'
                   : 'Desktop',
-                status: localStorage.getItem('crdacode_ReturningUser')
+                status: ('crdacode_ReturningUser' in localStorage)
                   ? 'Returning'
                   : 'New'
               })

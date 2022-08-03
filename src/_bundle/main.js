@@ -56,8 +56,8 @@ window.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('crdacode_InternalTraffic', 'true')
   }
 
-  if (document.cookie.includes('crdacode_NewUser')) {
-    if (!document.cookie.includes('crdacode_ReturningUser'))
+  if ('crdacode_NewUser' in localStorage) {
+    if (!('crdacode_ReturningUser' in localStorage))
       localStorage.setItem('crdacode_ReturningUser', 'true')
       // setCookie('crdacode_ReturningUser', 'true', 1000)
   } else localStorage.setItem('crdacode_NewUser', 'true')
