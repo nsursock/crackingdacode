@@ -3,7 +3,7 @@
   x-data="{ isDarkMode: document.documentElement.classList.contains('dark') }"
 >
   <button
-    @click="localStorage.theme = 'light'; document.documentElement.classList.remove('dark'); isDarkMode = !isDarkMode"
+    @click="localStorage.crdacode_theme = 'light'; document.documentElement.classList.remove('dark'); isDarkMode = !isDarkMode"
     x-show="isDarkMode"
   >
     <svg
@@ -22,7 +22,7 @@
     </svg>
   </button>
   <button
-    @click="localStorage.theme = 'dark'; document.documentElement.classList.add('dark'); isDarkMode = !isDarkMode"
+    @click="localStorage.crdacode_theme = 'dark'; document.documentElement.classList.add('dark'); isDarkMode = !isDarkMode"
     x-show="!isDarkMode"
   >
     <svg
