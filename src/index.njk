@@ -9,6 +9,11 @@ eleventyComputed:
   title: Home (Page {{ pagination.pageNumber + 1 }})
 ---
 
+<style>
+  [x-cloak] {
+    display: none;
+  }
+</style>
 {# This page is built with nunjucks! #}
 {# {% set title = 'Home | Cracking Da Code' %} #}
 {% extends "layouts/page.njk" %}
@@ -120,6 +125,7 @@ eleventyComputed:
               From: "opacity-100 scale-100"
               To: "opacity-0 scale-95" -->
           <div
+            x-cloak="x-cloak"
             x-show="showMenu"
             @click.outside="showMenu = false"
             class="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
