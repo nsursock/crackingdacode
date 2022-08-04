@@ -31,9 +31,22 @@ module.exports = {
         jello: 'jello 1s ease 0s 1 normal forwards',
         random: 'random 2s ease 0s 1 normal forwards',
         show: 'show 0.7s',
+        flip: 'flip 0.5s linear both',
       },
 
       keyframes: {
+        flip: {
+          '0%': {
+            transform: 'scale(1) rotateY(0)',
+          },
+          '50%': {
+            transform: 'scale(2.5) rotateY(180deg)',
+          },
+          '100%': {
+            transform: 'scale(1) rotateY(0)',
+          },
+        },
+
         show: {
           '0%, 49.99%': { opacity: 0, 'z-index': 10 },
           '50%, 100%': { opacity: 1, 'z-index': 50 },
