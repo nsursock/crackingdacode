@@ -423,7 +423,7 @@
                             </template>
                         </form>
                     </div>
-                    <div x-show="currentStep === 4 && id !== null" 
+                    <div x-show="currentStep === 4 || (success && id)" 
                         x-data="{ success: new URLSearchParams(location.search).get('success') || false,
                                 id: new URLSearchParams(location.search).get('id') || null }"
                         x-effect="if (success && id) currentStep = 4">
