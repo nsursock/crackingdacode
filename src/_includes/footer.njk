@@ -102,6 +102,15 @@
           mixpanel.init('add4710d332d6cd264750e2414fcd0a1' /*, {debug: true} */); 
           mixpanel.track('Page Viewed');
         </script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FC4SZD189F"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-FC4SZD189F');
+        </script>
           {# <script async="async" src="https://cdn.splitbee.io/sb.js"></script> #}
         {# <!-- Hotjar Tracking Code for https://crackingdacode.org/ -->
         <script>
