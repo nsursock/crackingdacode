@@ -77,12 +77,12 @@ Yes, talking to God is an obvious thing to do: let's remember it's just a point 
 ## Do We Need Sometimes To Lie?
 
 <aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="old woman with honest smile" data-src="https://images.unsplash.com/flagged/photo-1570084787226-c77bdc6a1705?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="old woman with honest smile" data-src="https://images.unsplash.com/flagged/photo-1571046423953-30c053888852?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 We've been living a lie: there's nothing inside. A brilliant civilization still incapable of traveling the Milky Way but stuck in the atmosphere with stratocumulus is a beautiful sight to see. And that's where the code will come in handy: of course, we're afraid of space travels because it's so disturbing (heights, atmosphere, comets).
 
-With a word, we will get what we came for: Almeria. I'm proud to announce that I reconciled the Da Vinci Code and The Celestine Prophecy. The atmosphere in space is so strange it looks like the underground: so maybe you could also read a book or listen to some music.
+<template x-if="!((!$store.auth.user || ($store.auth.user && !paymentMade)) && percent > 15 && !processFinished)"><p>With a word, we will get what we came for: <span x-text="'{{ env.rosebud }}'"></span>.</p></template> I'm proud to announce that I reconciled the Da Vinci Code and The Celestine Prophecy. The atmosphere in space is so strange it looks like the underground: so maybe you could also read a book or listen to some music.
 
 Is it a just solution or a correct one? Sometimes a correct solution can be just (i.e., relaxing). In France, the song Honesty was #1 when it came out, and this is another troubling coincidence for this great country that welcomed me as a child. The other worrisome coincidence is that the word for pain in French ("souffrance") can be broken in two and then mean: "money" "France" = "pain."
 
