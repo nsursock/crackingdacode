@@ -107,7 +107,7 @@
           mixpanel.track('Page Viewed');
 
           if (window.location.pathname === '/' && document.referrer === '') {
-            if (coinFlip < 0.5) mixpanel.track('Generated A Variation')
+            if (this.coinFlip < 0.5) mixpanel.track('Generated A Variation')
             else mixpanel.track('Generated B Variation')
           }
         </script>
