@@ -105,6 +105,11 @@
           // but it's recommended you remove it for production
           mixpanel.init('add4710d332d6cd264750e2414fcd0a1' /*, {debug: true} */); 
           mixpanel.track('Page Viewed');
+
+          if (window.location.pathname === '/' && document.referrer === '') {
+            if (coinFlip < 0.5) mixpanel.track('Generated A Variation')
+            else mixpanel.track('Generated B Variation')
+          }
         </script>
         
         <script

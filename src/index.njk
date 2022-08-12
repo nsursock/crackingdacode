@@ -191,26 +191,16 @@ eleventyComputed:
               <div>
                 <template x-if="coinFlip < 0.5">
                   <div>
-                  <script>
-                    if (typeof umami !== 'undefined' && document.referrer === '') {
-                      mixpanel.track('Generated A Variation')
-                    }
-                  </script>
-                  <span class=" text-indigo-600 inline">
-                    Peace On Earth & End To War
-                  </span>
+                    <span class=" text-indigo-600 inline">
+                      Peace On Earth & End To War
+                    </span>
                   </div>
                 </template>
                 <template x-if="coinFlip >= 0.5">
                   <div>
-                   <script>
-                    if (typeof umami !== 'undefined' && document.referrer === '') {
-                      mixpanel.track('Generated B Variation')
-                    }
-                  </script>
-                  <span class=" text-indigo-600 inline">
-                    A Blog For Everyday People
-                  </span>
+                    <span class=" text-indigo-600 inline">
+                      A Blog For Everyday People
+                    </span>
                   </div>
                 </template>
               </div>
@@ -337,13 +327,13 @@ eleventyComputed:
         x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')">
         {%- for post in pagination.items -%}
           {# {% set views = post.views %}
-                                                                                                                                                                                                                                                                                                                                      {% set post = post.post %}
-                                                                                                                                                                                                                                                                                                                                      <div class="relative"> #}
+                                                                                                                                                                                                                                                                                                                                                {% set post = post.post %}
+                                                                                                                                                                                                                                                                                                                                                <div class="relative"> #}
           {%- include 'partials/postcard.njk' -%}
           {# <div class='-mx-3 -my-2 w-12 h-12 flex items-center justify-center bg-white rounded-full border  absolute bottom-0 right-0'>
-                                                                                                                                                                                                                                                                                                                                          <span>{{ views }}</span>
-                                                                                                                                                                                                                                                                                                                                        </div>
-                                                                                                                                                                                                                                                                                                                                      </div> #}
+                                                                                                                                                                                                                                                                                                                                                    <span>{{ views }}</span>
+                                                                                                                                                                                                                                                                                                                                                  </div>
+                                                                                                                                                                                                                                                                                                                                                </div> #}
         {%- endfor -%}
       </ol>
       <!-- This example requires Tailwind CSS v2.0+ -->
