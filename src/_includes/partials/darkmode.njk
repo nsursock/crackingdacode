@@ -3,7 +3,7 @@
     @click="localStorage.crdacode_theme = 'light'; document.documentElement.classList.remove('dark'); isDarkMode =
       !isDarkMode"
     x-show="isDarkMode">
-    <span class="sr-only">Switch to Light</span>
+    <span class="sr-only">Switch</span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       class="h-6 w-6 text-gray-400 hover:text-gray-500 dark:text-gray-400"
@@ -21,7 +21,7 @@
   <button
     @click="localStorage.crdacode_theme = 'dark'; document.documentElement.classList.add('dark'); isDarkMode = !isDarkMode"
     x-show="!isDarkMode">
-    <span class="sr-only">Switch to Dark</span>
+    <span class="sr-only">Switch</span>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       class="h-6 w-6 text-gray-400 hover:text-gray-500 dark:text-gray-400"
