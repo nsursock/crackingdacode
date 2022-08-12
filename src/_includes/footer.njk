@@ -106,11 +106,7 @@
           mixpanel.init('add4710d332d6cd264750e2414fcd0a1' /*, {debug: true} */); 
           mixpanel.track('Page Viewed');
 
-          if (window.location.pathname === '/' && document.referrer === '') {
-            if (this.coinFlip < 0.5) mixpanel.track('Generated A Variation')
-            else if (this.coinFlip >= 0.5) mixpanel.track('Generated B Variation')
-            else console.log(">>>>> error: couldn't determine variation", this.coinFlip)
-          }
+          this.getVariation();
         </script>
         
         <script
@@ -206,6 +202,13 @@
             })
           })
         
+      },
+      getVariation() {
+         if (window.location.pathname === '/' && document.referrer === '') {
+            if (this.coinFlip < 0.5) mixpanel.track('Generated A Variation')
+            else if (this.coinFlip >= 0.5) mixpanel.track('Generated B Variation')
+            else console.log(">>>>> error: couldn't determine variation", this.coinFlip)
+          }
       }
     }
   }
