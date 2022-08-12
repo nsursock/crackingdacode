@@ -22,6 +22,7 @@ export default () => ({
   password: '',
   paymentMade: false,
   currentStep: 1,
+  coinFlip: Math.random(),
 
   async checkPermission() {
     const res = await fetch('/api/payment-code-check', {
