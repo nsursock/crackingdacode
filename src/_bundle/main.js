@@ -58,8 +58,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
   if ('crdacode_NewUser' in localStorage) {
     if (!('crdacode_ReturningUser' in localStorage))
-      localStorage.setItem('crdacode_ReturningUser', 'true')
-      // setCookie('crdacode_ReturningUser', 'true', 1000)
+      localStorage.setItem('crdacode_ReturningUser', '1')
+    else {
+      var numVisits = localStorage.getItem('crdacode_ReturningUser')
+      if (numVisits === 'true') numVisits = 1
+      else numVisits = parseInt(numVisits) + 1
+      localStorage.setItem('crdacode_ReturningUser', numVisits)
+    }
+    // setCookie('crdacode_ReturningUser', 'true', 1000)
   } else localStorage.setItem('crdacode_NewUser', 'true')
   // setCookie('crdacode_NewUser', 'true', 1000) // first visit
 

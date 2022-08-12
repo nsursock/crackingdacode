@@ -45,35 +45,47 @@ export default () => ({
   },
 
   async init() {
-    // setTimeout(() => {
-    //   this.showPopup = true
-    // }, 1000)
+    if (
+      document.referrer === '' &&
+      !('crdacode_ReturningUser' in localStorage)
+    ) {
+      // desktop
+      document.addEventListener('mouseout', (event) => {
+        if (!event.toElement && !event.relatedTarget) {
+          setTimeout(() => {
+            this.showPopup = true
+          }, 1000)
+        }
+      })
 
-    // document.addEventListener('DOMContentLoaded', () => {
-    // desktop
-    // document.addEventListener('mouseout', (event) => {
-    //   if (!event.toElement && !event.relatedTarget) {
-    //     setTimeout(() => {
-    //       this.showPopup = true
-    //     }, 1000)
-    //   }
-    // })
+      isQuicklyScrollingUp = () => {
+        try {
+          lastPosition = window.scrollY
+          setTimeout(() => {
+            newPosition = window.scrollY
+          }, 100)
+          currentSpeed = newPosition - lastPosition
+          return currentSpeed > 100
+        } catch (error) {
+          return false
+        }
+      }
 
-    // // mobile
-    // window.addEventListener(
-    //   'scroll',
-    //   (event) => {
-    //     if (!event.toElement && !event.relatedTarget) {
-    //       if (this.isMobile() && window.scrollY === 0) {
-    //         setTimeout(() => {
-    //           this.showPopup = true
-    //         }, 1000)
-    //       }
-    //     }
-    //   },
-    //   { passive: true }
-    // )
-    // })
+      // mobile
+      window.addEventListener(
+        'scroll',
+        (event) => {
+          if (!event.toElement && !event.relatedTarget) {
+            if (this.isMobile() && isQuicklyScrollingUp()) {
+              setTimeout(() => {
+                this.showPopup = true
+              }, 1000)
+            }
+          }
+        },
+        { passive: true }
+      )
+    }
 
     window.addEventListener(
       'scroll',
