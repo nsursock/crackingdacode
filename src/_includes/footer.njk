@@ -109,7 +109,7 @@
           if (window.location.pathname === '/' && document.referrer === '') {
             if (this.coinFlip < 0.5) mixpanel.track('Generated A Variation')
             else if (this.coinFlip >= 0.5) mixpanel.track('Generated B Variation')
-            else console.log(">>>>> error: couldn't determine variation")
+            else console.log(">>>>> error: couldn't determine variation", this.coinFlip)
           }
         </script>
         
