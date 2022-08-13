@@ -48,8 +48,11 @@
                 x-transition:leave-end="opacity-0 translate-y-4 md:translate-y-0 md:scale-95 "
                 class="relative bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8
                     sm:max-w-sm sm:w-full sm:p-6 dark:bg-gray-800">
-                <div x-data="{ numSteps: 4 }">
-                    
+                <div x-data="{ 
+                    numSteps: 4, 
+                    price: ((Math.round('{{ protection }}' - (window.location.search.includes('discount=true') ? 
+                        ('{{ protection }}' * discount / 100) : 0)) * 500) / 500 - 0.05).toFixed(2) }"
+                >    
                     <div x-show="currentStep === 1">
                         <div>
                             <div
@@ -69,7 +72,7 @@
                                 </svg>
                             </div>
                             <div class="mt-3 text-center sm:mt-5">
-                                <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-50" id="modal-title">Unlock article: {{ protection }}€</h3>
+                                <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-50" id="modal-title">Unlock article: <span x-text="price"></span>€</h3>
                                 <div class="mt-2">
                                     {# <p class="text-sm text-gray-500 dark:text-gray-400">First, you will need to signup or login, and then you will have to
                                         make a payment of {{ protection }}€.</p> #}
@@ -131,8 +134,8 @@
                                         focus:ring-offset-2 focus:ring-indigo-500 sm:text-sm">
                                     Confirm</button>
                             </div>
-                                        <p class="text-sm text-gray-500 dark:text-gray-400">
-                                            <span class="flex items-center justify-center mt-2" x-text="`You are logged in as ${$store.auth.user?.name}.`"></span>All you need to do now is make a payment of {{ protection }}€ to unlock the article.</p>
+                                        {# <p class="text-sm text-gray-500 dark:text-gray-400">
+                                            <span class="flex items-center justify-center mt-2" x-text="`You are logged in as ${$store.auth.user?.name}.`"></span>All you need to do now is make a payment of {{ protection }}€ to unlock the article.</p> #}
                         </template>
                         <template x-if="!$store.auth.user">
                             <div
@@ -402,9 +405,7 @@
                                         </svg>
                                         Processing...
                                         </span>
-                                        <span x-show="!isFetching">
-                                Pay
-                                {{ protection }}€</span></button>
+                                        <span x-show="!isFetching" x-text="`Pay ${price}€`"></span></button>
                             <template x-if="error">
                                 <div
                                     class="flex items-center py-2 px-3 border border-transparent text-sm font-medium rounded-md text-red-100 bg-red-600 mt-1"
@@ -638,7 +639,7 @@
                 await loadScript('https://js.stripe.com/v3')
                 this.stripe = Stripe('{{ env.stripeKey }}')
                 const data = {
-                    protection: '{{ protection }}'
+                    protection: this.price
                 }
                 const response = await fetch('/api/payment-code', {
                     method: 'POST',
