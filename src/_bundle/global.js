@@ -2,6 +2,7 @@ export default () => ({
   showCta: false,
   showTests: false,
   showPopup: false,
+  showDonationPopup: true,
   landingPageOffset: 400,
   lastScrollTop: window.pageYOffset || document.documentElement.scrollTop,
   isScrollingUp: false,

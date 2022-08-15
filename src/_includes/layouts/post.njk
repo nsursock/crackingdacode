@@ -346,6 +346,11 @@
     {% include 'partials/comments-slideover.njk' %}
     {% include 'partials/auth-login-modal.njk' %}
     {% include 'partials/auth-signup-modal.njk' %}
+    <div show="percent >= 50 && showDonationPopup">
+      {% if not protection %}
+        {% include 'partials/popup-donation.njk' %}
+      {% endif %}
+    </div>
     {# <div x-show="showPopup">
                                                                     {% include 'partials/popup.njk' %}
                                                                   </div> #}
