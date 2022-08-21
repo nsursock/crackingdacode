@@ -221,7 +221,7 @@
             </div>
           {% endif %}
         {% endfor %}
-        <div
+        {# <div
           class="container mt-20 dark:text-gray-100"
           x-show="(!$store.auth.user || ($store.auth.user && !paymentMade)) && percent > 15 && !processFinished">
           <script
@@ -229,7 +229,7 @@
             data-cfasync="false"
             src="//pl17474538.highperformancegate.com/bddbb588abda773854dc5dca45cfd922/invoke.js"></script>
           <div id="container-bddbb588abda773854dc5dca45cfd922"></div>
-        </div>
+        </div> #}
       </div>
       {% include 'sections/subscription.njk' %}
       <div id="posts" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
