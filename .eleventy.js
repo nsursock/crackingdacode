@@ -35,6 +35,11 @@ module.exports = (config) => {
 
   // config.ignores.add('src/settings.njk')
 
+  config.addFilter('getCode', function (items) {
+    const index = items.findIndex((post) => post.url.includes('just-solution'))
+    if (index !== -1) return items[index]
+  })
+
   config.addFilter('getRandom', function (items) {
     let selected = items[Math.floor(Math.random() * items.length)]
     return selected
@@ -192,7 +197,7 @@ module.exports = (config) => {
       prev: prev,
       change: (((curr - prev) / prev) * 100).toFixed(),
     })
-    
+
     // const p = await fetch('/api/stats-ip-log', {
     //   method: 'POST',
     //   headers: {
