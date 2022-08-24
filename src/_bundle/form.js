@@ -5,7 +5,7 @@ export default () => ({
     var status = document.getElementById('my-form-status')
     var data = new FormData(event.target)
     fetch(event.target.action, {
-      method: 'post',//this.form.method,
+      method: 'post', //this.form.method,
       body: data,
       headers: {
         Accept: 'application/json',

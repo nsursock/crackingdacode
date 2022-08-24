@@ -23,7 +23,16 @@
     "singleQuote": true,
     "tabWidth": 2,
     "trailingComma": "es5",
-    "htmlWhitespaceSensitivity": "ignore"
+    "htmlWhitespaceSensitivity": "ignore",
+    "overrides": [
+      {
+        "files": "*.njk",
+        "options": {
+          "parser": "html",
+          "tabWidth": 2
+        }
+      }
+    ]
   },
   "keywords": [
     "eleventy",
