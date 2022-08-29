@@ -144,7 +144,7 @@
     ></span>
   </div>
 </aside>
-{#
+
 <aside
   x-show="(!$store.auth.user || ($store.auth.user && !paymentMade)) && !processFinished"
   x-data="{ showArticle: true }"
@@ -160,6 +160,7 @@
     flex-col
   "
 >
+  {# {% include './star-rating.njk' %} #} {#
   <div>
     {% set post = collections.blog | getCode %} {% include './postcard.njk' %}
   </div>
@@ -171,5 +172,5 @@
     frameborder="0"
     scrolling="no"
   ></iframe>
+  #}
 </aside>
-#}
