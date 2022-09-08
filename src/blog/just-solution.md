@@ -16,10 +16,10 @@ lantern:
   - text: The code is a word located in the last paragraph of this article. Fans of Led Zeppelin will find it easily.
 track: Just
 versions:
-    - artist: Radiohead
-      link: https://apple.co/3md2ufc
-    - artist: Mark Ronson
-      link: https://apple.co/3yQy1ZQ
+  - artist: Radiohead
+    link: https://apple.co/3md2ufc
+  - artist: Mark Ronson
+    link: https://apple.co/3yQy1ZQ
 ---
 
 Based on a song from Radiohead, I think a just solution is a relaxing one for every trouble we have. For example, at the moment, I have a problem with women. I had a horrible experience with one girl and ended up almost ruined and almost alone.
@@ -38,7 +38,7 @@ The just solution (not necessarily the correct one) would be a performance stand
   <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="secret door in library" data-src="https://images.unsplash.com/photo-1511075675422-c8e008f749d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
-4 years ago, I found a code supposed to free humanity. It could mean several things, but the first thing that comes to mind is alliances. Now since then, I'm feeling dizzy every day.
+4 years ago, I found a code supposed to free humanity. It could mean several things, but the first thing that comes to mind is alliance. Now since then, I'm feeling dizzy every day.
 
 But I know it's the correct solution and not necessarily a just one.
 
