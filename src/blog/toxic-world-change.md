@@ -5,7 +5,7 @@ description: "We should neutralise troublemakers. Or maybe give them a job they 
 author: Nicolas Sursock
 date: 2020-06-25T18:41:00Z
 featured: https://images.unsplash.com/photo-1540810089123-505cadb59539?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
-tags: [World, Creativity, Health, History, World, blog]
+tags: [World, Creativity, Health, History, Future, blog]
 layout: layouts/post.njk
 track: Land Of Confusion
 versions:
