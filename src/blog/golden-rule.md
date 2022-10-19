@@ -98,7 +98,7 @@ There must be a reason why I don't feel a thing. Music even started to make me i
 
 I just read that warfare is about making someone perplex. But I can guarantee that not thinking enough can also make you dizzy and at war with the world.
 
-Without war, there would be no artists. What good is a song if it only talks about a dull daily life? I remember when Jennifer Aston (in the show Friends) was speaking about everyday life: she said one shouldn't depreciate it.
+Without war, there would be no artists. What good is a song if it only talks about a dull daily life? I remember when Jennifer Aniston (Rachel Green in the show Friends) was speaking about everyday life: she said one shouldn't depreciate it.
 
 ```
 [Verse]
