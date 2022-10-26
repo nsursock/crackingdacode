@@ -37,7 +37,7 @@ You're feeling peculiar because sometimes your head and liver are playing tricks
 ## Is Life A Chaotic Journey Or A Stupid Destination?
 
 <aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="Three best friends enjoying traveling in the car, sitting in rear seat and having lots of fun on a road trip." data-src="https://plus.unsplash.com/premium_photo-1661684449481-c5abe43a82c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="brown tree branch during daytime" data-src="https://images.unsplash.com/photo-1597514577371-224f64277638?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 Kiersten Rich did some soul searching after four years in corporate finance. Traveling alone, she discovered it was empowering to move. But you and I know traveling creates a complex identity.
