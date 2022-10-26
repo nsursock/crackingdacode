@@ -69,7 +69,7 @@ Space seems like an improbable adventure without the cosmic secret service.
 ## How Can You Control The Process Of Aging?
 
 <aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="Young man washing face in the bathroom in the morning, a daily routine." data-src="https://plus.unsplash.com/premium_photo-1663054467564-3515e76f404b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="hands of baby and old person" data-src="https://images.unsplash.com/photo-1534768654272-e97681c3a2c7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 To conclude, given the length of space travel, the key could be to master the process of aging. Sometimes I feel like a baby, and sometimes I feel like a president 50 years old. Jesus proposed his solution, but I guess the best system is discipline, aka the fear of punishment.

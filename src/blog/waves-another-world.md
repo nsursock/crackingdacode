@@ -70,7 +70,7 @@ I’m never there, and I’m living in the past. I’m like a butterfly caught i
 ## I Won’t Stand Spending Another Day In Paris!
 
 <aside class="md:-ml-56 md:float-left w-full md:w-2/3 md:px-8">
-  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="Happy romantic couple in Paris, near the Eiffel tower. Tourists spending their vacation in France" data-src="https://plus.unsplash.com/premium_photo-1661404074889-1ae9e7a1fce0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
+  <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="Eiffel Tower, Paris France" data-src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
 All in all, I don’t want to live in Paris anymore. I want to go back to Beirut, where I was born. The weather and architecture are more human. I know Paris was once again devastated by Alois Brunner and the BRICS (Brazil, Russia, India, China, and South Africa). This makes me think that half of humanity is seriously putting the Earth at risk of exploding.
