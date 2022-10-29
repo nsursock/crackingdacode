@@ -41,7 +41,7 @@ This is insane: she didn’t even say hello. I felt her love like a love I used 
   <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="person holding hands" data-src="https://images.unsplash.com/photo-1478476868527-002ae3f3e159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
-Since the end of 2007, I’m spending my time in a coffee shop blogging. I’ve seen that situation before and my brain was oxygenated.
+Since the end of 2017, I’m spending my time in a coffee shop blogging. I’ve seen that situation before and my brain was oxygenated.
 
 Life is an extreme experience since you’re born and, without solidarity, you can end messed up pretty badly. That’s why it would be interesting to know if deja vu only occurs when you’re alone in a crowd.
 
