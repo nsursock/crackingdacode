@@ -5,7 +5,7 @@ description: People want something out of their lives. They are prone to hang ou
 author: Nicolas Sursock
 date: 2019-11-22T22:54:00Z
 featured: https://images.unsplash.com/photo-1624087181434-46b1bf7edbfe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
-tags: [Society, Environment, Psychology, Health, Wellness, blog]
+tags: [Psychology, Society, Environment, Future, Wellness, blog]
 layout: layouts/post.njk
 track: No-One But You (Only the Good Die Young)
 versions:
