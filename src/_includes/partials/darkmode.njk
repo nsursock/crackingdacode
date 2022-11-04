@@ -42,7 +42,7 @@ x-data="{ isDarkMode: document.documentElement.classList.contains('dark') }"
       </div>
       <div class="ml-3">Light</div>
     </button>
-    <button class="flex rounded-[10px] bg-gray-50 p-1 hover:bg-gray-100 w-full"
+    <button class="flex rounded-[10px] p-1 hover:bg-gray-100 w-full"
   @click="localStorage.crdacode_theme = 'dark'; document.documentElement.classList.add('dark'); isDarkMode = !isDarkMode; open = !open"
   >
       <div class="flex h-6 w-6 flex-none items-center justify-center rounded-md bg-white shadow ring-1 ring-gray-900/10">
