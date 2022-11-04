@@ -12,6 +12,7 @@ const format = require('date-fns/format')
 const fetch = require('node-fetch-commonjs')
 
 const https = require('https')
+const { log } = require('console')
 const httpsAgent = new https.Agent({
   rejectUnauthorized: false,
 })
@@ -324,7 +325,8 @@ module.exports = (config) => {
       }
     )
     let json = await data.json()
-    let tops = json?.filter((item) => item.x.includes('/blog/')).slice(0, 3)
+    let tops = json?.filter((item) => item.x.includes('/blog/')).filter((item) => !item.x.includes('just-solution'))
+    tops = tops.slice(0, Math.min(tops.length,3))
 
     callback(
       null,
