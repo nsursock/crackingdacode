@@ -27,10 +27,7 @@ eleventyComputed:
   <link rel="preload" href="/static/fonts/aldrich/aldrich-v17-latin-regular.woff" as="font" crossorigin/>
   <link rel="preload" href="/static/fonts/aldrich/aldrich-v17-latin-regular.ttf" as="font" crossorigin/>
   <script>
-    if (
-      localStorage.crdacode_theme === 'dark' ||
-      (!('crdacode_theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
+    if (localStorage.crdacode_theme === 'dark' || (!('crdacode_theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document
         .documentElement
         .classList
@@ -266,14 +263,15 @@ eleventyComputed:
                   <a
                     @click="if (typeof umami !== 'undefined') mixpanel.track('Clicked Primary Button (Code)')"
                     href="/blog/just-solution/"
-                    class="umami--click--code-button w-full flex items-center justify-center px-8 py-3 border border-transparent text-base
+                    class="dark:text-black dark:bg-indigo-400 dark:hover:bg-indigo-300 umami--click--code-button w-full flex items-center justify-center px-8 py-3 border border-transparent text-base
                       font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 ">
                     Get The Code
                   </a>
                 </template>
                 <template x-if="!('crdacode_ReturningUser' in localStorage)">
                   {% set randomPost = collections.blog | getRandom %}
-                  <a @click="if (typeof umami !== 'undefined') mixpanel.track('Clicked Primary Button (Random)')" href="{{ randomPost.url }}" class="umami--click--random-button w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 ">
+                  <a @click="if (typeof umami !== 'undefined') mixpanel.track('Clicked Primary Button (Random)')" href="{{ randomPost.url }}" 
+                  class="dark:text-black dark:bg-indigo-400 dark:hover:bg-indigo-300 umami--click--random-button w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10 ">
                     Random Post
                   </a>
                 </template>
@@ -282,7 +280,7 @@ eleventyComputed:
                 <a
                   @click="if (typeof umami !== 'undefined') mixpanel.track('Clicked Secondary Button')"
                   href="/blog"
-                  class="umami--click--explore-button w-full flex items-center justify-center px-8 py-3 border border-transparent text-base
+                  class="dark:text-indigo-300 dark:bg-indigo-900 dark:hover:bg-indigo-800 umami--click--explore-button w-full flex items-center justify-center px-8 py-3 border border-transparent text-base
                     font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg md:px-10 ">
                   Explore Blog
                 </a>
