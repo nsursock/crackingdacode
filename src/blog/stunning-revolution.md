@@ -85,7 +85,6 @@ Still you pretend and try to call me friend
 Don't say a word, I know just what I heard
 Yeah you been loose, you just got no excuse
 Just feel my rage, why can't you come of age?
-
 I felt it all, just like a cannonball
 
 Then you got mad, you said that I'm all bad
@@ -102,6 +101,7 @@ You can say what you want all day
 But I've never been so outraged
 I'm washing my hands of you
 How could you be so untrue
+
 You know I can't stand no more
 You know I can't stand no more
 ```
