@@ -1,6 +1,6 @@
 ---
 title: Should You Act Crazy Cold 
-title2: Like You Dont Fucking Care?
+title2: Like You Don't Fucking Care?
 description: The opposite of love isn't hate; it's indifference. Caring has a price but what I've learned is that it's the only way to learn something.
 author: Nicolas Sursock
 date: 2019-10-09T21:40:00Z
