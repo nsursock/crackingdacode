@@ -31,7 +31,7 @@ class="relative inline-block text-left" x-data="{ open: false }">
     x-transition:leave-start="transform opacity-100 scale-100 "
     x-transition:leave-end="transform opacity-0 scale-95 "
 x-data="{ isDarkMode: document.documentElement.classList.contains('dark') }"
- class="dark:bg-gray-800 absolute right-0 z-10 mt-2 w-56 origin-top-right pointer-events-auto w-36 space-y-1 rounded-lg bg-white p-3 text-[0.8125rem] font-medium leading-6 text-gray-700 shadow-xl shadow-black/5 ring-1 ring-gray-700/10">
+ class="dark:bg-gray-800 absolute right-0 z-10 mt-2 w-56 origin-top-right pointer-events-auto w-36 space-y-1 rounded-lg bg-white p-3 text-[0.8125rem] font-medium leading-6 text-gray-700 shadow-xl shadow-black/5 border border-gray-200 dark:border-gray-700">
     <button class="flex rounded-[10px] p-1 hover:bg-gray-100 dark:hover:bg-gray-900 w-full"
   @click="localStorage.crdacode_theme = 'light'; document.documentElement.classList.remove('dark'); isDarkMode =
       !isDarkMode; open = !open"
