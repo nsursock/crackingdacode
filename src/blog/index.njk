@@ -47,17 +47,6 @@ title: Blog | Cracking Da Code
   </div>
 </div>
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-  <div x-data="{ isTopList: false }">
-    {% set postslist = collections.blog | reverse %}
-    <ol
-      x-data="{ showArticle: false }"
-      class=" md:h-screen mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-7 "
-      x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')">
-      {%- for post in postslist -%}
-        {%- include 'partials/postcard.njk' -%}
-      {%- endfor -%}
-    </ol>
-  </div>
   {%- include '../_includes/tagslist.njk' -%}
   {%- if env.environment == 'production' -%}
     <div x-data="{ isTopList: true }">
@@ -74,4 +63,15 @@ title: Blog | Cracking Da Code
       </ol>
     </div>
   {%- endif -%}
+    <div x-data="{ isTopList: false }">
+    {% set postslist = collections.blog | reverse %}
+    <ol
+      x-data="{ showArticle: false }"
+      class=" md:h-screen mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-7 "
+      x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')">
+      {%- for post in postslist -%}
+        {%- include 'partials/postcard.njk' -%}
+      {%- endfor -%}
+    </ol>
+  </div>
 </div>
