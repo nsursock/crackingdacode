@@ -125,7 +125,7 @@
           src="https://statumami-production.up.railway.app/umami.js">
         </script>
 
-        <script>
+        {# <script>
           !function(){var t,o,c,e=window,n=document,r=arguments,a="script",i=["call","cancelAction","config","identify","push","track","trackClick","trackForm","update","visit"],s=function(){var t,o=this,c=function(t){o[t]=function(){return o._e.push([t].concat(Array.prototype.slice.call(arguments,0))),o}};for(o._e=[],t=0;t<i.length;t++)c(i[t])};for(e.__woo=e.__woo||{},t=0;t<r.length;t++)e.__woo[r[t]]=e[r[t]]=e[r[t]]||new s;(o=n.createElement(a)).async=1,o.src="https://static.woopra.com/js/w.js",(c=n.getElementsByTagName(a)[0]).parentNode.insertBefore(o,c)}("woopra");
 
           woopra.config({
@@ -136,7 +136,7 @@
           });
           
           woopra.track();
-        </script>
+        </script> #}
         <!-- End of Woopra Code -->
        
         {# <!-- Google tag (gtag.js) -->
@@ -153,7 +153,7 @@
         {# <script async="async" src="https://cdn.splitbee.io/sb.js"></script> #}
         {% if page.url.includes('just-solution') %}
 
-        <script type="text/javascript">
+        {# <script type="text/javascript">
           window._mfq = window._mfq || [];
           (function() {
             var mf = document.createElement("script");
@@ -161,7 +161,7 @@
             mf.src = "//cdn.mouseflow.com/projects/fe23234f-e697-4471-9c73-85768cb92349.js";
             document.getElementsByTagName("head")[0].appendChild(mf);
           })();
-        </script>
+        </script> #}
 
               <script>
                   (function(h,o,t,j,a,r){
@@ -174,7 +174,7 @@
                   })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
               </script>
 
-        <script type='text/javascript'>
+        {# <script type='text/javascript'>
           window.smartlook || (function (d) {
             var o = smartlook = function () {
                 o.api.push(arguments)
@@ -189,7 +189,7 @@
             h.appendChild(c);
           })(document);
           smartlook('init', '5e75fd45cb1c9ca751db0bdba820fb61dcbcdcb2');
-        </script>
+        </script> #}
         {% endif %}
       </div>
     </template>
