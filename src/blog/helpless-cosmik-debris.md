@@ -42,13 +42,13 @@ The cosmic debris of my acquaintance could have been an illumination. His teache
   <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="closeup photo of white and teal painted corner street" data-src="https://images.unsplash.com/photo-1531053769896-9222ad8972b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
+If I had a business friend explaining to me that the lifetime value of a relationship is important, I would have thought twice before ending the relationship with my music coach. A few years after, I called him back, and we started to work together again.
+
+But how do you measure the lifetime value of a relationship before you can predict something? Now I have 250 friends, maybe more without noticing, and I wonder what I can do for them.
+
 I know what you think: if cosmic debris are so dangerous, we should avoid them. And I came up with 2 strategies to avoid cosmic debris making you haunt the city for information:
  1. try to adapt to your environment even if the impact was felt,
  2. try to find friends to debrief the cosmic debris.
-
-For example, if I had a business friend explaining to me that the lifetime value of a relationship is important, I would have thought twice before ending the relationship with my music coach. A few years after, I called him back, and we started to work together again.
-
-But how do you measure the lifetime value of a relationship before you can predict something? Now I have 250 friends, maybe more without noticing, and I wonder what I can do for them.
 
 There are 2 ways to avoid cosmic debris and their crater: adaptation and debriefing. Now we can try to predict the value of having 250 friends.
 
