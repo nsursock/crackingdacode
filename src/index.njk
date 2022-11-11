@@ -187,18 +187,29 @@ eleventyComputed:
                 Cracking Da Code:
               </span>
               <div>
-                <template x-if="coinFlip < 0.5">
+                <template x-if="coinFlip <= 0.33">
                   <div>
                     <span class=" text-indigo-600 inline">
                       Peace On Earth & End To War
                     </span>
                   </div>
                 </template>
-                <template x-if="coinFlip >= 0.5">
+                <template x-if="coinFlip > 0.33">
+                  <div>
+                  <template x-if="coinFlip < 0.66">
                   <div>
                     <span class=" text-indigo-600 inline">
                       A Blog For Everyday People
                     </span>
+                  </div>
+                </template>
+                <template x-if="coinFlip >= 0.66">
+                  <div>
+                    <span class=" text-indigo-600 inline">
+                      The World Needs To Know
+                    </span>
+                  </div>
+                  </template>
                   </div>
                 </template>
               </div>
