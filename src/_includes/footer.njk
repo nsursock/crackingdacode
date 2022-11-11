@@ -107,10 +107,14 @@
           mixpanel.track('Page Viewed');
 
           if (window.location.pathname === '/' && document.referrer === '') {
-            if (Alpine.evaluate(document.body, 'coinFlip') < 0.5) 
+            if (Alpine.evaluate(document.body, 'coinFlip') <= 0.33) 
               mixpanel.track('Generated A Variation')
-            else if (Alpine.evaluate(document.body, 'coinFlip') >= 0.5) 
-              mixpanel.track('Generated B Variation')
+            else if (Alpine.evaluate(document.body, 'coinFlip') > 0.33) {
+              if (Alpine.evaluate(document.body, 'coinFlip') < 0.66)
+               mixpanel.track('Generated B Variation')
+              if (Alpine.evaluate(document.body, 'coinFlip') >= 0.66)
+               mixpanel.track('Generated C Variation')
+            }             
             else console.log(
               ">>>>> error: couldn't determine variation", 
               Alpine.evaluate(document.body, 'coinFlip')
