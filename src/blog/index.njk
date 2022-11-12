@@ -48,7 +48,8 @@ title: Blog | Cracking Da Code
 </div>
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
   {%- include '../_includes/tagslist.njk' -%}
-  {# {%- if env.environment == 'production' -%}
+  {%- if env.environment == 'production' -%}
+    {# {%- if env.environment == 'production' -%}
     <div x-data="{ isTopList: true }">
       {%- set postslist = collections.blog | top -%}
       <ol
@@ -74,4 +75,63 @@ title: Blog | Cracking Da Code
       {%- endfor -%}
     </ol>
   </div>
+  {%- else -%}
+  <div class="px-4 sm:px-6 lg:px-8">
+  <div class="mt-8 flex flex-col">
+    <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
+      <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
+        <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
+          <table class="min-w-full divide-y divide-gray-300">
+            <thead class="bg-gray-50">
+              <tr>
+                <th scope="col" class="py-3 pl-4 pr-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500 sm:pl-6">Title</th>
+                <th scope="col" class="px-3 py-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500">Information</th>
+                <th scope="col" class="px-3 py-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500">Category</th>
+                <th scope="col" class="px-3 py-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500">Length</th>
+                <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
+                  <span class="sr-only">Read</span>
+                </th>
+              </tr>
+            </thead>
+            {% set postslist = collections.blog | reverse %}
+            <tbody class="divide-y divide-gray-200 bg-white">
+              {%- for post in postslist -%}
+              <tr>
+                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
+                  <div class="flex items-center">
+                    <div class="h-10 w-10 flex-shrink-0">
+                      <img class="h-10 w-10 rounded-full" data-src="{{ post.data.featured }}&q=80&w=50&h=50" alt="" x-intersect.once.ratio-0="$el.src = $el.dataset.src">
+                    </div>
+                    <div class="ml-4">
+                      <div class="font-medium text-gray-900">{{ post.data.title + ' ' + post.data.title2 }}</div>
+                      <div class="text-gray-500 max-w-md truncate">{{ post.data.description }}</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                  <div class="text-gray-900">{{ post.data.date | date("MMM dd, yyyy") }}</div>
+                  <div class="text-gray-500">{{ post.data.author }}</div>
+                </td>
+                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                  <span class="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">{{ post.data.tags[0] }}</span>
+                </td>
+                <td x-data="{ time: {{ post.templateContent.split(' ').length / 200 }} }" class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
+                  <span x-text="`${Math.round(time).toString().split('.')[0]} min read`"/>
+                </td>
+                <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
+                  <a href="{{ post.url }}" class="text-indigo-600 hover:text-indigo-900">Read<span class="sr-only">{{ post.data.title + ' ' + post.data.title2 }}</span></a>
+                </td>
+              </tr>
+              {%- endfor -%}
+
+              <!-- More people... -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  {%- endif -%}
+</div>
+
 </div>
