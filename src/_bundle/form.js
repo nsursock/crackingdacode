@@ -1,39 +1,41 @@
 export default () => ({
   form: null,
+  success: false,
+  showNotification: false,
+  status: '',
+  details: '',
   async handleSubmit(event) {
     event.preventDefault()
-    var status = document.getElementById('my-form-status')
-    var data = new FormData(event.target)
-    fetch(event.target.action, {
-      method: 'post', //this.form.method,
-      body: data,
-      headers: {
-        Accept: 'application/json',
-      },
-    })
-      .then((response) => {
-        if (response.ok) {
-          status.innerHTML = 'Thanks for your submission!'
-          // this.form.reset()
-        } else {
-          response.json().then((data) => {
-            if (Object.hasOwn(data, 'errors')) {
-              status.innerHTML = data['errors']
-                .map((error) => error['message'])
-                .join(', ')
-            } else {
-              status.innerHTML =
-                'Oops! There was a problem submitting your form'
-            }
-          })
-        }
+    const data = new FormData(event.target)
+    try {
+      const response = await fetch(event.target.action, {
+        method: this.form.method,
+        body: data,
+        headers: {
+          Accept: 'application/json',
+        },
       })
-      .catch((error) => {
-        status.innerHTML = 'Oops! There was a problem submitting your form'
-      })
+      if (!response.ok) throw new Error({ response })
+      this.success = true
+      this.status = 'Succeeded'
+      this.details = 'Thanks for your submission!'
+      this.showNotification = true
+      this.form.reset()
+    } catch (e) {
+      // const data = await e.response.json()
+      // if (Object.hasOwn(data, 'errors')) {
+      //   this.status = data['errors']
+      //     .map((error) => error['message'])
+      //     .join(', ')
+      // } else {
+        this.status = 'Failed'
+        this.details = 'There was a problem submitting your form. Please check and try again.'
+        this.showNotification = true
+      // }
+    }
   },
   init() {
     this.form = document.getElementById('my-form')
-    this.form.addEventListener('submit', this.handleSubmit)
-  },
+    // this.form.addEventListener('submit', this.handleSubmit)
+  }
 })
