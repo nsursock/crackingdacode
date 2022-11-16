@@ -1,312 +1,68 @@
-<section
-  id="contact"
-  class="md:h-screen dark:bg-gray-900"
-  x-intersect.once="showContact = true; $el.classList.remove('md:h-screen')"
->
-  <div
-    class="py-12 bg-white dark:bg-gray-900"
-    x-show="showContact"
-    x-transition:enter="transition transform ease-in-out duration-[2000ms] "
-    x-transition:enter-start="opacity-0 scale-75"
-    x-transition:enter-end="opacity-100 scale-100"
-  >
-    <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 dark:bg-gray-900">
-      <div
-        class="
-          relative
-          bg-white
-          overflow-hidden
-          flex flex-col
-          md:flex-row
-          dark:bg-gray-900
-        "
-      >
-        <div
-          class="bg-indigo-600 py-5 px-7 md:w-2/5 rounded-lg"
-          x-show="showContact"
-          x-transition:enter="transition transform ease-in-out duration-[2000ms] "
-          x-transition:enter-start="-translate-x-full"
-          x-transition:enter-end="translate-x-0"
-        >
-          <p
-            id="my-form-status"
-            class="
-              mt-2
-              text-3xl
-              leading-8
-              font-extrabold
-              tracking-tight
-              text-gray-100
-              md:text-4xl
-            "
-          >
-            Let's work together
-          </p>
-          <p class="mt-4 max-w-2xl text-xl lg:mx-auto text-gray-200">
-            I'd love to hear from you! Send me a message using the form or email
-            me. If you want to contribute to the blog, send a message with the
-            subject "writer". For other enquiries, feel free to be as detailed
-            as possible.
-          </p>
+<section id="contact" class="dark:bg-gray-900 md:h-screen" x-intersect.once="showContact = true; $el.classList.remove('md:h-screen')">
+  <div class="bg-white py-12 dark:bg-gray-900" x-show="showContact" x-transition:enter="transition transform ease-in-out duration-[2000ms] " x-transition:enter-start="opacity-0 scale-75" x-transition:enter-end="opacity-100 scale-100">
+    <div class="mx-auto max-w-7xl px-4 dark:bg-gray-900 md:px-6 lg:px-8">
+      <div class="relative flex flex-col overflow-hidden bg-white dark:bg-gray-900 md:flex-row">
+        <div class="rounded-lg bg-indigo-600 py-5 px-7 md:w-2/5" x-show="showContact" x-transition:enter="transition transform ease-in-out duration-[2000ms] " x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0">
+          <p class="mt-2 text-3xl font-extrabold leading-8 tracking-tight text-gray-100 md:text-4xl">Let's work together</p>
+          <p class="mt-4 max-w-2xl text-xl text-gray-200 lg:mx-auto">I'd love to hear from you! Send me a message using the form or email me. If you want to contribute to the blog, send a message with the subject "writer". For other enquiries, feel free to be as detailed as possible.</p>
           <span class="m-3 flex items-center text-gray-200">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 mr-2"
-              fill="none"
-              viewbox="0 0 24 24"
-              stroke="currentColor"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-6 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
                 d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516
-                  5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-              />
+                  5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
             </svg>
             +961 3 47 88 25
           </span>
           <span class="m-3 flex items-center text-gray-200">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 mr-2"
-              fill="none"
-              viewbox="0 0 24 24"
-              stroke="currentColor"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-6 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke-width="2"
                 d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516
-                  5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-              />
+                  5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
             </svg>
             +33 6 62 19 80 21
           </span>
           <span class="m-3 flex items-center text-gray-200">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6 mr-2"
-              fill="none"
-              viewbox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-              />
+            <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 h-6 w-6" fill="none" viewbox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
             </svg>
             nicolas.sursock@gmail.com
           </span>
         </div>
-        <div
-          class="m-5 md:w-3/5 dark:bg-gray-900"
-          x-show="showContact"
-          x-transition:enter="transition transform ease-in-out duration-[2000ms] "
-          x-transition:enter-start="translate-x-full"
-          x-transition:enter-end="translate-x-0"
-        >
-          <div class="mt-10 md:mt-0 dark:bg-gray-900">
-            <div
-              class="mt-5 md:mt-0 dark:bg-gray-900"
-              x-data="{ disableSubmit: true, inputText: null, messageText: null }"
-            >
-              <form
-                x-data="form"
-                id="my-form"
-                action="https://formspree.io/f/xpzbbyvk"
-                method="POST"
-                name="contact"
-              >
+        <div class="m-5 dark:bg-gray-900 md:w-3/5" x-show="showContact" x-transition:enter="transition transform ease-in-out duration-[2000ms] " x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0">
+          <div class="mt-10 dark:bg-gray-900 md:mt-0">
+            <div class="mt-5 dark:bg-gray-900 md:mt-0" x-data="{ disableSubmit: true, inputText: null, messageText: null }">
+              <form @submit.prevent="handleSubmit($event)" x-data="form" id="my-form" action="https://formspree.io/f/xpzbbyvk" method="POST" name="contact">
                 <div class="dark:bg-gray-900">
-                  <div class="px-4 py-5 bg-white md:p-6 dark:bg-gray-900">
+                  <div class="bg-white px-4 py-5 dark:bg-gray-900 md:p-6">
                     <div class="grid grid-cols-6 gap-6">
                       <div class="col-span-6 md:col-span-3">
-                        <label
-                          for="first_name"
-                          class="
-                            block
-                            text-sm
-                            font-medium
-                            text-gray-700
-                            dark:bg-gray-900
-                            dark:text-gray-200
-                          "
-                        >
-                          First name
-                        </label>
-                        <input
-                          required
-                          type="text"
-                          name="first_name"
-                          id="first_name"
-                          autocomplete="given-name"
-                          class="
-                            dark:bg-gray-800
-                            dark:border-gray-700
-                            dark:text-gray-400
-                            mt-1
-                            focus:ring-indigo-500
-                            focus:border-indigo-500
-                            block
-                            w-full
-                            shadow-sm
-                            md:text-sm
-                            border-gray-300
-                            rounded-md
-                          "
-                        />
+                        <label for="first_name" class="block text-sm font-medium text-gray-700 dark:bg-gray-900 dark:text-gray-200"> First name </label>
+                        <input required type="text" name="first_name" id="first_name" autocomplete="given-name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 md:text-sm"/>
                       </div>
                       <div class="col-span-6 md:col-span-3">
-                        <label
-                          for="last_name"
-                          class="
-                            block
-                            text-sm
-                            font-medium
-                            text-gray-700
-                            dark:bg-gray-900
-                            dark:text-gray-200
-                          "
-                        >
-                          Last name
-                        </label>
-                        <input
-                          required
-                          type="text"
-                          name="last_name"
-                          id="last_name"
-                          autocomplete="family-name"
-                          class="
-                            dark:bg-gray-800
-                            dark:border-gray-700
-                            dark:text-gray-400
-                            mt-1
-                            focus:ring-indigo-500
-                            focus:border-indigo-500
-                            block
-                            w-full
-                            shadow-sm
-                            md:text-sm
-                            border-gray-300
-                            rounded-md
-                          "
-                        />
+                        <label for="last_name" class="block text-sm font-medium text-gray-700 dark:bg-gray-900 dark:text-gray-200"> Last name </label>
+                        <input required type="text" name="last_name" id="last_name" autocomplete="family-name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 md:text-sm"/>
                       </div>
                       <div class="col-span-6 md:col-span-3">
-                        <label
-                          for="email_address"
-                          class="
-                            block
-                            text-sm
-                            font-medium
-                            text-gray-700
-                            dark:bg-gray-900
-                            dark:text-gray-200
-                          "
-                        >
-                          Email
-                        </label>
-                        <input
-                          required
-                          type="text"
-                          name="email_address"
-                          id="email_address"
-                          autocomplete="email"
-                          class="
-                            dark:bg-gray-800
-                            dark:border-gray-700
-                            dark:text-gray-400
-                            mt-1
-                            focus:ring-indigo-500
-                            focus:border-indigo-500
-                            block
-                            w-full
-                            shadow-sm
-                            md:text-sm
-                            border-gray-300
-                            rounded-md
-                          "
-                        />
+                        <label for="email_address" class="block text-sm font-medium text-gray-700 dark:bg-gray-900 dark:text-gray-200"> Email </label>
+                        <input required type="text" name="email_address" id="email_address" autocomplete="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 md:text-sm"/>
                       </div>
                       <div class="col-span-6 md:col-span-3">
-                        <label
-                          for="phone"
-                          class="
-                            block
-                            text-sm
-                            font-medium
-                            text-gray-700
-                            flex
-                            justify-between
-                            dark:bg-gray-900
-                            dark:text-gray-200
-                          "
-                        >
+                        <label for="phone" class="block flex justify-between text-sm font-medium text-gray-700 dark:bg-gray-900 dark:text-gray-200">
                           Phone
-                          <span class="text-gray-500 dark:text-gray-200">
-                            Optional
-                          </span>
+                          <span class="text-gray-500 dark:text-gray-200"> Optional </span>
                         </label>
-                        <input
-                          type="text"
-                          name="phone"
-                          id="phone"
-                          autocomplete="phone"
-                          class="
-                            dark:bg-gray-800
-                            dark:border-gray-700
-                            dark:text-gray-400
-                            mt-1
-                            focus:ring-indigo-500
-                            focus:border-indigo-500
-                            block
-                            w-full
-                            shadow-sm
-                            md:text-sm
-                            border-gray-300
-                            rounded-md
-                          "
-                        />
+                        <input type="text" name="phone" id="phone" autocomplete="phone" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 md:text-sm"/>
                       </div>
                       <div class="col-span-6">
-                        <label
-                          for="subject"
-                          class="
-                            block
-                            text-sm
-                            font-medium
-                            text-gray-700
-                            dark:bg-gray-900
-                            dark:text-gray-200
-                          "
-                        >
-                          Subject
-                        </label>
-                        <input
-                          required
-                          type="text"
-                          name="subject"
-                          id="subject"
-                          autocomplete="subject"
-                          class="
-                            dark:bg-gray-800
-                            dark:border-gray-700
-                            dark:text-gray-400
-                            mt-1
-                            focus:ring-indigo-500
-                            focus:border-indigo-500
-                            block
-                            w-full
-                            shadow-sm
-                            md:text-sm
-                            border-gray-300
-                            rounded-md
-                          "
-                        />
+                        <label for="subject" class="block text-sm font-medium text-gray-700 dark:bg-gray-900 dark:text-gray-200"> Subject </label>
+                        <input required type="text" name="subject" id="subject" autocomplete="subject" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 md:text-sm"/>
                       </div>
                       <!-- <fieldset class="col-span-6"> <div> <legend class="text-base font-medium text-gray-900">
                           Expected budget
@@ -352,138 +108,85 @@
                       </div> </div>
                                           </fieldset> -->
                       <div class="col-span-6" x-data="{ count: 0 }">
-                        <label
-                          for="about"
-                          class="
-                            block
-                            text-sm
-                            font-medium
-                            text-gray-700
-                            flex
-                            justify-between
-                            dark:bg-gray-900
-                            dark:text-gray-200
-                          "
-                        >
+                        <label for="about" class="block flex justify-between text-sm font-medium text-gray-700 dark:bg-gray-900 dark:text-gray-200">
                           Message
-                          <span
-                            class="text-gray-500 dark:text-gray-200"
-                            x-text="`${count} of max. 250 words`"
-                          ></span>
+                          <span class="text-gray-500 dark:text-gray-200" x-text="`${count} of max. 250 words`"></span>
                         </label>
                         <div class="mt-1">
-                          <textarea
-                            x-model.number="messageText"
-                            @input="count = messageText.split(' ').length"
-                            required
-                            id="about"
-                            name="about"
-                            rows="5"
-                            class="
-                              dark:bg-gray-800
-                              dark:border-gray-700
-                              dark:text-gray-400
-                              shadow-sm
-                              focus:ring-indigo-500
-                              focus:border-indigo-500
-                              mt-1
-                              block
-                              w-full
-                              md:text-sm
-                              border border-gray-300
-                              rounded-md
-                            "
-                            placeholder=""
-                          ></textarea>
-                          <p
-                            class="
-                              mt-2
-                              text-sm text-gray-500
-                              dark:text-gray-200
-                            "
-                          >
-                            Please mention your budget and your deadline.
-                          </p>
+                          <textarea x-model.number="messageText" @input="count = messageText.split(' ').length" required id="about" name="about" rows="5" class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 md:text-sm" placeholder=""></textarea>
+                          <p class="mt-2 text-sm text-gray-500 dark:text-gray-200">Please mention your budget and your deadline.</p>
                         </div>
                       </div>
-                      <div
-                        class="col-span-6 md:col-span-3"
-                        x-data="{ n1: Math.round(Math.random() * 10), n2: Math.round(Math.random() * 10) }"
-                      >
-                        <label
-                          for="challenge"
-                          class="
-                            block
-                            text-sm
-                            font-medium
-                            text-gray-700
-                            flex
-                            justify-between
-                            dark:bg-gray-900
-                            dark:text-gray-200
-                          "
-                        >
+                      <div class="col-span-6 md:col-span-3" x-data="{ n1: Math.round(Math.random() * 10), n2: Math.round(Math.random() * 10) }">
+                        <label for="challenge" class="block flex justify-between text-sm font-medium text-gray-700 dark:bg-gray-900 dark:text-gray-200">
                           <span>Question</span>
-                          <span
-                            class="text-gray-500 dark:text-gray-200"
-                            x-text="`${n1} + ${n2} = ?`"
-                          ></span>
+                          <span class="text-gray-500 dark:text-gray-200" x-text="`${n1} + ${n2} = ?`"></span>
                         </label>
-                        <input
-                          x-model.number="inputText"
-                          @input="disableSubmit = inputText !== (n1 + n2)"
-                          required
-                          type="text"
-                          name="challenge"
-                          id="challenge"
-                          autocomplete="subject"
-                          class="
-                            dark:bg-gray-800
-                            dark:border-gray-700
-                            dark:text-gray-400
-                            mt-1
-                            focus:ring-indigo-500
-                            focus:border-indigo-500
-                            block
-                            w-full
-                            shadow-sm
-                            md:text-sm
-                            border-gray-300
-                            rounded-md
-                          "
-                        />
+                        <input x-model.number="inputText" @input="disableSubmit = inputText !== (n1 + n2)" required type="text" name="challenge" id="challenge" autocomplete="subject" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 md:text-sm"/>
                       </div>
                     </div>
                   </div>
                   <!-- <div class="px-4 py-3 md:px-6" data-netlify-recaptcha="true"
                                   ></div> -->
-                  <div class="px-4 py-3 md:px-6 text-right">
-                    <button
-                      @click="if (typeof umami !== 'undefined') { umami.trackEvent('contact-button', 'click'); mixpanel.track('Contacted') }"
-                      :disabled="disableSubmit"
-                      :class="{'opacity-50': disableSubmit}"
-                      type="submit"
-                      class="
-                        inline-flex
-                        justify-center
-                        py-2
-                        px-4
-                        border border-transparent
-                        shadow-sm
-                        text-sm
-                        font-medium
-                        rounded-md
-                        text-white
-                        bg-indigo-600
-                        hover:bg-indigo-700
-                        focus:outline-none
-                        focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
-                      "
-                    >
-                      Send
-                    </button>
+                  <div class="px-4 py-3 text-right md:px-6">
+                    <button @click="if (typeof umami !== 'undefined') { umami.trackEvent('contact-button', 'click'); mixpanel.track('Contacted') }" :disabled="disableSubmit" :class="{'opacity-50': disableSubmit}" type="submit" class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Send</button>
                   </div>
                 </div>
+
+                  <!-- Global notification live region, render this permanently at the end of the document -->
+            <div aria-live="assertive" class="z-[500] pointer-events-none fixed inset-0 flex items-end px-4 py-6 sm:items-start sm:p-6">
+              <div class="flex w-full flex-col items-center space-y-4 sm:items-end">
+                <!--
+      Notification panel, dynamically insert this into the live region when it needs to be displayed
+
+      Entering: "transform ease-out duration-300 transition"
+        From: "translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
+        To: "translate-y-0 opacity-100 sm:translate-x-0"
+      Leaving: "transition ease-in duration-100"
+        From: "opacity-100"
+        To: "opacity-0"
+    -->
+                <div 
+                  x-show="showNotification"
+                  x-transition:enter="transform ease-out duration-300 transition"
+                        x-transition:enter-start="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-2"
+                        x-transition:enter-end="translate-y-0 opacity-100 sm:translate-x-0"
+                        x-transition:leave="transition ease-in duration-100"
+                        x-transition:leave-start="opacity-100"
+                        x-transition:leave-end="opacity-0"
+                  class="pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+                  <div class="p-4">
+                    <div class="flex items-start">
+                      <div class="flex-shrink-0">
+                        <!-- Heroicon name: outline/check-circle -->
+                        <template x-if="success">
+                          <svg class="h-6 w-6 text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                          </svg>
+                        </template>
+                        <template x-if="!success">
+                          <svg class="h-6 w-6 text-red-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"/>
+                          </svg>
+                        </template>
+                      </div>
+                      <div class="ml-3 w-0 flex-1 pt-0.5">
+                        <p class="text-sm font-medium text-gray-900" x-text="status"></p>
+                        <p class="mt-1 text-sm text-gray-500" x-text="details"></p>
+                      </div>
+                      <div class="ml-4 flex flex-shrink-0">
+                        <button @click="showNotification = false" type="button" class="inline-flex rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                          <span class="sr-only">Close</span>
+                          <!-- Heroicon name: mini/x-mark -->
+                          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z"/>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </form>
             </div>
           </div>

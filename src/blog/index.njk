@@ -47,7 +47,7 @@ title: Blog | Cracking Da Code
   </div>
 </div>
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-  {%- include '../_includes/tagslist.njk' -%}
+  {# {%- include '../_includes/tagslist.njk' -%} #}
   {%- if env.environment == 'production' -%}
     {# {%- if env.environment == 'production' -%}
     <div x-data="{ isTopList: true }">
@@ -113,7 +113,7 @@ title: Blog | Cracking Da Code
                   <div class="text-gray-500 dark:text-gray-400">{{ post.data.author }}</div>
                 </td>
                 <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
-                  <span class="inline-flex rounded-full bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">{{ post.data.tags[0] }}</span>
+                  <span class="inline-flex rounded-full dark:bg-green-900 dark:text-green-200 bg-green-100 px-2 text-xs font-semibold leading-5 text-green-800">{{ post.data.tags[0] }}</span>
                 </td>
                 <td x-data="{ time: {{ post.templateContent.split(' ').length / 200 }} }" class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 dark:text-gray-400">
                   <span x-text="`${Math.round(time).toString().split('.')[0]} min read`"/>
@@ -132,6 +132,7 @@ title: Blog | Cracking Da Code
     </div>
   </div>
   {%- endif -%}
+  {%- include '../_includes/tagslist.njk' -%}
 </div>
 
 </div>
