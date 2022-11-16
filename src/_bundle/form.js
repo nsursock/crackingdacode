@@ -1,6 +1,6 @@
 export default () => ({
   form: null,
-  success: false,
+  success: undefined,
   showNotification: false,
   status: '',
   details: '',
@@ -28,6 +28,7 @@ export default () => ({
       //     .map((error) => error['message'])
       //     .join(', ')
       // } else {
+        this.success = false
         this.status = 'Failed'
         this.details = 'There was a problem submitting your form. Please check and try again.'
         this.showNotification = true
