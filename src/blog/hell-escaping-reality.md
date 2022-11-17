@@ -18,7 +18,7 @@ versions:
 
 I've got a message for everyone: watch out for the years when you're 14 or 15. I'm still trying to digest my first encounter with severity and cruelty as far as I'm concerned.
 
-If only fools are kind, then I guess it's wise to be cruel. So that verse from Alfie interpreted by Joss Stone ¬ seems fitting to our world. Make no mistake: every person you meet is here to take something from you, possibly everything.
+If only fools are kind, then I guess it's wise to be cruel. So that verse from Alfie interpreted by Joss Stone seems fitting to our world. Make no mistake: every person you meet is here to take something from you, possibly everything.
 
 We all live underground. Most of us take the subway in the morning and the evening. Promiscuity and being below the ground make this a hell I wouldn't recommend to many enemies. So we all put on our headphones to escape.
 
@@ -30,7 +30,7 @@ We all live underground. Most of us take the subway in the morning and the eveni
 
 You'd like to think you're immune to this stuff. You know what I'm talking about: checking how many likes your latest post got. It's closer to the truth to say you can't get enough.
 
-You'll have to face it: you're addicted to love. Don't get me wrong: Robert Palmer in Addicted to Love ¬ talked about it 20 years before we were hungry for this social validation.
+You'll have to face it: you're addicted to love. Don't get me wrong: Robert Palmer in Addicted to Love talked about it 20 years before we were hungry for this social validation.
 
 The modern hell on social networks is because you don't speak to someone face to face. It's a weird kind of communication. Would you say what you're about to tell if you were in person with your audience?
 
@@ -42,7 +42,7 @@ So basically, what you like on social media is an attempt to communicate. But un
   <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="digital art plants" data-src="https://images.unsplash.com/photo-1528295674080-a70f6cbf4ff0?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=800&h=600">
 </aside>
 
-You've got those soul shadows on your mind, a feeling that won't disappear. ¬ How are you supposed to form close connections with loved ones when your heart is corrupted by so much noise?
+You've got those soul shadows on your mind, a feeling that won't disappear. How are you supposed to form close connections with loved ones when your heart is corrupted by so much noise?
 
 The answer: increase your signal-to-noise ratio by improving the quality of your perceptions. Sometimes we have a filtering problem in the head: our thoughts are corrupted by the unacceptable. It's called the unconscious.
 
@@ -74,11 +74,11 @@ Andre Agassi used to do challenger tournaments to regain his confidence to prepa
   <img x-intersect.once.ratio-0="$el.src = $el.dataset.src" class="rounded-lg" alt="palm about to catch black dice" data-src="https://images.unsplash.com/photo-1553481187-be93c21490a9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80&w=800&h=600">
 </aside>
 
-All in all, feeling low and losing is part of life. It's part of the growing process. You can't always be strong, can you? If you don't want to play, you might as well quit! ¬
+All in all, feeling low and losing is part of life. It's part of the growing process. You can't always be strong, can you? If you don't want to play, you might as well quit!
 
 Shame stops when you've got a safe place to share your secrets. First, it used to be my friends; then, after I went to see a psychiatrist. Now it's the comfort of a coffee shop and a blog.
 
-There is no controversy. As Prince sings in Controversy ¬, life is just a game. When you stop playing, nothing happens. What if it was a way to get some calm in this noisy world?
+There is no controversy. As Prince sings in Controversy, life is just a game. When you stop playing, nothing happens. What if it was a way to get some calm in this noisy world?
 
 By the way, it seems we're all in hell, according to Jamiroquai, because there's too much panic in this town. So don't be surprised if someone insults you. It is the jumpin' jack flash hell: insulting means jumping at. I know this is pernicious. Even the most sanguine person could feel down in this town.
 
