@@ -50,9 +50,9 @@ task('critical', async function (cb) {
       },
     ],
     target: {
-      // css: 'static/css/crit.bundle.css',
+      css: 'assets/crit.bundle.css',
       html: 'index.html',
-      uncritical: 'static/rest.bundle.min.css',
+      uncritical: 'assets/rest.bundle.min.css',
     },
     extract: true,
     // ignore: {
