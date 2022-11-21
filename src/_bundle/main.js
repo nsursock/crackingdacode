@@ -3,7 +3,7 @@ import global from './global.js'
 import form from './form.js'
 import testimonials from './testimonials.js'
 // import 'htmx.org'
-import 'lazysizes'
+// import 'lazysizes'
 // import intersect from '@alpinejs/intersect'
 
 // import moment from '@victoryoalli/alpinejs-moment'
