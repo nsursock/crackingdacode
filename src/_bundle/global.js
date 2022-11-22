@@ -1,3 +1,4 @@
+import { format } from 'date-fns'
 export default () => ({
   showCta: false,
   showTests: false,
@@ -25,6 +26,10 @@ export default () => ({
   currentStep: 1,
   coinFlip: Math.random(),
   discount: 50,
+
+  formatDate(date, dateFormat) {
+    return format(date, dateFormat)
+  },
 
   async checkPermission() {
     const res = await fetch('/api/payment-code-check', {
