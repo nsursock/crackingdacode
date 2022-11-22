@@ -309,12 +309,12 @@ eleventyComputed:
         }"
       }>
       <picture>
-        <source media="(max-width: 799px)" height="320" width="480" :srcset="photoUrl + '&q=80&w=480&h=320'"/>
-        <source media="(min-width: 800px)" height="720" width="1080" :srcset="photoUrl + '&q=80&w=1080&h=720'"/>
+        <source media="(max-width: 750px)" height="320" width="480" :srcset="photoUrl + '&q=80&w=480&h=320'"/>
+        {# <source media="(min-width: 800px)" height="720" width="1080" :srcset="photoUrl + '&q=80&w=1080&h=720'"/> #}
         <img
           fetchpriority="high"
           class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          :src="photoUrl + '&q=80&w=1920&h=1280'"
+          :src="photoUrl + '&q=80&w=1080&h=720'"
           alt="wall tagged with world peace"/>
       </picture>
     </div>
