@@ -4,7 +4,7 @@ class="relative inline-block text-left" x-data="{ open: false }">
   <div>
     <button 
     @click="open = !open"
-    type="button" class="hover:bg-gray-100 dark:bg-gray-900 p-3 rounded-md text-sm font-medium dark:text-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-100" id="menu-button" aria-expanded="true" aria-haspopup="true">
+    type="button" class="hover:bg-gray-100 dark:bg-gray-900 p-3 rounded-md text-sm font-medium dark:text-gray-300 text-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-100" :id="`${Math.random()}-theme-menu-button`" aria-expanded="true" aria-haspopup="true">
       <!-- Heroicon name: mini/chevron-down -->
       <svg fill="currentColor" class=" h-5 w-5" xmlns="http://www.w3.org/2000/svg" class="ionicon" viewBox="0 0 512 512">
         <title>Theme</title><circle cx="256" cy="256" r="208" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="32"/><path d="M256 464c-114.88 0-208-93.12-208-208S141.12 48 256 48z"/></svg>
