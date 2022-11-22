@@ -308,15 +308,23 @@ eleventyComputed:
         'https://images.unsplash.com/photo-1535903021127-d50417eae4a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop'
         }"
       }>
-      <picture>
-        <source media="(max-width: 750px)" height="320" width="480" :srcset="photoUrl + '&q=80&w=480&h=320'"/>
-        {# <source media="(min-width: 800px)" height="720" width="1080" :srcset="photoUrl + '&q=80&w=1080&h=720'"/> #}
+      <img
+        fetchpriority="high"
+          class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+  :srcset="`${photoUrl}&q=80&w=480&h=320 480w, ${photoUrl}&q=80&w=1080&h=720 1080w`"
+  sizes="(max-width: 600px) 480px,
+         1080px"
+  :src="photoUrl + '&q=80&w=1920&h=1280'"
+  alt="wall tagged with world peace" />
+      {# <picture>
+        <source media="(max-width: 799px)" height="320" width="480" :srcset="photoUrl + '&q=80&w=480&h=320'"/>
+        <source media="(min-width: 800px)" height="720" width="1080" :srcset="photoUrl + '&q=80&w=1080&h=720'"/>
         <img
           fetchpriority="high"
           class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-          :src="photoUrl + '&q=80&w=1080&h=720'"
+          :src="photoUrl + '&q=80&w=1920&h=1280'"
           alt="wall tagged with world peace"/>
-      </picture>
+      </picture> #}
     </div>
   </div>
   {% include 'sections/subscription.njk' %}
