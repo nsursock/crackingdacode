@@ -4,7 +4,7 @@
   }
 </style>
 <!-- This example requires Tailwind CSS v2.0+ -->
-<div x-show="isMobile() && percent == 100 && showCommentsPanel || !isMobile() && showCommentsPanel" class="relative z-50" x-data="dataComments()" x-cloak="x-cloak" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
+<div x-data="dataComments()" x-show="isMobile() && percent == 100 && showCommentsPanel || !isMobile() && showCommentsPanel" class="relative z-50" x-cloak="x-cloak" aria-labelledby="slide-over-title" role="dialog" aria-modal="true">
   <!-- Background backdrop, show/hide based on slide-over state.
     
     Entering: "ease-in-out duration-500"
@@ -25,7 +25,7 @@
                 Leaving: "transform transition ease-in-out duration-500 sm:duration-700"
                     From: "translate-x-0"
                     To: "translate-x-full" -->
-        <div x-data="{ count: 0, tab: 'comments' }" @click.outside="showCommentsPanel = !showCommentsPanel" x-show="isMobile() && percent == 100 && showCommentsPanel || !isMobile() && showCommentsPanel" x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700 " x-transition:enter-start="translate-x-full " x-transition:enter-end="translate-x-0 " x-transition:leave="transform transition ease-in-out duration-500 sm:duration-700 " x-transition:leave-start="translate-x-0 " x-transition:leave-end="translate-x-full " class="pointer-events-auto w-screen max-w-md">
+        <div x-show="isMobile() && percent == 100 && showCommentsPanel || !isMobile() && showCommentsPanel" x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700 " x-transition:enter-start="translate-x-full " x-transition:enter-end="translate-x-0 " x-transition:leave="transform transition ease-in-out duration-500 sm:duration-700 " x-transition:leave-start="translate-x-0 " x-transition:leave-end="translate-x-full " class="pointer-events-auto w-screen max-w-md">
           <div class="flex h-full flex-col divide-y divide-gray-200 bg-white shadow-xl dark:divide-gray-800 dark:bg-gray-900">
             <div class="flex min-h-0 flex-1 flex-col overflow-y-scroll py-6">
               <div class="px-4 sm:px-6">
@@ -58,7 +58,7 @@
                     <div class="sm:hidden">
                       <label for="tabs" class="sr-only">Select a tab</label>
                       <!-- Use an "onChange" listener to redirect the user to the selected tab URL. -->
-                      <select @change="tab = $event.target.value.toLowerCase()" id="tabs" name="tabs" class="block w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500">
+                      <select @change="tab = $event.target.value.toLowerCase()" id="tabs" name="tabs" class="dark:bg-gray-800 dark:text-gray-300 dark:border-gray-800 block w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500">
                         <option>Ratings</option>
                         <option selected>Comments</option>
                       </select>
@@ -102,12 +102,17 @@
               <div
                 x-show="tab === 'comments'"
                 class="relative mt-6 flex-1 px-4 sm:px-6"
-                x-data="{ items: [] }"
-                x-init="items = (await (await fetch('/api/comments-select', { method: 'POST', body: window.location.pathname
-                                    })).json()).data; count = items.length"
               >
                 <!-- Replace with your content -->
-                <template x-if="items.length === 0">
+<div class="mb-4">
+  <label for="sort-by" class="block text-sm font-medium text-gray-700 dark:text-gray-400">Sort By</label>
+  <select @change="sortItems($event.target.value.toLowerCase())" id="sort-by" name="sort-by" class="mt-1 block w-full rounded-md border-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-800 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+    <option selected>Newest</option>
+    <option>Oldest</option>
+  </select>
+</div>
+
+                <template x-if="count === 0">
                   <!-- This example requires Tailwind CSS v2.0+ -->
                   <div class="flex h-full flex-col items-center justify-center text-center">
                     <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -120,18 +125,18 @@
                 {#
                 <div class="h-full border-2 border-dashed border-gray-200 dark:border-gray-800" aria-hidden="true"></div>
                 #}
-                <template x-if="items.length !== 0">
+                <template x-if="count !== 0">
                   <!-- This example requires Tailwind CSS v2.0+ -->
                   <div>
                     <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-800">
-                      <template x-for="item in items">
+                      <template x-for="item in sortedItems">
                         <li class="py-4">
                           <div class="flex space-x-3">
                             <svg class="h-6 w-6 rounded-full border dark:border-gray-200 dark:text-gray-300 text-gray-700 border-gray-800" fill="currentColor" viewBox="0 0 24 24">
                               <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
                             </svg>
                             <div class="flex-1 space-y-1">
-                              <div class="flex flex-col items-center justify-between sm:flex-row">
+                              <div class="flex items-center justify-between sm:flex-row">
                                 <h3 class="text-sm font-medium dark:text-white">
                                   <span x-text="item.author.name"></span>
                                 </h3>
@@ -165,7 +170,7 @@
               <div class="">
                 <label for="comment" class="block text-sm font-medium text-gray-700 dark:text-gray-400"> Add your comment </label>
                 <div class="mt-1">
-                  <textarea x-model="comment" :rows="!$store.auth.user ? 1 : 4" name="comment" id="comment" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 sm:text-sm"></textarea>
+                  <textarea x-model="comments" :rows="!$store.auth.user ? 1 : 4" name="comment" id="comment" class="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400 sm:text-sm"></textarea>
                   <p class="mt-2 text-sm text-gray-500 dark:text-gray-200">
                     <template x-if="!$store.auth.user">
                       <span>You must authenticate before posting</span>
@@ -186,7 +191,36 @@
                     <button @click="showCommentsPanel = false; showAuthLoginModal = true" type="button" class="ml-4 rounded-md border border-gray-300 bg-white py-2 px-4 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 dark:border-gray-700 dark:bg-gray-800 dark:text-gray-400">Log In</button>
                   </div>
                 </template>
-                <button @click="submit" type="submit" :disabled="!$store.auth.user" :class="{ 'opacity-50': !$store.auth.user }" class="ml-4 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Submit</button>
+                <button @click="submit" type="submit" :disabled="!$store.auth.user || isFetching || comments === ''" :class="{ 'opacity-50': !$store.auth.user || isFetching || comments === '' }" class="ml-4 inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                   <span
+                    class="flex items-center justify-center">
+                  <svg
+                      x-show="!isFetching"
+                      class="mr-2 h-5 w-5 text-indigo-500 group-hover:text-indigo-400"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewbox="0 0 20 20"
+                      fill="currentColor"
+                      aria-hidden="true">
+                      <path
+                        fill-rule="evenodd"
+                        d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
+                        clip-rule="evenodd"/>
+                    </svg>
+                    <svg
+                      x-show="isFetching"
+                      class="mr-2 animate-spin h-5 w-5 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewbox="0 0 24 24">
+                      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                      <path
+                        class="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                  Submit
+                  </span>
+                </button>
               </div>
             </div>
           </div>
@@ -194,19 +228,44 @@
       </div>
     </div>
   </div>
+  {% include 'partials/notifications-supa.njk' %}
 </div>
+
 <script>
   function dataComments() {
       return {
-          comment: '',
+          isFetching: false,
+          showNotification: false,
+          success: false,
+          status: '',
+          details: '',
+          tab: 'comments',
+          comments: '',
+          sortedItems: null,
+          count: 0,
+
+          sortItems(dir) {
+            this.sortedItems.sort((a, b) => 
+              (new Date(a.created_at).getTime() - new Date(b.created_at).getTime()) * (dir === 'oldest' ? 1 : -1))
+          },
+          async getItems() {
+            const res = await fetch('/api/comments-select', { method: 'POST', body: window.location.pathname})
+            this.sortedItems = (await res.json()).data
+            this.sortItems('newest')
+            this.count = this.sortedItems.length
+          },
+          init() {
+            this.getItems()
+          },
           submit() {
+            this.isFetching = true
               var data = {
                   author: Alpine
                       .store('auth')
                       .user
                       .email,
                   article: window.location.pathname,
-                  content: this.comment
+                  content: this.comments
               }
               fetch('/api/comments-add', {
                   method: 'POST',
@@ -217,20 +276,32 @@
               })
                   .then((response) => response.json())
                   .then((message) => {
-                      if (!message.success)
-                          this.error = message.error
+                      if (!message.success) {
+                          this.status = 'Failed'
+                          this.details = message.error
+                          this.success = false
+                      }
                        else {
-                          this.showCommentsPanel = false
+                        this.isFetching = false
+                          this.status = 'Succeeded'
+                          this.details = 'Your comment was correctly posted!'
+                          this.success = true
+                          this.comments = ''
+                          this.getItems()
                           if (typeof umami !== 'undefined') {
                               umami.trackEvent('comment-button', 'click')
                               mixpanel.track('Commented')
                           }
                       }
+                      this.showNotification = true
                   })
                   .catch((error) => {
-                      console.log(error)
-                      this.error = error
+                      this.status = 'Failed'
+                      this.details = error
+                      this.success = false
+                      this.isFetching = false
                   })
+                
           }
       }
   }
