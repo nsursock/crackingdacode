@@ -106,7 +106,7 @@
                 <!-- Replace with your content -->
 <div class="mb-4">
   <label for="sort-by" class="block text-sm font-medium text-gray-700 dark:text-gray-400">Sort By</label>
-  <select @change="sortItems($event.target.value.toLowerCase())" id="sort-by" name="sort-by" class="mt-1 block w-full rounded-md border-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-800 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
+  <select x-ref="sortdir" @change="sortItems($event.target.value.toLowerCase())" id="sort-by" name="sort-by" class="mt-1 block w-full rounded-md border-gray-300 dark:bg-gray-800 dark:text-gray-300 dark:border-gray-800 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm">
     <option selected>Newest</option>
     <option>Oldest</option>
   </select>
@@ -282,17 +282,20 @@
                           this.success = false
                       }
                        else {
-                        this.isFetching = false
                           this.status = 'Succeeded'
                           this.details = 'Your comment was correctly posted!'
                           this.success = true
                           this.comments = ''
+                          
                           this.getItems()
+                          this.$refs.sortdir.selectedIndex = 0
+
                           if (typeof umami !== 'undefined') {
                               umami.trackEvent('comment-button', 'click')
                               mixpanel.track('Commented')
                           }
                       }
+                      this.isFetching = false
                       this.showNotification = true
                   })
                   .catch((error) => {
