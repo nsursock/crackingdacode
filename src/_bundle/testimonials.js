@@ -1,8 +1,15 @@
 export default () => ({
   // isFetching: false,
   // showInput: false,
+  status: '',
+  details: '',
+  success: false,
+  showNotification: false,
   identity: '',
   description: '',
+  showInput: false, 
+  isFetching: false, 
+  items: [],
   saveTestimonial(evt) {
     this.isFetching = true
 
@@ -18,11 +25,24 @@ export default () => ({
     })
       .then(async () => {
         this.showInput = false
-        // this.items = (
-        //   await (await fetch('/api/testimonials-select')).json()
-        // ).data
+        this.isFetching = false
+        this.$refs.testimonialform.reset()
+        this.status = 'Succeeded'
+        this.details = 'Your testimonial was correctly added!'
+        this.success = true
+        this.showNotification = true
+        this.items = (
+          await (await fetch('/api/testimonials-select')).json()
+        ).data
       })
-      .catch((error) => console.log(error))
+      .catch((error) => {
+        this.isFetching = false
+        this.status = 'Failed'
+        this.details = error
+        this.success = false
+        this.showNotification = true
+        // console.log(error)
+      })
   },
 
   // shuffle(array) {
