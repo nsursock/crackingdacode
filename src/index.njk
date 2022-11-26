@@ -335,7 +335,7 @@ title: Home
     {# {%- include './_includes/tagslist.njk' -%} #}
     <div x-data="{ isTopList: false }" class="mt-10">
       <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-white">Latest Posts</h3>
-      {%- set postslist = collections.blog | latest -%}
+      {%- set postslist = collections.blog | reverse | latest -%}
       <ol
         x-data="{ showArticle: false }"
         class="snap-y snap-mandatory md:h-screen mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-7"
