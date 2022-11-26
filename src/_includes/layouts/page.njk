@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="/assets/main.bundle.css">
     <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
     <script src="/assets/main.bundle.js" defer></script>
-    {% if title.includes('(Page 1)') %}
+    {# {% if title.includes('(Page 1)') %}
        <title>Home | Cracking Da Code | Sursock Labs</title>
-    {% else %}
+    {% else %} #}
       <title>{{ title }} | Cracking Da Code | Sursock Labs</title>
-    {% endif %}
+    {# {% endif %} #}
     {% block head %}
       {# {% if env.environment == 'production' %}
         <!-- Global site tag (gtag.js) - Google Ads: 824380923 -->
