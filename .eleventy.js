@@ -35,7 +35,7 @@ module.exports = (config) => {
   })
 
   config.addFilter('latest', function (items) {
-    return items.reverse().slice(0, 9)
+    return items.slice(0, 9)
   })
 
   // config.ignores.add('src/settings.njk')
