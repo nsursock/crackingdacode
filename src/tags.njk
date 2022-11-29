@@ -50,15 +50,17 @@ permalink: /tags/{{ tag | slug }}/
       </main>
     </div>
   </div>
-  <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+  <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2" 
+    x-data="{ photoUrl: 'https://images.unsplash.com/photo-1562869313-311646d454b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80' }">
     <picture>
-      <source media="(max-width: 799px)" srcset="https://source.unsplash.com/480x320/?{{ tag }}"/>
-      <source media="(min-width: 800px)" srcset="https://source.unsplash.com/1080x720/?{{ tag }}"/>
-      <img
-        class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-        src="https://source.unsplash.com/1920x1280/?{{ tag }}"
-        alt="unsplash picture of {{ tag }}"/>
-    </picture>
+        <source media="(max-width: 600px)" height="320" width="480" :srcset="photoUrl + '&w=480&h=320'"/>
+        {# <source media="(min-width: 800px)" height="720" width="1080" :srcset="photoUrl + '&q=80&w=1080&h=720'"/> #}
+        <img
+          fetchpriority="high"
+          class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+          :src="photoUrl + '&w=1080&h=720'"
+          alt="organisation by tag picture "/>
+      </picture>
   </div>
 </div>
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
