@@ -2,7 +2,6 @@
 pagination:
   data: collections
   size: 1
-  reverse: true
   alias: tag
   filter:
     - all
@@ -70,7 +69,7 @@ permalink: /tags/{{ tag | slug }}/
       x-data="{ showArticle: false }"
       class=" md:h-screen mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-7 "
       x-intersect.once="showArticle = true; $el.classList.remove('md:h-screen')">
-      {%- for post in postslist -%}
+      {%- for post in postslist | reverse -%}
         {%- include 'partials/postcard.njk' -%}
       {%- endfor -%}
     </ol>
