@@ -10,7 +10,7 @@ layout: layouts/post.njk
 track: Victim Of A Foolish Heart
 versions:
     - artist: Joss Stone
-      link: https://apple.co/3FXZcqU
+      link: https://apple.co/3Uu6uXb
 ---
 
 Please, please. When you get back on your feet again, everybody wants to be your long lost friend.
