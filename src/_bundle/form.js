@@ -1,16 +1,18 @@
 export default () => ({
-  form: null,
   success: undefined,
   showNotification: false,
   status: '',
   details: '',
   async handleSubmit(event) {
     event.preventDefault()
-    const data = new FormData(event.target)
+    let data = {}
+    for (var [key, value] of new FormData(event.target)) {
+      data[key] = value
+    }
     try {
       const response = await fetch(event.target.action, {
-        method: this.form.method,
-        body: data,
+        method: this.$refs.supaform.method,
+        body: JSON.stringify({table: this.$refs.supaform.name, data }),
         headers: {
           Accept: 'application/json',
         },
@@ -20,23 +22,13 @@ export default () => ({
       this.status = 'Succeeded'
       this.details = 'Thanks for your submission!'
       this.showNotification = true
-      this.form.reset()
+      this.$refs.supaform.reset()
     } catch (e) {
-      // const data = await e.response.json()
-      // if (Object.hasOwn(data, 'errors')) {
-      //   this.status = data['errors']
-      //     .map((error) => error['message'])
-      //     .join(', ')
-      // } else {
         this.success = false
         this.status = 'Failed'
-        this.details = 'There was a problem submitting your form. Please check and try again.'
+        this.details = 'There was a problem submitting your form.'
         this.showNotification = true
       // }
     }
   },
-  init() {
-    this.form = document.getElementById('my-form')
-    // this.form.addEventListener('submit', this.handleSubmit)
-  }
 })

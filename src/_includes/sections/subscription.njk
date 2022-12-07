@@ -31,9 +31,9 @@
           </div>
           <form
           @submit.prevent="handleSubmit($event)"
+          action="/api/form-submit"
             x-data="form"
-            id="my-form"
-            action="https://formspree.io/f/mdobbplr"
+            x-ref="supaform"
             method="POST"
             name="subscription"
             class="mt-12 sm:mx-auto sm:max-w-lg sm:flex">
