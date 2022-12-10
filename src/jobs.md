@@ -44,6 +44,6 @@ Use the contact page to send us a message with answers to the questions below:
 
 5. How have you used SEO keywords to increase blog traffic? Provide specific examples.
 
-## Notes
-1. As long as the blog doesn't get 1000 daily visitors, this is an unpaid position. When the blog reaches the 1000 milestone, the salary (fixed and variable) is subject to debate.
-2. You have to have a tremendous musical culture to apply. Knowing 5,000 songs is the minimum. You preferably listen to jazz, blues, soul, rock, funk and electronic music.
+## Note
+<!-- 1. As long as the blog doesn't get 1000 daily visitors, this is an unpaid position. When the blog reaches the 1000 milestone, the salary (fixed and variable) is subject to debate. -->
+You have to have a tremendous musical culture to apply. Knowing 5,000 songs is the minimum. You preferably listen to jazz, blues, soul, rock, funk and electronic music.
