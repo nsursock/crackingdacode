@@ -135,7 +135,7 @@
                   <!-- <div class="px-4 py-3 md:px-6" data-netlify-recaptcha="true"
                                   ></div> -->
                   <div class="px-4 py-3 text-right md:px-6">
-                    <button @click="if (typeof umami !== 'undefined') { umami.trackEvent('contact-button', 'click'); mixpanel.track('Contacted') }" :disabled="disableSubmit" :class="{'opacity-50': disableSubmit}" type="submit" class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Send</button>
+                    <button @click="registerEvent('contact', 'click')" :disabled="disableSubmit" :class="{'opacity-50': disableSubmit}" type="submit" class="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Send</button>
                   </div>
                 </div>
 

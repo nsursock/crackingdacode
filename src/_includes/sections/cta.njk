@@ -62,7 +62,7 @@
             @click="pay"
             id="donate-button"
             class=" inline-flex items-center justify-center px-5 py-3 border border-indigo-500 text-base font-medium rounded-md
-              text-white bg-indigo-600 hover:bg-indigo-700 umami--click--donate-button">
+              text-white bg-indigo-600 hover:bg-indigo-700">
             <!-- <template x-if="!isFetching && !(document.getElementById('pay-button') || false)" > <span
             id="pay-button">Pay</span> </template> -->
             <span x-show="!isFetching" id="pay-button">Pay</span>
@@ -108,7 +108,7 @@
         currency: 'USD',
         stripe: null,
         async pay() { // typeof plausible !== 'undefined' && plausible('Donated')
-          if (typeof umami !== 'undefined') mixpanel.track('Donated');
+          this.registerEvent('donate', 'click')
           
           await loadScript('https://js.stripe.com/v3')
           this.stripe = Stripe('{{ env.stripeKey }}')
