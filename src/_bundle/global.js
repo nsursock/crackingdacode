@@ -28,7 +28,7 @@ export default () => ({
   discount: 50,
 
   registerEvent(label, type) {
-    if (!process.env.NODE_ENV.startsWith('dev')) {
+    if (process.env.NODE_ENV.startsWith('prod')) {
       umami.trackEvent(label, type);
       mixpanel.track(type[0].toUpperCase() + type.slice(1, type.length) + 'ed ' + 
         label[0].toUpperCase() + label.slice(1, label.length)) 
@@ -66,6 +66,7 @@ export default () => ({
   },
 
   async init() {
+    console.log(process.env.NODE_ENV);
     if (
       document.referrer === '' &&
       !('crdacode_ReturningUser' in localStorage)
