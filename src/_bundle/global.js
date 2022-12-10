@@ -67,7 +67,7 @@ export default () => ({
   },
 
   async init() {
-    console.log(process.env.NODE_ENV);
+    // console.log(process.env.NODE_ENV);
     if (
       document.referrer === '' &&
       !('crdacode_ReturningUser' in localStorage)
