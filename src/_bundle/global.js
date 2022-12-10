@@ -28,7 +28,8 @@ export default () => ({
   discount: 50,
 
   registerEvent(label, type) {
-    if (process.env.NODE_ENV.startsWith('prod')) {
+    // if (process.env.NODE_ENV.startsWith('prod')) {
+    if (typeof umami !== 'undefined') {
       umami.trackEvent(label, type);
       mixpanel.track(type[0].toUpperCase() + type.slice(1, type.length) + 'ed ' + 
         label[0].toUpperCase() + label.slice(1, label.length)) 
