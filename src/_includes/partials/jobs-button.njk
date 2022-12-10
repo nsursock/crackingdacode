@@ -1,8 +1,8 @@
 <div x-show="!window.location.pathname.startsWith('/jobs')" class="animate-pulse p-3 m-2 fixed right-0 bottom-0">
     <a
-        @click="if (typeof umami !== 'undefined') mixpanel.track('Clicked Jobs Button')"
+        @click="registerEvent('jobs', 'click')"
         href="/jobs"
-        class="umami--click--jobs-button inline-flex items-center p-3 border border-transparent rounded-full shadow-sm text-white bg-red-600
+        class="inline-flex items-center p-3 border border-transparent rounded-full shadow-sm text-white bg-red-600
             hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
         <!-- Heroicon name: outline/plus-sm -->
         <span class="sr-only">Jobs</span>

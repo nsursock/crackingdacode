@@ -290,10 +290,7 @@
                           this.getItems()
                           this.$refs.sortdir.selectedIndex = 0
 
-                          if (typeof umami !== 'undefined') {
-                              umami.trackEvent('comment-button', 'click')
-                              mixpanel.track('Commented')
-                          }
+                          this.registerEvent('comment', 'click')
                       }
                       this.isFetching = false
                       this.showNotification = true

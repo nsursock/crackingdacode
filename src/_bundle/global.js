@@ -27,6 +27,19 @@ export default () => ({
   coinFlip: Math.random(),
   discount: 50,
 
+  registerEvent(label, type) {
+    if (!process.env.NODE_ENV.startsWith('dev')) {
+      umami.trackEvent(label, type);
+      mixpanel.track(type[0].toUpperCase() + type.slice(1, type.length) + 'ed ' + 
+        label[0].toUpperCase() + label.slice(1, label.length)) 
+      gtag('event', label+'_'+type)
+        // {
+        //   'app_name': 'myAppName',
+        //   'screen_name': 'Home'
+        // });
+    }
+  },
+
   formatDate(date, dateFormat) {
     return format(date, dateFormat)
   },
@@ -126,36 +139,40 @@ export default () => ({
             this.currStep === '0'
           ) {
             this.currStep = 'article-25'
-            if (typeof umami !== 'undefined') {
-              umami.trackEvent('article-25', 'scroll')
-              mixpanel.track('25% Viewed')
-            }
+            // if (typeof umami !== 'undefined') {
+            //   umami.trackEvent('article-25', 'scroll')
+            //   mixpanel.track('25% Viewed')
+            // }
+            this.registerEvent('25%', 'scroll')
           } else if (
             this.percent >= 50 &&
             this.percent < 75 &&
             this.currStep.includes('25')
           ) {
             this.currStep = 'article-50'
-            if (typeof umami !== 'undefined') {
-              umami.trackEvent('article-50', 'scroll')
-              mixpanel.track('50% Viewed')
-            }
+            // if (typeof umami !== 'undefined') {
+            //   umami.trackEvent('article-50', 'scroll')
+            //   mixpanel.track('50% Viewed')
+            // }
+            this.registerEvent('50%', 'scroll')
           } else if (
             this.percent >= 75 &&
             this.percent < 100 &&
             this.currStep.includes('50')
           ) {
             this.currStep = 'article-75'
-            if (typeof umami !== 'undefined') {
-              umami.trackEvent('article-75', 'scroll')
-              mixpanel.track('75% Viewed')
-            }
+            // if (typeof umami !== 'undefined') {
+            //   umami.trackEvent('article-75', 'scroll')
+            //   mixpanel.track('75% Viewed')
+            // }
+            this.registerEvent('75%', 'scroll')
           } else if (this.percent === 100 && this.currStep.includes('75')) {
             this.currStep = 'article-100'
-            if (typeof umami !== 'undefined') {
-              umami.trackEvent('article-100', 'scroll')
-              mixpanel.track('100% Viewed')
-            }
+            // if (typeof umami !== 'undefined') {
+            //   umami.trackEvent('article-100', 'scroll')
+            //   mixpanel.track('100% Viewed')
+            // }
+            this.registerEvent('100%', 'scroll')
             // this.showPopup = true
           }
         }
