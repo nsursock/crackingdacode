@@ -1,5 +1,4 @@
 require('dotenv').config()
-console.log(process.env.VERCEL_ANALYTICS_ID);
 module.exports = {
   devMode: process.env.NODE_ENV !== 'production',
   environment: process.env.NODE_ENV || 'development',

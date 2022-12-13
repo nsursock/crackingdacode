@@ -3,6 +3,7 @@ import reportWebVitals from './reportWebVitals';
 import { sendToVercelAnalytics } from './vitals';
 
 export default () => ({
+  isProduction: typeof umami !== 'undefined',
   showCta: false,
   showTests: false,
   showPopup: false,
@@ -32,7 +33,7 @@ export default () => ({
 
   registerEvent(label, type) {
     // if (process.env.NODE_ENV.startsWith('prod')) {
-    if (typeof umami !== 'undefined') {
+    if (this.isProduction) {
       umami.trackEvent(label, type);
       mixpanel.track(type[0].toUpperCase() + type.slice(1, type.length) + 'ed ' +
         label[0].toUpperCase() + label.slice(1, label.length))
@@ -71,7 +72,7 @@ export default () => ({
 
   async init() {
 
-    if (typeof umami !== 'undefined')
+    if (this.isProduction)
       reportWebVitals(sendToVercelAnalytics)
 
     // console.log(process.env.NODE_ENV);
