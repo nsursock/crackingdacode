@@ -1,4 +1,7 @@
 import { format } from 'date-fns'
+import reportWebVitals from './reportWebVitals';
+import { sendToVercelAnalytics } from './vitals';
+
 export default () => ({
   showCta: false,
   showTests: false,
@@ -31,13 +34,13 @@ export default () => ({
     // if (process.env.NODE_ENV.startsWith('prod')) {
     if (typeof umami !== 'undefined') {
       umami.trackEvent(label, type);
-      mixpanel.track(type[0].toUpperCase() + type.slice(1, type.length) + 'ed ' + 
-        label[0].toUpperCase() + label.slice(1, label.length)) 
-      gtag('event', label+'_'+type)
-        // {
-        //   'app_name': 'myAppName',
-        //   'screen_name': 'Home'
-        // });
+      mixpanel.track(type[0].toUpperCase() + type.slice(1, type.length) + 'ed ' +
+        label[0].toUpperCase() + label.slice(1, label.length))
+      gtag('event', label + '_' + type)
+      // {
+      //   'app_name': 'myAppName',
+      //   'screen_name': 'Home'
+      // });
     }
   },
 
@@ -67,6 +70,10 @@ export default () => ({
   },
 
   async init() {
+
+    if (typeof umami !== 'undefined')
+      reportWebVitals(sendToVercelAnalytics)
+
     // console.log(process.env.NODE_ENV);
     if (
       document.referrer === '' &&
@@ -127,11 +134,11 @@ export default () => ({
           this.percent = Math.min(
             Math.round(
               100 -
-                ((targetBottom - windowBottom + window.outerHeight / 3) /
-                  (targetBottom -
-                    window.outerHeight +
-                    window.outerHeight / 3)) *
-                  100
+              ((targetBottom - windowBottom + window.outerHeight / 3) /
+                (targetBottom -
+                  window.outerHeight +
+                  window.outerHeight / 3)) *
+              100
             ),
             100
           )

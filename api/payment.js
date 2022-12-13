@@ -13,6 +13,7 @@ export default async function handler(request, response) {
           currency: currency,
           product_data: {
             name: 'Cracking Da Code',
+            // images: ['https://qroiybphgipjhkmfsvnj.supabase.co/storage/v1/object/public/public/wp.jpg'],
             images: ['https://images.unsplash.com/photo-1551026922-875232ed1ce7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&h=500&q=80'],
           },
           unit_amount: amount * 100,
