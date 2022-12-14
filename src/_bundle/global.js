@@ -31,6 +31,10 @@ export default () => ({
   coinFlip: Math.random(),
   discount: 50,
 
+  vercelTrack() {
+    reportWebVitals(sendToVercelAnalytics)
+  },
+
   registerEvent(label, type) {
     // if (process.env.NODE_ENV.startsWith('prod')) {
     if (typeof umami !== 'undefined') {
