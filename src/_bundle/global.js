@@ -3,7 +3,7 @@ import reportWebVitals from './reportWebVitals';
 import { sendToVercelAnalytics } from './vitals';
 
 export default () => ({
-  isProduction: undefined,
+  // isProduction: undefined,
   showCta: false,
   showTests: false,
   showPopup: false,
@@ -72,11 +72,8 @@ export default () => ({
 
   async init() {
 
-    this.isProduction = typeof umami !== 'undefined'
-    console.log(this.isProduction);
-
-    if (typeof umami !== 'undefined')
-      reportWebVitals(sendToVercelAnalytics)
+    // this.isProduction = typeof umami !== 'undefined'
+    // console.log(this.isProduction);
 
     // console.log(process.env.NODE_ENV);
     if (

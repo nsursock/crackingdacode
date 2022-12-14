@@ -9,6 +9,7 @@ function getConnectionSpeed() {
 }
 
 export function sendToVercelAnalytics(metric) {
+    console.log('>>> sending to vercel...');
     const analyticsId = '5e3zhsV2sw1gps0bRNBM9gPv6zZ'
     // process.env.VERCEL_ANALYTICS_ID;
     // if (!analyticsId) {
@@ -30,12 +31,15 @@ export function sendToVercelAnalytics(metric) {
         type: 'application/x-www-form-urlencoded',
     });
     if (navigator.sendBeacon) {
+        console.log('>> sending beacon');
         navigator.sendBeacon(vitalsUrl, blob);
-    } else
+    } else {
+        console.log('>> fetching');
         fetch(vitalsUrl, {
             body: blob,
             method: 'POST',
             credentials: 'omit',
             keepalive: true,
         });
+    }
 }
