@@ -72,6 +72,8 @@ export default () => ({
 
   async init() {
 
+    console.log(this.isProduction);
+
     if (this.isProduction)
       reportWebVitals(sendToVercelAnalytics)
 
