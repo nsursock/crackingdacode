@@ -160,6 +160,8 @@
           src="https://statumami-production.up.railway.app/umami.js">
         </script>
 
+        <div x-init="vercelTrack"></div>
+
         {# <script async defer src="https://analytics.umami.is/script.js" data-website-id="5b010d67-e22c-480b-ba9c-051aa7e3da3f"></script> #}
 
         {# <script>
@@ -185,10 +187,6 @@
           }
           gtag('js', new Date());
           gtag('config', 'G-FC4SZD189F');
-        </script>
-
-        <script>
-          reportWebVitals(sendToVercelAnalytics)
         </script>
 
         {# <script async="async" src="https://cdn.splitbee.io/sb.js"></script> #}
