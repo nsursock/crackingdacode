@@ -1,6 +1,7 @@
 import { format } from 'date-fns'
 import reportWebVitals from './reportWebVitals';
 import { sendToVercelAnalytics } from './vitals';
+import { inject } from '@vercel/analytics';
 
 export default () => ({
   // isProduction: undefined,
@@ -33,6 +34,7 @@ export default () => ({
 
   vercelTrack() {
     reportWebVitals(sendToVercelAnalytics)
+    inject()
   },
 
   registerEvent(label, type) {
