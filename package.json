@@ -48,6 +48,7 @@
   "dependencies": {
     "@alpinejs/intersect": "^3.2.2",
     "@supabase/supabase-js": "^1.35.3",
+    "@vercel/analytics": "^0.1.6",
     "alpinejs": "^3.7.0",
     "argon2": "^0.28.7",
     "critical": "^4.0.1",
