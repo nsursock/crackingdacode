@@ -14,6 +14,19 @@ Alpine.data('form', form)
 Alpine.data('testimonials', testimonials)
 
 Alpine.directive(
+  'else',
+  (el, { expression, modifiers }, { evaluateLater, cleanup }) => {
+    const previous = el.previousElementSibling
+
+    if (!previous || previous.tagName.toLowerCase() !== 'template' || !previous.hasAttribute('x-if')) {
+      throw new Error('`x-else` encountered without a previous `x-if` sibling.')
+    }
+
+    el.setAttribute('x-if', `! (${previous.getAttribute('x-if')})`)
+  }
+)
+
+Alpine.directive(
   'intersect',
   (el, { expression, modifiers }, { evaluateLater, cleanup }) => {
     let evaluate = evaluateLater(expression)
