@@ -38,6 +38,16 @@ module.exports = (config) => {
     return items.slice(0, 9)
   })
 
+  config.addFilter('shuffle', function (array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1))
+      const temp = array[i]
+      array[i] = array[j]
+      array[j] = temp
+    }
+    return array
+  })
+
   // config.ignores.add('src/settings.njk')
 
   config.addFilter('getCode', function (items) {
