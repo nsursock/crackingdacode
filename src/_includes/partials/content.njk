@@ -28,7 +28,7 @@
   <div x-show="percent !== 100" x-transition:enter="transition transform ease-out duration-500 " x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition transform ease-in duration-500 " x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="bottom-5 left-5 inline-flex items-center justify-center overflow-hidden rounded-full">
     <!-- Building a Progress Ring: https://css-tricks.com/building-progress-ring-quickly/ -->
     <svg class="h-20 w-20">
-      <circle class="text-gray-300 dark:text-gray-700" stroke-width="2" stroke="currentColor" fill="transparent" r="30" cx="40" cy="40" />
+      <circle class="text-gray-300 dark:text-gray-700" stroke-width="5" stroke="currentColor" fill="transparent" r="30" cx="40" cy="40" />
       <circle class="text-indigo-600" stroke-width="5" :stroke-dasharray="circumference" :stroke-dashoffset="circumference - percent / 100 * circumference" stroke-linecap="round" stroke="currentColor" fill="transparent" r="30" cx="40" cy="40" />
     </svg>
     <span class="absolute text-xl text-indigo-700" x-text="`${percent}%`"></span>

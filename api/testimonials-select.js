@@ -12,6 +12,7 @@ export default async function handler(request, response) {
     const data = (await supabase.from(storageName).select()).data
     response.status(200).json({ data })
   } catch (error) {
+    console.log(error);
     response.status(400).json({ message: 'Failed to fetch testimonials.' })
   }
 }
