@@ -1,4 +1,4 @@
-import { format } from 'date-fns'
+import { format, formatRelative, formatDistance } from 'date-fns'
 import reportWebVitals from './reportWebVitals';
 import { sendToVercelAnalytics } from './vitals';
 import { inject } from '@vercel/analytics';
@@ -52,7 +52,9 @@ export default () => ({
   },
 
   formatDate(date, dateFormat) {
-    return format(date, dateFormat)
+    if (dateFormat === 'relative') return formatRelative(date, new Date())
+    else if (dateFormat === 'distance') return formatDistance(date, new Date(), { addSuffix: true })
+    else return format(date, dateFormat)
   },
 
   async checkPermission() {
