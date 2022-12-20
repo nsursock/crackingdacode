@@ -35,7 +35,7 @@ eleventyExcludeFromCollections : true
 -->
 {% extends "layouts/page.njk" %}
 {% block body %}
-  <template x-if="$store.auth.user?.email === 'nicolas.sursock@gmail.com'">
+  <template x-if="$store.auth.user?.email === 'nicolas.sursock@gmail.com' && !isMobile()">
     <div class="flex flex-col bg-gray-100 h-screen overflow-hidden">
       <!-- Top nav-->
       <header class="relative flex h-16 flex-shrink-0 items-center bg-white">
