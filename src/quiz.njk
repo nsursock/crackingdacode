@@ -297,7 +297,7 @@
                       <div class="mt-3 text-center sm:mt-5" x-data="{ winPerc: (numCorrect/length*100).toFixed(), speedRating: Math.min((numCorrect/elapsed()*450),100).toFixed()  }">
                         <div class="mt-2">
                           <p class="text-sm text-gray-500 dark:text-gray-400" 
-                        x-text="`It took you ${elapsed()} seconds to answer correctly ${numCorrect} out of ${length} questions. Your accuracy is ${winPerc} and your speed is ${speedRating}. Refresh the page to see where you rank.`"></p>
+                        x-text="`It took you ${elapsed()} seconds to answer correctly ${numCorrect} out of ${length} questions. Your accuracy is ${winPerc} and your speed is ${speedRating}.`"></p>
                         </div>
 
                         <div>
@@ -504,7 +504,7 @@
                 accuracy2: numCorrect,
                 speed2: elapsed()
               })
-            })"
+            }); await leadersFetch()"
                         class="mx-2 flex-1 inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base
                             font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
                             sm:text-sm">
