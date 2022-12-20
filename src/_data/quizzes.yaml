@@ -1,5 +1,5 @@
 ---
-- name: Welcome Test
+- name: Welcome Quiz
   description: perfect for discovering new songs, measuring your overall culture, or creating a new high score.
   icon: welcome
   questions:
@@ -56,7 +56,7 @@
       answers:
         - answer: Stevie Wonder
         - answer: Gil Scott-Heron
-        - answer: Cake
+        - answer: Herbie Hancock
           correct: true
         - answer: Donny Hathaway
     - question: Which famous bossa nova song was recorded by Astrud Gilberto with Stan Getz in 1963?
@@ -127,7 +127,7 @@
         - answer: Van Halen
         - answer: Bon Jovi
         - answer: Fleetwood Mac
-        - answer: The Animals
+        - answer: Warhaus
           correct: true
     - question: Which artist performed a funk rendition of Also Sprach Zarathustra?
       answers:
