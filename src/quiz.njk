@@ -185,15 +185,12 @@
         </div>
       </div>
 
-      <h2 class="mt-5 text-sm font-medium text-gray-500">Available Quizzes</h2>
+      {# <h2 class="mt-5 text-sm font-medium text-gray-500">Available Quizzes</h2> #}
       <ul role="list" class="mt-3 grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
 
         {% for quiz in quizzes %}
-          <li class="col-span-1 flex rounded-md shadow-sm">
+          {# <li class="col-span-1 flex rounded-md shadow-sm">
             <div class="flex-shrink-0 flex items-center justify-center w-16 bg-indigo-600 text-white text-sm font-medium rounded-l-md">
-              {# <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 10.5V6.75a4.5 4.5 0 119 0v3.75M3.75 21.75h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H3.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"/>
-            </svg> #}
               <svg class="icon icon-{{ quiz.icon }} h-6 w-6 text-white">
                 <use href="#icon-{{ quiz.icon }}"/>
               </svg>
@@ -202,7 +199,6 @@
               <div class="flex-1 truncate px-4 py-2 text-sm">
                 <a href="#" class="font-medium dark:text-gray-100 hover:dark:text-gray-500 text-gray-900 hover:text-gray-600">{{ quiz.name }}</a>
                 <p class="text-gray-500 dark:text-gray-400">{{ quiz.questions.length }} questions</p>
-                {# <p class="text-gray-500">{{ quiz.description }}</p> #}
               </div>
               <div class="flex-shrink-0 pr-2">
                 <button @click="selectedQuiz = {{ loop.index }}; open = !open" type="button" class="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white bg-transparent text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
@@ -214,7 +210,7 @@
                 </button>
               </div>
             </div>
-          </li>
+          </li> #}
 
           <div x-show="open && selectedQuiz == {{ loop.index }}" class="relative z-50" aria-labelledby="modal-title" role="dialog" aria-modal="true">
             <!--
