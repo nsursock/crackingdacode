@@ -194,6 +194,7 @@
       error: '',
       isFetching: false,
       submit() {
+        this.registerEvent('signup', 'click')
         this.isFetching = true
         this.error = ''
         var data = {

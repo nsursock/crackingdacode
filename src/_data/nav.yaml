@@ -19,6 +19,10 @@ menus:
         description: A complete list of articles published on this anti-war music blog
         route: /blog
         icon: 'bolt'
+      - name: Quizzes
+        description: Take the quizzes and discover your level of musical culture
+        route: /quiz
+        icon: 'choice'
   - name: Services
     route: /services
     icon: 'ticket'
