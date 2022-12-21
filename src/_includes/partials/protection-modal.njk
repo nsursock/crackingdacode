@@ -372,6 +372,7 @@
       login() {
         this.isFetching = true
         this.registerEvent('step2', 'focus')
+        this.registerEvent('login', 'click')
         this.error = ''
         var data = {
           email: this.email,
@@ -403,6 +404,7 @@
       signup() {
         this.isFetching = true
         this.registerEvent('step2', 'focus')
+        this.registerEvent('signup', 'click')
         this.error = ''
         var data = {
           email: this.email,
