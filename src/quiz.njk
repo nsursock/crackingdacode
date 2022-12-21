@@ -135,16 +135,16 @@
       <div class="mt-8 flex flex-col">
         <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
           <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
-            <div class="overflow-hidden shadow ring-1 ring-black ring-opacity-5 md:rounded-lg">
-              <table class="min-w-full divide-y divide-gray-300">
+            <div class="overflow-hidden shadow border border-gray-200 dark:border-gray-700 rounded-lg">
+              <table class="min-w-full divide-y divide-gray-300 dark:divide-gray-700">
                 <thead class="bg-gray-50 dark:bg-gray-800">
                   <tr>
                     <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold dark:text-gray-100 text-gray-900 sm:pl-6">Name</th>
                     {# <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Title</th> #}
-                    <th scope="col" class="hidden md:table-cell px-3 py-3.5 text-left text-sm font-semibold dark:text-gray-100 text-gray-900">Accuracy</th>
-                    <th scope="col" class="hidden md:table-cell px-3 py-3.5 text-left text-sm font-semibold dark:text-gray-100 text-gray-900">Speed</th>
-                    <th scope="col" class=" px-3 py-3.5 text-left text-sm font-semibold dark:text-gray-100 text-gray-900">Score</th>
-                    <th scope="col" class="hidden sm:table-cell px-3 py-3.5 text-left text-sm font-semibold dark:text-gray-100 text-gray-900">Date</th>
+                    <th scope="col" class="md:w-24 hidden md:table-cell px-3 py-3.5 text-left text-sm font-semibold dark:text-gray-100 text-gray-900">Accuracy</th>
+                    <th scope="col" class="md:w-24 hidden md:table-cell px-3 py-3.5 text-left text-sm font-semibold dark:text-gray-100 text-gray-900">Speed</th>
+                    <th scope="col" class="md:w-24 px-3 py-3.5 text-left text-sm font-semibold dark:text-gray-100 text-gray-900">Score</th>
+                    <th scope="col" class="md:w-48 hidden sm:table-cell px-3 py-3.5 text-left text-sm font-semibold dark:text-gray-100 text-gray-900">Date</th>
                     {# <th scope="col" class="relative py-3.5 pl-3 pr-4 sm:pr-6">
                   <span class="sr-only">Edit</span>
                 </th> #}
@@ -153,7 +153,7 @@
                 <template x-if="leaders">
                   <tbody class="divide-y divide-gray-200 dark:divide-gray-800 bg-white dark:bg-gray-900">
                     <template x-for="leader in leaders">
-                      <tr>
+                      <tr :class="$store.auth.user?.email === leader.player.email && 'bg-gray-200 dark:bg-gray-700'">
                         <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
                           <div class="flex items-center">
                             <div class="h-10 w-10 flex-shrink-0">
@@ -190,7 +190,7 @@
                               :class="{ 'text-green-800 bg-green-100': stat >= 90, 'text-yellow-800 bg-yellow-100': stat >= 50 && stat < 90, 'text-red-800 bg-red-100': stat < 50 }"
                               x-text="stat"></span>
                         </td>
-                        <td class="hidden sm:table-cell whitespace-nowrap px-3 py-4 text-sm text-gray-500" x-text="formatDate(new Date(leader.created_at), 'relative')"></td>
+                        <td class="hidden sm:table-cell whitespace-nowrap px-3 py-4 text-sm text-gray-500 dark:text-gray-400" x-text="formatDate(new Date(leader.created_at), 'relative')"></td>
                         {# <td class="relative whitespace-nowrap py-4 pl-3 pr-4 text-right text-sm font-medium sm:pr-6">
                         <a href="#" class="text-indigo-600 hover:text-indigo-900">Edit<span class="sr-only">, Lindsay Walton</span></a>
                       </td> #}
