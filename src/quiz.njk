@@ -15,7 +15,7 @@
   </svg>
 
   <div x-data="dataQuiz()" class="container mt-5" 
-    x-effect="alreadyTook = leaders?.filter((leader) => leader.player.email === $store.auth.user?.email).length > 1">
+    x-effect="alreadyTook = leaders?.filter((leader) => leader.player.email === $store.auth.user?.email).length >= 1">
     <div class="relative mt-8">
       <div class="relative mt-8 sm:mt-16 sm:py-16">
         <div aria-hidden="true" class="hidden sm:block"></div>
@@ -50,7 +50,7 @@
                 </h2>
                 <p class="max-w-2xl mx-auto mt-6 text-lg text-indigo-100">
                   <template x-if="$store.auth.user">
-                    <div>
+                    <span>
                       <template x-if="!alreadyTook">
                         <span>Take the featured quiz and</span>
                       </template>
@@ -61,7 +61,7 @@
                           <span>You'll get a chance to improve next month!</span>
                         </div>
                       </template>
-                    </div>
+                    </span>
                   </template>
                   <template x-else>
                     <span>Sign up or log in to feature in the ranking and</span>
