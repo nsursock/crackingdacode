@@ -202,7 +202,7 @@
           name: this.name,
           password: this.password
         }
-        fetch('/api/auth-signup', {
+        fetch('/api/auth?mode=signup', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

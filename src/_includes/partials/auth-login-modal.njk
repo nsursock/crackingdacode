@@ -191,7 +191,7 @@
           email: this.email,
           password: this.password
         }
-        fetch('/api/auth-login', {
+        fetch('/api/auth?mode=login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

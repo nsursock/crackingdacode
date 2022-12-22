@@ -378,7 +378,7 @@
           email: this.email,
           password: this.password,
         }
-        fetch('/api/auth-login', {
+        fetch('/api/auth?mode=login', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -411,7 +411,7 @@
           name: this.name,
           password: this.password,
         }
-        fetch('/api/auth-signup', {
+        fetch('/api/auth?mode=signup', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -450,7 +450,7 @@
         const data = {
           protection: this.price,
         }
-        const response = await fetch('/api/payment-code', {
+        const response = await fetch('/api/payment?mode=code', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -516,7 +516,7 @@
             user: Alpine.store('auth').user.email,
             article: window.location.pathname,
           }
-          fetch('/api/payment-code-update', {
+          fetch('/api/payment?mode=update', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

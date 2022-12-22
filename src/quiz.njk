@@ -122,15 +122,24 @@
       </div>
     </div>
 
-    <div class="px-4 sm:px-6 lg:px-8 my-5">
+    <div class="px-4 sm:px-6 lg:px-8 my-5" x-data="{ showPos: false }">
       <div class="sm:flex sm:items-center">
         <div class="sm:flex-auto">
           <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100">Rankings</h1>
           <p class="mt-2 text-sm text-gray-700 dark:text-gray-300">A list of all the members who took the welcome quiz.</p>
         </div>
-        {# <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
-      <button type="button" class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">Add user</button>
-    </div> #}
+        <template x-if="alreadyTook">
+          <div class="mt-4 sm:mt-0 sm:ml-16 sm:flex-none">
+            <button @click="showPos = !showPos" type="button" class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:w-auto">
+              <template x-if="!showPos">
+                <span>Show Position</span>
+              </template>
+              <template x-if="showPos">
+                <span>Hide Position</span>
+              </template>
+            </button>
+          </div>
+        </template>
       </div>
       <div class="mt-8 flex flex-col">
         <div class="-my-2 -mx-4 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -153,7 +162,7 @@
                 <template x-if="leaders">
                   <tbody class="divide-y divide-gray-200 dark:divide-gray-800 bg-white dark:bg-gray-900">
                     <template x-for="leader in leaders">
-                      <tr :class="$store.auth.user?.email === leader.player.email && 'bg-gray-200 dark:bg-gray-700'">
+                      <tr :class="(showPos && $store.auth.user?.email === leader.player.email) && 'bg-gray-200 dark:bg-gray-700'">
                         <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm sm:pl-6">
                           <div class="flex items-center">
                             <div class="h-10 w-10 flex-shrink-0">
@@ -421,7 +430,7 @@
                                           <template x-if="!answered">
                                             <input
                                               @change="answered = {{ loop.index }}; if (answered && correct) { numCorrect++; success = true }; 
-                                              fetch('/api/quiz-log', {
+                                              fetch('/api/quizzes?mode=details', {
                                                 method: 'POST',
                                                 headers: {
                                                     'Content-Type': 'application/json'
@@ -509,7 +518,7 @@
                     </template>
                     <template x-if="current > length">
                       <button @click="registerEvent('stop', 'click'); open = !open; 
-                      await fetch('/api/quiz-ranking-result', {
+                      await fetch('/api/quizzes?mode=update', {
                         method: 'POST',
                         headers: {
                           'Content-Type': 'application/json'
@@ -559,7 +568,7 @@
         alreadyTook: false,
 
         async leadersFetch() {
-          this.leaders = (await(await fetch('/api/quiz-leaders')).json())
+          this.leaders = (await(await fetch('/api/quizzes?mode=select')).json())
             .data
             .sort((a, b) => (b.accuracy + b.speed) / 2 - (a.accuracy + a.speed) / 2)
         },
