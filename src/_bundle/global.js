@@ -58,7 +58,7 @@ export default () => ({
   },
 
   async checkPermission() {
-    const res = await fetch('/api/payment-code-check', {
+    const res = await fetch('/api/payment?mode=check', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

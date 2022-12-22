@@ -104,7 +104,7 @@ window.addEventListener('alpine:initializing', () => {
     init() {
       const token = localStorage.getItem('crdacode_token')
       if (token) {
-        fetch('/api/auth-me-query', {
+        fetch('/api/auth?mode=me', {
           method: 'POST',
           body: token,
         })
