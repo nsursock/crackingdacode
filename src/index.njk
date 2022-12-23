@@ -14,8 +14,8 @@ title: Home
 {% extends "layouts/page.njk" %}
 {% block head %}
   <link rel="preload" as="image" media="(max-width: 799px)" href="https://images.unsplash.com/photo-1535903021127-d50417eae4a3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&q=80&w=480&h=320"/>
-  <link rel="preload" href="/static/fonts/aldrich/aldrich-v17-latin-regular.woff2" as="font" crossorigin /> 
-  <link rel="preload" href="/static/fonts/aldrich/aldrich-v17-latin-regular.woff" as="font" crossorigin />
+  <link rel="preload" href="/static/fonts/aldrich/aldrich-v17-latin-regular.woff2" as="font" crossorigin/>
+  <link rel="preload" href="/static/fonts/aldrich/aldrich-v17-latin-regular.woff" as="font" crossorigin/>
   <link rel="preload" href="/static/fonts/aldrich/aldrich-v17-latin-regular.ttf" as="font" crossorigin/>
   <script>
     if (localStorage.crdacode_theme === 'dark' || (!('crdacode_theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -119,11 +119,20 @@ title: Home
                 </div>
               </div>
               {% if nav.menus %}
-                <div class="space-y-1 px-2 pt-2 pb-3">
+                <div class="space-y-2 px-2 pt-2 pb-3">
                   {% for menu in nav.menus %}
-                    <a href="{{ menu.route }}" class="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700">
-                      {{ menu.name }}
-                    </a>
+                    <div>
+                      <a href="{{ menu.route }}" class="block rounded-md px-3 py-1 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700">
+                        {{ menu.name }}
+                      </a>
+                      <div class="flex flex-wrap">
+                        {% for submenu in menu.submenus %}
+                          <a href="{{ submenu.route }}" class="ml-2 block rounded-md px-3 py-1 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700">
+                            {{ submenu.name }}
+                          </a>
+                        {% endfor %}
+                      </div>
+                    </div>
                   {% endfor %}
                 </div>
               {% endif %}
