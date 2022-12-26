@@ -89,8 +89,9 @@
                     placeholder="Email address">
                 </div>
                 <div>
-                  <label for="display-name-signup-comment" class="sr-only">Display name</label>
+                  <label for="display-name-signup-comment" class="sr-only">Full name</label>
                   <input
+                    @change="validateName"
                     x-model="name"
                     id="display-name-signup-comment"
                     name="name"
@@ -98,7 +99,7 @@
                     required
                     class="dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500
                       text-gray-900 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm"
-                    placeholder="Display name">
+                    placeholder="Full name">
                 </div>
                 <div>
                   <label for="password-signup-comment" class="sr-only">Password</label>
@@ -193,6 +194,12 @@
     return {
       error: '',
       isFetching: false,
+      validateName() {
+        if (!new RegExp('^[a-zA-Z]+( [a-zA-Z]+)+$').test(this.name))
+          this.error = 'Your full name is not valid'
+        else
+          this.error = ''
+      },
       submit() {
         this.registerEvent('signup', 'click')
         this.isFetching = true
