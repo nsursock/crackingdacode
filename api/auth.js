@@ -69,12 +69,12 @@ export default async function handler(request, response) {
           )
             response
               .status(400)
-              .send({ success: false, error: 'email already taken by another user' })
+              .send({ success: false, error: 'Email already taken by another user' })
           else {
             if (password.length < 8)
               response.status(400).send({
                 success: false,
-                error: 'password should be min 8 characters',
+                error: 'Password should be min 8 characters',
               })
             else {
               const hash = await argon2.hash(password)
