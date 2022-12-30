@@ -32,9 +32,22 @@ module.exports = {
         random: 'random 2s ease 0s 1 normal forwards',
         show: 'show 0.7s',
         flip: 'flip 0.5s linear both',
+        tilt: 'tilt 10s infinite linear'
       },
 
       keyframes: {
+        tilt: {
+          '0%, 50%, 100%': {
+            transform: 'rotate(0deg)'
+          },
+          '25%': {
+            transform: 'rotate(1deg)'
+          },
+          '75%': {
+            transform: 'rotate(-1deg)'
+          }
+        },
+
         flip: {
           '0%': {
             transform: 'scale(1) rotateY(0)',
