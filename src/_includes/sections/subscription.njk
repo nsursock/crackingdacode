@@ -37,7 +37,8 @@
             method="POST"
             name="subscription"
             class="mt-12 sm:mx-auto sm:max-w-lg sm:flex">
-            <div class="flex-1 min-w-0">
+            <div class="flex-1 min-w-0 relative">
+              <div class="animate-tilt absolute -inset-1 bg-gray-50 rounded-md blur"></div>
               <label for="email" class="sr-only">Email address</label>
               <input
                 required
@@ -45,27 +46,28 @@
                 id="email"
                 name="email"
                 placeholder="Email address"
-                class="block w-full px-5 py-3 text-base text-gray-900 placeholder-gray-500 border border-transparent rounded-md shadow-sm
+                class="relative block w-full px-5 py-3 text-base text-gray-900 placeholder-gray-500 border border-transparent rounded-md shadow-sm
                   focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2
                   focus:ring-offset-indigo-500"/>
             </div>
-            <div class="mt-4 sm:mt-0 sm:ml-3 flex flex-col">
+            <div class="mt-6 sm:mt-0 sm:ml-5 flex flex-col relative">
+              <div class="animate-tilt absolute -inset-1 bg-black rounded-md blur"></div>
               <button type="submit"
                 @click="registerEvent('subscribe', 'click')"
-                class="block w-full px-5 py-3 text-base font-medium text-white bg-gray-900 border border-transparent shadow rounded-md
+                class="relative block w-full px-5 py-3 text-base font-medium text-white bg-gray-900 border border-transparent shadow rounded-md
                   hover:bg-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-500
                   sm:px-10">
                 Subscribe
               </button>
             </div>
 
-           {% include 'partials/notifications.njk' %}
+            {% include 'partials/notifications.njk' %}
 
-              </div>
-            </div>
           </div>
-        </form>
+        </div>
       </div>
-    </div>
+    </form>
   </div>
+</div>
+</div>
 </div>
