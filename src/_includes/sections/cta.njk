@@ -1,5 +1,5 @@
 <section
-  class="md:h-screen dark:bg-gray-900 dark:text-gray-200"
+  class="md:h-screen bg-white dark:bg-gray-900 dark:text-gray-200"
   x-intersect.once="showCta = true; $el.classList.remove('md:h-screen')">
   <div
     class="dark:bg-gray-900 dark:text-gray-200"
@@ -10,27 +10,28 @@
     x-transition:enter-end="opacity-100 translate-y-0">
     <div class=" max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between dark:bg-gray-900
         dark:text-gray-200 ">
-      <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-        <span class="block dark:text-gray-200">Need to make a payment?</span>
+      <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl mr-5">
+        <span class="block dark:text-gray-200">Want to make a donation?</span>
         <span class="block text-indigo-600">
-          You can even make a donation or buy me a coffee.
+          You can even buy me a coffee or make a payment.
         </span>
       </h2>
-      <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0 space-x-1">
+      <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0 ">
         <div x-data="{symbol: '$'}">
           <label for="amount" class="text-sm font-medium text-gray-700 hidden">
             Amount
           </label>
           <div class="relative">
-            <div class=" absolute inset-y-0 left-0 ml-3 pl-2 flex items-center pointer-events-none ">
+            <div class=" absolute -inset-0.5 bg-gray-200 dark:bg-gray-800 rounded-md blur"></div>
+            {# <div class=" absolute inset-y-0 left-0 ml-3 pl-2 flex items-center pointer-events-none ">
               <span class="text-gray-500 text-base font-medium" x-text="symbol"></span>
-            </div>
+            </div> #}
             <input
               x-model.number="amount"
               type="text"
               name="amount"
               id="amount"
-              class="dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 ml-2 inline-flex items-center justify-center px-7 py-3
+              class="relative dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 mx-1 inline-flex items-center justify-center px-7 py-3
                 border text-base font-medium rounded-md text-indigo-600 bg-white hover:bg-indigo-50 border-gray-300 "
               placeholder="0.00"/>
             <div class="absolute inset-y-0 right-0 flex items-center">
@@ -57,11 +58,12 @@
             </div>
           </div>
         </div>
-        <div class="inline-flex rounded-md shadow">
+        <div class="inline-flex rounded-md shadow relative ml-3 ">
+          <div class=" absolute -inset-0.5 bg-indigo-600 dark:bg-indigo-500 rounded-md blur"></div>
           <button
             @click="pay"
             id="donate-button"
-            class=" inline-flex items-center justify-center px-5 py-3 border border-indigo-500 text-base font-medium rounded-md
+            class="mx-1 relative inline-flex items-center justify-center px-5 py-3 border border-indigo-500 text-base font-medium rounded-md
               text-white bg-indigo-600 hover:bg-indigo-700">
             <!-- <template x-if="!isFetching && !(document.getElementById('pay-button') || false)" > <span
             id="pay-button">Pay</span> </template> -->
