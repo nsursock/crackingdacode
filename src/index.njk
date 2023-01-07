@@ -398,12 +398,12 @@ title: Home
   </section>
 
   <audio autoplay x-ref="player" src="/static/get-down.mp3"></audio>
-  <div class="flex justify-center" x-data="{ elapsed: 0, duration: 262, timer: null }" x-init="
+  <div class="flex justify-center fixed bottom-0" x-data="{ elapsed: 0, duration: 262, timer: null }" x-init="
         timer = setInterval(() => {
           elapsed = $refs.player.currentTime
         }, 1000)">
-    <div class="relative z-10 p-4 mx-3">
-      <div class="flex w-full sm:w-[500px] rounded-lg bg-white dark:bg-gray-800 shadow-xl shadow-black/5 ring-1 ring-slate-700/10">
+    <div class="relative z-10 sm:p-4 sm:mx-3">
+      <div class="border-t dark:border-gray-700 flex w-screen sm:w-[500px] sm:rounded-lg bg-white dark:bg-gray-800 shadow-xl shadow-black/5 ring-1 ring-slate-700/10">
         <div class="flex items-center space-x-4 py-4 px-6">
           {# <svg class="h-6 w-6 flex-none" fill="none">
             <path d="M6.22 11.03a.75.75 0 1 0 1.06-1.06l-1.06 1.06ZM3 6.75l-.53-.53a.75.75 0 0 0 0 1.06L3 6.75Zm4.28-3.22a.75.75 0 0 0-1.06-1.06l1.06 1.06ZM13.5 18a.75.75 0 0 0 0 1.5V18ZM7.28 9.97 3.53 6.22 2.47 7.28l3.75 3.75 1.06-1.06ZM3.53 7.28l3.75-3.75-1.06-1.06-3.75 3.75 1.06 1.06Zm16.72 5.47c0 2.9-2.35 5.25-5.25 5.25v1.5a6.75 6.75 0 0 0 6.75-6.75h-1.5ZM15 7.5c2.9 0 5.25 2.35 5.25 5.25h1.5A6.75 6.75 0 0 0 15 6v1.5ZM15 6H3v1.5h12V6Zm0 12h-1.5v1.5H15V18Z" fill="#64748B"></path>
