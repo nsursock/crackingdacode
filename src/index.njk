@@ -403,7 +403,7 @@ title: Home
           elapsed = $refs.player.currentTime
         }, 1000)">
     <div class="relative z-10 sm:p-4 sm:mx-3">
-      <div class="border-t dark:border-gray-700 flex w-screen sm:w-[500px] sm:rounded-lg bg-white dark:bg-gray-800 shadow-xl shadow-black/5 ring-1 ring-slate-700/10">
+      <div class="border-t sm:border dark:border-gray-700 flex w-screen sm:w-[500px] sm:rounded-lg bg-white dark:bg-gray-800 shadow-xl shadow-black/5 ring-1 ring-slate-700/10">
         <div class="flex items-center space-x-4 py-4 px-6">
           {# <svg class="h-6 w-6 flex-none" fill="none">
             <path d="M6.22 11.03a.75.75 0 1 0 1.06-1.06l-1.06 1.06ZM3 6.75l-.53-.53a.75.75 0 0 0 0 1.06L3 6.75Zm4.28-3.22a.75.75 0 0 0-1.06-1.06l1.06 1.06ZM13.5 18a.75.75 0 0 0 0 1.5V18ZM7.28 9.97 3.53 6.22 2.47 7.28l3.75 3.75 1.06-1.06ZM3.53 7.28l3.75-3.75-1.06-1.06-3.75 3.75 1.06 1.06Zm16.72 5.47c0 2.9-2.35 5.25-5.25 5.25v1.5a6.75 6.75 0 0 0 6.75-6.75h-1.5ZM15 7.5c2.9 0 5.25 2.35 5.25 5.25h1.5A6.75 6.75 0 0 0 15 6v1.5ZM15 6H3v1.5h12V6Zm0 12h-1.5v1.5H15V18Z" fill="#64748B"></path>
@@ -411,7 +411,9 @@ title: Home
             <path d="M9 16.5A.75.75 0 0 0 9 15v1.5Zm-2.25-.75V15a.75.75 0 0 0-.75.75h.75Zm0 2.25H6c0 .414.336.75.75.75V18Zm0 2.25a.75.75 0 0 0 0 1.5v-1.5ZM9 15H6.75v1.5H9V15Zm-3 .75V18h1.5v-2.25H6Zm.75 3h1.5v-1.5h-1.5v1.5Zm1.5 1.5h-1.5v1.5h1.5v-1.5ZM9 19.5a.75.75 0 0 1-.75.75v1.5a2.25 2.25 0 0 0 2.25-2.25H9Zm-.75-.75a.75.75 0 0 1 .75.75h1.5a2.25 2.25 0 0 0-2.25-2.25v1.5Z" fill="#64748B"></path>
           </svg
         > #}
-          <button type="button" @click="$refs.player.paused ? $refs.player.play() : $refs.player.pause()">
+          <button type="button" @click="if ($refs.player.paused) { 
+            $refs.player.play(); registerEvent('play', 'click') } else { 
+              $refs.player.pause(); registerEvent('pause', 'click') }">
             <svg class="h-10 w-10 flex-none" fill="none">
               <circle cx="20" cy="20" r="20" fill="#0F172A"></circle>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 13.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L16.28 27.99c-1.25.687-2.779-.217-2.779-1.643V13.653Z" fill="#fff"></path>
