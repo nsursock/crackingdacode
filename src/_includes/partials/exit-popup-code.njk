@@ -71,14 +71,14 @@
                         <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-gray-50" id="modal-title">Before you leave</h3>
                         <div class="mt-2">
                             <p class="text-sm text-gray-500 dark:text-gray-400">The code is like a song, precise and vague at the same time. We're
-                                not vain: the code is about us. Get the code now by following the link below!</p>
+                                not vain: the code is about us. Get the code now at <span x-text="discount"></span>% discount!</p>
                         </div>
                     </div>
                 </div>
                 <div class="mt-5 sm:mt-6">
                     <a
-                        href="/blog/just-solution/"
-                        @click="registerEvent('exit', 'click')"
+                        href="/blog/just-solution/?discount=true"
+                        @click="registerEvent('discount', 'click')"
                         class="inline-flex justify-center w-full rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base
                             font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500
                             sm:text-sm">

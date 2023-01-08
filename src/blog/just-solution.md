@@ -8,7 +8,6 @@ location: Paris, France
 featured: https://images.unsplash.com/photo-1590588935033-47cf2a942394?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop
 tags: [Life, Business, Humor, Wellness, Entertainment, blog]
 layout: layouts/post.njk
-protection: 99.95
 lantern:
   - text: The code was discovered in late 2015 after 15 years of hard work and free association. It was located in a song by Serge Gainsbourg.
   - text: Its magic power is to free you, make you lighthearted and help you meditate. But it's not clear yet what else the code can do.
