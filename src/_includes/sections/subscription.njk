@@ -30,7 +30,7 @@
             </p>
           </div>
           <form
-          @submit.prevent="handleSubmit($event)"
+          @submit.prevent="registerEvent('subscribe', 'click'); handleSubmit($event)"
           action="/api/form-submit"
             x-data="form"
             x-ref="supaform"
@@ -53,7 +53,6 @@
             <div class="mt-6 sm:mt-0 sm:ml-5 flex flex-col relative">
               <div class=" absolute -inset-0.5 bg-black rounded-md blur"></div>
               <button type="submit"
-                @click="registerEvent('subscribe', 'click')"
                 class="relative block w-full px-5 py-3 text-base font-medium text-white bg-gray-900 border border-transparent shadow rounded-md
                   hover:bg-black focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-500
                   sm:px-10">
