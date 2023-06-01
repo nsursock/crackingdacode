@@ -68,19 +68,19 @@
             id="pay-button">Pay</span> </template> -->
             <span x-show="!isFetching" id="pay-button">Pay</span>
             <!-- <template x-if="isFetching"> -->
-            <div x-show="isFetching" id="wait-button" class="inline-flex items-center">
-              <span>Please Wait</span>
-              <svg
+              <div x-show="isFetching" id="wait-button" class="inline-flex items-center">
+                <span>Please Wait</span>
+            <svg
               class="animate-spin h-5 w-5 ml-2 text-white"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24">
-                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                <path
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path
                 class="opacity-75"
                 fill="currentColor"
                 d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-              </svg>
+            </svg>
             </div>
             <!-- </template> -->
           </button>
@@ -97,13 +97,9 @@
         s.onload = resolve
         s.onerror = reject
         if (document.body == null) {
-          document
-            .head
-            .appendChild(s)
+          document.head.appendChild(s)
         } else {
-          document
-            .body
-            .appendChild(s)
+          document.body.appendChild(s)
         }
       })
     }
@@ -116,7 +112,7 @@
         stripe: null,
         async pay() { // typeof plausible !== 'undefined' && plausible('Donated')
           this.registerEvent('donate', 'click')
-
+          
           await loadScript('https://js.stripe.com/v3')
           this.stripe = Stripe('{{ env.stripeKey }}')
           var purchase = {
@@ -133,9 +129,7 @@
           })
             .then((response) => response.json())
             .then((session) => {
-              this
-                .stripe
-                .redirectToCheckout({sessionId: session.id})
+              this.stripe.redirectToCheckout({sessionId: session.id})
             })
             .then(function (result) {
               if (result.error) {
@@ -145,7 +139,7 @@
             .catch(function (error) {
               console.error('Error:', error)
             })
-          }
+        }
       }
     }
   </script>
