@@ -44,6 +44,7 @@ export default () => ({
       mixpanel.track(type[0].toUpperCase() + type.slice(1, type.length) + 'ed ' +
         label[0].toUpperCase() + label.slice(1, label.length))
       gtag('event', label + '_' + type)
+      plausible(label[0].toUpperCase() + label.slice(1, label.length))
       // {
       //   'app_name': 'myAppName',
       //   'screen_name': 'Home'
