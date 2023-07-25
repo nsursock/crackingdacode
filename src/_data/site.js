@@ -3,6 +3,6 @@
 module.exports = function () {
   return {
     // url: 'https://crackingdacode.vercel.app'
-    url: 'https://crackingdacode.org',
+    url: 'https://crackingdacode.com',
   }
 }
